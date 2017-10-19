@@ -1,0 +1,264 @@
+@mixin flexbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin inline-flex {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+@mixin flex-direction($v: row) {
+   @if $v==row-reverse{
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+  }
+  @else if $v==column {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+  }
+  @else if $v==column-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: vertical;
+  }
+  @else {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+  }
+  -webkit-flex-direction: $v;
+  -moz-flex-direction: $v;
+  -ms-flex-direction: $v;
+  flex-direction: $v;
+}
+
+@mixin flex-wrap($v: nowrap) {
+  @if $v==nowrap {
+    -ms-flex-wrap: none;
+  }
+  @else {
+    -ms-flex-wrap: $v;
+  }
+  flex-wrap: $v;
+  -webkit-flex-wrap: $v;
+  -moz-flex-wrap: $v;
+}
+
+@mixin flex-flow($vs: (row nowrap)) {
+  // No Webkit Box fallback.
+  -webkit-flex-flow: $vs;
+  -moz-flex-flow: $vs;
+  -ms-flex-flow: $vs;
+  flex-flow: $vs;
+}
+
+@mixin order($num: 0) {
+  -webkit-box-ordinal-group: $num + 1;
+  -webkit-order: $num;
+  -moz-order: $num;
+  -ms-flex-order: $num;
+  order: $num;
+}
+
+@mixin flex-basis($v: auto) {
+  -webkit-flex-basis: $v;
+  -moz-flex-basis: $v;
+  -ms-flex-preferred-size: $v;
+  flex-basis: $v;
+}
+
+
+@mixin flex-grow($num: 0) {
+  -webkit-box-flex: $num;
+  -webkit-flex-grow: $num;
+  -moz-flex-grow: $num;
+  -ms-flex-positive: $num;
+  flex-grow: $num;
+}
+
+@mixin flex-shrink($num: 1) {
+  -webkit-flex-shrink: $num;
+  -moz-flex-shrink: $num;
+  -ms-flex-negative: $num;
+  flex-shrink: $num;
+}
+
+
+@mixin align-items($v: stretch) {
+   @if $v==flex-start{
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+  }
+  @else if $v==flex-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+  }
+  @else {
+    -webkit-box-align: $v;
+    -ms-flex-align: $v;
+  }
+  -webkit-align-items: $v;
+  -moz-align-items: $v;
+  align-items: $v;
+}
+
+@mixin justify-content($v: flex-start) {
+   @if $v==flex-start{
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+  }
+  @else if $v==flex-end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+  }
+  @else if $v==space-between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+  }
+  @else if $v==space-around {
+    -ms-flex-pack: distribute;
+  }
+  @else {
+    -webkit-box-pack: $v;
+    -ms-flex-pack: $v;
+  }
+  -webkit-justify-content: $v;
+  -moz-justify-content: $v;
+  justify-content: $v;
+}
+
+
+
+
+@mixin align-content($v: stretch) {
+  -webkit-align-content: $v;
+  -moz-align-content: $v;
+  @if $v==flex-start {
+    -ms-flex-line-pack: start;
+  }
+  @else if $v==flex-end {
+    -ms-flex-line-pack: end;
+  }
+  @else {
+    -ms-flex-line-pack: $v;
+  }
+  align-content: $v;
+}
+
+
+@mixin align-self($v: auto) {
+  -webkit-align-self: $v;
+  -moz-align-self: $v;
+  @if $v==flex-start {
+    -ms-flex-item-align: start;
+  }
+  @else if $v==flex-end {
+    -ms-flex-item-align: end;
+  }
+  @else {
+    -ms-flex-item-align: $v;
+  }
+  align-self: $v;
+}
+
+
+
+
+.oh-align-center,
+[oh-align-center] {
+  @include align-items(center);
+}
+
+.oh-align-start,
+[oh-align-start] {
+  @include align-items(flex-start);
+}
+
+.oh-row,[oh-row] {
+  @include flexbox();
+  @include flex-direction(row);
+}
+.oh-column,[oh-column] {
+  @include flexbox();
+  @include flex-direction(column);
+}
+
+.oh-align-end,
+[oh-align-end] {
+  @include align-items(flex-end);
+}
+
+.oh-justify-center,
+[oh-justify-center] {
+  @include justify-content(center);
+}
+
+.oh-justify-around,
+[oh-justify-around] {
+  @include justify-content(space-around);
+}
+
+.oh-justify-between,
+[oh-justify-between] {
+  @include justify-content(space-between);
+}
+
+.oh-flex,
+.oh-flexbox, [oh-flex] {
+  @include flexbox();
+}
+
+.oh-flex-column, [oh-flex-column] {
+  @include flex-direction(column);
+}
+
+.oh-flex-row {
+  @include flex-direction(row);
+}
+
+.oh-grow, [oh-grow] {
+  @include flex-grow(1);
+}
+
+.oh-grow-off, [oh-grow-off] {
+  @include flex-grow(0);
+}
+
+.oh-shrink-off, [oh-shrink-off] {
+  @include flex-shrink(0);
+}
+
+.oh-shrink, [oh-shrink] {
+  @include flex-shrink(1);
+}
+
+
+// BASED ON THE WORK OF BRIAN FRANCO
+//
+// // Flexbox Mixins
+// http://philipwalton.github.io/solved-by-flexbox/
+// https://github.com/philipwalton/solved-by-flexbox
+//
+// Copyright (c) 2013 Brian Franco
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to
+// permit persons to whom the Software is furnished to do so, subject to
+// the following conditions:
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+// IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+// CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+// TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+// SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

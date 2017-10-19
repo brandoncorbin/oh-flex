@@ -1,0 +1,19 @@
+{
+  "name": "oh-flex",
+  "version": "1.0.0",
+  "description": "Set of Flex and Styles lib",
+  "main": "lib/oh-flex.css",
+  "scripts": {
+    "build-css" : "node-sass --include-path scss src/oh-flex.scss lib/oh-flex.css",
+    "watch" : "nodemon -e scss -x \"npm run build-css\"",
+    "serve" : "browser-sync start -s",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass src/oh-flex.scss lib/oh-flex.css"
+  },
+  "author": "Brandon Corbin <code@icorbin.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "sass": "^1.0.0-beta.2"
+  }
+}

@@ -1,0 +1,98 @@
+.oh-height-100,[oh-height-100] {
+  height:100%;
+}
+.oh-width-100,[oh-width-100] {
+  width:100%;
+}
+
+@for $i from 0 to 101 {
+  @if $i % 5 == 0 {
+    .oh-width-#{$i}, [oh-width-#{$i}] {
+        width : #{$i + 0%};
+    }
+    .oh-height-#{$i}, [oh-height-#{$i}] {
+        height : #{$i + 0%};
+    }
+    .oh-max-width-#{$i}, [oh-max-width-#{$i}] {
+        max-width : #{$i + 0%};
+    }
+    .oh-max-height-#{$i}, [oh-max-height-#{$i}] {
+        max-height : #{$i + 0%};
+    }
+    .oh-min-width-#{$i}, [oh-min-width-#{$i}] {
+        min-width : #{$i + 0%};
+    }
+    .oh-min-height-#{$i}, [oh-min-height-#{$i}] {
+        min-height : #{$i + 0%};
+    }
+  }
+}
+@for $i from 1 to 901 {
+    @if $i % 20 == 0 {
+        .oh-width-#{$i}px, [oh-width-#{$i}px] {
+            width : #{$i * 1px};
+        }
+        .oh-height-#{$i}px, [oh-height-#{$i}px] {
+            height : #{$i * 1px};
+        }
+        .oh-min-width-#{$i}px, [oh-min-width-#{$i}px] {
+            min-width : #{$i * 1px};
+        }
+        .oh-min-height-#{$i}px, [oh-min-height-#{$i}px] {
+            min-height : #{$i * 1px};
+        }
+        .oh-max-width-#{$i}px, [oh-max-width-#{$i}px] {
+            max-width : #{$i * 1px};
+        }
+        .oh-max-height-#{$i}px, [oh-max-height-#{$i}px] {
+            max-height : #{$i * 1px};
+        }
+    }
+}
+
+.oh-m-auto, [oh-m-auto] {
+  margin-left:auto;
+  margin-right:auto;
+}
+.oh-m-l-auto, [oh-m-l-auto] {
+  margin-left:auto;
+}
+.oh-m-r-auto, [oh-m-r-auto] {
+  margin-right:auto;
+}
+
+@for $i from 0 to 51 {
+  .oh-m-#{$i}px,[oh-m-#{$i}px] {
+      margin : #{$i * 1px};
+  }
+  .oh-m-l-#{$i}px,[oh-m-l-#{$i}px] {
+      margin-left : #{$i * 1px};
+  }
+  .oh-m-r-#{$i}px,[oh-m-r-#{$i}px] {
+      margin-right : #{$i * 1px};
+  }
+  .oh-m-b-#{$i}px,[oh-m-b-#{$i}px] {
+      margin-bottom : #{$i * 1px};
+  }
+  .oh-m-t-#{$i}px,[oh-m-t-#{$i}px] {
+      margin-top : #{$i * 1px};
+  }
+}
+
+@for $i from 0 to 51 {
+  .oh-p-#{$i}px,[oh-p-#{$i}px] {
+      padding : #{$i * 1px};
+  }
+  .oh-p-l-#{$i}px,[oh-p-l-#{$i}px] {
+      padding-left : #{$i * 1px};
+  }
+  .oh-p-r-#{$i}px,[oh-p-r-#{$i}px] {
+      padding-right : #{$i * 1px};
+  }
+  .oh-p-b-#{$i}px,[oh-p-b-#{$i}px] {
+      padding-bottom : #{$i * 1px};
+  }
+  .oh-p-t-#{$i}px,[oh-p-t-#{$i}px] {
+      padding-top : #{$i * 1px};
+  }
+}
