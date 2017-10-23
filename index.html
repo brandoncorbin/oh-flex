@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="oh-flex.css" />
+  <link rel="stylesheet" href="lib/oh-flex.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
 
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
@@ -61,7 +61,7 @@
             <span>Examples <span f-text-faded-30>No Custom CSS</span></span>
           </div>
 
-          <a f-item href="/examples/mail/mail.html">
+          <a f-item href="examples/mail/mail.html">
             <div f-item-content>
               <div f-title>
                 iOS Mail Example (widescreen)
@@ -72,7 +72,7 @@
               <i class="zmdi zmdi-chevron-right"></i>
             </button>
           </a>
-          <a f-item href="/examples/messages/messages.html">
+          <a f-item href="examples/messages/messages.html">
             <div f-item-content>
               <div f-title>
                 iOS Messages Example (widescreen)
@@ -83,7 +83,7 @@
               <i class="zmdi zmdi-chevron-right"></i>
             </button>
           </a>
-          <a f-item href="/examples/coinbase/coinbase.html">
+          <a f-item href="examples/coinbase/coinbase.html">
             <div f-item-content>
               <div f-title>
                 Coinbase Mockup
@@ -108,7 +108,21 @@
           <article f-item-divider>Installation</article>
           <article f-item>
             <div f-item-content>
-
+              <div f-title f-text-faded-70>Just the Stylesheet</div>
+              <textarea rows="1" f-p-5px f-m-t-5px f-round-sm f-bg-faded-60 f-text-white-90 f-text-16px><link rel="stylesheet" href="https://unpkg.com/oh-flex"  />
+              </textarea>
+            </div>
+          </article>
+          <article f-item>
+            <div f-item-content>
+              <div f-title>From Source</div>
+              <textarea rows="1" f-p-5px f-m-t-5px f-m-b-5px f-round-sm f-bg-faded-60 f-text-white-90 f-text-16px>
+npm install oh-flex --save-dev
+              </textarea>
+              <div f-title f-text-12px f-text-faded-60 >In your own SASS file</div>
+              <textarea rows="1" f-p-5px f-m-t-5px f-round-sm f-bg-faded-60 f-text-white-90 f-text-16px>
+@import '~oh-flex/src/oh-flex'
+              </textarea>
             </div>
           </article>
 

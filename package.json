@@ -4,7 +4,7 @@
   "description": "Set of Flex and Styles lib",
   "main": "lib/oh-flex.css",
   "scripts": {
-    "server:start": "browser-sync start --server 'lib/' --files 'lib/' --index ",
+    "server:start": "browser-sync start --server",
     "compile:scss": "node-sass --include-path scss src/oh-flex.scss lib/oh-flex.css  --output-style compressed",
     "compile:docs": "kss --source src/scss --destination lib/docs  --css ../oh-flex.css --builder resources/kss",
     "compile:es6": "babel src/ -d lib/",
