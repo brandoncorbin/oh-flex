@@ -1,6 +1,6 @@
 {
   "name": "oh-flex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Set of Flex and Styles lib",
   "main": "lib/oh-flex.css",
   "scripts": {
@@ -14,11 +14,10 @@
     "watch:docs": "watch --wait=2 \"npm run compile:docs\" ./src/scss",
     "dev:docs": "concurrently \"npm run server:start\" \"npm run watch:scss\" \"npm run watch:docs\"",
     "dev": "concurrently \"npm run server:start\" \"npm run watch:scss\"",
-    "release-patch" : "npm-bump patch",
-    "release-minor" : "npm-bump minor",
-    "release-major" : "npm-bump major"
+    "release-patch": "npm-bump patch",
+    "release-minor": "npm-bump minor",
+    "release-major": "npm-bump major"
   },
-
   "watch": {
     "test": "{src,test}/*.spec.js"
   },
@@ -52,6 +51,5 @@
     "build": "babel src/ -d lib/",
     "test-once": "mocha  lib/**/*.spec.js --exit",
     "watch-test": "npm-watch"
-
   }
 }
