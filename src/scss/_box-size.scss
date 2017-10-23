@@ -38,27 +38,27 @@
   }
 }
 //Pixels
-@for $i from 1 to 601 {
-    @if $i % 20 == 0 {
-        [f-width-#{$i}px] {
-            width : #{$i * 1px}
-        }
-        [f-height-#{$i}px] {
-            height : #{$i * 1px}
-        }
-        [f-min-width-#{$i}px] {
-            min-width : #{$i * 1px}
-        }
-        [f-min-height-#{$i}px] {
-            min-height : #{$i * 1px}
-        }
-        [f-max-width-#{$i}px] {
-            max-width : #{$i * 1px}
-        }
-        [f-max-height-#{$i}px] {
-            max-height : #{$i * 1px}
-        }
+@for $i from 1 to 401 {
+  @if $i % 5 == 0 {
+    [f-width-#{$i}px] {
+        width : #{$i * 1px}
     }
+    [f-height-#{$i}px] {
+        height : #{$i * 1px}
+    }
+    [f-min-width-#{$i}px] {
+        min-width : #{$i * 1px}
+    }
+    [f-min-height-#{$i}px] {
+        min-height : #{$i * 1px}
+    }
+    [f-max-width-#{$i}px] {
+        max-width : #{$i * 1px}
+    }
+    [f-max-height-#{$i}px] {
+        max-height : #{$i * 1px}
+    }
+  }
 }
 
 [f-m-auto] {

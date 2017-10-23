@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="../oh-flex.css">
 
 </head>
-<body id="kss-node" class="kss-fullscreen-mode">
+<body id="kss-node" >
 
   <div f-layout f-layout-aside f-collapse-phone>
     <aside f-column f-flex f-width-160px f-min-width-20 f-max-width-260px f-bg-secondary>
@@ -40,6 +40,12 @@
             <div f-title>Inputs</div>
             <span f-note>4</span>
           </a>
+              <a f-item f-bg-faded-inverse-10 f-text-normal href="section-inputs.html#kssref-inputs-placeholder">
+                <div f-title f-text-14px>
+                  Placeholder
+                </div>
+                <span>4.1</span>
+              </a>
           <a f-item href="section-layout.html">
             <div f-title>F-Layout</div>
             <span f-note>5</span>
@@ -68,62 +74,63 @@
           <header f-header>
             <div f-toolbar>
               <div f-title f-rubber>
-                List Item
+                Inputs
               </div>
-              <button clear f-button>s.6.1</button>
+              <button clear f-button>s.4</button>
             </div>
           </header>
-        <div id="kssref-list-item" class="kss-section kss-section--depth-2 is-fullscreen">
+        <div id="kssref-inputs" class="kss-section kss-section--depth-1 ">
+
+          <div f-p-20px class="kss-style">
+            <h1 class="kss-title kss-title--level-1">
+              <a class="kss-title__permalink" href="#kssref-inputs">
+                <span class="kss-title__ref">
+                  4
+                  <span class="kss-title__permalink-hash">
+                      #Inputs
+                  </span>
+                </span>
+                Inputs
+              </a>
+            </h1>
+
+
+
+          </div>
+
+
+
+        </div>
+        <section id="kssref-inputs-placeholder" class="kss-section kss-section--depth-2 ">
 
           <div f-p-20px class="kss-style">
             <h2 class="kss-title kss-title--level-2">
-              <a class="kss-title__permalink" href="#kssref-list-item">
+              <a class="kss-title__permalink" href="#kssref-inputs-placeholder">
                 <span class="kss-title__ref">
-                  6.1
+                  4.1
                   <span class="kss-title__permalink-hash">
-                      #List.Item
+                      #Inputs.placeholder
                   </span>
                 </span>
-                List Item
+                Placeholder
               </a>
             </h2>
 
 
               <div class="kss-description">
-                <p>A simple to use List item</p>
-<div f-round f-bg-white f-box-shadow-2 f-contain f-m-b-10px>
-<article f-item>
-  <div f-avatar>
-     <img src="http://i.pravatar.cc/400?img=64" />
-  </div>
-  <div f-item-content f-rubber>
-    <div f-title>Item Title</div>
-    <p f-note>This is some other content</p>
-  </div>
-   <p f-note f-item-right>More</p>
-</article>
-<article f-item>
-  <div f-avatar>
-     <img src="http://i.pravatar.cc/400?img=64" />
-  </div>
-  <div f-item-content f-rubber>
-    <div f-title>Item Title</div>
-    <p f-note>This is some other content</p>
-  </div>
-  <p f-note f-item-right>Right</p>
-</article>
+                <p>Control how a place holder in an input looks</p>
+<h4 id="centered-placeholder">Centered Placeholder</h4>
+<div f-p-16px>
+ <input f-p-6px f-round f-text-16px f-border-none f-width-90 f-lg f-bg-faded-10 type="text" placeholder="Centered Placeholder" f-placeholder-center />
 </div>
 
-<pre><code>&lt;article f-item&gt;
-  &lt;div f-avatar&gt;
-     &lt;img src=&quot;http://i.pravatar.cc/400?img=64&quot; /&gt;
-  &lt;/div&gt;
-  &lt;div f-item-content f-rubber&gt;
-    &lt;div f-title&gt;Item Title&lt;/div&gt;
-    &lt;p f-note&gt;This is some other content&lt;/p&gt;
-  &lt;/div&gt;
-   &lt;p f-note f-item-right&gt;More&lt;/p&gt;
-&lt;/article&gt;
+<pre><code> &lt;input f-p-6px f-round f-text-16px f-border-none f-width-90 f-lg  type=&quot;text&quot; placeholder=&quot;Centered Placeholder&quot; f-placeholder-center /&gt;
+</code></pre><h4 id="inverse">Inverse</h4>
+<div f-bg-blue-100 f-p-16px  f-m-t-20px>
+ <input f-p-10px f-round f-text-16px f-border-none f-width-90 f-lg f-bg-blue-700 type="text" placeholder="Centered Placeholder" f-placeholder-center f-placeholder-inverse />
+</div>
+
+<pre><code> &lt;input f-p-10px f-round f-text-16px f-border-none f-width-90 f-lg f-bg-blue-100 type=&quot;text&quot; placeholder=&quot;Centered Placeholder&quot; f-placeholder-center /&gt;
 </code></pre>
               </div>
 
@@ -131,10 +138,10 @@
 
 
             <div class="kss-source kss-style">
-              Source: <code>_item.scss</code>, line 2
+              Source: <code>_text.scss</code>, line 48
             </div>
 
-        </div>
+        </section>
   </main>
   </div> <!-- end f-layout -->
 

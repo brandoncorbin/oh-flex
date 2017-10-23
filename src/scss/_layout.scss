@@ -47,6 +47,7 @@
 // </div>
 // ```
 //
+//
 // Style guide: Layout
 
  [f-layout] {
@@ -126,6 +127,39 @@
 
 [f-contain] {
   max-width:$contain-max-width;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+[f-contain-700px] {
+  max-width:700px;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+[f-contain-800px] {
+  max-width:800px;
+  margin-right:auto;
+  margin-left:auto;
+}
+[f-contain-900px] {
+  max-width:900px;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+[f-contain-1024px] {
+  max-width:1024px;
+  margin-right:auto;
+  margin-left:auto;
+}
+[f-contain-1080px] {
+  max-width:1080px;
+  margin-right:auto;
+  margin-left:auto;
+}
+[f-contain-1180px] {
+  max-width:1180px;
   margin-right:auto;
   margin-left:auto;
 }

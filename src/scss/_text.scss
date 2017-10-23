@@ -44,6 +44,34 @@
   font-weight:bold;
 }
 
+
+// Placeholder
+//
+// Control how a place holder in an input looks
+//
+//
+// #### Centered Placeholder
+//
+// <div f-p-16px>
+//  <input f-p-6px f-round f-text-16px f-border-none f-width-90 f-lg f-bg-faded-10 type="text" placeholder="Centered Placeholder" f-placeholder-center />
+// </div>
+//
+// ```
+//  <input f-p-6px f-round f-text-16px f-border-none f-width-90 f-lg  type="text" placeholder="Centered Placeholder" f-placeholder-center />
+// ```
+//
+// #### Inverse
+//
+// <div f-bg-blue-100 f-p-16px  f-m-t-20px>
+//  <input f-p-10px f-round f-text-16px f-border-none f-width-90 f-lg f-bg-blue-700 type="text" placeholder="Centered Placeholder" f-placeholder-center f-placeholder-inverse />
+// </div>
+//
+// ```
+//  <input f-p-10px f-round f-text-16px f-border-none f-width-90 f-lg f-bg-blue-100 type="text" placeholder="Centered Placeholder" f-placeholder-center />
+// ```
+//
+// Style guide: Inputs.placeholder
+
 [f-placeholder-inverse] {
   &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: rgba(255,255,255,0.4);
@@ -78,6 +106,33 @@
 }
 [f-text-normal] {
   font-weight:normal !important;
+}
+
+[f-text-uppercase] {
+  text-transform: uppercase;
+}
+
+[f-text-capitalize] {
+  text-transform: capitalize;
+}
+
+[f-text-right] {
+  text-align:right
+}
+
+[f-text-left] {
+  text-align:left
+}
+
+[f-text-thin] {
+  font-weight:300;
+}
+[f-text-spread] {
+  letter-spacing: 0.1rem;
+}
+
+[f-text-transform-none] {
+  text-transform:none;
 }
 
 [f-title] {

@@ -13,6 +13,11 @@
   @include align-items(flex-end);
 }
 
+[f-wrap] {
+  @include flex-wrap(wrap);
+}
+
+
 [f-row] {
   @include flexbox();
   @include flex-direction(row);

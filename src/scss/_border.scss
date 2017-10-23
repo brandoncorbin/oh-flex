@@ -14,3 +14,16 @@
 [f-border-r-none] {
   border-right:none !important;
 }
+
+[f-border-r-faded] {
+  border-right:solid 1px rgba($faded,0.2);
+}
+[f-border-t-faded] {
+  border-top:solid 1px rgba($faded,0.2);
+}
+[f-border-l-faded] {
+  border-left:solid 1px rgba($faded,0.2);
+}
+[f-border-b-faded] {
+  border-bottom:solid 1px rgba($faded,0.2);
+}

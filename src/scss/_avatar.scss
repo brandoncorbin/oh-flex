@@ -1,25 +1,81 @@
+// Avatar
+//
+// A wrapper for images, not the blue alien movie.
+//
+//
+// <div f-bg-faded-80 f-p-20px f-flex f-row f-align-center f-justify-center f-wrap>
+//   <figure f-bg-white f-avatar><img src="https://robohash.org/234" /></figure>
+//   <figure f-bg-white f-avatar f-avatar-sm><img src="https://robohash.org/445" /></figure>
+//   <figure f-bg-white f-avatar f-avatar-md><img src="https://robohash.org/555" /></figure>
+//   <figure f-bg-white f-avatar f-avatar-lg><img src="https://robohash.org/666" /></figure>
+//   <figure f-bg-white f-avatar f-avatar-xl><img src="https://robohash.org/777" /></figure>
+// </div>
+//
+// ```
+//   <figure f-bg-white f-avatar><img src="https://robohash.org/234" /></figure>
+//   <figure f-bg-white f-avatar f-avatar-sm><img src="https://robohash.org/445" /></figure>
+//   <figure f-bg-white f-avatar f-avatar-md><img src="https://robohash.org/555" /></figure>
+//   <figure f-bg-white f-avatar f-avatar-lg><img src="https://robohash.org/666" /></figure>
+//   <figure f-bg-white f-avatar f-avatar-xl><img src="https://robohash.org/777" /></figure>
+// ```
+//
+//
+// <div f-bg-faded-80 f-p-20px f-flex f-row f-align-center f-justify-center f-wrap>
+//   <figure f-bg-white f-avatar-square><img src="https://robohash.org/234" /></figure>
+//   <figure f-bg-white f-avatar-square f-avatar-sm><img src="https://robohash.org/445" /></figure>
+//   <figure f-bg-white f-avatar-square f-avatar-md><img src="https://robohash.org/555" /></figure>
+//   <figure f-bg-white f-avatar-square f-avatar-lg><img src="https://robohash.org/666" /></figure>
+//   <figure f-bg-white f-avatar-square f-avatar-xl><img src="https://robohash.org/777" /></figure>
+// </div>
+//
+// ```
+//   <figure f-bg-white f-avatar-square><img src="https://robohash.org/234" /></figure>
+//   <figure f-bg-white f-avatar-square f-avatar-sm><img src="https://robohash.org/445" /></figure>
+//   <figure f-bg-white f-avatar-square f-avatar-md><img src="https://robohash.org/555" /></figure>
+//   <figure f-bg-white f-avatar-square f-avatar-lg><img src="https://robohash.org/666" /></figure>
+//   <figure f-bg-white f-avatar-square f-avatar-xl><img src="https://robohash.org/777" /></figure>
+// ```
+//
+// ## Optional Attributes
+//
+// ### f-avatar-{size}
+//   - f-avatar-sm
+//   - f-avatar-md
+//   - f-avatar-lg
+//   - f-avatar-xl
+// ### f-avatar-square
+//   - Creates a squared avatar (with with round corners)
+// ### f-bg-{color}
+//   - Add a background to your avatars (if they're using transparent pngs);
+//
+// Style guide: Avatars
+
 [f-avatar],[f-avatar-square] {
   display:inline-block;
   @include flex-grow(0);
   @include flex-shrink(0);
-  max-width:50px;
-  max-height:50px;
+  width:50px;
+  height:50px;
   overflow: hidden;
   border-radius:50%;
   img {
-    width:100%;
+    min-width:100%;
   }
-  &[sm] {
+  &[sm],&[f-avatar-sm] {
     width:30px !important;
     height:30px !important;
   }
-  &[md] {
+  &[md],&[f-avatar-md] {
     width:45px !important;
     height:45px !important;
   }
-  &[lg] {
+  &[lg],&[f-avatar-lg] {
     width:70px !important;
     height:70px !important;
+  }
+  &[xl],&[f-avatar-xl] {
+    width:120px !important;
+    height:120px !important;
   }
   &[f-avatar-square] {
     border-radius:4px;
