@@ -11,6 +11,22 @@ $line-height-base: 18px;
 $body-bg: #E9E9E9;
 $body-color:#121212;
 
+$yellow: #F9CD00;
+$red: #F82823;
+$brown: #531702;
+
+$primary: #006dfe;
+$secondary: $yellow;
+$faded: #78818c;
+$light: lighten($faded, 40%);
+$dark: #222;
+
+$font-size-sm: $font-size * 0.9;
+$font-size-md: $font-size * 1.2;
+$font-size-lg: $font-size * 1.4;
+$font-size-xl: $font-size * 1.6;
+
+
 $headings-margin-bottom : 4px;
 $paragraph-margin-bottom : 4px;
 $dt-font-weight : bold;
@@ -22,3 +38,7 @@ $link-hover-decoration: underline;
 
 $table-cell-padding : 2px;
 $text-muted : rgba(0,0,0,0.5);
+
+$toolbar-min-height:50px;
+
+$contain-max-width:900px;

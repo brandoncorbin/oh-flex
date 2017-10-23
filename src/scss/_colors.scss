@@ -1,0 +1,113 @@
+
+
+
+[f-color-primary] {
+	color:$primary !important;
+}
+ [f-color-secondary] {
+	color:$secondary !important;
+}
+
+[f-bg-primary] {
+	background-color:$primary !important;
+}
+[f-bg-secondary] {
+	background-color:$secondary;
+}
+
+[f-bg-white] {
+	background-color:#FFF !important;
+}
+[f-bg-dark] {
+	background-color:#333 !important;
+}
+[f-bg-black] {
+	background-color:#111 !important;
+}
+[f-text-white] {
+	color:#FFF;
+}
+[f-text-dark] {
+	color:$dark;
+}
+[f-text-faded] {
+	color:$faded;
+}
+
+// Backgrounds
+//
+// Simple background filling
+//
+// <div f-p-10px f-bg-primary f-text-white>f-bg-primary</div>
+// <div f-p-10px f-bg-secondary>f-bg-secondary</div>
+//
+// <div f-p-10px f-bg-faded-100>.f-bg-faded-100</div>
+// <div f-p-10px f-bg-faded-90>.f-bg-faded-90</div>
+// <div f-p-10px f-bg-faded-80>.f-bg-faded-80</div>
+// <div f-p-10px f-bg-faded-70>.f-bg-faded-70</div>
+// <div f-p-10px f-bg-faded-60>.f-bg-faded-60</div>
+// <div f-p-10px f-bg-faded-50>.f-bg-faded-50</div>
+// <div f-p-10px f-bg-faded-40>.f-bg-faded-40</div>
+// <div f-p-10px f-bg-faded-30>.f-bg-faded-30</div>
+// <div f-p-10px f-bg-faded-20>.f-bg-faded-20</div>
+// <div f-p-10px f-bg-faded-10>.f-bg-faded-10</div>
+// <div f-p-10px f-bg-faded-5>.f-bg-faded-5</div>
+//
+//
+// Style guide: Colors.Backgrounds
+
+@include bg-faded(1);
+@include bg-faded(.9);
+@include bg-faded(.8);
+@include bg-faded(.7);
+@include bg-faded(.6);
+@include bg-faded(.5);
+@include bg-faded(.4);
+@include bg-faded(.3);
+@include bg-faded(.2);
+@include bg-faded(.1);
+@include bg-faded(.15);
+@include bg-faded(.05);
+
+@mixin text-faded($amount) {
+	[f-text-faded-#{$amount * 100}] {
+		color : rgba(0,0,0,$amount) !important;
+	}
+	 [f-text-faded-inverse-#{$amount * 100}] {
+		color : rgba(255,255,255,$amount) !important;
+	}
+}
+
+// Text Color
+//
+// Simple background filling
+//
+// <div f-p-10px f-text-bold f-text-primary>f-text-primary</div>
+// <div f-p-10px f-text-bold f-text-secondary>f-text-secondary</div>
+// <div f-p-10px f-text-bold f-text-faded-100>f-text-faded-100</div>
+// <div f-p-10px f-text-bold f-text-faded-90>f-text-faded-90</div>
+// <div f-p-10px f-text-bold f-text-faded-80>f-text-faded-80</div>
+// <div f-p-10px f-text-bold f-text-faded-70>f-text-faded-70</div>
+// <div f-p-10px f-text-bold f-text-faded-60>f-text-faded-60</div>
+// <div f-p-10px f-text-bold f-text-faded-50>f-text-faded-50</div>
+// <div f-p-10px f-text-bold f-text-faded-40>f-text-faded-40</div>
+// <div f-p-10px f-text-bold f-text-faded-30>f-text-faded-30</div>
+// <div f-p-10px f-text-bold f-text-faded-20>f-text-faded-20</div>
+// <div f-p-10px f-text-bold f-text-faded-10>f-text-faded-10</div>
+// <div f-p-10px f-text-bold f-text-faded-5>f-text-faded-5</div>
+//
+//
+// Style guide: Colors.Backgrounds
+
+@include text-faded(1);
+@include text-faded(.9);
+@include text-faded(.8);
+@include text-faded(.7);
+@include text-faded(.6);
+@include text-faded(.5);
+@include text-faded(.4);
+@include text-faded(.3);
+@include text-faded(.2);
+@include text-faded(.1);
+@include text-faded(.15);
+@include text-faded(.05);

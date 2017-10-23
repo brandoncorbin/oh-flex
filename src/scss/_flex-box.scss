@@ -1,0 +1,88 @@
+
+
+[f-align-center] {
+  @include align-items(center);
+}
+
+
+[f-align-start] {
+  @include align-items(flex-start);
+}
+
+[f-align-end] {
+  @include align-items(flex-end);
+}
+
+[f-row] {
+  @include flexbox();
+  @include flex-direction(row);
+}
+[f-column] {
+  @include flexbox();
+  @include flex-direction(column);
+}
+
+
+[f-align-end] {
+  @include align-items(flex-end);
+}
+
+
+[f-justify-center] {
+  @include justify-content(center);
+}
+
+[f-rubber] {
+  width:100%;
+  height:100%;
+  @include flex-grow(1);
+  @include flex-shrink(1);
+  min-width:1px;
+  min-height:1px;
+  max-height:100%;
+  max-width:100%;
+}
+
+
+[f-justify-around] {
+  @include justify-content(space-around);
+}
+
+
+[f-justify-between] {
+  @include justify-content(space-between);
+}
+
+
+[f-justify-end] {
+  @include justify-content(flex-end);
+}
+
+
+[f-flex] {
+  @include flexbox();
+}
+
+[f-flex-column] {
+  @include flex-direction(column);
+}
+
+[f-flex-row] {
+  @include flex-direction(row);
+}
+
+[f-grow] {
+  @include flex-grow(1);
+}
+
+[f-grow-off] {
+  @include flex-grow(0);
+}
+
+[f-shrink-off] {
+  @include flex-shrink(0);
+}
+
+[f-shrink] {
+  @include flex-shrink(1);
+}

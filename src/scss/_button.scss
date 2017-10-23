@@ -1,0 +1,97 @@
+
+
+@mixin fbutton($background, $font-color, $height) {
+  display:inline-block;
+  vertical-align: middle;
+  @include flexbox();
+  @include flex-direction(row);
+  @include justify-content(center);
+  @include align-items(center);
+  white-space:nowrap;
+  color:$font-color;
+  font-size:$height * 0.46;
+  height:$height;
+  max-height:$height;
+  background-color:$background;
+  border:solid 1px darken($background,10%);
+  padding-left:8px;
+  padding-right:8px;
+  border-radius:2px;
+}
+
+[f-button] {
+  @include fbutton(#FFF, $faded, 30px);
+}
+[f-button-primary] {
+  @include fbutton($primary, #FFF, 30px);
+}
+[f-button-dark] {
+  @include fbutton($dark, #FFF, 30px);
+}
+
+[f-button][round] {
+  border-radius:22px;
+}
+
+[f-button] {
+  display:inline-block;
+  vertical-align: middle;
+  @include flexbox();
+  @include flex-direction(row);
+  @include justify-content(center);
+  @include align-items(center);
+  white-space:nowrap;
+
+
+
+  color:$dark;
+
+  &[clear] {
+
+    border-radius:6px;
+    border: none !important;
+    background-color:transparent;
+    border-style:none;
+    font-size:$font-size-md;
+    &[f-primary], &.f-primary {
+      color:$primary;
+    }
+    transition:all 0.5s ease-out;
+    &:hover {
+      color:saturate(lighten($primary,20%),40%);
+      text-shadow:0px 0px 10px #FFF;
+    }
+  }
+  &[f-icon-only] {
+    font-size:$font-size-xl !important;
+    i,icon,span {
+      font-size:$font-size-xl !important;
+      &:before {
+        font-size:$font-size-xl !important;
+      }
+    }
+  }
+  i {
+    margin-left:6px;
+    margin-right:6px;
+  }
+  outline-style: none !important;
+  &[f-sm] {
+    font-size:12px;
+    i {
+      font-size:14px;
+      &:before {
+        font-size:14px;
+      }
+    }
+  }
+  &[f-md] {
+    font-size:14px;
+    i {
+      font-size:16px;
+      &:before {
+        font-size:16px;
+      }
+    }
+  }
+}

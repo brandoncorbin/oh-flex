@@ -1,0 +1,60 @@
+@mixin f-item() {
+  @include flexbox();
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content(flex-start);
+  text-decoration: none;
+  color:$dark;
+  &:hover {
+    text-decoration: none;
+  }
+  min-height:38px;
+  padding-bottom:8px;
+  padding-top:8px;
+  font-size:$font-size;
+  p {
+    font-size:$font-size;
+  }
+
+
+  button {
+    color:darken($light,15%);
+  }
+
+  &[f-no-padding] {
+    padding:0 !important;
+  }
+
+  [f-avatar] {
+    margin-right:10px;
+  }
+
+  a {
+    color:$primary;
+    text-decoration: none;
+    &:visited {
+      color:lighten($primary,20%);
+    }
+  }
+
+  [f-note][f-item-right] {
+    
+  }
+
+  padding-left:16px;
+  padding-right:16px;
+
+  border-bottom:solid 1px rgba(0,0,0,0.1);
+
+  &[no-lines],&[f-no-lines] {
+    border-bottom:none !important;
+    border:none !important;
+  }
+
+  &[selected] {
+    background-color:#EEE;
+  }
+
+
+
+}

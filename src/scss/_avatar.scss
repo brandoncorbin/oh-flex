@@ -1,0 +1,27 @@
+[f-avatar],[f-avatar-square] {
+  display:inline-block;
+  @include flex-grow(0);
+  @include flex-shrink(0);
+  max-width:50px;
+  max-height:50px;
+  overflow: hidden;
+  border-radius:50%;
+  img {
+    width:100%;
+  }
+  &[sm] {
+    width:30px !important;
+    height:30px !important;
+  }
+  &[md] {
+    width:45px !important;
+    height:45px !important;
+  }
+  &[lg] {
+    width:70px !important;
+    height:70px !important;
+  }
+  &[f-avatar-square] {
+    border-radius:4px;
+  }
+}

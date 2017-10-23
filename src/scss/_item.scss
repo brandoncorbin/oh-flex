@@ -1,0 +1,157 @@
+
+// List Item
+//
+// A simple to use List item
+//
+// <div f-round f-bg-white f-box-shadow-2 f-contain f-m-b-10px>
+// <article f-item>
+//   <div f-avatar>
+//      <img src="http://i.pravatar.cc/400?img=64" />
+//   </div>
+//   <div f-item-content f-rubber>
+//     <div f-title>Item Title</div>
+//     <p f-note>This is some other content</p>
+//   </div>
+//    <p f-note f-item-right>More</p>
+// </article>
+// <article f-item>
+//   <div f-avatar>
+//      <img src="http://i.pravatar.cc/400?img=64" />
+//   </div>
+//   <div f-item-content f-rubber>
+//     <div f-title>Item Title</div>
+//     <p f-note>This is some other content</p>
+//   </div>
+//   <p f-note f-item-right>Right</p>
+// </article>
+// </div>
+//
+// ```
+// <article f-item>
+//   <div f-avatar>
+//      <img src="http://i.pravatar.cc/400?img=64" />
+//   </div>
+//   <div f-item-content f-rubber>
+//     <div f-title>Item Title</div>
+//     <p f-note>This is some other content</p>
+//   </div>
+//    <p f-note f-item-right>More</p>
+// </article>
+// ```
+//
+// Style guide: List.Item
+
+
+
+
+$icon-default:14px;
+$icon-sm : 12px;
+$icon-md : 24px;
+$icon-lg : 36px;
+$icon-xl : 48px;
+
+// f-icon
+//
+// A way to control font icon sizes without messing around with CSS
+//
+// Style guide: components.icon
+
+[f-icon] {
+  font-size:$icon-default;
+  &:before {
+    font-size:$icon-default;
+  }
+  &:after {
+    font-size:$icon-default;
+  }
+  &[sm] {
+    font-size:$icon-sm;
+    &:before {
+      font-size:$icon-sm;
+    }
+    &:after {
+      font-size:$icon-sm;
+    }
+  }
+  &[md] {
+    font-size:$icon-md;
+    &:before {
+      font-size:$icon-md;
+    }
+    &:after {
+      font-size:$icon-md;
+    }
+  }
+  &[lg] {
+    font-size:$icon-lg;
+    &:before {
+      font-size:$icon-lg;
+    }
+    &:after {
+      font-size:$icon-lg;
+    }
+  }
+
+}
+
+[f-item] {
+  box-sizing: border-box;
+  @include f-item();
+
+  [f-rubber] {
+    @extend .truncate;
+  }
+
+  [f-title],[f-content] {
+    @include flex-grow(1);
+    @include flex-shrink(0);
+  }
+  [f-title] {
+    line-height:$font-size-md + 4px;
+    font-size:$font-size-md;
+    @extend .truncate;
+  }
+
+  [f-item-left] {
+    margin-right:8px;
+    margin-left:-8px;
+  }
+
+  [f-item-right] {
+    margin-left:8px;
+    text-align: right;
+  }
+
+
+
+
+  [f-note] {
+    margin:2px 0;
+    padding:0;
+    font-size:$font-size;
+    color:$faded;
+    &.darken,&[darken] {
+      color:darken($faded,20%);
+    }
+  }
+
+  [item-right] {
+    padding-left:6px;
+  }
+  [item-left] {
+    padding-right:6px;
+  }
+}
+
+[f-item-divider] {
+    @include f-item();
+    min-height: 16px;
+    padding-top:4px;
+    padding-bottom:4px;
+    background-color:rgba($light,0.6);
+    color:$faded;
+    line-height:30px;
+    &.clear,&[clear] {
+      background-color:transparent;
+    }
+}

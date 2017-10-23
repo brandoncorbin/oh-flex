@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="oh-flex.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
+  <title>Oh Flex | CSS toolkit for developer who hate CSS</title>
+</head>
+<body class="f">
+  <div f-layout f-master-menu-left>
+    <aside f-width-160px f-min-width-20 f-max-width-260px f-bg-secondary>
+      <header f-header no-border>
+        <div f-bg-secondary f-toolbar f-justify-center>
+            <span f-rubber></span>
+            <img src="examples/resources/brand/oh-flex-logo.png" height="30" />
+            <span f-rubber></span>
+        </div>
+      </header>
+    </aside>
+    <main f-rubber>
+      <header f-header>
+        <div f-toolbar-light f-toolbar>
+          <button f-button clear f-primary icon-only>
+            <i class="zmdi zmdi-menu"></i>
+          </button>
+          <span f-rubber></span>
+          <div f-title>Oh-Flex! Toolkit</div>
+          <span f-rubber></span>
+          <a href="https://github.com/brandoncorbin/oh-flex" target="_blank" f-button clear f-primary icon-only>
+            <i class="zmdi zmdi-github"></i>
+          </a>
+        </div>
+      </header>
+      <article f-content>
+        <div f-pane f-m-20px f-text-center>
+          <img src="examples/resources/brand/oh-flex-logo.png" height="120" />
+        </div>
+        <div f-list f-contain>
+          <div f-item f-m-t-20px>
+            <div f-item-content f-text-center f-width-100>
+              <p f-note f-text-faded-60 f-p-b-10px f-text-20px>
+                 Oh-Flex was built for developers who HATE CSS.<br />
+                 <small f-text-14px f-text-faded-50>Oh-Flex, a javascript-less, CSS toolkit was  created to give non-frontend developers tools to avoid touching CSS.
+                    </small>
+              </p>
+
+            </div>
+          </div>
+          <div f-item-divider>
+            <span>Examples <span f-text-faded-30>No Custom CSS</span></span>
+          </div>
+
+          <a f-item href="/examples/mail/mail.html">
+            <div f-item-content>
+              <div f-title>
+                iOS Mail Example (widescreen)
+              </div>
+              <p f-note>A mockup of iOS 11 Mail using only tag attributes (or class names)</p>
+            </div>
+            <button f-button clear icon-only>
+              <i class="zmdi zmdi-chevron-right"></i>
+            </button>
+          </a>
+          <a f-item href="/examples/messages/messages.html">
+            <div f-item-content>
+              <div f-title>
+                iOS Messages Example (widescreen)
+              </div>
+              <p f-note>A mockup of iOS 11 Messages using only tag attributes (or class names)</p>
+            </div>
+            <button f-button clear icon-only>
+              <i class="zmdi zmdi-chevron-right"></i>
+            </button>
+          </a>
+          <a f-item href="/examples/facebook/facebook.html">
+            <div f-item-content>
+              <div f-title>
+                Facebook (widescreen)
+              </div>
+              <p f-note>A mockup of Facebook on the Tablet</p>
+            </div>
+            <button f-button clear icon-only>
+              <i class="zmdi zmdi-chevron-right"></i>
+            </button>
+          </a>
+          <article f-item-divider>Installation</article>
+          <article f-item>
+            <div f-item-content>
+
+            </div>
+          </article>
+          <article f-item>
+            <div f-item-content>
+              <div f-title huge>
+                    What's the Point?
+              </div>
+              <p f-note f-p-b-10px>
+                <a href="https://www.icorbin.com">I work with a lot of large companies</a> who are trying to get their hands around an overaching UI process.
+                Most companies have a bunch of developers who, honestly, hate working on the front end. They've resorted to
+                throwing Bootstrap or some other UI library and call it done.
+              </p>
+
+              <p f-note  f-p-b-10px>
+                As the developers start creating more and more functionality, the find themselves writing a bunch of hacky CSS just to get
+                the problem solved as fast as possible. Each time a developer implements a CSS hack, an angel loses its wings. Oh-Flex is a set of
+                classes to solve this problem.
+              </p>
+              <p f-note f-p-b-10px>
+                This is a set of mixins and classes I found to use over and over in my projects. This page is an example of what you can do with these classes.
+                Not a good example tho! Here's why... This page is completely designed with just class names. No external styles besides Oh Flex...
+              </p>
+            </div>
+          </article>
+
+          <article f-item-divider>
+            What's included?
+          </article>
+
+          <article f-item>
+            <div f-item-content>
+              <div f-title>
+                  Insane Flexibility
+              </div>
+              <p f-note>
+                  Oh-Flex should work with any existing UI library - including Bootstrap, Angular Material, SemanticUI, etc. Everyhting is prefixed as to not mess up any existing design.
+              </p>
+            </div>
+          </article>
+
+
+          <article f-item>
+            <div f-item-content>
+              <div f-title>
+                  Flexbox
+              </div>
+              <p f-note>
+                  .f-rubber, .f-flex, .f-row, .f-column, .f-grow, .f-shrink
+              </p>
+            </div>
+          </article>
+
+          <article f-item>
+            <div f-item-content>
+              <div f-title>
+                  List Item
+              </div>
+              <p f-note>
+                 A sensible and simple list item using flexbox
+              </p>
+            </div>
+          </article>
+
+          <article f-item>
+            <div f-item-content>
+              <div f-title>
+                  Toolbar
+              </div>
+              <p f-note>
+                 A highlevel toolbar class for creating flexible and responsive toolbars.
+              </p>
+            </div>
+          </article>
+
+          <article f-item>
+            <div f-item-content>
+              <div f-title>
+                  Layout Control
+              </div>
+              <p f-note>
+                 Have sticky headers and footers, side menus and the likes - without a bunch of crazy code.
+              </p>
+            </div>
+          </article>
+
+          <article f-item>
+            <div f-item-content>
+              <div f-title>
+                  Margin and Padding
+              </div>
+              <p f-note>
+                 Pixel level control of padding and margin with shortcuts. .f-p-20px adds 20px padding on all sides. While .f-p-b-10px adds padding to the bottom.
+              </p>
+            </div>
+          </article>
+
+          <article f-item>
+            <div f-item-content>
+              <div f-title>
+                Font Size and Colors
+              </div>
+              <p f-note>
+                 Pixel level font control .f-text-20px .f-text-bolder .f-text-bold
+              </p>
+            </div>
+          </article>
+
+
+
+          <article f-item-divider></article>
+
+        </div>
+        <footer f-footer>
+          <div f-toolbar f-toolbar-primary>
+            <div f-title f-text-faded-inverse-90></div>
+          </div>
+        </footer>
+
+      </article>
+
+    </main>
+  </div> <!-- end f-layout -->
+</body>
+</html>

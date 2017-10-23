@@ -1,2 +1,49 @@
 node_modules
 .sass-cache
+deploy.sh
+# Created by https://www.gitignore.io/api/code,macos,vagrant
+
+
+builder
+
+### Code ###
+# Visual Studio Code - https://code.visualstudio.com/
+.settings/
+.vscode/
+.dawson-dist
+.vagrant
+node_modules
+tsconfig.json
+jsconfig.json
+
+### macOS ###
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### Vagrant ###
+.vagrant/
+
+# End of https://www.gitignore.io/api/code,macos,vagrant

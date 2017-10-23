@@ -1,0 +1,19 @@
+// Toolbar
+//
+// A simple row based flexible toolbar
+//
+// Style guide: components.toolbar
+
+.f-toolbar, [f-toolbar] {
+  @include f-toolbar(#F9F9F9, $faded);
+  &[f-toolbar-inverse] {
+    @include f-toolbar($dark, #F8F8F8);
+  }
+  
+  button:first-child {
+    margin-left:-4px;
+  }
+  &[f-column] {
+    @include align-items(flex-start);
+  }
+}

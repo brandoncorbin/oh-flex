@@ -1,0 +1,24 @@
+
+
+@mixin f-toolbar($bg, $color) {
+
+  background-color:$bg;
+  min-height:$toolbar-min-height;
+  @include flexbox();
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content(flex-start);
+  padding-left:8px;
+  padding-right:8px;
+  button,[f-button],[f-title] {
+    margin-left:4px;
+    margin-right:4px;
+  }
+  [f-buttons-left] {
+    margin-left:-8px;
+  }
+  [f-buttons-right] {
+    margin-left:-8px;
+  }
+
+}

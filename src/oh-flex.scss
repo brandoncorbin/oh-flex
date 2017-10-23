@@ -1,8 +1,20 @@
-@import 'variables';
-@import 'colors';
-@import 'box-shadow';
-@import 'body';
-@import 'text';
-@import 'flex-box';
-@import 'positions';
-@import 'box-size';
+@import 'scss/mixins/mixins';
+
+@import 'scss/variables';
+@import 'scss/toolbar';
+@import 'scss/box-shadow';
+@import 'scss/media';
+@import 'scss/colors';
+@import 'scss/button';
+@import 'scss/positions';
+@import 'scss/avatar';
+@import 'scss/box-size';
+@import 'scss/text';
+
+@import 'scss/layout';
+@import 'scss/border';
+@import 'scss/body';
+
+@import 'scss/item';
+
+@import 'scss/flex-box';
