@@ -6,7 +6,7 @@
   "scripts": {
     "server:start": "browser-sync start --server 'lib/' --files 'lib/' --index ",
     "compile:scss": "node-sass --include-path scss src/oh-flex.scss lib/oh-flex.css  --output-style compressed",
-    "compile:docs": "kss --source src/scss --destination lib/docs  --css ../oh-flex.css",
+    "compile:docs": "kss --source src/scss --destination lib/docs  --css ../oh-flex.css --builder resources/kss",
     "compile:es6": "babel src/ -d lib/",
     "compile:es6-watch": "babel --watch=./src  src/ -d lib/ --copy-files",
     "test": "mocha lib/**/*.spec.js --exit",

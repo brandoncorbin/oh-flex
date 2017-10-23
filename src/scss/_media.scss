@@ -1,234 +1,84 @@
-//  Author: Rafal Bromirski
-//  www: http://rafalbromirski.com/
-//  github: http://github.com/paranoida/sass-mediaqueries
-//
-//  Licensed under a MIT License
-//
-//  Version:
-//  1.6.1
+/* Desktops and laptops ----------- */
+@media only screen and (max-width : 1824px) {
 
-// --- generator ---------------------------------------------------------------
-
-@mixin mq($args...) {
-  $media-type: 'only screen';
-  $media-type-key: 'media-type';
-  $args: keywords($args);
-  $expr: '';
-
-  @if map-has-key($args, $media-type-key) {
-    $media-type: map-get($args, $media-type-key);
-    $args: map-remove($args, $media-type-key);
-  }
-
-  @each $key, $value in $args {
-    @if $value {
-      $expr: "#{$expr} and (#{$key}: #{$value})";
-    }
-  }
-
-  @media #{$media-type} #{$expr} {
-    @content;
-  }
 }
 
-// --- screen ------------------------------------------------------------------
+/* iPads (landscape) ----------- */
+@media only screen and (max-width : 1224px)   {
 
-@mixin screen($min, $max, $orientation: false) {
-  @include mq($min-width: $min, $max-width: $max, $orientation: $orientation) {
-    @content;
-  }
 }
 
-@mixin max-screen($max) {
-  @include mq($max-width: $max) {
-    @content;
-  }
+/* iPads (portrait) ----------- */
+@media only screen and (max-width : 1024px  ) {
+
 }
 
-@mixin min-screen($min) {
-  @include mq($min-width: $min) {
-    @content;
-  }
-}
-
-@mixin screen-height($min, $max, $orientation: false) {
-  @include mq($min-height: $min, $max-height: $max, $orientation: $orientation) {
-    @content;
-  }
-}
-
-@mixin max-screen-height($max) {
-  @include mq($max-height: $max) {
-    @content;
-  }
-}
-
-@mixin min-screen-height($min) {
-  @include mq($min-height: $min) {
-    @content;
-  }
-}
-
-// --- hdpi --------------------------------------------------------------------
-
-@mixin hdpi($ratio: 1.3) {
-  @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
-  only screen and (min-resolution: #{round($ratio*96)}dpi) {
-    @content;
-  }
-}
-
-// --- hdtv --------------------------------------------------------------------
-
-@mixin hdtv($standard: '1080') {
-  $min-width: false;
-  $min-height: false;
-
-  $standards: ('720p', 1280px, 720px)
-              ('1080', 1920px, 1080px)
-              ('2K', 2048px, 1080px)
-              ('4K', 4096px, 2160px);
-
-  @each $s in $standards {
-    @if $standard == nth($s, 1) {
-      $min-width: nth($s, 2);
-      $min-height: nth($s, 3);
-    }
-  }
-
-  @include mq(
-    $min-device-width: $min-width,
-    $min-device-height: $min-height,
-    $min-width: $min-width,
-    $min-height: $min-height
-  ) {
-    @content;
-  }
-}
-
-// --- iphone4 -----------------------------------------------------------------
-
-@mixin iphone4($orientation: false) {
-  $min: 320px;
-  $max: 480px;
-  $pixel-ratio: 2;
-  $aspect-ratio: '2/3';
-
-  @include mq(
-    $min-device-width: $min,
-    $max-device-width: $max,
-    $orientation: $orientation,
-    $device-aspect-ratio: $aspect-ratio,
-    $-webkit-device-pixel-ratio: $pixel-ratio
-  ) {
-    @content;
-  }
-}
-
-// --- iphone5 -----------------------------------------------------------------
-
-@mixin iphone5($orientation: false) {
-  $min: 320px;
-  $max: 568px;
-  $pixel-ratio: 2;
-  $aspect-ratio: '40/71';
-
-  @include mq(
-    $min-device-width: $min,
-    $max-device-width: $max,
-    $orientation: $orientation,
-    $device-aspect-ratio: $aspect-ratio,
-    $-webkit-device-pixel-ratio: $pixel-ratio
-  ) {
-    @content;
-  }
-}
-
-// --- iphone6 -----------------------------------------------------------------
-
-@mixin iphone6($orientation: false) {
-  $min: 375px;
-  $max: 667px;
-  $pixel-ratio: 2;
-
-  @include mq(
-    $min-device-width: $min,
-    $max-device-width: $max,
-    $orientation: $orientation,
-    $-webkit-device-pixel-ratio: $pixel-ratio
-  ) {
-    @content;
-  }
-}
-
-// --- iphone6 plus ------------------------------------------------------------
-
-@mixin iphone6-plus($orientation: false) {
-  $min: 414px;
-  $max: 736px;
-  $pixel-ratio: 3;
-
-  @include mq(
-    $min-device-width: $min,
-    $max-device-width: $max,
-    $orientation: $orientation,
-    $-webkit-device-pixel-ratio: $pixel-ratio
-  ) {
-    @content;
-  }
-}
-
-// --- ipad (all) --------------------------------------------------------------
-
-@mixin ipad($orientation: false) {
-  $min: 768px;
-  $max: 1024px;
-
-  @include mq(
-    $min-device-width: $min,
-    $max-device-width: $max,
-    $orientation: $orientation
-  ) {
-    @content;
-  }
-}
-
-// --- ipad-retina -------------------------------------------------------------
-
-@mixin ipad-retina($orientation: false) {
-  $min: 768px;
-  $max: 1024px;
-  $pixel-ratio: 2;
-
-  @include mq(
-    $min-device-width: $min,
-    $max-device-width: $max,
-    $orientation: $orientation,
-    $-webkit-device-pixel-ratio: $pixel-ratio
-  ) {
-    @content;
-  }
-}
-
-// --- orientation -------------------------------------------------------------
-
-@mixin landscape() {
-  @include mq($orientation: landscape) {
-    @content;
-  }
-}
-
-@mixin portrait() {
-  @include mq($orientation: portrait) {
-    @content;
-  }
-}
-
-@include iphone6-plus() {
-  .f-hide-sm,[f-hide-sm] {
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 768px) {
+  [f-show-md] {
     display:none !important;
   }
-  .f-show-sm,[f-show-sm] {
+  [f-show-md-down] {
+    display:none;
+    [f-hide-sm] {
+      display:none;
+    }
+  }
+}
+
+/* Big smartphones (portrait) (ie: Galaxy 3 has 360)*/
+@media only screen and (max-width : 640px ) {
+  [f-hide-md] {
+    display:none !important;
+  }
+  [f-show-md] {
+    display:inherit;
+  }
+  [f-hide-md-down] {
+    display:none !important;
+    [f-hide-sm ]{
+      display:none !important;
+    }
+  }
+  [f-show-md-down] {
+    display:inherit;
+    [f-hide-sm] {
+      display:inherit;
+    }
+  }
+  [f-layout-aside][f-collapse-phone] {
+    main {
+      overflow:hidden;
+      min-width:90%;
+    }
+    aside {
+      box-shadow:inset -6px 0px 10px rgba(0,0,0,0.1);
+      max-width:20px;
+      width:20px;
+      min-width:20px;
+      overflow: hidden;
+      * {
+        opacity: 0;
+      }
+      transition:all 0.5s ease-out;
+      &:hover,&:focus {
+        max-width:80%;
+        width:80%;
+        min-width:80%;
+        * {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+/* Smartphones (portrait) (ie: Galaxy 1) */
+@media only screen and (max-width :   321px) {
+  [f-hide-md] {
+    display:none !important;
+  }
+  [f-show-md] {
     display:inherit;
   }
 }

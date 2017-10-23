@@ -9,10 +9,23 @@
 
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
   <title>Oh Flex | CSS toolkit for developer who hate CSS</title>
+
+  <style type="text/css">
+    [f-text-primary] {
+      color:red !important;
+    }
+    [f-primary] {
+      color:red !important;
+    }
+    [f-bg-primary] {
+      color:red !important;
+    }
+  </style>
+
 </head>
 <body class="f">
-  <div f-layout f-master-menu-left>
-    <aside f-width-160px f-min-width-20 f-max-width-260px f-bg-secondary>
+  <div f-layout f-layout-aside f-collapse-phone>
+    <aside f-column f-flex f-width-160px f-min-width-20 f-max-width-260px f-bg-secondary>
       <header f-header no-border>
         <div f-bg-secondary f-toolbar f-justify-center>
             <span f-rubber></span>
@@ -20,12 +33,19 @@
             <span f-rubber></span>
         </div>
       </header>
+      <div f-content>
+
+      </div>
+      <footer f-footer no-border f-text-12px f-p-10px f-border-t-none>
+        Copyright 2017. <br  />All Rights Reserved.<br  />
+        <a href="https://www.icorbin.com" f-text-faded-60>A Corbin Creation</a>
+      </footer>
     </aside>
     <main f-rubber>
       <header f-header>
         <div f-toolbar-light f-toolbar>
           <button f-button clear f-primary icon-only>
-            <i class="zmdi zmdi-menu"></i>
+            <!-- <i class="zmdi zmdi-menu"></i> -->
           </button>
           <span f-rubber></span>
           <div f-title>Oh-Flex! Toolkit</div>
@@ -41,10 +61,10 @@
         </div>
         <div f-list f-contain>
           <div f-item f-m-t-20px>
-            <div f-item-content f-text-center f-width-100>
-              <p f-note f-text-faded-60 f-p-b-10px f-text-20px>
-                 Oh-Flex was built for developers who HATE CSS.<br />
-                 <small f-text-14px f-text-faded-50>Oh-Flex, a javascript-less, CSS toolkit was  created to give non-frontend developers tools to avoid touching CSS.
+            <div f-item-content f-text-center f-width-100 f-align-center f-justify-center f-m-b-20px>
+              <p f-note f-text-faded-60 f-p-b-10px f-text-20px f-width-70 >
+                Hate writing CSS?<br />
+                 <small f-text-14px f-text-faded-50>A set of tag attributes to create rich &amp; flexible UIs. Oh-Flex also plays well with other UI libraries too!
                     </small>
               </p>
 
@@ -93,11 +113,36 @@
 
             </div>
           </article>
+
+          <article f-item-divider>
+            <span>Documentation</span>
+          </article>
+
+          <a f-item href="https://github.com/brandoncorbin/oh-flex">
+            <div f-item-content f-rubber>
+              <span f-title>Github</span>
+            </div>
+            <button f-button clear icon-only>
+              <i class="zmdi zmdi-chevron-right"></i>
+            </button>
+          </a>
+
+          <a f-item href="/docs">
+            <div f-item-content f-rubber>
+              <span f-title>Styleguide (work in progress)</span>
+            </div>
+            <button f-button clear icon-only>
+              <i class="zmdi zmdi-chevron-right"></i>
+            </button>
+          </a>
+
+
+          <article f-item-divider>
+            <span>What's the Point?</span>
+          </article>
+
           <article f-item>
             <div f-item-content>
-              <div f-title huge>
-                    What's the Point?
-              </div>
               <p f-note f-p-b-10px>
                 <a href="https://www.icorbin.com">I work with a lot of large companies</a> who are trying to get their hands around an overaching UI process.
                 Most companies have a bunch of developers who, honestly, hate working on the front end. They've resorted to
@@ -165,7 +210,7 @@
             </div>
           </article>
 
-          <article f-item>
+          <a f-item href="/docs/section-layout.html">
             <div f-item-content>
               <div f-title>
                   Layout Control
@@ -174,7 +219,10 @@
                  Have sticky headers and footers, side menus and the likes - without a bunch of crazy code.
               </p>
             </div>
-          </article>
+            <span f-button clear icon-only>
+              <i class="zmdi zmdi-chevron-right"></i>
+            </span>
+          </a>
 
           <article f-item>
             <div f-item-content>
@@ -187,7 +235,7 @@
             </div>
           </article>
 
-          <article f-item>
+          <a f-item href="/docs/section-typography.html">
             <div f-item-content>
               <div f-title>
                 Font Size and Colors
@@ -196,7 +244,10 @@
                  Pixel level font control .f-text-20px .f-text-bolder .f-text-bold
               </p>
             </div>
-          </article>
+            <span f-button clear icon-only>
+              <i class="zmdi zmdi-chevron-right"></i>
+            </span>
+          </a>
 
 
 

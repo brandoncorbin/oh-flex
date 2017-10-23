@@ -14,74 +14,87 @@
 </head>
 <body id="kss-node" class="kss-fullscreen-mode">
 
-<div class="kss-sidebar kss-style">
-  <header class="kss-header">
-    <h1 class="kss-doc-title">KSS Style Guide</h1>
-  </header>
-  <nav class="kss-nav">
-    <ul class="kss-nav__menu">
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="./">
-          <span class="kss-nav__ref">0</span
-          ><span class="kss-nav__name">Overview</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-colors.html">
-          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Colors</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-components.html">
-          <span class="kss-nav__ref">2</span><span class="kss-nav__name">components</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-list.html">
-          <span class="kss-nav__ref">3</span><span class="kss-nav__name">List</span>
-        </a>
-            <ul class="kss-nav__menu-child">
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-list.html#kssref-list-item">
-                  <span class="kss-nav__ref ">3.1</span
-                  ><span class="kss-nav__name">List Item</span>
-                </a>
-              </li>
-            </ul>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-typography.html">
-          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Typography</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-</div>
-<article role="main" class="kss-main">
-
-    <div id="kssref-list" class="kss-section kss-section--depth-1 is-fullscreen">
-
-      <div class="kss-style">
-        <h1 class="kss-title kss-title--level-1">
-          <a class="kss-title__permalink" href="#kssref-list">
-            <span class="kss-title__ref">
-              3
-              <span class="kss-title__permalink-hash">
-                  #List
-              </span>
-            </span>
-            List
+  <div f-layout f-layout-aside f-collapse-phone>
+    <aside f-column f-flex f-width-160px f-min-width-20 f-max-width-260px f-bg-secondary>
+      <header f-header no-border>
+        <div f-bg-secondary f-toolbar f-justify-center>
+            <span f-rubber></span>
+            <img src="examples/resources/brand/oh-flex-logo.png" height="30" />
+            <span f-rubber></span>
+        </div>
+      </header>
+      <div f-content>
+          <a f-item href="section-colors.html">
+            <div f-title>Colors</div>
+            <span f-note>1</span>
           </a>
-        </h1>
-
-
-
+          <a f-item href="section-components.html">
+            <div f-title>components</div>
+            <span f-note>2</span>
+          </a>
+          <a f-item href="section-layout.html">
+            <div f-title>F-Layout</div>
+            <span f-note>3</span>
+          </a>
+          <a f-item href="section-list.html">
+            <div f-title>List</div>
+            <span f-note>4</span>
+          </a>
+              <a f-item f-bg-faded-inverse-10 f-text-normal href="section-list.html#kssref-list-item">
+                <div f-title f-text-14px>
+                  List Item
+                </div>
+                <span>4.1</span>
+              </a>
+          <a f-item href="section-toolbar.html">
+            <div f-title>Toolbar</div>
+            <span f-note>5</span>
+          </a>
+          <a f-item href="section-typography.html">
+            <div f-title>Typography</div>
+            <span f-note>6</span>
+          </a>
       </div>
+      <footer f-footer no-border f-text-12px f-p-10px f-border-t-none>
+        Copyright 2017. <br  />All Rights Reserved.<br  />
+        <a href="https://www.icorbin.com" f-text-faded-60>A Corbin Creation</a>
+      </footer>
+    </aside>
+    <main f-content>
+
+
+          <header f-header>
+            <div f-toolbar>
+              <div f-title f-rubber>
+                List
+              </div>
+              <button clear f-button>s.4</button>
+            </div>
+          </header>
+        <div id="kssref-list" class="kss-section kss-section--depth-1 is-fullscreen">
+
+          <div f-p-20px class="kss-style">
+            <h1 class="kss-title kss-title--level-1">
+              <a class="kss-title__permalink" href="#kssref-list">
+                <span class="kss-title__ref">
+                  4
+                  <span class="kss-title__permalink-hash">
+                      #List
+                  </span>
+                </span>
+                List
+              </a>
+            </h1>
 
 
 
-    </div>
-</article>
+          </div>
+
+
+
+        </div>
+  </main>
+  </div> <!-- end f-layout -->
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>

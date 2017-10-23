@@ -14,61 +14,167 @@
 </head>
 <body id="kss-node" >
 
-<div class="kss-sidebar kss-style">
-  <header class="kss-header">
-    <h1 class="kss-doc-title">KSS Style Guide</h1>
-  </header>
-  <nav class="kss-nav">
-    <ul class="kss-nav__menu">
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="./">
-          <span class="kss-nav__ref">0</span
-          ><span class="kss-nav__name">Overview</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-colors.html">
-          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Colors</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-components.html">
-          <span class="kss-nav__ref">2</span><span class="kss-nav__name">components</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-list.html">
-          <span class="kss-nav__ref">3</span><span class="kss-nav__name">List</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-typography.html">
-          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Typography</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-</div>
-<article role="main" class="kss-main">
-
-    <div id="kssref-typography" class="kss-section kss-section--depth-1 ">
-
-      <div class="kss-style">
-        <h1 class="kss-title kss-title--level-1">
-          <a class="kss-title__permalink" href="#kssref-typography">
-            <span class="kss-title__ref">
-              4
-              <span class="kss-title__permalink-hash">
-                  #typography
-              </span>
-            </span>
-            Typography
+  <div f-layout f-layout-aside f-collapse-phone>
+    <aside f-column f-flex f-width-160px f-min-width-20 f-max-width-260px f-bg-secondary>
+      <header f-header no-border>
+        <div f-bg-secondary f-toolbar f-justify-center>
+            <span f-rubber></span>
+            <img src="examples/resources/brand/oh-flex-logo.png" height="30" />
+            <span f-rubber></span>
+        </div>
+      </header>
+      <div f-content>
+          <a f-item href="section-colors.html">
+            <div f-title>Colors</div>
+            <span f-note>1</span>
           </a>
-        </h1>
+          <a f-item href="section-components.html">
+            <div f-title>components</div>
+            <span f-note>2</span>
+          </a>
+          <a f-item href="section-layout.html">
+            <div f-title>F-Layout</div>
+            <span f-note>3</span>
+          </a>
+          <a f-item href="section-list.html">
+            <div f-title>List</div>
+            <span f-note>4</span>
+          </a>
+          <a f-item href="section-toolbar.html">
+            <div f-title>Toolbar</div>
+            <span f-note>5</span>
+          </a>
+          <a f-item href="section-typography.html">
+            <div f-title>Typography</div>
+            <span f-note>6</span>
+          </a>
+              <a f-item f-bg-faded-inverse-10 f-text-normal href="section-typography.html#kssref-typography-colors">
+                <div f-title f-text-14px>
+                  Text Color
+                </div>
+                <span>6.1</span>
+              </a>
+              <a f-item f-bg-faded-inverse-10 f-text-normal href="section-typography.html#kssref-typography-size">
+                <div f-title f-text-14px>
+                  Font Size
+                </div>
+                <span>6.2</span>
+              </a>
+      </div>
+      <footer f-footer no-border f-text-12px f-p-10px f-border-t-none>
+        Copyright 2017. <br  />All Rights Reserved.<br  />
+        <a href="https://www.icorbin.com" f-text-faded-60>A Corbin Creation</a>
+      </footer>
+    </aside>
+    <main f-content>
 
 
-          <div class="kss-description">
-            <p>Markdown:</p>
+          <header f-header>
+            <div f-toolbar>
+              <div f-title f-rubber>
+                Typography
+              </div>
+              <button clear f-button>s.6</button>
+            </div>
+          </header>
+        <div id="kssref-typography" class="kss-section kss-section--depth-1 ">
+
+          <div f-p-20px class="kss-style">
+            <h1 class="kss-title kss-title--level-1">
+              <a class="kss-title__permalink" href="#kssref-typography">
+                <span class="kss-title__ref">
+                  6
+                  <span class="kss-title__permalink-hash">
+                      #Typography
+                  </span>
+                </span>
+                Typography
+              </a>
+            </h1>
+
+
+
+          </div>
+
+
+
+        </div>
+        <section id="kssref-typography-colors" class="kss-section kss-section--depth-2 ">
+
+          <div f-p-20px class="kss-style">
+            <h2 class="kss-title kss-title--level-2">
+              <a class="kss-title__permalink" href="#kssref-typography-colors">
+                <span class="kss-title__ref">
+                  6.1
+                  <span class="kss-title__permalink-hash">
+                      #Typography.colors
+                  </span>
+                </span>
+                Text Color
+              </a>
+            </h2>
+
+
+              <div class="kss-description">
+                <p>Simple Text Fading</p>
+<div f-flex f-row>
+    <div f-width-50>
+        <div f-p-10px f-text-bold f-text-primary>f-text-primary</div>
+        <div f-p-10px f-text-bold f-text-secondary>f-text-secondary</div>
+        <div f-p-10px f-text-bold f-text-faded-100>f-text-faded-100</div>
+        <div f-p-10px f-text-bold f-text-faded-90>f-text-faded-90</div>
+        <div f-p-10px f-text-bold f-text-faded-80>f-text-faded-80</div>
+        <div f-p-10px f-text-bold f-text-faded-70>f-text-faded-70</div>
+        <div f-p-10px f-text-bold f-text-faded-60>f-text-faded-60</div>
+        <div f-p-10px f-text-bold f-text-faded-50>f-text-faded-50</div>
+        <div f-p-10px f-text-bold f-text-faded-40>f-text-faded-40</div>
+        <div f-p-10px f-text-bold f-text-faded-30>f-text-faded-30</div>
+        <div f-p-10px f-text-bold f-text-faded-20>f-text-faded-20</div>
+        <div f-p-10px f-text-bold f-text-faded-10>f-text-faded-10</div>
+        <div f-p-10px f-text-bold f-text-faded-5>f-text-faded-5</div>
+    </div>
+    <div f-width-50 f-bg-faded-90>
+        <div f-p-10px f-text-bold f-text-faded-inverse-100>f-text-faded-inverse-100</div>
+        <div f-p-10px f-text-bold f-text-faded-inverse-90>f-text-faded-inverse-90</div>
+        <div f-p-10px f-text-bold f-text-faded-inverse-80>f-text-faded-inverse-80</div>
+        <div f-p-10px f-text-bold f-text-faded-inverse-70>f-text-faded-inverse-70</div>
+        <div f-p-10px f-text-bold f-text-faded-inverse-60>f-text-faded-inverse-60</div>
+        <div f-p-10px f-text-bold f-text-faded-inverse-50>f-text-faded-inverse-50</div>
+        <div f-p-10px f-text-bold f-text-faded-inverse-40>f-text-faded-inverse-40</div>
+        <div f-p-10px f-text-bold f-text-faded-inverse-30>f-text-faded-inverse-30</div>
+        <div f-p-10px f-text-bold f-text-faded-inverse-20>f-text-faded-inverse-20</div>
+        <div f-p-10px f-text-bold f-text-faded-inverse-10>f-text-faded-inverse-10</div>
+        <div f-p-10px f-text-bold f-text-faded-inverse-5>f-text-faded-inverse-5</div>
+    </div>
+</div>
+              </div>
+
+          </div>
+
+
+            <div class="kss-source kss-style">
+              Source: <code>_colors.scss</code>, line 81
+            </div>
+
+        </section>
+        <section id="kssref-typography-size" class="kss-section kss-section--depth-2 ">
+
+          <div f-p-20px class="kss-style">
+            <h2 class="kss-title kss-title--level-2">
+              <a class="kss-title__permalink" href="#kssref-typography-size">
+                <span class="kss-title__ref">
+                  6.2
+                  <span class="kss-title__permalink-hash">
+                      #Typography.size
+                  </span>
+                </span>
+                Font Size
+              </a>
+            </h2>
+
+
+              <div class="kss-description">
+                <p>Markdown:</p>
 <ul>
 <li f-text-8px>.f-text-8px</li>
 <li f-text-10px>.f-text-10px</li>
@@ -87,17 +193,18 @@
 <li f-text-40px>.f-text-40px</li>
 <li f-text-42px>.f-text-42px</li>
 </ul>
+              </div>
+
           </div>
 
-      </div>
 
+            <div class="kss-source kss-style">
+              Source: <code>_text.scss</code>, line 1
+            </div>
 
-        <div class="kss-source kss-style">
-          Source: <code>_text.scss</code>, line 1
-        </div>
-
-    </div>
-</article>
+        </section>
+  </main>
+  </div> <!-- end f-layout -->
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>

@@ -1,3 +1,54 @@
+// F-Layout
+//
+// Structure pages with headers, footers, asides and more.
+//
+// Header and footer will always be at their respective locations (top and bottom)
+// f-content will be rubbery and flex with the allowed space. It also is responsible
+// for handling scrolling of the main content.
+//
+// <h2>Standard Header Content Footer</h2>
+// <div style="position:relative;" f-round f-bg-faded-20 f-width-30 f-height-200px>
+//   <div f-layout>
+//     <header f-header>Header</header>
+//     <main f-content>Content</main>
+//     <footer f-footer>Footer</footer>
+//   </div>
+// </div>
+//
+// ```
+//   <div f-layout>
+//     <header f-header>Header</header>
+//     <main f-content>Content</main>
+//     <footer f-footer>Footer</footer>
+//   </div>
+// ```
+// <h2>Multi Menu Layout</h2>
+// <div style="position:relative;" f-round f-bg-faded-20 f-width-60 f-height-200px>
+//   <div f-layout f-layout-aside>
+//     <aside f-width-10 f-justify-center f-align-center>1</aside>
+//     <aside f-width-20 f-justify-center f-align-center>Menu 2</aside>
+//     <main>
+//       <header f-header>Header</header>
+//       <main f-content>Content</main>
+//       <footer f-footer>Footer</footer>
+//     </main>
+//   </div>
+// </div>
+//
+// ```
+// <div f-layout f-layout-aside>
+//   <aside>Menu 1</aside>
+//   <aside>Menu 2</aside>
+//   <main>
+//     <header f-header>Header</header>
+//     <main f-content>Content</main>
+//     <footer f-footer>Footer</footer>
+//   </main>
+// </div>
+// ```
+//
+// Style guide: Layout
+
  [f-layout] {
   font-family:$font-family;
   font-size:$font-size-base;
@@ -42,24 +93,31 @@
     overflow-x: hidden;
   }
 
-  &[f-master-menu-left] {
+  &[f-layout-aside] {
     @include flexbox()
     @include flex-direction(row);
     @include justify-content(stretch);
     @include align-items(flex-start);
 
    aside {
+     @include flexbox();
+     @include flex-direction(column);
      @include flex-grow(1);
      @include flex-shrink(0);
-     height:100%;
+      height:100%;
      position:relative;
-     display:block;
      border-right:solid 1px rgba(0,0,0,0.18);
      z-index:1;
+
    }
    main {
-      position:relative;
-     display:block;
+    position:relative;
+    height:100%;
+    width:100%;
+    @include flexbox();
+    @include flex-direction(column);
+    @include flex-shrink(1);
+    @include flex-grow(1);
 
    }
  } // end-master-menu-left

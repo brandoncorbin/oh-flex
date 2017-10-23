@@ -17,6 +17,7 @@
   padding-left:8px;
   padding-right:8px;
   border-radius:2px;
+  text-decoration: none;
 }
 
 [f-button] {
@@ -56,10 +57,9 @@
     &[f-primary], &.f-primary {
       color:$primary;
     }
-    transition:all 0.5s ease-out;
+    transition:all 0.2s ease-out;
     &:hover {
       color:saturate(lighten($primary,20%),40%);
-      text-shadow:0px 0px 10px #FFF;
     }
   }
   &[f-icon-only] {

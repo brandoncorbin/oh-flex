@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="../oh-flex.css">
 
 </head>
-<body id="kss-node" class="kss-fullscreen-mode">
+<body id="kss-node" >
 
   <div f-layout f-layout-aside f-collapse-phone>
     <aside f-column f-flex f-width-160px f-min-width-20 f-max-width-260px f-bg-secondary>
@@ -60,38 +60,76 @@
           <header f-header>
             <div f-toolbar>
               <div f-title f-rubber>
-                Box Sizes
+                F-Layout
               </div>
-              <button clear f-button>s.2.2</button>
+              <button clear f-button>s.3</button>
             </div>
           </header>
-        <div id="kssref-components-sizes" class="kss-section kss-section--depth-2 is-fullscreen">
+        <div id="kssref-layout" class="kss-section kss-section--depth-1 ">
 
           <div f-p-20px class="kss-style">
-            <h2 class="kss-title kss-title--level-2">
-              <a class="kss-title__permalink" href="#kssref-components-sizes">
+            <h1 class="kss-title kss-title--level-1">
+              <a class="kss-title__permalink" href="#kssref-layout">
                 <span class="kss-title__ref">
-                  2.2
+                  3
                   <span class="kss-title__permalink-hash">
-                      #components.sizes
+                      #Layout
                   </span>
                 </span>
-                Box Sizes
+                F-Layout
               </a>
-            </h2>
+            </h1>
 
 
               <div class="kss-description">
-                <p>A simple row based flexible toolbar</p>
-<p>Markdown:</p>
-<div f-height-30px f-bg-faded-20 f-round>30px Tall Box</div>
+                <p>Structure pages with headers, footers, asides and more.</p>
+<p>Header and footer will always be at their respective locations (top and bottom)
+f-content will be rubbery and flex with the allowed space. It also is responsible
+for handling scrolling of the main content.</p>
+<p><h2>Standard Header Content Footer</h2></p>
+<div style="position:relative;" f-round f-bg-faded-20 f-width-30 f-height-200px>
+  <div f-layout>
+    <header f-header>Header</header>
+    <main f-content>Content</main>
+    <footer f-footer>Footer</footer>
+  </div>
+</div>
+
+<pre><code>  &lt;div f-layout&gt;
+    &lt;header f-header&gt;Header&lt;/header&gt;
+    &lt;main f-content&gt;Content&lt;/main&gt;
+    &lt;footer f-footer&gt;Footer&lt;/footer&gt;
+  &lt;/div&gt;
+</code></pre><p><h2>Multi Menu Layout</h2></p>
+<div style="position:relative;" f-round f-bg-faded-20 f-width-60 f-height-200px>
+  <div f-layout f-layout-aside>
+    <aside f-width-10 f-justify-center f-align-center>1</aside>
+    <aside f-width-20 f-justify-center f-align-center>Menu 2</aside>
+    <main>
+      <header f-header>Header</header>
+      <main f-content>Content</main>
+      <footer f-footer>Footer</footer>
+    </main>
+  </div>
+</div>
+
+<pre><code>&lt;div f-layout f-layout-aside&gt;
+  &lt;aside&gt;Menu 1&lt;/aside&gt;
+  &lt;aside&gt;Menu 2&lt;/aside&gt;
+  &lt;main&gt;
+    &lt;header f-header&gt;Header&lt;/header&gt;
+    &lt;main f-content&gt;Content&lt;/main&gt;
+    &lt;footer f-footer&gt;Footer&lt;/footer&gt;
+  &lt;/main&gt;
+&lt;/div&gt;
+</code></pre>
               </div>
 
           </div>
 
 
             <div class="kss-source kss-style">
-              Source: <code>_box-size.scss</code>, line 1
+              Source: <code>_layout.scss</code>, line 1
             </div>
 
         </div>

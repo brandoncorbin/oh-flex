@@ -11,14 +11,18 @@
   <title>Oh Flex | iOS Messages Example</title>
 </head>
 <body class="f">
-  <div f-layout f-master-menu-left  id="app">
+  <div f-layout f-layout-aside f-collapse-phone  id="app">
 
     <!-- START Message List View -->
     <aside f-width-30>
       <div f-layout>
         <header f-header>
           <div f-toolbar f-toolbar-light>
-            <button f-button clear f-primary f-text-16px f-width-80px>Edit</button>
+            <div f-buttons-left>
+              <a href="/" f-button clear f-primary f-icon-only>
+                <i class="zmdi zmdi-arrow-left"></i>
+              </a>
+            </div>
             <span f-rubber></span>
             <button f-button clear f-primary f-text-16px><i class="zmdi zmdi-edit"></i></button>
           </div>
@@ -68,21 +72,45 @@
         <div f-content f-justify-end f-p-16px f-flex f-column>
 
           <section f-width-100 f-justify-end f-flex f-m-b-16px>
-            <acticle  f-bg-primary f-text-faded-inverse-90 f-p-4px f-p-r-12px f-p-l-12px f-round-lg  f-max-width-85>
+            <article  f-bg-primary f-text-faded-inverse-90 f-p-4px f-p-r-12px f-p-l-12px f-round-lg  f-max-width-85>
+              I think we need to go check out Chatanooga... It's pretty amazing.
+            </article>
+          </section>
+
+          <section f-width-100 f-justify-end f-flex f-m-b-16px>
+            <article  f-bg-primary f-text-faded-inverse-90 f-p-4px f-p-r-12px f-p-l-12px f-round-lg  f-max-width-85>
+              Have you seen my mouse? I think one of the puppies ate it.
+            </article>
+          </section>
+
+          <section f-width-100 f-justify-end f-flex f-m-b-16px>
+            <article  f-text-32px f-bg-primary f-text-faded-inverse-90 f-p-6px f-p-r-12px f-p-l-12px f-round-lg  f-max-width-85>
+              😝
+            </article>
+          </section>
+
+          <section f-width-100 f-justify-start f-flex f-m-b-16px>
+            <article  f-bg-faded-10 f-text-faded-90 f-p-4px f-p-r-12px f-p-l-12px f-round-lg  f-max-width-85>
+              OK, we're just about to head out. I hope you have a nice week!
+            </article>
+          </section>
+
+          <section f-width-100 f-justify-end f-flex f-m-b-16px>
+            <article  f-bg-primary f-text-faded-inverse-90 f-p-4px f-p-r-12px f-p-l-12px f-round-lg  f-max-width-85>
               How's the trip going so far? Any problems?
-            </acticle>
+            </article>
           </section>
 
           <section f-width-100 f-justify-start f-flex f-m-b-16px>
-            <acticle  f-bg-faded-10 f-text-faded-90 f-p-4px f-p-r-12px f-p-l-12px f-round-lg  f-max-width-85>
+            <article  f-bg-faded-10 f-text-faded-90 f-p-4px f-p-r-12px f-p-l-12px f-round-lg  f-max-width-85>
               We have a nother 2 miles of stopped/slow traffic on the map
-            </acticle>
+            </article>
           </section>
 
           <section f-width-100 f-justify-start f-flex f-m-b-16px>
-            <acticle  f-bg-faded-10 f-text-faded-90 f-p-4px f-p-r-12px f-p-l-12px f-round-lg  f-max-width-85>
+            <article  f-bg-faded-10 f-text-faded-90 f-p-4px f-p-r-12px f-p-l-12px f-round-lg  f-max-width-85>
               ... at least
-            </acticle>
+            </article>
           </section>
 
           <section f-p-6px f-text-center f-text-10px f-text-faded-50>
@@ -90,15 +118,15 @@
           </section>
 
           <section f-width-100 f-justify-start f-flex f-m-b-16px>
-            <acticle  f-bg-faded-10 f-text-faded-90 f-p-4px f-p-r-12px f-p-l-12px f-round-lg  f-max-width-85>
+            <article  f-bg-faded-10 f-text-faded-90 f-p-4px f-p-r-12px f-p-l-12px f-round-lg  f-max-width-85>
               Would you eat barbecue drumbsticks? Thought I'd change it up from the breasts this week.
-            </acticle>
+            </article>
           </section>
 
           <section f-width-100 f-justify-end f-flex f-m-b-16px>
-            <acticle  f-bg-primary f-text-faded-inverse-90 f-p-4px f-p-r-12px f-p-l-12px f-round-lg  f-max-width-85>
+            <article  f-bg-primary f-text-faded-inverse-90 f-p-4px f-p-r-12px f-p-l-12px f-round-lg  f-max-width-85>
               I should would!
-            </acticle>
+            </article>
           </section>
 
 
@@ -106,10 +134,10 @@
         </div>
         <footer f-footer>
           <div f-toolbar>
-            <button clear f-icon-only f-m-l-10px f-text-faded-50><i class="zmdi zmdi-camera"></i></button>
-            <button clear f-icon-only  f-text-faded-50 f-m-r-12px><i class="zmdi zmdi-apps"></i></button>
+            <button f-button clear f-icon-only f-m-l-10px f-text-faded-50><i class="zmdi zmdi-camera"></i></button>
+            <button f-button clear f-icon-only  f-text-faded-50 f-m-r-12px><i class="zmdi zmdi-apps"></i></button>
             <input type="text" placeholder="Search" f-rubber f-text-12px f-round-xl f-p-4px f-p-l-20px f-border-faded f-bg-faded-5 />
-            <button clear f-icon-only f-m-l-10px f-text-faded-50><i class="zmdi zmdi-mic"></i></button>
+            <button f-button clear f-icon-only f-m-l-10px f-text-faded-50><i class="zmdi zmdi-mic"></i></button>
           </div>
         </footer>
       </div>

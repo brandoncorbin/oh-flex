@@ -2,14 +2,56 @@
 //
 // A simple row based flexible toolbar
 //
-// Style guide: components.toolbar
+// <div   f-bg-faded-10>
+//   <div f-toolbar f-toolbar-inverse f-bg-primary>
+//     <span f-title>Hi there</span>
+//     <div f-buttons-right>
+//       <button f-text-white f-button clear>Login</button>
+//     </div>
+//   </div>
+// </div>
+//
+// ```
+// <div f-toolbar f-toolbar-inverse f-bg-primary>
+//     <span f-title>Hi there</span>
+//     <div f-buttons-right>
+//       <button f-text-white f-button clear>Login</button>
+//     </div>
+//   </div>
+// ```
+//
+//  <div  f-bg-faded-10>
+//   <div f-toolbar>
+//     <button f-button clear> Left</button>
+//     <span f-rubber></span>
+//     <div f-title>Centered</div>
+//     <span f-rubber></span>
+//     <button f-button clear>Right</button>
+//   </div>
+// </div>
+//
+// ```
+//   <div f-toolbar>
+//     <button f-button clear> Left</button>
+//     <span f-rubber></span>
+//     <div f-title>Centered</div>
+//     <span f-rubber></span>
+//     <button f-button clear>Right</button>
+//   </div>
+// ```
+//
+// Style guide: Toolbar
 
 .f-toolbar, [f-toolbar] {
   @include f-toolbar(#F9F9F9, $faded);
   &[f-toolbar-inverse] {
     @include f-toolbar($dark, #F8F8F8);
+    color:#FFF;
+    [f-button] {
+      color:#FFF;
+    }
   }
-  
+
   button:first-child {
     margin-left:-4px;
   }

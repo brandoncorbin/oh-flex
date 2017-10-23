@@ -12,13 +12,13 @@
   <title>Oh Flex | iOS Mail Example</title>
 </head>
 <body class="f">
-  <div f-layout f-master-menu-left>
+  <div f-layout f-layout-aside f-collapse-phone>
     <!-- START Mailboxes List -->
-    <aside f-width-25 f-hide-sm>
+    <aside f-width-25>
       <div f-layout>
         <header f-header>
           <div f-toolbar f-toolbar-light>
-            <div f-buttons-left><a f-button clear f-primary href="../../"><i class="zmdi zmdi-menu"></i></a></div>
+            <div f-buttons-left><a f-button f-icon-only clear f-primary href="../../"><i class="zmdi zmdi-arrow-back"></i></a></div>
             <span f-rubber></span>
             <button f-button clear f-primary f-text-16px>Edit</button>
           </div>
@@ -85,6 +85,7 @@
       <div f-layout>
         <header f-header>
           <div f-toolbar f-toolbar-light>
+            <div f-buttons-left f-show-md-down><a f-button clear f-primary href="../../"><i class="zmdi zmdi-menu"></i></a></div>
             <span f-rubber></span>
             <button f-button  clear f-primary f-text-16px>Edit</button>
           </div>

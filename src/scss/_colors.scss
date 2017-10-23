@@ -80,24 +80,41 @@
 
 // Text Color
 //
-// Simple background filling
+// Simple Text Fading
 //
-// <div f-p-10px f-text-bold f-text-primary>f-text-primary</div>
-// <div f-p-10px f-text-bold f-text-secondary>f-text-secondary</div>
-// <div f-p-10px f-text-bold f-text-faded-100>f-text-faded-100</div>
-// <div f-p-10px f-text-bold f-text-faded-90>f-text-faded-90</div>
-// <div f-p-10px f-text-bold f-text-faded-80>f-text-faded-80</div>
-// <div f-p-10px f-text-bold f-text-faded-70>f-text-faded-70</div>
-// <div f-p-10px f-text-bold f-text-faded-60>f-text-faded-60</div>
-// <div f-p-10px f-text-bold f-text-faded-50>f-text-faded-50</div>
-// <div f-p-10px f-text-bold f-text-faded-40>f-text-faded-40</div>
-// <div f-p-10px f-text-bold f-text-faded-30>f-text-faded-30</div>
-// <div f-p-10px f-text-bold f-text-faded-20>f-text-faded-20</div>
-// <div f-p-10px f-text-bold f-text-faded-10>f-text-faded-10</div>
-// <div f-p-10px f-text-bold f-text-faded-5>f-text-faded-5</div>
+// <div f-flex f-row>
+// 	<div f-width-50>
+// 		<div f-p-10px f-text-bold f-text-primary>f-text-primary</div>
+// 		<div f-p-10px f-text-bold f-text-secondary>f-text-secondary</div>
+// 		<div f-p-10px f-text-bold f-text-faded-100>f-text-faded-100</div>
+// 		<div f-p-10px f-text-bold f-text-faded-90>f-text-faded-90</div>
+// 		<div f-p-10px f-text-bold f-text-faded-80>f-text-faded-80</div>
+// 		<div f-p-10px f-text-bold f-text-faded-70>f-text-faded-70</div>
+// 		<div f-p-10px f-text-bold f-text-faded-60>f-text-faded-60</div>
+// 		<div f-p-10px f-text-bold f-text-faded-50>f-text-faded-50</div>
+// 		<div f-p-10px f-text-bold f-text-faded-40>f-text-faded-40</div>
+// 		<div f-p-10px f-text-bold f-text-faded-30>f-text-faded-30</div>
+// 		<div f-p-10px f-text-bold f-text-faded-20>f-text-faded-20</div>
+// 		<div f-p-10px f-text-bold f-text-faded-10>f-text-faded-10</div>
+// 		<div f-p-10px f-text-bold f-text-faded-5>f-text-faded-5</div>
+// 	</div>
+// 	<div f-width-50 f-bg-faded-90>
+// 		<div f-p-10px f-text-bold f-text-faded-inverse-100>f-text-faded-inverse-100</div>
+// 		<div f-p-10px f-text-bold f-text-faded-inverse-90>f-text-faded-inverse-90</div>
+// 		<div f-p-10px f-text-bold f-text-faded-inverse-80>f-text-faded-inverse-80</div>
+// 		<div f-p-10px f-text-bold f-text-faded-inverse-70>f-text-faded-inverse-70</div>
+// 		<div f-p-10px f-text-bold f-text-faded-inverse-60>f-text-faded-inverse-60</div>
+// 		<div f-p-10px f-text-bold f-text-faded-inverse-50>f-text-faded-inverse-50</div>
+// 		<div f-p-10px f-text-bold f-text-faded-inverse-40>f-text-faded-inverse-40</div>
+// 		<div f-p-10px f-text-bold f-text-faded-inverse-30>f-text-faded-inverse-30</div>
+// 		<div f-p-10px f-text-bold f-text-faded-inverse-20>f-text-faded-inverse-20</div>
+// 		<div f-p-10px f-text-bold f-text-faded-inverse-10>f-text-faded-inverse-10</div>
+// 		<div f-p-10px f-text-bold f-text-faded-inverse-5>f-text-faded-inverse-5</div>
+// 	</div>
+// </div>
 //
 //
-// Style guide: Colors.Backgrounds
+// Style guide: Typography.colors
 
 @include text-faded(1);
 @include text-faded(.9);
