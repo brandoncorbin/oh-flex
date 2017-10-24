@@ -24,14 +24,14 @@
 }
 
 [f-scroll-x] {
-  overflow-x:scroll;
+  overflow-x:scroll !important;
 }
  [f-scroll-y] {
-  overflow-y:scroll;
+  overflow-y:scroll !important;
 }
 [f-scroll-off-y] {
-  overflow-y:hidden;
+  overflow-y:hidden !important;
 }
  [f-scroll-off-x] {
-  overflow-x:hidden;
+  overflow-x:hidden !important;
 }
