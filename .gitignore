@@ -3,6 +3,7 @@ node_modules
 deploy.sh
 # Created by https://www.gitignore.io/api/code,macos,vagrant
 
+npm-debug.log
 
 builder
 
@@ -47,3 +48,5 @@ Temporary Items
 .vagrant/
 
 # End of https://www.gitignore.io/api/code,macos,vagrant
+
+*.log
