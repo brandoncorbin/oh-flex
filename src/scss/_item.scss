@@ -50,11 +50,20 @@ $icon-md : 24px;
 $icon-lg : 32px;
 $icon-xl : 38px;
 
-// f-icon
+// Icon Control
 //
-// A way to control font icon sizes without messing around with CSS
+// Oh Flex doesn't contain an icon pack. Instead, you should use one of the million amazing that already exist.
+// However, universally controlling the various icon pack font sizes is a gamble. Here I try to make a
+// general icon size controller.
 //
-// Style guide: components.icon
+// ### f-icon-sm
+//
+// ### f-icon-md
+//
+// ### f-icon-lg
+//
+//
+// Style guide: Typography.Icons
 
 [f-icon] {
   font-size:$icon-default;
@@ -64,7 +73,7 @@ $icon-xl : 38px;
   &:after {
     font-size:$icon-default;
   }
-  &[sm] {
+  &[sm],&[f-icon-sm] {
     font-size:$icon-sm;
     &:before {
       font-size:$icon-sm;
@@ -73,7 +82,7 @@ $icon-xl : 38px;
       font-size:$icon-sm;
     }
   }
-  &[md] {
+  &[md],&[f-icon-md] {
     font-size:$icon-md;
     &:before {
       font-size:$icon-md;
@@ -82,7 +91,7 @@ $icon-xl : 38px;
       font-size:$icon-md;
     }
   }
-  &[lg] {
+  &[lg],&[f-icon-lg] {
     font-size:$icon-lg;
     &:before {
       font-size:$icon-lg;

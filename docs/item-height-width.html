@@ -76,50 +76,80 @@
           <header f-header>
             <div f-toolbar>
               <div f-title f-rubber>
-                Backgrounds
+                Height and Widths
               </div>
-              <button clear f-button>s.2.1</button>
+              <button clear f-button>s.4</button>
             </div>
           </header>
-        <div id="kssref-colors-backgrounds" class="kss-section kss-section--depth-2 is-fullscreen">
+        <div id="kssref-height-width" class="kss-section kss-section--depth-1 is-fullscreen">
 
-          <div f-p-20px class="kss-style">
-            <h2 class="kss-title kss-title--level-2">
-              <a class="kss-title__permalink" href="#kssref-colors-backgrounds">
+          <div f-p-l-20px f-p-r-20px f-p-b-20px class="kss-style">
+            <h1 class="kss-title kss-title--level-1">
+              <a class="kss-title__permalink" href="#kssref-height-width">
                 <span class="kss-title__ref">
-                  2.1
+                  4
                   <span class="kss-title__permalink-hash">
-                      #Colors.Backgrounds
+                      #Height-Width
                   </span>
                 </span>
-                Backgrounds
+                Height and Widths
               </a>
-            </h2>
+            </h1>
 
 
               <div class="kss-description">
-                <p>Simple background filling</p>
-<div f-p-10px f-bg-primary f-text-white>f-bg-primary</div>
-<div f-p-10px f-bg-secondary>f-bg-secondary</div>
+                <p><strong>[f-width-100]</strong> - is 100%<br />
+<strong>[f-width-100px]</strong> - is 100px</p>
+<p><strong>Percentage Heights and Width</strong> are available for every 5%. 0, 5, 10, 15...<br />
+<strong>Pixel Heights and Widths</strong> are available for every 5px up to 400px</p>
 
-<div f-p-10px f-bg-faded-100>.f-bg-faded-100</div>
-<div f-p-10px f-bg-faded-90>.f-bg-faded-90</div>
-<div f-p-10px f-bg-faded-80>.f-bg-faded-80</div>
-<div f-p-10px f-bg-faded-70>.f-bg-faded-70</div>
-<div f-p-10px f-bg-faded-60>.f-bg-faded-60</div>
-<div f-p-10px f-bg-faded-50>.f-bg-faded-50</div>
-<div f-p-10px f-bg-faded-40>.f-bg-faded-40</div>
-<div f-p-10px f-bg-faded-30>.f-bg-faded-30</div>
-<div f-p-10px f-bg-faded-20>.f-bg-faded-20</div>
-<div f-p-10px f-bg-faded-10>.f-bg-faded-10</div>
-<div f-p-10px f-bg-faded-5>.f-bg-faded-5</div>
+<p><p>Also available <strong>[f-max-width-{amount}]</strong>, <strong>[f-min-width-{amount}]</strong>, <strong>[f-max-height-{amount}]</strong>, <strong>[f-min-height-{amount}]</strong>,</p>
+<div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-30px f-height-30px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-height-40px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-50px f-height-50px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-60px f-height-60px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-70px f-height-70px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-80px f-height-80px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-90px f-height-90px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-100px f-height-100px></div>
+</div>
+
+<pre><code>  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-30px f-height-30px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-height-40px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-50px f-height-50px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-60px f-height-60px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-70px f-height-70px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-80px f-height-80px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-90px f-height-90px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-100px f-height-100px&gt;&lt;/div&gt;
+</code></pre><div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-30px f-height-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-height-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-50px f-height-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-60px f-height-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-70px f-height-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-80px f-height-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-90px f-height-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-100px f-height-100px></div>
+</div>
+
+<pre><code>  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-30px f-height-100px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-height-100px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-50px f-height-100px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-60px f-height-100px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-70px f-height-100px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-80px f-height-100px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-90px f-height-100px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-100px f-height-100px&gt;&lt;/div&gt;
+</code></pre>
               </div>
 
           </div>
 
 
             <div class="kss-source kss-style">
-              Source: <code>_colors.scss</code>, line 308
+              Source: <code>_box-size.scss</code>, line 1
             </div>
 
         </div>

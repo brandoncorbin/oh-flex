@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>KSS Style Guide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="../lib/oh-flex.css">
+
+</head>
+<body id="kss-node" class="kss-fullscreen-mode">
+
+  <div f-layout f-layout-aside f-collapse-phone>
+    <aside f-column f-flex f-width-160px f-min-width-20 f-max-width-260px f-bg-secondary>
+      <header f-header no-border>
+        <div f-bg-secondary f-toolbar f-justify-center>
+            <span f-rubber></span>
+            <a href="/"><img src="/examples/resources/brand/oh-flex-logo.png" height="30" /></a>
+            <span f-rubber></span>
+        </div>
+      </header>
+      <div f-content>
+          <a f-item href="section-avatars.html">
+            <div f-title>Avatar</div>
+            <!-- <span f-note>1</span> -->
+          </a>
+          <a f-item href="section-colors.html">
+            <div f-title>Colors</div>
+            <!-- <span f-note>2</span> -->
+          </a>
+          <a f-item href="section-flexbox.html">
+            <div f-title>Flexbox</div>
+            <!-- <span f-note>3</span> -->
+          </a>
+          <a f-item href="section-height-width.html">
+            <div f-title>Height and Widths</div>
+            <!-- <span f-note>4</span> -->
+          </a>
+          <a f-item href="section-inputs.html">
+            <div f-title>Inputs</div>
+            <!-- <span f-note>5</span> -->
+          </a>
+          <a f-item href="section-layout.html">
+            <div f-title>Layout</div>
+            <!-- <span f-note>6</span> -->
+          </a>
+          <a f-item href="section-list.html">
+            <div f-title>List</div>
+            <!-- <span f-note>7</span> -->
+          </a>
+          <a f-item href="section-padding-margin.html">
+            <div f-title>Padding &amp; Margins</div>
+            <!-- <span f-note>8</span> -->
+          </a>
+          <a f-item href="section-toolbar.html">
+            <div f-title>Toolbar</div>
+            <!-- <span f-note>9</span> -->
+          </a>
+          <a f-item href="section-typography.html">
+            <div f-title>Typography</div>
+            <!-- <span f-note>10</span> -->
+          </a>
+      </div>
+      <footer f-footer no-border f-text-12px f-p-10px f-border-t-none>
+        Copyright 2017. <br  />All Rights Reserved.<br  />
+        <a href="https://www.icorbin.com" f-text-faded-60>A Corbin Creation</a>
+      </footer>
+    </aside>
+    <main f-content>
+
+
+          <header f-header>
+            <div f-toolbar>
+              <div f-title f-rubber>
+                Padding &amp; Margins
+              </div>
+              <button clear f-button>s.8</button>
+            </div>
+          </header>
+        <div id="kssref-padding-margin" class="kss-section kss-section--depth-1 is-fullscreen">
+
+          <div f-p-l-20px f-p-r-20px f-p-b-20px class="kss-style">
+            <h1 class="kss-title kss-title--level-1">
+              <a class="kss-title__permalink" href="#kssref-padding-margin">
+                <span class="kss-title__ref">
+                  8
+                  <span class="kss-title__permalink-hash">
+                      #Padding-Margin
+                  </span>
+                </span>
+                Padding &amp; Margins
+              </a>
+            </h1>
+
+
+              <div class="kss-description">
+                <p>Padding and margins are one of the biggest problems with existing UI frameworks.
+When you absolutely need to tweak some padding or margin, you shouldn&#39;t be forced to
+write CSS. Instead, use Oh-Flex to nudge things around.
+ <h2>Padding</h2>
+ <p>Padding supports up sizes between 1px and 31px</p></p>
+ <dl>
+   <li><strong>f-p-{size}</strong>: padding:{size}</li>
+     <li><strong>f-p-t-{size}</strong>: padding-top:{size}</li>
+    <li><strong>f-p-b-{size}</strong>: padding-bottom:{size}</li>
+    <li><strong>f-p-l-{size}</strong>: padding-left:{size}</li>
+    <li><strong>f-p-r-{size}</strong>: padding-right:{size}</li>
+ </dl>
+
+<div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-p-t-2px  f-height-100px><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-p-t-6px  f-height-100px><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-p-t-10px  f-height-100px><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-p-t-15px  f-height-100px><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-p-t-18px  f-height-100px><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-p-t-20px  f-height-100px><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-p-t-26px  f-height-100px><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-p-t-30px  f-height-100px><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+</div>
+
+<pre><code>&lt;div  f-m-5px f-width-40px f-p-t-2px  f-height-100&gt;&lt;div f-bg-blue-600 f-height-20px f-width-20px&gt;&lt;/div&gt; &lt;/div&gt;
+&lt;div  f-m-5px f-width-40px f-p-t-6px  f-height-100&gt;&lt;div f-bg-blue-600 f-height-20px f-width-20px&gt;&lt;/div&gt; &lt;/div&gt;
+&lt;div  f-m-5px f-width-40px f-p-t-10px  f-height-100&gt;&lt;div f-bg-blue-600 f-height-20px f-width-20px&gt;&lt;/div&gt; &lt;/div&gt;
+&lt;div  f-m-5px f-width-40px f-p-t-15px  f-height-100&gt;&lt;div f-bg-blue-600 f-height-20px f-width-20px&gt;&lt;/div&gt; &lt;/div&gt;
+&lt;div  f-m-5px f-width-40px f-p-t-18px  f-height-100&gt;&lt;div f-bg-blue-600 f-height-20px f-width-20px&gt;&lt;/div&gt; &lt;/div&gt;
+&lt;div  f-m-5px f-width-40px f-p-t-20px  f-height-100&gt;&lt;div f-bg-blue-600 f-height-20px f-width-20px&gt;&lt;/div&gt; &lt;/div&gt;
+&lt;div  f-m-5px f-width-40px f-p-t-26px  f-height-100&gt;&lt;div f-bg-blue-600 f-height-20px f-width-20px&gt;&lt;/div&gt; &lt;/div&gt;
+&lt;div  f-m-5px f-width-40px f-p-t-30px  f-height-100&gt;&lt;div f-bg-blue-600 f-height-20px f-width-20px&gt;&lt;/div&gt; &lt;/div&gt;
+</code></pre><h2>Margin</h2>
+
+<dl>
+   <li><strong>f-m-{size}</strong>: margin:{size}</li>
+     <li><strong>f-m-t-{size}</strong>: margin-top:{size}</li>
+    <li><strong>f-m-b-{size}</strong>: margin-bottom:{size}</li>
+    <li><strong>f-m-l-{size}</strong>: margin-left:{size}</li>
+    <li><strong>f-m-r-{size}</strong>: margin-right:{size}</li>
+ </dl>
+
+<div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap f-m-t-20px>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-width-40px f-m-t-2px  f-height-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-width-40px f-m-t-4px  f-height-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-width-40px f-m-t-6px  f-height-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-width-40px f-m-t-8px  f-height-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-width-40px f-m-t-10px  f-height-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-width-40px f-m-t-12px  f-height-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-width-40px f-m-t-14px  f-height-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-width-40px f-m-t-16px  f-height-100px></div>
+</div>
+
+<pre><code>&lt;div f-m-l-10px f-m-t-2px&gt; &lt;/div&gt;
+&lt;div f-m-l-10px f-m-t-4px&gt; &lt;/div&gt;
+&lt;div f-m-l-10px f-m-t-6px&gt; &lt;/div&gt;
+&lt;div f-m-l-10px f-m-t-8px&gt; &lt;/div&gt;
+&lt;div f-m-l-10px f-m-t-10px&gt; &lt;/div&gt;
+&lt;div f-m-l-10px f-m-t-12px&gt; &lt;/div&gt;
+&lt;div f-m-l-10px f-m-t-14px&gt; &lt;/div&gt;
+&lt;div f-m-l-10px f-m-t-16px&gt; &lt;/div&gt;
+</code></pre>
+              </div>
+
+          </div>
+
+
+            <div class="kss-source kss-style">
+              Source: <code>_box-size.scss</code>, line 111
+            </div>
+
+        </div>
+  </main>
+  </div> <!-- end f-layout -->
+
+<!-- SCRIPTS -->
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/scrollspy.js"></script>
+<script src="kss-assets/prettify.js"></script>
+<script src="kss-assets/kss-fullscreen.js"></script>
+<script src="kss-assets/kss-guides.js"></script>
+<script src="kss-assets/kss-markup.js"></script>
+<script>
+  prettyPrint();
+  var spy = new ScrollSpy('#kss-node', {
+    nav: '.kss-nav__menu-child > li > a',
+    className: 'is-in-viewport'
+  });
+  var kssFullScreen = new KssFullScreen({
+    idPrefix: 'kss-fullscreen-',
+    bodyClass: 'kss-fullscreen-mode',
+    elementClass: 'is-fullscreen'
+  });
+  var kssGuides = new KssGuides({
+    bodyClass: 'kss-guides-mode'
+  });
+  var kssMarkup = new KssMarkup({
+    bodyClass: 'kss-markup-mode',
+    detailsClass: 'kss-markup'
+  });
+</script>
+
+
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+      <script
+      			  src="https://code.jquery.com/jquery-2.2.4.min.js"
+      			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      			  crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({
+    languages: ['HTML, XML']
+  });
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>

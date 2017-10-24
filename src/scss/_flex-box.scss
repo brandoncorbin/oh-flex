@@ -1,4 +1,66 @@
+//
+// Flexbox
+//
+// Let's start flexing! Sure your friend using IE 10 and below might not like you that much
+// but really... should we care what they think?
+//
+//  <h2>Flexbox Row with variable widths</h2>
+//
+//  <div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap f-m-t-20px>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
+// </div>
+//
+// ```
+//  <div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap f-m-t-20px>
+//   <div f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
+//   <div f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
+//   <div f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
+//   <div f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
+//   <div f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
+//   <div f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
+//   <div f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
+//   <div f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
+//  </div>
+// ```
+//
+//
+//  <h2>Flexbox Column with variable widths</h2>
+//
+//  <div  f-bg-blue-100 f-flex f-column f-p-30px f-wrap f-m-t-20px>
+//   <div f-bg-white f-box-shadow-1 f-m-b-10px f-max-height-10px f-min-height-1px f-height-30px f-grow f-shrink f-width-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-b-10px f-max-height-100 f-min-height-20px f-height-30px f-grow f-shrink f-width-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-b-10px f-max-height-10px f-min-height-1px f-height-30px f-grow f-shrink f-width-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-b-10px f-max-height-100 f-min-height-20px f-height-30px f-grow f-shrink f-width-100px></div>
+// </div>
+//
+// ```
+//  <div  f-bg-blue-100 f-flex f-column f-p-30px f-wrap f-m-t-20px>
+//   <div  f-m-b-10px f-max-height-10px f-min-height-1px f-height-30px f-grow f-shrink f-width-100px></div>
+//   <div  f-m-b-10px f-max-height-100 f-min-height-20px f-height-30px f-grow f-shrink f-width-100px></div>
+//   <div  f-m-b-10px f-max-height-10px f-min-height-1px f-height-30px f-grow f-shrink f-width-100px></div>
+//   <div  f-m-b-10px f-max-height-100 f-min-height-20px f-height-30px f-grow f-shrink f-width-100px></div>
+// </div>
+// ```
+//
+// Style guide: Flexbox
 
+//
+// Flexbox Align
+//
+// Let's start flexing! Sure your friend using IE 10 and below might not like you that much
+// but really... should we care what they think?
+//
+//
+//
+//
+// Style guide: Flexbox.alignment
 
 [f-align-center] {
   @include align-items(center);

@@ -38,7 +38,7 @@
           <span f-rubber></span>
           <div f-title>Oh-Flex! Toolkit</div>
           <span f-rubber></span>
-          <a href="https://github.com/brandoncorbin/oh-flex" target="_blank" f-button clear f-primary icon-only>
+          <a href="https://github.com/brandoncorbin/oh-flex" target="_blank" f-button clear f-text-red-700 f-icon-only>
             <i class="zmdi zmdi-github"></i>
           </a>
         </div>
@@ -50,15 +50,22 @@
         <div f-list f-contain>
           <div f-item f-m-t-20px>
             <div f-item-content f-text-center f-width-100 f-align-center f-justify-center f-m-b-20px>
-              <p f-note f-text-faded-60 f-p-b-10px f-text-20px f-width-70 >
-                Hate writing CSS?<br />
-                 <small f-text-14px f-text-faded-50>A set of tag attributes to create rich &amp; flexible UIs. Oh-Flex also plays well with other UI libraries too!</small>
+              <p f-note f-text-faded-60 f-p-b-10px f-text-20px f-width-50 >
+                Flexible Designs with no custom CSS<br />
+                 <small f-text-14px f-text-faded-50><strong>Oh-Flex Objective</strong>: Allow anyone to build flexible and pretty interfaces with only HTML attributes.</small>
               </p>
 
             </div>
           </div>
           <div f-item-divider>
             <span>Examples <span f-text-faded-30>No Custom CSS</span></span>
+
+          </div>
+
+          <div f-item>
+            <div f-note>
+              The following examples were built using only Oh-Flex attributes - no custom CSS - no custom Javascript.
+            </div>
           </div>
 
           <a f-item href="examples/mail/mail.html">
@@ -156,20 +163,14 @@ npm install oh-flex --save-dev
           <article f-item>
             <div f-item-content>
               <p f-note f-p-b-10px>
-                <a href="https://www.icorbin.com">I work with a lot of large companies</a> who are trying to get their hands around an overaching UI process.
-                Most companies have a bunch of developers who, honestly, hate working on the front end. They've resorted to
-                throwing Bootstrap or some other UI library and call it done.
-              </p>
-
-              <p f-note  f-p-b-10px>
-                As the developers start creating more and more functionality, the find themselves writing a bunch of hacky CSS just to get
-                the problem solved as fast as possible. Each time a developer implements a CSS hack, an angel loses its wings. Oh-Flex is a set of
-                classes to solve this problem.
-              </p>
-              <p f-note f-p-b-10px>
-                This is a set of mixins and classes I found to use over and over in my projects. This page is an example of what you can do with these classes.
-                Not a good example tho! Here's why... This page is completely designed with just class names. No external styles besides Oh Flex...
-              </p>
+                I've been a product consultant for most of my adult life. Often I'm brought in to help development teams with little or no UI or UX skills build products that don't suck - without a dedicated creative resource.
+                <br><br>
+                Time and time again I would see the following: Dev team starts a new project using whatever the year's hottest UI framework is - and all starts off swimmingly. Then they start hitting all of the outlier design patterns that aren't included in their framework - and the hacking begins.  It's usually an innocent: "I'll just through it over here in main.css", but over the years the once tame "main.css" has turned into a 12 headed monster.
+                <br><br>
+                A year ago, I was presented with the previous scenario and I postulated that if they hated CSS so much, then why not just get rid of custom CSS all together?
+                <br><br>
+                All of the CSS and attributes I've used over the years has now be combined into a single CSS file that can be added to any project using any UI framework - without causing any UI interference.
+            </p>
             </div>
           </article>
 

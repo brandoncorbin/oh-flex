@@ -40,6 +40,56 @@
 //   </div>
 // ```
 //
+// <div f-toolbar f-bg-indigo-500>
+//   <div f-buttons-left>
+//     <a href="/" f-button clear f-text-white f-icon-only>
+//       <i class="zmdi zmdi-arrow-left" f-text-white></i>
+//     </a>
+//   </div>
+//   <span f-min-width-10></span><!-- spacer to balance other side buttons -->
+//   <span f-rubber></span>
+//   <input type="text" placeholder="Search Facebook" f-text-14px f-round f-placeholder-inverse f-placeholder-center f-min-width-40 f-p-8px f-p-l-12px f-m-t-10px f-m-b-10px f-border-none f-bg-faded-20 />
+//   <span f-rubber></span>
+//   <button f-button clear f-text-white-100 f-icon-only>
+//     <i class="zmdi zmdi-comment-more"></i>
+//   </button>
+//   <button f-button clear f-text-white-50>
+//     <div f-avatar sm f-m-r-10px>
+//       <img src="http://i.pravatar.cc/100?d=7" />
+//     </div>
+//     <span f-text-white-100 f-text-14px f-hide-md-down>Brandon</span>
+//   </button>
+//   <button f-button clear f-text-white-50 f-icon-only>
+//     <i class="zmdi zmdi-chevron-down"></i>
+//   </button>
+// </div>
+//
+// ```
+// <div f-toolbar f-bg-indigo-500>
+//   <div f-buttons-left>
+//     <a href="/" f-button clear f-text-white f-icon-only>
+//       <i class="zmdi zmdi-arrow-left" f-text-white></i>
+//     </a>
+//   </div>
+//   <span f-min-width-10></span><!-- spacer to balance other side buttons -->
+//   <span f-rubber></span>
+//   <input type="text" placeholder="Search Facebook" f-text-14px f-round f-placeholder-inverse f-placeholder-center f-min-width-40 f-p-8px f-p-l-12px f-m-t-10px f-m-b-10px f-border-none f-bg-faded-20 />
+//   <span f-rubber></span>
+//   <button f-button clear f-text-white-100 f-icon-only>
+//     <i class="zmdi zmdi-comment-more"></i>
+//   </button>
+//   <button f-button clear f-text-white-50>
+//     <div f-avatar sm f-m-r-10px>
+//       <img src="http://i.pravatar.cc/100?d=7" />
+//     </div>
+//     <span f-text-white-100 f-text-14px f-hide-md-down>Brandon</span>
+//   </button>
+//   <button f-button clear f-text-white-50 f-icon-only>
+//     <i class="zmdi zmdi-chevron-down"></i>
+//   </button>
+// </div>
+// ```
+//
 // Style guide: Toolbar
 
 .f-toolbar, [f-toolbar] {

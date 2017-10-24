@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="kss-assets/kss.css">
-  <link rel="stylesheet" href="../oh-flex.css">
+  <link rel="stylesheet" href="../lib/oh-flex.css">
 
 </head>
 <body id="kss-node" >
@@ -26,35 +26,43 @@
       <div f-content>
           <a f-item href="section-avatars.html">
             <div f-title>Avatar</div>
-            <span f-note>1</span>
+            <!-- <span f-note>1</span> -->
           </a>
           <a f-item href="section-colors.html">
             <div f-title>Colors</div>
-            <span f-note>2</span>
+            <!-- <span f-note>2</span> -->
           </a>
-          <a f-item href="section-components.html">
-            <div f-title>components</div>
-            <span f-note>3</span>
+          <a f-item href="section-flexbox.html">
+            <div f-title>Flexbox</div>
+            <!-- <span f-note>3</span> -->
+          </a>
+          <a f-item href="section-height-width.html">
+            <div f-title>Height and Widths</div>
+            <!-- <span f-note>4</span> -->
           </a>
           <a f-item href="section-inputs.html">
             <div f-title>Inputs</div>
-            <span f-note>4</span>
+            <!-- <span f-note>5</span> -->
           </a>
           <a f-item href="section-layout.html">
-            <div f-title>F-Layout</div>
-            <span f-note>5</span>
+            <div f-title>Layout</div>
+            <!-- <span f-note>6</span> -->
           </a>
           <a f-item href="section-list.html">
             <div f-title>List</div>
-            <span f-note>6</span>
+            <!-- <span f-note>7</span> -->
+          </a>
+          <a f-item href="section-padding-margin.html">
+            <div f-title>Padding &amp; Margins</div>
+            <!-- <span f-note>8</span> -->
           </a>
           <a f-item href="section-toolbar.html">
             <div f-title>Toolbar</div>
-            <span f-note>7</span>
+            <!-- <span f-note>9</span> -->
           </a>
           <a f-item href="section-typography.html">
             <div f-title>Typography</div>
-            <span f-note>8</span>
+            <!-- <span f-note>10</span> -->
           </a>
       </div>
       <footer f-footer no-border f-text-12px f-p-10px f-border-t-none>
@@ -70,16 +78,16 @@
               <div f-title f-rubber>
                 Toolbar
               </div>
-              <button clear f-button>s.7</button>
+              <button clear f-button>s.9</button>
             </div>
           </header>
         <div id="kssref-toolbar" class="kss-section kss-section--depth-1 ">
 
-          <div f-p-20px class="kss-style">
+          <div f-p-l-20px f-p-r-20px f-p-b-20px class="kss-style">
             <h1 class="kss-title kss-title--level-1">
               <a class="kss-title__permalink" href="#kssref-toolbar">
                 <span class="kss-title__ref">
-                  7
+                  9
                   <span class="kss-title__permalink-hash">
                       #Toolbar
                   </span>
@@ -123,6 +131,53 @@
     &lt;span f-rubber&gt;&lt;/span&gt;
     &lt;button f-button clear&gt;Right&lt;/button&gt;
   &lt;/div&gt;
+</code></pre><div f-toolbar f-bg-indigo-500>
+  <div f-buttons-left>
+    <a href="/" f-button clear f-text-white f-icon-only>
+      <i class="zmdi zmdi-arrow-left" f-text-white></i>
+    </a>
+  </div>
+  <span f-min-width-10></span><!-- spacer to balance other side buttons -->
+  <span f-rubber></span>
+  <input type="text" placeholder="Search Facebook" f-text-14px f-round f-placeholder-inverse f-placeholder-center f-min-width-40 f-p-8px f-p-l-12px f-m-t-10px f-m-b-10px f-border-none f-bg-faded-20 />
+  <span f-rubber></span>
+  <button f-button clear f-text-white-100 f-icon-only>
+    <i class="zmdi zmdi-comment-more"></i>
+  </button>
+  <button f-button clear f-text-white-50>
+    <div f-avatar sm f-m-r-10px>
+      <img src="http://i.pravatar.cc/100?d=7" />
+    </div>
+    <span f-text-white-100 f-text-14px f-hide-md-down>Brandon</span>
+  </button>
+  <button f-button clear f-text-white-50 f-icon-only>
+    <i class="zmdi zmdi-chevron-down"></i>
+  </button>
+</div>
+
+<pre><code>&lt;div f-toolbar f-bg-indigo-500&gt;
+  &lt;div f-buttons-left&gt;
+    &lt;a href=&quot;/&quot; f-button clear f-text-white f-icon-only&gt;
+      &lt;i class=&quot;zmdi zmdi-arrow-left&quot; f-text-white&gt;&lt;/i&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;span f-min-width-10&gt;&lt;/span&gt;&lt;!-- spacer to balance other side buttons --&gt;
+  &lt;span f-rubber&gt;&lt;/span&gt;
+  &lt;input type=&quot;text&quot; placeholder=&quot;Search Facebook&quot; f-text-14px f-round f-placeholder-inverse f-placeholder-center f-min-width-40 f-p-8px f-p-l-12px f-m-t-10px f-m-b-10px f-border-none f-bg-faded-20 /&gt;
+  &lt;span f-rubber&gt;&lt;/span&gt;
+  &lt;button f-button clear f-text-white-100 f-icon-only&gt;
+    &lt;i class=&quot;zmdi zmdi-comment-more&quot;&gt;&lt;/i&gt;
+  &lt;/button&gt;
+  &lt;button f-button clear f-text-white-50&gt;
+    &lt;div f-avatar sm f-m-r-10px&gt;
+      &lt;img src=&quot;http://i.pravatar.cc/100?d=7&quot; /&gt;
+    &lt;/div&gt;
+    &lt;span f-text-white-100 f-text-14px f-hide-md-down&gt;Brandon&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button f-button clear f-text-white-50 f-icon-only&gt;
+    &lt;i class=&quot;zmdi zmdi-chevron-down&quot;&gt;&lt;/i&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
 </code></pre>
               </div>
 
@@ -165,7 +220,24 @@
 </script>
 
 
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+      <script
+      			  src="https://code.jquery.com/jquery-2.2.4.min.js"
+      			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      			  crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 
+<script>
+$(document).ready(function() {
+  hljs.configure({
+    languages: ['HTML, XML']
+  });
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
 <!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>
 </html>

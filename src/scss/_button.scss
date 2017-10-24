@@ -45,10 +45,14 @@
 
   color:$dark;
 
+  &[f-square] {
+    border-radius:0px;
+  }
+
   &[clear] {
 
-    border-radius:6px;
-    border: none !important;
+    border-radius:0px;
+    border: none;
     background-color:transparent;
     border-style:none;
     font-size:$font-size-md;

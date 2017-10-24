@@ -1,11 +1,58 @@
-// Box Sizes
+// Height and Widths
 //
-// A simple row based flexible toolbar
+// <p><strong>[f-width-100]</strong> - is 100%<br />
+// <strong>[f-width-100px]</strong> - is 100px</p>
+// <p><strong>Percentage Heights and Width</strong> are available for every 5%. 0, 5, 10, 15...<br />
+// <strong>Pixel Heights and Widths</strong> are available for every 5px up to 400px</p>
 //
-// Markdown:
-// <div f-height-30px f-bg-faded-20 f-round>30px Tall Box</div>
+// <p>Also available <strong>[f-max-width-{amount}]</strong>, <strong>[f-min-width-{amount}]</strong>, <strong>[f-max-height-{amount}]</strong>, <strong>[f-min-height-{amount}]</strong>,
 //
-// Style guide: components.sizes
+// <div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-30px f-height-30px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-height-40px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-50px f-height-50px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-60px f-height-60px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-70px f-height-70px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-80px f-height-80px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-90px f-height-90px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-100px f-height-100px></div>
+// </div>
+//
+// ```
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-30px f-height-30px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-height-40px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-50px f-height-50px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-60px f-height-60px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-70px f-height-70px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-80px f-height-80px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-90px f-height-90px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-100px f-height-100px></div>
+// ```
+//
+// <div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-30px f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-50px f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-60px f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-70px f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-80px f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-90px f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-100px f-height-100px></div>
+// </div>
+//
+// ```
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-30px f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-50px f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-60px f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-70px f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-80px f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-90px f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-100px f-height-100px></div>
+// ```
+//
+//
+// Style guide: Height-Width
 
 [f-height-100] {
   height:100%;
@@ -60,6 +107,79 @@
     }
   }
 }
+
+// Padding & Margins
+//
+// Padding and margins are one of the biggest problems with existing UI frameworks.
+// When you absolutely need to tweak some padding or margin, you shouldn't be forced to
+// write CSS. Instead, use Oh-Flex to nudge things around.
+//  <h2>Padding</h2>
+//  <p>Padding supports up sizes between 1px and 31px</p>
+//
+//  <dl>
+//    <li><strong>f-p-{size}</strong>: padding:{size}</li>
+//      <li><strong>f-p-t-{size}</strong>: padding-top:{size}</li>
+//     <li><strong>f-p-b-{size}</strong>: padding-bottom:{size}</li>
+//     <li><strong>f-p-l-{size}</strong>: padding-left:{size}</li>
+//     <li><strong>f-p-r-{size}</strong>: padding-right:{size}</li>
+//  </dl>
+//
+// <div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-p-t-2px  f-height-100px><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-p-t-6px  f-height-100px><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-p-t-10px  f-height-100px><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-p-t-15px  f-height-100px><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-p-t-18px  f-height-100px><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-p-t-20px  f-height-100px><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-p-t-26px  f-height-100px><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-p-t-30px  f-height-100px><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+// </div>
+//
+//  ```
+// <div  f-m-5px f-width-40px f-p-t-2px  f-height-100><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+// <div  f-m-5px f-width-40px f-p-t-6px  f-height-100><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+// <div  f-m-5px f-width-40px f-p-t-10px  f-height-100><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+// <div  f-m-5px f-width-40px f-p-t-15px  f-height-100><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+// <div  f-m-5px f-width-40px f-p-t-18px  f-height-100><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+// <div  f-m-5px f-width-40px f-p-t-20px  f-height-100><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+// <div  f-m-5px f-width-40px f-p-t-26px  f-height-100><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+// <div  f-m-5px f-width-40px f-p-t-30px  f-height-100><div f-bg-blue-600 f-height-20px f-width-20px></div> </div>
+//
+//  ```
+//
+// <h2>Margin</h2>
+//
+// <dl>
+//    <li><strong>f-m-{size}</strong>: margin:{size}</li>
+//      <li><strong>f-m-t-{size}</strong>: margin-top:{size}</li>
+//     <li><strong>f-m-b-{size}</strong>: margin-bottom:{size}</li>
+//     <li><strong>f-m-l-{size}</strong>: margin-left:{size}</li>
+//     <li><strong>f-m-r-{size}</strong>: margin-right:{size}</li>
+//  </dl>
+//
+// <div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap f-m-t-20px>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px  f-width-40px f-m-t-2px  f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px  f-width-40px f-m-t-4px  f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px  f-width-40px f-m-t-6px  f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px  f-width-40px f-m-t-8px  f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px  f-width-40px f-m-t-10px  f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px  f-width-40px f-m-t-12px  f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px  f-width-40px f-m-t-14px  f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px  f-width-40px f-m-t-16px  f-height-100px></div>
+// </div>
+//
+// ```
+// <div f-m-l-10px f-m-t-2px> </div>
+// <div f-m-l-10px f-m-t-4px> </div>
+// <div f-m-l-10px f-m-t-6px> </div>
+// <div f-m-l-10px f-m-t-8px> </div>
+// <div f-m-l-10px f-m-t-10px> </div>
+// <div f-m-l-10px f-m-t-12px> </div>
+// <div f-m-l-10px f-m-t-14px> </div>
+// <div f-m-l-10px f-m-t-16px> </div>
+// ```
+//
+// Style guide: Padding-Margin
 
 [f-m-auto] {
   margin-left:auto;

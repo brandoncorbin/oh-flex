@@ -26,16 +26,16 @@
         {{#each menu}}
           <a f-item href="section-{{referenceURI}}.html">
             <div f-title>{{header}}</div>
-            <span f-note>{{referenceNumber}}</span>
+            <!-- <span f-note>{{referenceNumber}}</span> -->
           </a>
           {{#if isActive}}
             {{#if children}}
               {{#each children}}
               <a f-item f-bg-faded-inverse-10 f-text-normal href="section-{{../referenceURI}}.html#kssref-{{referenceURI}}">
                 <div f-title f-text-14px>
-                  {{header}}
+                  - {{header}}
                 </div>
-                <span>{{referenceNumber}}</span>
+                <!-- <span>{{referenceNumber}}</span> -->
               </a>
               {{/each}}
             {{/if}}
@@ -76,7 +76,7 @@
         {{/if}}
         <{{#if @first}}div{{else}}section{{/if}} id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}} {{#if @root.template.isItem}}is-fullscreen{{/if}}">
 
-          <div f-p-20px class="kss-style">
+          <div f-p-l-20px f-p-r-20px f-p-b-20px class="kss-style">
             <h{{depth}} class="kss-title kss-title--level-{{depth}}">
               <a class="kss-title__permalink" href="#kssref-{{referenceURI}}">
                 <span class="kss-title__ref">
@@ -214,7 +214,7 @@
                     Markup
                   {{/if}}
                 </summary>
-                <pre class="prettyprint linenums lang-html"><code data-language="html">{{markup}}</code></pre>
+                <pre class="prettyprint linenums lang-html"><code class="html" data-language="html">{{markup}}</code></pre>
               </details>
             {{/if}}
           {{/if}}
@@ -266,7 +266,24 @@
     <a href="https://github.com/kss-node/kss-node"><img src="kss-assets/github-fork--black.png" alt="Fork me on GitHub"></a>
   </footer>
 {{/if}}
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+      <script
+      			  src="https://code.jquery.com/jquery-2.2.4.min.js"
+      			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      			  crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 
+<script>
+$(document).ready(function() {
+  hljs.configure({
+    languages: ['HTML, XML']
+  });
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
 <!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>
 </html>

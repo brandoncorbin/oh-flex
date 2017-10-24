@@ -1,12 +1,12 @@
 {
   "name": "oh-flex",
-  "version": "1.0.5-pre",
+  "version": "1.0.4-pre",
   "description": "Set of Flex and Styles lib",
   "main": "lib/oh-flex.css",
   "scripts": {
-    "server:start": "browser-sync start --server",
+    "server:start": "browser-sync start --server './' --files './' --index ",
     "compile:scss": "node-sass --include-path scss src/oh-flex.scss lib/oh-flex.css  --output-style compressed",
-    "compile:docs": "kss --source src/scss --destination lib/docs  --css ../oh-flex.css --builder resources/kss",
+    "compile:docs": "kss --source src/scss --destination docs  --css ../lib/oh-flex.css --builder resources/kss",
     "compile:es6": "babel src/ -d lib/",
     "compile:es6-watch": "babel --watch=./src  src/ -d lib/ --copy-files",
     "test": "mocha lib/**/*.spec.js --exit",

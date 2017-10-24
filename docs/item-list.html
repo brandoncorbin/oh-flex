@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="kss-assets/kss.css">
-  <link rel="stylesheet" href="../oh-flex.css">
+  <link rel="stylesheet" href="../lib/oh-flex.css">
 
 </head>
 <body id="kss-node" class="kss-fullscreen-mode">
@@ -26,41 +26,49 @@
       <div f-content>
           <a f-item href="section-avatars.html">
             <div f-title>Avatar</div>
-            <span f-note>1</span>
+            <!-- <span f-note>1</span> -->
           </a>
           <a f-item href="section-colors.html">
             <div f-title>Colors</div>
-            <span f-note>2</span>
+            <!-- <span f-note>2</span> -->
           </a>
-          <a f-item href="section-components.html">
-            <div f-title>components</div>
-            <span f-note>3</span>
+          <a f-item href="section-flexbox.html">
+            <div f-title>Flexbox</div>
+            <!-- <span f-note>3</span> -->
+          </a>
+          <a f-item href="section-height-width.html">
+            <div f-title>Height and Widths</div>
+            <!-- <span f-note>4</span> -->
           </a>
           <a f-item href="section-inputs.html">
             <div f-title>Inputs</div>
-            <span f-note>4</span>
+            <!-- <span f-note>5</span> -->
           </a>
           <a f-item href="section-layout.html">
-            <div f-title>F-Layout</div>
-            <span f-note>5</span>
+            <div f-title>Layout</div>
+            <!-- <span f-note>6</span> -->
           </a>
           <a f-item href="section-list.html">
             <div f-title>List</div>
-            <span f-note>6</span>
+            <!-- <span f-note>7</span> -->
           </a>
               <a f-item f-bg-faded-inverse-10 f-text-normal href="section-list.html#kssref-list-item">
                 <div f-title f-text-14px>
-                  List Item
+                  - List Item
                 </div>
-                <span>6.1</span>
+                <!-- <span>7.1</span> -->
               </a>
+          <a f-item href="section-padding-margin.html">
+            <div f-title>Padding &amp; Margins</div>
+            <!-- <span f-note>8</span> -->
+          </a>
           <a f-item href="section-toolbar.html">
             <div f-title>Toolbar</div>
-            <span f-note>7</span>
+            <!-- <span f-note>9</span> -->
           </a>
           <a f-item href="section-typography.html">
             <div f-title>Typography</div>
-            <span f-note>8</span>
+            <!-- <span f-note>10</span> -->
           </a>
       </div>
       <footer f-footer no-border f-text-12px f-p-10px f-border-t-none>
@@ -76,16 +84,16 @@
               <div f-title f-rubber>
                 List
               </div>
-              <button clear f-button>s.6</button>
+              <button clear f-button>s.7</button>
             </div>
           </header>
         <div id="kssref-list" class="kss-section kss-section--depth-1 is-fullscreen">
 
-          <div f-p-20px class="kss-style">
+          <div f-p-l-20px f-p-r-20px f-p-b-20px class="kss-style">
             <h1 class="kss-title kss-title--level-1">
               <a class="kss-title__permalink" href="#kssref-list">
                 <span class="kss-title__ref">
-                  6
+                  7
                   <span class="kss-title__permalink-hash">
                       #List
                   </span>
@@ -132,7 +140,24 @@
 </script>
 
 
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+      <script
+      			  src="https://code.jquery.com/jquery-2.2.4.min.js"
+      			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      			  crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 
+<script>
+$(document).ready(function() {
+  hljs.configure({
+    languages: ['HTML, XML']
+  });
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
 <!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>
 </html>
