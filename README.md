@@ -2,6 +2,48 @@
 
 ![](https://snaps.nomie.io/pb-KV7j4Nv61V.png)
 
-## Design with attributes! A CSS toolkit built for developers who HATE CSS.
+## Design with attributes! Built for developers who hate writing CSS.
 
-Oh-Flex is a javascript-less CSS toolkit that abuses tag attributes to achieve nice looking designs without touching a single line of CSS. As an added bonus, it works great with other libraries like Bootstrap - which is still missing some key mobile features that Oh-Flex can fill.
+Oh-Flex exists to help non front-end developers build nice looking consistent web pages and apps by abusing html tag attributes.
+
+### What's inside?
+
+HTML Attributes that control:
+
+- Full flex control
+- Toolbars
+- Flex based Layouts
+- All Material Design colors for text and backgrounds
+- Font control
+- Avatars
+- Padding and margins
+- Box sizing
+- Mobile List Items
+- ... and more
+
+
+
+[Full documentation and examples](https://brandoncorbin.github.io/oh-flex)
+
+
+### Installation
+
+#### The Easy Way
+
+Simply embed oh-flex.css directly into your web page using unpkg. 
+
+```
+<link rel="stylesheet" href="https://unpkg.com/oh-flex"  />
+```
+
+#### Sass Way
+
+```
+npm install oh-flex --save-dev
+```
+
+Add to your sass file
+
+```
+@import '~oh-flex/src/oh-flex'
+```
