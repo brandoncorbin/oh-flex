@@ -103,11 +103,11 @@
 f-content will be rubbery and flex with the allowed space. It also is responsible
 for handling scrolling of the main content.</p>
 <p><h2>Standard Header Content Footer</h2></p>
-<div style="position:relative;" f-round f-bg-faded-20 f-width-30 f-height-200px>
+<div style="position:relative;" f-round f-bg-green-200 f-width-30 f-height-200px>
   <div f-layout>
-    <header f-header>Header</header>
-    <main f-content>Content</main>
-    <footer f-footer>Footer</footer>
+    <header f-header f-bg-green-400>Header</header>
+    <main f-content f-bg-green-100>Content</main>
+    <footer f-footer f-bg-green-500>Footer</footer>
   </div>
 </div>
 
@@ -117,14 +117,14 @@ for handling scrolling of the main content.</p>
     &lt;footer f-footer&gt;Footer&lt;/footer&gt;
   &lt;/div&gt;
 </code></pre><p><h2>Multi Menu Layout</h2></p>
-<div style="position:relative;" f-round f-bg-faded-20 f-width-60 f-height-200px>
+<div style="position:relative;" f-round f-bg-blue-300 f-width-60 f-height-200px>
   <div f-layout f-layout-aside>
-    <aside f-width-10 f-justify-center f-align-center>1</aside>
-    <aside f-width-20 f-justify-center f-align-center>Menu 2</aside>
+    <aside f-width-10 f-justify-center f-align-center f-bg-blue-100>1</aside>
+    <aside f-width-20 f-justify-center f-align-center f-bg-blue-300>Menu 2</aside>
     <main>
-      <header f-header>Header</header>
-      <main f-content>Content</main>
-      <footer f-footer>Footer</footer>
+      <header f-header f-text-white f-bg-blue-600 f-justify-center f-align-center >Header</header>
+      <main f-content f-bg-blue-400 f-justify-center f-align-center >Content</main>
+      <footer f-footer f-text-white f-bg-blue-600 f-justify-center f-align-center >Footer</footer>
     </main>
   </div>
 </div>
