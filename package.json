@@ -1,6 +1,6 @@
 {
   "name": "oh-flex",
-  "version": "1.0.4",
+  "version": "1.0.5.pre",
   "description": "Set of Flex and Styles lib",
   "main": "lib/oh-flex.css",
   "scripts": {
