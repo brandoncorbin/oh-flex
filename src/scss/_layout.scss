@@ -92,6 +92,7 @@
     @include flex-grow(1);
     overflow-y: scroll;
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
   }
 
   &[f-layout-aside] {
@@ -162,4 +163,109 @@
   max-width:1180px;
   margin-right:auto;
   margin-left:auto;
+}
+
+.f-aside-open {
+  transition:all 0.2s ease-out;
+  &:after {
+    transition:all 0.2s ease-out;
+    left:-40px;
+    color:rgba(0,0,0,0);
+  }
+  max-width:80% !important;
+  width:80% !important;
+  min-width:80% !important;
+  padding-left:1px;
+  * {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width : 640px ) {
+  [f-hide-md] {
+    display:none !important;
+  }
+  [f-show-md] {
+    display:inherit;
+  }
+  [f-hide-md-down] {
+    display:none !important;
+    [f-hide-sm ]{
+      display:none !important;
+    }
+  }
+  [f-show-md-down] {
+    display:inherit;
+    [f-hide-sm] {
+      display:inherit;
+    }
+  }
+
+
+
+  [f-layout-aside] {
+
+      main[f-collapse-phone] {
+        overflow-y:scroll;
+        min-width:90%;
+        @include flex-shrink(0);
+      }
+
+      aside[f-collapse-phone] {
+
+        &[f-aside-open] {
+          transition:all 0.2s ease-out;
+          &:after {
+            transition:all 0.2s ease-out;
+            left:-40px;
+            color:rgba(0,0,0,0);
+          }
+          max-width:80%;
+          width:80%;
+          min-width:80%;
+          padding-left:1px;
+          * {
+            opacity: 1;
+          }
+        }
+        @include flex-shrink(0);
+        overflow: hidden;
+        box-shadow:inset -6px 0px 10px rgba(0,0,0,0.1);
+        max-width:1px;
+        width:1px;
+        min-width:1px;
+        transition:all 0.2s ease-out;
+
+        &[f-collpase-auto] {
+
+          padding-left:30px;
+          * {
+            opacity: 0;
+            transition:all 0.2s ease-out;
+          }
+          &:after {
+            transition:all 0.2s ease-out;
+            content: "•••";
+            position:absolute;
+            opacity: 1;
+            left:6px;
+            color:rgba(0,0,0,0.4);
+            top:0;
+            bottom:0;
+            transform: rotate(90deg);
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content(center);
+            @include align-items(center);
+          }
+
+          &:hover {
+            @extends .f-aside-open;
+          }
+        } // end f-collpase-auto
+      } // end aside
+
+
+
+  } // f-layout-aside
 }

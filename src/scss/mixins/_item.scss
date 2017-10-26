@@ -58,8 +58,8 @@
     border:none !important;
   }
 
-  &[selected] {
-    background-color:#EEE;
+  &[selected],&.selected {
+    background-color:rgba(0,0,0,0.12);
   }
 
 

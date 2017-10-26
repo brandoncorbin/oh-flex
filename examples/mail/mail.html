@@ -5,16 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../../lib/oh-flex.css" />
-
-  <script src="https://rawgit.com/riot/riot/master/riot%2Bcompiler.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
   <title>Oh Flex | iOS Mail Example</title>
 </head>
 <body class="f">
-  <div f-layout f-layout-aside>
+  <div f-layout f-layout-aside id="app">
     <!-- START Mailboxes List -->
-    <aside f-width-25 f-collapse-phone>
+    <aside f-width-25 f-collapse-phone :f-aside-open="mailbox_menu_open">
       <div f-layout>
         <header f-header>
           <div f-toolbar f-toolbar-light>
@@ -81,11 +80,11 @@
     </aside>
     <!-- END Mailboxes List -->
     <!-- START Message List View -->
-    <aside f-width-30 f-collapse-phone>
+    <aside f-width-30 f-collapse-phone :f-aside-open="message_menu_open">
       <div f-layout>
         <header f-header>
           <div f-toolbar f-toolbar-light>
-            <div f-buttons-left f-show-md-down><a f-button clear f-primary href="../../"><i class="zmdi zmdi-menu"></i></a></div>
+            <div f-buttons-left f-show-md-down><a f-button clear v-on:click="toggleMailboxMenu"><i class="zmdi zmdi-menu"></i></a></div>
             <span f-rubber></span>
             <button f-button  clear f-primary f-text-16px>Edit</button>
           </div>
@@ -150,6 +149,7 @@
       <div f-layout>
         <header f-header>
           <div f-toolbar f-toolbar-light>
+            <button f-button clear f-icon-only v-on:click="toggleMessageMenu"><i class="zmdi zmdi-menu"></i></button>
             <span f-rubber></span>
             <button clear f-icon-only f-primary f-button>
               <i class="zmdi zmdi-flag"></i>
@@ -214,9 +214,28 @@
         </footer> -->
       </div>
     </main>
-    <div
+
   </div> <!-- end f-layout -->
 
+  <script>
+
+  var app = new Vue({
+      el: '#app',
+      methods: {
+        toggleMailboxMenu: function() {
+          this.mailbox_menu_open = !this.mailbox_menu_open;
+        },
+        toggleMessageMenu: function() {
+          this.message_menu_open = !this.message_menu_open;
+        }
+      },
+      data: {
+        mailbox_menu_open : false,
+        message_menu_open: false
+      }
+  })
+
+  </script>
 
 </body>
 </html>

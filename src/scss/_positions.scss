@@ -25,9 +25,11 @@
 
 [f-scroll-x] {
   overflow-x:scroll !important;
+  -webkit-overflow-scrolling: touch;
 }
  [f-scroll-y] {
   overflow-y:scroll !important;
+  -webkit-overflow-scrolling: touch;
 }
 [f-scroll-off-y] {
   overflow-y:hidden !important;

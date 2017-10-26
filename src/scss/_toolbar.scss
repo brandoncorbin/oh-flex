@@ -95,7 +95,7 @@
 .f-toolbar, [f-toolbar] {
   @include f-toolbar(#F9F9F9, $faded);
   &[f-toolbar-inverse] {
-    @include f-toolbar($dark, #F8F8F8);
+    @include f-toolbar(transparent, #F8F8F8);
     color:#FFF;
     [f-button] {
       color:#FFF;

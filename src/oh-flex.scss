@@ -1,10 +1,12 @@
 @import 'scss/mixins/mixins';
 
 @import 'scss/variables';
+@import 'scss/item';
 @import 'scss/toolbar';
 @import 'scss/box-shadow';
 @import 'scss/media';
-
+@import 'scss/modal';
+@import 'scss/list';
 @import 'scss/button';
 @import 'scss/positions';
 @import 'scss/avatar';
@@ -15,7 +17,7 @@
 
 @import 'scss/body';
 
-@import 'scss/item';
+
 
 @import 'scss/flex-box';
 @import 'scss/colors';

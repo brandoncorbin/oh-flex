@@ -9,8 +9,13 @@
 }
 
 /* iPads (portrait) ----------- */
-@media only screen and (max-width : 1024px  ) {
-
+@media only screen and (min-width : 1024px  ) {
+  [f-show-md] {
+    display:inherit;
+  }
+  [f-show-md] {
+    display:inherit;
+  }
 }
 
 /* Smartphones (landscape) ----------- */
@@ -46,56 +51,6 @@
       display:inherit;
     }
   }
-  [f-layout-aside] {
-
-      main[f-collapse-phone] {
-        overflow-y:scroll;
-        min-width:90%;
-      }
-      aside[f-collapse-phone] {
-        box-shadow:inset -6px 0px 10px rgba(0,0,0,0.1);
-        max-width:1px;
-        width:1px;
-        min-width:1px;
-
-        padding-left:30px;
-        * {
-          opacity: 0;
-          transition:all 0.5s ease-out;
-        }
-        &:after {
-          transition:all 0.5s ease-out;
-          content: "•••";
-          position:absolute;
-          opacity: 1;
-          left:6px;
-          color:rgba(0,0,0,0.4);
-          top:0;
-          bottom:0;
-          transform: rotate(90deg);
-          @include flexbox();
-          @include flex-direction(column);
-          @include justify-content(center);
-          @include align-items(center);
-        }
-        transition:all 0.5s ease-out;
-        &:hover,&:focus {
-          transition:all 0.5s ease-out;
-          &:after {
-            transition:all 0.5s ease-out;
-            left:-40px;
-            color:rgba(0,0,0,0);
-          }
-          max-width:80%;
-          width:80%;
-          min-width:80%;
-          padding-left:1px;
-          * {
-            opacity: 1;
-          }
-        }
-      } // end aside
-  } // f-layout-aside
 }
 
 /* Smartphones (portrait) (ie: Galaxy 1) */

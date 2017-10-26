@@ -14,7 +14,7 @@
   <div f-layout f-layout-aside   id="app">
 
     <!-- START Message List View -->
-    <aside f-width-30 f-collapse-phone>
+    <aside f-width-30 f-collapse-phone :f-aside-open="menu_open">
       <div f-layout>
         <header f-header>
           <div f-toolbar f-toolbar-light>
@@ -58,6 +58,7 @@
       <div f-layout>
         <header f-header>
           <div f-toolbar f-toolbar-light>
+            <button f-button clear f-icon-only v-on:click="toggleMenu"><i class="zmdi zmdi-menu"></i></button>
             <span f-rubber></span>
             <div f-text-center>
               <span f-avatar sm f-m-t-4px>
@@ -148,7 +149,13 @@
 
   var app = new Vue({
       el: '#app',
+      methods: {
+        toggleMenu: function() {
+          this.menu_open = !this.menu_open;
+        }
+      },
       data: {
+        menu_open: false,
         messages: [{
           from: 'Bill Arnold',
           avatar: 'http://i.pravatar.cc/100?d=0',

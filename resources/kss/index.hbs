@@ -7,14 +7,16 @@
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
 
+    <script src="https://unpkg.com/vue"></script>
   <link rel="stylesheet" href="kss-assets/kss.css">
   {{{styles}}}
 </head>
 <body id="kss-node" {{#if template.isItem}}class="kss-fullscreen-mode"{{/if}}>
 
-  <div f-layout f-layout-aside >
-    <aside f-collapse-phone f-column f-flex f-width-160px f-min-width-20 f-max-width-260px f-bg-secondary>
+  <div f-layout f-layout-aside id="app">
+    <aside f-collapse-phone :f-aside-open="menu_open" f-column f-flex f-width-160px f-min-width-20 f-max-width-260px f-bg-secondary>
       <header f-header no-border>
         <div f-bg-secondary f-toolbar f-justify-center>
             <span f-rubber></span>
@@ -47,16 +49,33 @@
         <a href="https://www.icorbin.com" f-text-faded-60>A Corbin Creation</a>
       </footer>
     </aside>
-    <main f-content f-collapse-phone>
-
+    <main f-content f-layout  f-collapse-phone>
+      <header f-header>
+        <div f-toolbar>
+          <div f-buttons-left>
+            <a v-on:click="toggleMenu" f-button clear f-text-blue-400 f-icon-only>
+              <i class="zmdi zmdi-menu"></i>
+            </a>
+          </div>
+          <div f-title f-rubber>
+            Oh-Flex Docs
+          </div>
+        </div>
+      </header>
     {{#if template.isHomepage}}
       {{#if homepage}}
-        <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
-          {{{homepage}}}
+        <div f-content>
+
+          <div id="kssref-0" f-p-20px>
+            {{{homepage}}}
+          </div>
+
         </div>
       {{/if}}
     {{else}}
 
+
+    <div f-content>
       {{!
         Display each section, in order.
 
@@ -228,6 +247,10 @@
         </{{#if @first}}div{{else}}section{{/if}}>
       {{/each}}
     {{/if}}
+
+    </div> <!-- end inner f-content -->
+
+
   </main>
   </div> <!-- end f-layout -->
 
@@ -283,6 +306,21 @@ $(document).ready(function() {
     hljs.highlightBlock(block);
   });
 });
+</script>
+<script>
+
+var app = new Vue({
+    el: '#app',
+    methods: {
+      toggleMenu: function() {
+        this.menu_open = !this.menu_open;
+      }
+    },
+    data: {
+      menu_open : false
+    }
+})
+
 </script>
 <!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>
