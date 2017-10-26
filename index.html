@@ -13,7 +13,7 @@
 </head>
 <body class="f">
   <div f-layout f-layout-aside id="app">
-    <aside f-collapse-phone :f-aside-open="menu_open" f-width-160px f-min-width-120px f-max-width-200px f-bg-secondary>
+    <aside f-collapse-phone :f-aside-open="menu_open" f-w-160px f-w-min-120px f-w-max-200px f-bg-secondary>
       <header f-header no-border>
         <div f-bg-secondary f-toolbar f-justify-center>
             <span f-rubber></span>
@@ -24,35 +24,35 @@
       <div f-content>
 
       </div>
-      <footer f-footer no-border f-text-12px f-p-10px f-border-t-none>
+      <footer f-footer no-border f-t-12px f-p-10px f-b-t-none>
         Copyright 2017. <br  />All Rights Reserved.<br  />
-        <a href="https://www.icorbin.com" f-text-faded-60>A Corbin Creation</a>
+        <a href="https://www.icorbin.com" f-t-black-60>A Corbin Creation</a>
       </footer>
     </aside>
     <main f-collapse-phone f-content>
       <header f-header>
         <div f-toolbar-light f-toolbar >
-          <button f-button clear f-text-red-700 icon-only v-on:click="toggleMenu">
+          <button f-button clear f-t-red-700 icon-only v-on:click="toggleMenu">
             <i class="zmdi zmdi-menu"></i>
           </button>
           <span f-rubber></span>
           <div f-title>Oh-Flex! Toolkit</div>
           <span f-rubber></span>
-          <a href="https://github.com/brandoncorbin/oh-flex" target="_blank" f-button clear f-text-red-700 f-icon-only>
+          <a href="https://github.com/brandoncorbin/oh-flex" target="_blank" f-button clear f-t-red-700 f-icon-only>
             <i class="zmdi zmdi-github"></i>
           </a>
         </div>
       </header>
       <article f-content>
-        <div f-pane f-m-20px f-m-t-30px f-text-center>
+        <div f-pane f-m-20px f-m-t-30px f-t-center>
           <img src="examples/resources/brand/oh-flex-logo.png" height="120" />
         </div>
         <div f-list f-contain>
           <div f-item f-m-t-20px>
-            <div f-item-content f-text-center f-width-100 f-align-center f-justify-center f-m-b-20px>
-              <p f-note f-text-faded-60 f-p-b-10px f-text-20px f-width-55 >
+            <div f-item-content f-t-center f-w-100 f-align-center f-justify-center f-m-b-20px>
+              <p f-note f-t-black-60 f-p-b-10px f-t-20px f-w-55 >
                 Flexible Designs with no custom CSS<br />
-                 <small f-text-14px f-text-faded-50><strong>Oh-Flex Objective</strong>: Help non-designers build flexible and beautiful interfaces using only HTML attributes.</small>
+                 <small f-t-14px f-t-black-50><strong>Oh-Flex Objective</strong>: Help non-designers build flexible and beautiful interfaces using only HTML attributes.</small>
               </p>
 
             </div>
@@ -126,19 +126,19 @@
           <article f-item-divider>Installation</article>
           <article f-item>
             <div f-item-content>
-              <div f-title f-text-faded-70>Just the Stylesheet</div>
-              <textarea rows="1" f-p-5px f-m-t-5px f-round-sm f-bg-faded-60 f-text-white-90 f-text-16px><link rel="stylesheet" href="https://unpkg.com/oh-flex"  />
+              <div f-title f-t-black-70>Just the Stylesheet</div>
+              <textarea rows="1" f-p-5px f-m-t-5px f-round-sm f-bg-black-60 f-t-white-90 f-t-16px><link rel="stylesheet" href="https://unpkg.com/oh-flex"  />
               </textarea>
             </div>
           </article>
           <article f-item>
             <div f-item-content>
               <div f-title>From Source</div>
-              <textarea rows="1" f-p-5px f-m-t-5px f-m-b-5px f-round-sm f-bg-faded-60 f-text-white-90 f-text-16px>
+              <textarea rows="1" f-p-5px f-m-t-5px f-m-b-5px f-round-sm f-bg-black-60 f-t-white-90 f-t-16px>
 npm install oh-flex --save-dev
               </textarea>
-              <div f-title f-text-12px f-text-faded-60 >In your own SASS file</div>
-              <textarea rows="1" f-p-5px f-m-t-5px f-round-sm f-bg-faded-60 f-text-white-90 f-text-16px>
+              <div f-title f-t-12px f-t-black-60 >In your own SASS file</div>
+              <textarea rows="1" f-p-5px f-m-t-5px f-round-sm f-bg-black-60 f-t-white-90 f-t-16px>
 @import '~oh-flex/src/oh-flex'
               </textarea>
             </div>
@@ -149,7 +149,7 @@ npm install oh-flex --save-dev
           </article>
 
           <a f-item href="docs">
-            <i class="zmdi zmdi-assignment" f-icon lg f-text-faded f-m-r-10px></i>
+            <i class="zmdi zmdi-assignment" f-icon lg f-t-black f-m-r-10px></i>
             <div f-item-content f-rubber>
               <span f-title>Oh-Flex Style Guide (in progress)</span>
             </div>
@@ -159,7 +159,7 @@ npm install oh-flex --save-dev
           </a>
 
           <a f-item href="https://github.com/brandoncorbin/oh-flex">
-            <i class="zmdi zmdi-github" f-icon lg f-text-faded f-m-r-10px></i>
+            <i class="zmdi zmdi-github" f-icon lg f-t-black f-m-r-10px></i>
             <div f-item-content f-rubber>
               <span f-title>Github</span>
             </div>
@@ -269,7 +269,7 @@ npm install oh-flex --save-dev
                 Font Size and Colors
               </div>
               <p f-note>
-                 Pixel level font control .f-text-20px .f-text-bolder .f-text-bold
+                 Pixel level font control .f-t-20px .f-t-bolder .f-t-bold
               </p>
             </div>
             <span f-button clear icon-only>
@@ -284,7 +284,7 @@ npm install oh-flex --save-dev
         </div>
         <footer f-footer>
           <div f-toolbar f-toolbar-primary>
-            <div f-title f-text-faded-inverse-90></div>
+            <div f-title f-t-white-90></div>
           </div>
         </footer>
 

@@ -119,49 +119,83 @@
           <header f-header f-m-b-20px>
             <div f-toolbar>
               <div f-title f-rubber>
-                Placeholder
+                Borders
               </div>
-              <button clear f-button>s.7</button>
+              <button clear f-button>s.2</button>
             </div>
           </header>
-        <div id="kssref-inputs" class="kss-section kss-section--depth-1 ">
+        <div id="kssref-borders" class="kss-section kss-section--depth-1 ">
 
           <div f-p-l-20px f-p-r-20px f-p-b-20px class="kss-style">
             <h1 class="kss-title kss-title--level-1">
-              <a class="kss-title__permalink" href="#kssref-inputs">
+              <a class="kss-title__permalink" href="#kssref-borders">
                 <span class="kss-title__ref">
-                  7
+                  2
                   <span class="kss-title__permalink-hash">
-                      #Inputs
+                      #borders
                   </span>
                 </span>
-                Placeholder
+                Borders
               </a>
             </h1>
 
 
               <div class="kss-description">
-                <p>Control how a place holder in an input looks</p>
-<h4 id="centered-placeholder">Centered Placeholder</h4>
-<div f-p-16px>
- <input f-p-6px f-round f-t-16px f-b-none f-w-90 f-lg f-bg-black-10 type="text" placeholder="Centered Placeholder" f-placeholder-center />
+                <h1 id="prefix-f-b">Prefix f-b</h1>
+<p>oh-flex currently only supports border weights up to 2px
+and colors of primary, the default light, and white</p>
+<div f-p-20px f-row>
+ <div f-p-20px f-bg-white f-b f-m-r-20px>
+    All<br> <strong>f-b</strong>
+ </div>
+ <div f-p-20px f-bg-white f-b-t f-m-r-10px>
+    Top<br> <strong>f-b-t</strong>
+ </div>
+ <div f-p-20px f-bg-white f-b-b f-m-r-10px>
+    Bottom<br> <strong>f-b-b</strong>
+ </div>
+ <div f-p-20px f-bg-white f-b-l f-m-r-10px>
+    Left<br> <strong>f-b-l</strong>
+ </div>
+ <div f-p-20px f-bg-white f-b-r>
+    Right<br> <strong>f-b-r</strong>
+ </div>
 </div>
 
-<pre><code> &lt;input f-p-6px f-round f-t-16px f-b-none f-w-90 f-lg  type=&quot;text&quot; placeholder=&quot;Centered Placeholder&quot; f-placeholder-center /&gt;
-</code></pre><h4 id="inverse">Inverse</h4>
-<div f-bg-blue-100 f-p-16px  f-m-t-20px>
- <input f-input f-lg f-bg-blue-700 type="text" placeholder="Centered Placeholder" f-placeholder-center f-placeholder-inverse />
+<div f-p-20px f-row f-bg-blue-900>
+ <div f-p-20px  f-b-white f-t-white f-m-r-20px>
+    All<br> <strong>f-b-white</strong>
+ </div>
+ <div f-p-20px  f-b-t-white f-t-white   f-m-r-10px>
+    Top<br> <strong>f-b-t-white</strong>
+ </div>
+ <div f-p-20px  f-b-b-white f-t-white   f-m-r-10px>
+    Bottom<br> <strong>f-b-b-white</strong>
+ </div>
+ <div f-p-20px  f-b-l-white f-t-white   f-m-r-10px>
+    Left<br> <strong>f-b-l-white</strong>
+ </div>
+ <div f-p-20px  f-b-r-white f-t-white  >
+    Right<br> <strong>f-b-r-white</strong>
+ </div>
 </div>
 
-<pre><code> &lt;input f-p-10px f-round f-t-16px f-b-none f-w-90 f-lg f-bg-blue-100 type=&quot;text&quot; placeholder=&quot;Centered Placeholder&quot; f-placeholder-center /&gt;
-</code></pre>
+<h3 id="border-width">Border Width</h3>
+<div f-p-20px f-row>
+ <div f-p-20px f-bg-white f-b f-m-r-20px f-b-2px>
+    Border Width<br> <strong>f-b-2px</strong>
+ </div>
+ <div f-p-20px f-b-primary f-b f-m-r-10px>
+    Primary<br> <strong>f-b-primary</strong>
+ </div>
+</div>
               </div>
 
           </div>
 
 
             <div class="kss-source kss-style">
-              Source: <code>_input.scss</code>, line 1
+              Source: <code>_border.scss</code>, line 1
             </div>
 
         </div>

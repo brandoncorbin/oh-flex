@@ -6,11 +6,11 @@
 // #### Centered Placeholder
 //
 // <div f-p-16px>
-//  <input f-p-6px f-round f-text-16px f-border-none f-width-90 f-lg f-bg-faded-10 type="text" placeholder="Centered Placeholder" f-placeholder-center />
+//  <input f-p-6px f-round f-t-16px f-b-none f-w-90 f-lg f-bg-black-10 type="text" placeholder="Centered Placeholder" f-placeholder-center />
 // </div>
 //
 // ```
-//  <input f-p-6px f-round f-text-16px f-border-none f-width-90 f-lg  type="text" placeholder="Centered Placeholder" f-placeholder-center />
+//  <input f-p-6px f-round f-t-16px f-b-none f-w-90 f-lg  type="text" placeholder="Centered Placeholder" f-placeholder-center />
 // ```
 //
 // #### Inverse
@@ -20,7 +20,7 @@
 // </div>
 //
 // ```
-//  <input f-p-10px f-round f-text-16px f-border-none f-width-90 f-lg f-bg-blue-100 type="text" placeholder="Centered Placeholder" f-placeholder-center />
+//  <input f-p-10px f-round f-t-16px f-b-none f-w-90 f-lg f-bg-blue-100 type="text" placeholder="Centered Placeholder" f-placeholder-center />
 // ```
 //
 // Style guide: Inputs
@@ -35,7 +35,7 @@
     border-radius: 20px;
   }
 
-  &[f-input-faded] {
+  &[f-input-black] {
     background-color: rgba(0,0,0,0.1);
   }
 }

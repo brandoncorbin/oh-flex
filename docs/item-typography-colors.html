@@ -17,7 +17,7 @@
 <body id="kss-node" class="kss-fullscreen-mode">
 
   <div f-layout f-layout-aside id="app">
-    <aside f-collapse-phone :f-aside-open="menu_open" f-column f-flex f-width-160px f-min-width-20 f-max-width-260px f-bg-secondary>
+    <aside f-collapse-phone :f-aside-open="menu_open" f-column f-flex f-w-160px f-w-min-20 f-w-max-260px f-bg-secondary>
       <header f-header no-border>
         <div f-bg-secondary f-toolbar f-justify-center>
             <span f-rubber></span>
@@ -30,63 +30,67 @@
             <div f-title>Avatar</div>
             <!-- <span f-note>1</span> -->
           </a>
+          <a f-item href="section-borders.html">
+            <div f-title>Borders</div>
+            <!-- <span f-note>2</span> -->
+          </a>
           <a f-item href="section-buttons.html">
             <div f-title>Buttons</div>
-            <!-- <span f-note>2</span> -->
+            <!-- <span f-note>3</span> -->
           </a>
           <a f-item href="section-colors.html">
             <div f-title>Colors</div>
-            <!-- <span f-note>3</span> -->
+            <!-- <span f-note>4</span> -->
           </a>
           <a f-item href="section-flexbox.html">
             <div f-title>Flexbox</div>
-            <!-- <span f-note>4</span> -->
+            <!-- <span f-note>5</span> -->
           </a>
           <a f-item href="section-height-width.html">
             <div f-title>Height and Widths</div>
-            <!-- <span f-note>5</span> -->
+            <!-- <span f-note>6</span> -->
           </a>
           <a f-item href="section-inputs.html">
             <div f-title>Placeholder</div>
-            <!-- <span f-note>6</span> -->
+            <!-- <span f-note>7</span> -->
           </a>
           <a f-item href="section-layout.html">
             <div f-title>Layout</div>
-            <!-- <span f-note>7</span> -->
+            <!-- <span f-note>8</span> -->
           </a>
           <a f-item href="section-list.html">
             <div f-title>List</div>
-            <!-- <span f-note>8</span> -->
+            <!-- <span f-note>9</span> -->
           </a>
           <a f-item href="section-padding-margin.html">
             <div f-title>Padding &amp; Margins</div>
-            <!-- <span f-note>9</span> -->
+            <!-- <span f-note>10</span> -->
           </a>
           <a f-item href="section-shadows.html">
             <div f-title>Box Shadows</div>
-            <!-- <span f-note>10</span> -->
+            <!-- <span f-note>11</span> -->
           </a>
           <a f-item href="section-toolbar.html">
             <div f-title>Toolbar</div>
-            <!-- <span f-note>11</span> -->
+            <!-- <span f-note>12</span> -->
           </a>
           <a f-item href="section-typography.html">
             <div f-title>Typography</div>
-            <!-- <span f-note>12</span> -->
+            <!-- <span f-note>13</span> -->
           </a>
-        <div f-item-divider f-text-faded-40>
+        <div f-item-divider f-t-black-40>
           About
         </div>
         <div f-item>
           <div f-item-content>
             &copy; 2017 All Rights Reserved.
-            <a href="https://www.icorbin.com" f-text-faded-60>A Corbin Creation</a>
+            <a href="https://www.icorbin.com" f-t-black-60>A Corbin Creation</a>
           </div>
         </div>
       </div>
-      <footer f-footer no-border f-text-12px f-border-t-none>
+      <footer f-footer no-border f-t-12px f-b-t-none>
 
-        <div f-toolbar f-bg-faded-5>
+        <div f-toolbar f-bg-black-5>
           <a f-button clear f-rubber f-icon-only href="https://github.com/brandoncorbin/oh-flex">
             <i class="zmdi zmdi-github"></i>
           </a>
@@ -100,7 +104,7 @@
       <header f-header>
         <div f-toolbar>
           <div f-buttons-left>
-            <a v-on:click="toggleMenu" f-button clear f-text-blue-400 f-icon-only>
+            <a v-on:click="toggleMenu" f-button clear f-t-blue-400 f-icon-only>
               <i class="zmdi zmdi-menu"></i>
             </a>
           </div>
@@ -117,7 +121,7 @@
               <div f-title f-rubber>
                 Text Color
               </div>
-              <button clear f-button>s.12.1</button>
+              <button clear f-button>s.13.1</button>
             </div>
           </header>
         <div id="kssref-typography-colors" class="kss-section kss-section--depth-2 is-fullscreen">
@@ -126,7 +130,7 @@
             <h2 class="kss-title kss-title--level-2">
               <a class="kss-title__permalink" href="#kssref-typography-colors">
                 <span class="kss-title__ref">
-                  12.1
+                  13.1
                   <span class="kss-title__permalink-hash">
                       #Typography.colors
                   </span>
@@ -139,33 +143,33 @@
               <div class="kss-description">
                 <p>Simple Text Fading</p>
 <div f-flex f-row>
-    <div f-width-50>
-        <div f-p-10px f-text-bold f-text-primary>f-text-primary</div>
-        <div f-p-10px f-text-bold f-text-secondary>f-text-secondary</div>
-        <div f-p-10px f-text-bold f-text-faded-100>f-text-faded-100</div>
-        <div f-p-10px f-text-bold f-text-faded-90>f-text-faded-90</div>
-        <div f-p-10px f-text-bold f-text-faded-80>f-text-faded-80</div>
-        <div f-p-10px f-text-bold f-text-faded-70>f-text-faded-70</div>
-        <div f-p-10px f-text-bold f-text-faded-60>f-text-faded-60</div>
-        <div f-p-10px f-text-bold f-text-faded-50>f-text-faded-50</div>
-        <div f-p-10px f-text-bold f-text-faded-40>f-text-faded-40</div>
-        <div f-p-10px f-text-bold f-text-faded-30>f-text-faded-30</div>
-        <div f-p-10px f-text-bold f-text-faded-20>f-text-faded-20</div>
-        <div f-p-10px f-text-bold f-text-faded-10>f-text-faded-10</div>
-        <div f-p-10px f-text-bold f-text-faded-5>f-text-faded-5</div>
+    <div f-w-50>
+        <div f-p-10px f-t-bold f-t-primary>f-t-primary</div>
+        <div f-p-10px f-t-bold f-t-secondary>f-t-secondary</div>
+        <div f-p-10px f-t-bold f-t-black-100>f-t-black-100</div>
+        <div f-p-10px f-t-bold f-t-black-90>f-t-black-90</div>
+        <div f-p-10px f-t-bold f-t-black-80>f-t-black-80</div>
+        <div f-p-10px f-t-bold f-t-black-70>f-t-black-70</div>
+        <div f-p-10px f-t-bold f-t-black-60>f-t-black-60</div>
+        <div f-p-10px f-t-bold f-t-black-50>f-t-black-50</div>
+        <div f-p-10px f-t-bold f-t-black-40>f-t-black-40</div>
+        <div f-p-10px f-t-bold f-t-black-30>f-t-black-30</div>
+        <div f-p-10px f-t-bold f-t-black-20>f-t-black-20</div>
+        <div f-p-10px f-t-bold f-t-black-10>f-t-black-10</div>
+        <div f-p-10px f-t-bold f-t-black-5>f-t-black-5</div>
     </div>
-    <div f-width-50 f-bg-faded-90>
-        <div f-p-10px f-text-bold f-text-white-100>f-text-white-100</div>
-        <div f-p-10px f-text-bold f-text-white-90>f-text-white-90</div>
-        <div f-p-10px f-text-bold f-text-white-80>f-text-white-80</div>
-        <div f-p-10px f-text-bold f-text-white-70>f-text-white-70</div>
-        <div f-p-10px f-text-bold f-text-white-60>f-text-white-60</div>
-        <div f-p-10px f-text-bold f-text-white-50>f-text-white-50</div>
-        <div f-p-10px f-text-bold f-text-white-40>f-text-white-40</div>
-        <div f-p-10px f-text-bold f-text-white-30>f-text-white-30</div>
-        <div f-p-10px f-text-bold f-text-white-20>f-text-white-20</div>
-        <div f-p-10px f-text-bold f-text-white-10>f-text-white-10</div>
-        <div f-p-10px f-text-bold f-text-white-5>f-text-white-5</div>
+    <div f-w-50 f-bg-black-90>
+        <div f-p-10px f-t-bold f-t-white-100>f-t-white-100</div>
+        <div f-p-10px f-t-bold f-t-white-90>f-t-white-90</div>
+        <div f-p-10px f-t-bold f-t-white-80>f-t-white-80</div>
+        <div f-p-10px f-t-bold f-t-white-70>f-t-white-70</div>
+        <div f-p-10px f-t-bold f-t-white-60>f-t-white-60</div>
+        <div f-p-10px f-t-bold f-t-white-50>f-t-white-50</div>
+        <div f-p-10px f-t-bold f-t-white-40>f-t-white-40</div>
+        <div f-p-10px f-t-bold f-t-white-30>f-t-white-30</div>
+        <div f-p-10px f-t-bold f-t-white-20>f-t-white-20</div>
+        <div f-p-10px f-t-bold f-t-white-10>f-t-white-10</div>
+        <div f-p-10px f-t-bold f-t-white-5>f-t-white-5</div>
     </div>
 </div>
               </div>
@@ -174,7 +178,7 @@
 
 
             <div class="kss-source kss-style">
-              Source: <code>_colors.scss</code>, line 330
+              Source: <code>_colors.scss</code>, line 72
             </div>
 
         </div>

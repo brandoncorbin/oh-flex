@@ -13,16 +13,16 @@
 <body class="f">
   <div f-layout f-layout-aside id="app">
     <!-- START Mailboxes List -->
-    <aside f-width-25 f-collapse-phone :f-aside-open="mailbox_menu_open">
+    <aside f-w-25 f-collapse-phone :f-aside-open="mailbox_menu_open">
       <div f-layout>
         <header f-header>
           <div f-toolbar f-toolbar-light>
             <div f-buttons-left><a f-button f-icon-only clear f-primary href="../../"><i class="zmdi zmdi-arrow-back"></i></a></div>
             <span f-rubber></span>
-            <button f-button clear f-primary f-text-16px>Edit</button>
+            <button f-button clear f-primary f-t-16px>Edit</button>
           </div>
           <div f-toolbar f-toolbar-light f-column f-align-start>
-            <div f-title huge f-width-100>
+            <div f-title huge f-w-100>
               Mailboxes
             </div>
           </div>
@@ -33,28 +33,28 @@
             <button f-button clear f-primary icon-only f-item-left>
               <i f-icon md class="zmdi zmdi-inbox" ></i>
             </button>
-            <div f-rubber f-text-16px>All Inboxes</div>
-            <span f-note f-text-18px>4</span>
+            <div f-rubber f-t-16px>All Inboxes</div>
+            <span f-note f-t-18px>4</span>
           </a>
 
           <a f-item >
             <button f-button clear f-primary icon-only f-item-left>
               <i f-icon md class="zmdi zmdi-inbox" ></i>
             </button>
-            <div f-rubber f-text-16px>Happy Data</div>
-            <span f-note f-text-18px>4</span>
+            <div f-rubber f-t-16px>Happy Data</div>
+            <span f-note f-t-18px>4</span>
           </a>
 
           <a f-item >
             <button f-button clear f-primary icon-only f-item-left>
               <i f-icon md class="zmdi zmdi-inbox" ></i>
             </button>
-            <div f-rubber f-text-16px>Corbin UX</div>
-            <span f-note f-text-18px>12</span>
+            <div f-rubber f-t-16px>Corbin UX</div>
+            <span f-note f-t-18px>12</span>
           </a>
 
           <div f-item-divider>
-            <div f-text-18px text-faded f-p-t-6px f-p-b-6px f-rubber f-text-normal>
+            <div f-t-18px text-black f-p-t-6px f-p-b-6px f-rubber f-t-normal>
               Happy Data
             </div>
           </div>
@@ -63,16 +63,16 @@
             <button f-button clear f-primary icon-only f-m-r-10px f-item-left>
               <i class="zmdi zmdi-inbox" f-icon md ></i>
             </button>
-            <div f-rubber f-text-16px>Inbox</div>
-            <span f-note f-text-18px></span>
+            <div f-rubber f-t-16px>Inbox</div>
+            <span f-note f-t-18px></span>
           </a>
 
           <a f-item >
             <button f-button clear f-primary icon-only f-m-r-10px f-item-left>
               <i class="zmdi zmdi-mail-send" f-icon md ></i>
             </button>
-            <div f-rubber f-text-16px>Corbin UX</div>
-            <span f-note f-text-18px>12</span>
+            <div f-rubber f-t-16px>Corbin UX</div>
+            <span f-note f-t-18px>12</span>
           </a>
 
         </div>
@@ -80,19 +80,19 @@
     </aside>
     <!-- END Mailboxes List -->
     <!-- START Message List View -->
-    <aside f-width-30 f-collapse-phone :f-aside-open="message_menu_open">
+    <aside f-w-30 f-collapse-phone :f-aside-open="message_menu_open">
       <div f-layout>
         <header f-header>
           <div f-toolbar f-toolbar-light>
             <div f-buttons-left f-show-md-down f-icon-only f-primary><a f-button f-icon-only clear v-on:click="toggleMailboxMenu"><i class="zmdi zmdi-menu"></i></a></div>
             <span f-rubber></span>
-            <button f-button  clear f-primary f-text-16px>Edit</button>
+            <button f-button  clear f-primary f-t-16px>Edit</button>
           </div>
           <div f-toolbar f-toolbar-light f-column f-align-start>
-            <div f-title huge f-width-100>
+            <div f-title huge f-w-100>
               All Inboxes
             </div>
-            <input type="text" placeholder="Search" f-grow f-max-width-100 f-text-16px f-min-width-90 f-round-xl  f-shrink-off f-p-8px f-p-l-12px f-m-t-10px f-m-b-10px f-border-none f-bg-faded-10 />
+            <input type="text" placeholder="Search" f-grow f-w-max-100 f-t-16px f-w-min-90 f-round-xl  f-shrink-off f-p-8px f-p-l-12px f-m-t-10px f-m-b-10px f-b-none f-bg-black-10 />
           </div>
         </header>
 
@@ -100,7 +100,7 @@
           <a f-item clear f-align-start>
             <div f-content>
               <div f-row f-justify-between>
-                <div f-title><i class="zmdi zmdi-star" f-text-primary f-text-md></i> Audible</div>
+                <div f-title><i class="zmdi zmdi-star" f-t-primary f-t-md></i> Audible</div>
                 <div class="rubber"></div>
                 <div f-note>9:14 AM</div>
               </div>
@@ -149,11 +149,11 @@
         <footer f-footer>
           <div f-toolbar f-toolbar-light f-align-center>
             <button clear icon-only f-primary f-button><i class="zmdi zmdi-filter-list"></i></button>
-            <div f-text-center f-rubber f-p-r-30px >
-              <div f-text-10px f-text-bold f-text-faded-60>
+            <div f-t-center f-rubber f-p-r-30px >
+              <div f-t-10px f-t-bold f-t-black-60>
                 Updated at 11:09 AM
               </div>
-              <div f-text-10px f-text-faded-20>
+              <div f-t-10px f-t-black-20>
                 2 Unread
               </div>
             </div>
@@ -189,21 +189,21 @@
           <div f-p-30px>
             <div f-item>
               <div f-content>
-                <div f-row f-text-16px f-m-b-6px>
-                  From: <span f-text-primary f-m-l-10px>no_reply@email.apple.com</span>
+                <div f-row f-t-16px f-m-b-6px>
+                  From: <span f-t-primary f-m-l-10px>no_reply@email.apple.com</span>
                 </div>
-                <div f-row f-text-14px>
-                  To:  <span f-text-primary f-m-l-10px>brandon</span>
+                <div f-row f-t-14px>
+                  To:  <span f-t-primary f-m-l-10px>brandon</span>
                 </div>
               </div>
             </div>
 
             <div f-item f-m-t-20px no-lines>
               <div f-content>
-                <div f-text-bold f-m-b-6px f-text-24px>
+                <div f-t-bold f-m-b-6px f-t-24px>
                   Your App Review Feedback
                 </div>
-                <div f-row f-text-14px f-text-faded-40>
+                <div f-row f-t-14px f-t-black-40>
                   Yesterday at 7:50 PM
                 </div>
               </div>
@@ -213,7 +213,7 @@
 
 
               <p>Veniam consectetur laborum exercitation in minim dolore sit ea anim voluptate veniam commodo id voluptate cillum. Aliquip cillum aliqua aute commodo eiusmod do elit nisi dolor deserunt. Ex anim consectetur culpa reprehenderit amet incididunt fugiat laborum fugiat irure nisi est nostrud in adipisicing fugiat. In in consequat laborum magna eiusmod adipisicing exercitation tempor laboris amet commodo et veniam.</p>
-              <img src="../resources/brand/oh-flex-logo.png" f-width-95 />
+              <img src="../resources/brand/oh-flex-logo.png" f-w-95 />
                 <p>Eiusmod duis do pariatur ut nulla Lorem elit consectetur pariatur voluptate id esse dolore sit irure. Pariatur sunt sunt consequat duis ea sint do Lorem velit aliqua laborum ad sint ut magna culpa sunt. Non ipsum id dolore cupidatat enim magna amet dolore. Voluptate aute irure ad quis exercitation cillum exercitation sint eiusmod irure.</p>
               <p>Laboris consectetur dolor ut eiusmod nulla exercitation sunt esse consectetur velit ex laboris. Cupidatat ipsum est magna irure eu ullamco enim quis magna. Nulla mollit ea minim mollit ex tempor ullamco aliqua. Culpa aliquip deserunt Lorem fugiat ea reprehenderit do cillum elit reprehenderit esse. Incididunt veniam ad proident voluptate excepteur fugiat ullamco laborum ex. Ad anim sit ut fugiat ea eu exercitation do ipsum. Reprehenderit nisi incididunt pariatur Lorem fugiat officia irure magna quis anim non incididunt excepteur Lorem.</p>
               <p>Non aute nostrud anim ipsum pariatur eu reprehenderit velit deserunt veniam. Commodo eiusmod ex magna nostrud tempor cillum nisi. Ipsum ullamco dolore laboris magna nulla veniam esse. Magna commodo in exercitation ex magna fugiat aliquip nulla ullamco non exercitation. Duis in magna ipsum irure voluptate mollit aliquip Lorem commodo consequat est esse ad do ex ex voluptate. Lorem Lorem eiusmod consectetur dolor velit esse pariatur commodo eiusmod eu nulla excepteur. Incididunt culpa sint ipsum reprehenderit et sint quis Lorem.</p>

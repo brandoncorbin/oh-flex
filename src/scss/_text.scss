@@ -2,22 +2,22 @@
 //
 // Markdown:
 // <ul>
-// <li f-text-8px>.f-text-8px</li>
-// <li f-text-10px>.f-text-10px</li>
-// <li f-text-12px>.f-text-12px</li>
-// <li f-text-14px>.f-text-14px</li>
-// <li f-text-16px>.f-text-16px</li>
-// <li f-text-18px>.f-text-18px</li>
-// <li f-text-20px>.f-text-20px</li>
-// <li f-text-22px>.f-text-22px</li>
-// <li f-text-24px>.f-text-24px</li>
-// <li f-text-26px>.f-text-26px</li>
-// <li f-text-28px>.f-text-28px</li>
-// <li f-text-30px>.f-text-30px</li>
-// <li f-text-32px>.f-text-32px</li>
-// <li f-text-36px>.f-text-36px</li>
-// <li f-text-40px>.f-text-40px</li>
-// <li f-text-42px>.f-text-42px</li>
+// <li f-t-8px>.f-t-8px</li>
+// <li f-t-10px>.f-t-10px</li>
+// <li f-t-12px>.f-t-12px</li>
+// <li f-t-14px>.f-t-14px</li>
+// <li f-t-16px>.f-t-16px</li>
+// <li f-t-18px>.f-t-18px</li>
+// <li f-t-20px>.f-t-20px</li>
+// <li f-t-22px>.f-t-22px</li>
+// <li f-t-24px>.f-t-24px</li>
+// <li f-t-26px>.f-t-26px</li>
+// <li f-t-28px>.f-t-28px</li>
+// <li f-t-30px>.f-t-30px</li>
+// <li f-t-32px>.f-t-32px</li>
+// <li f-t-36px>.f-t-36px</li>
+// <li f-t-40px>.f-t-40px</li>
+// <li f-t-42px>.f-t-42px</li>
 // </ul>
 //
 // Style guide: Typography.size
@@ -39,43 +39,43 @@
 @include text-size(40px);
 @include text-size(42px);
 
-[f-text-bold] {
+[f-t-bold] {
   font-weight: bold;
 }
 
-[f-text-faded] {
+[f-t-black] {
   color: $faded;
 }
 
-[f-text-normal] {
+[f-t-normal] {
   font-weight: normal !important;
 }
 
-[f-text-uppercase] {
+[f-t-uppercase] {
   text-transform: uppercase;
 }
 
-[f-text-capitalize] {
+[f-t-capitalize] {
   text-transform: capitalize;
 }
 
-[f-text-right] {
+[f-t-right] {
   text-align: right;
 }
 
-[f-text-left] {
+[f-t-left] {
   text-align: left;
 }
 
-[f-text-thin] {
+[f-t-thin] {
   font-weight: 300;
 }
 
-[f-text-spread] {
+[f-t-spread] {
   letter-spacing: 0.1rem;
 }
 
-[f-text-transform-none] {
+[f-t-transform-none] {
   text-transform: none;
 }
 
@@ -86,15 +86,15 @@
   padding    : 0;
 }
 
-[f-text-bolder] {
+[f-t-bolder] {
   font-weight: bolder;
 }
 
-[f-text-center] {
+[f-t-center] {
   text-align: center;
 }
 
-[f-text-primary] {
+[f-t-primary] {
   color: $primary;
 }
 

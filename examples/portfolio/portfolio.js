@@ -7,7 +7,7 @@ var resume = {
     description: [
       "What would a resume of 2018 look like? It should be fluid and always active. It should be authentic and real, and not just a bunch of fluffy words.  You're now looking at my answer to that question.",
       "Hi, I'm Brandon Corbin a Product Designer/Developer/Architect with a passion for health & behavior tracking, understanding the human condition, and helping others discover their full potential.",
-      "<strong f-p-b-6px f-p-t-6px f-text-14px f-text-bolder f-text-dark>Strengths</strong>",
+      "<strong f-p-b-6px f-p-t-6px f-t-14px f-t-bolder f-t-dark>Strengths</strong>",
       "Turning really rough ideas into functional prototypes and MVP's.",
       "Discovering new ways of turning existing data/services into new product offerings.",
       "Managing and mentoring creatives",

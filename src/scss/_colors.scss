@@ -1,370 +1,111 @@
-$material-colors : (
-"red-50":   #FFEBEE,
-"red-100":  #FFCDD2,
-"red-200":  #EF9A9A,
-"red-300":  #E57373,
-"red-400":  #EF5350,
-"red-500":  #F44336,
-"red-600":  #E53935,
-"red-700":  #D32F2F,
-"red-800":  #C62828,
-"red-900":  #B71C1C,
-"red-A100": #FF8A80,
-"red-A200": #FF5252,
-"red-A400": #FF1744,
-"red-A700": #D50000,
-"pink-50":   #FCE4EC,
-"pink-100":  #F8BBD0,
-"pink-200":  #F48FB1,
-"pink-300":  #F06292,
-"pink-400":  #EC407A,
-"pink-500":  #E91E63,
-"pink-600":  #D81B60,
-"pink-700":  #C2185B,
-"pink-800":  #AD1457,
-"pink-900":  #880E4F,
-"pink-A100": #FF80AB,
-"pink-A200": #FF4081,
-"pink-A400": #F50057,
-"pink-A700": #C51162,
-"purple-50":   #F3E5F5,
-"purple-100":  #E1BEE7,
-"purple-200":  #CE93D8,
-"purple-300":  #BA68C8,
-"purple-400":  #AB47BC,
-"purple-500":  #9C27B0,
-"purple-600":  #8E24AA,
-"purple-700":  #7B1FA2,
-"purple-800":  #6A1B9A,
-"purple-900":  #4A148C,
-"purple-A100": #EA80FC,
-"purple-A200": #E040FB,
-"purple-A400": #D500F9,
-"purple-A700": #AA00FF,
-"deep-purple-50":   #EDE7F6,
-"deep-purple-100":  #D1C4E9,
-"deep-purple-200":  #B39DDB,
-"deep-purple-300":  #9575CD,
-"deep-purple-400":  #7E57C2,
-"deep-purple-500":  #673AB7,
-"deep-purple-600":  #5E35B1,
-"deep-purple-700":  #512DA8,
-"deep-purple-800":  #4527A0,
-"deep-purple-900":  #311B92,
-"deep-purple-A100": #B388FF,
-"deep-purple-A200": #7C4DFF,
-"deep-purple-A400": #651FFF,
-"deep-purple-A700": #6200EA,
-"indigo-50":   #E8EAF6,
-"indigo-100":  #C5CAE9,
-"indigo-200":  #9FA8DA,
-"indigo-300":  #7986CB,
-"indigo-400":  #5C6BC0,
-"indigo-500":  #3F51B5,
-"indigo-600":  #3949AB,
-"indigo-700":  #303F9F,
-"indigo-800":  #283593,
-"indigo-900":  #1A237E,
-"indigo-A100": #8C9EFF,
-"indigo-A200": #536DFE,
-"indigo-A400": #3D5AFE,
-"indigo-A700": #304FFE,
-"blue-50":   #E3F2FD,
-"blue-100":  #BBDEFB,
-"blue-200":  #90CAF9,
-"blue-300":  #64B5F6,
-"blue-400":  #42A5F5,
-"blue-500":  #2196F3,
-"blue-600":  #1E88E5,
-"blue-700":  #1976D2,
-"blue-800":  #1565C0,
-"blue-900":  #0D47A1,
-"blue-A100": #82B1FF,
-"blue-A200": #448AFF,
-"blue-A400": #2979FF,
-"blue-A700": #2962FF,
-"light-blue-50":   #E1F5FE,
-"light-blue-100":  #B3E5FC,
-"light-blue-200":  #81D4FA,
-"light-blue-300":  #4FC3F7,
-"light-blue-400":  #29B6F6,
-"light-blue-500":  #03A9F4,
-"light-blue-600":  #039BE5,
-"light-blue-700":  #0288D1,
-"light-blue-800":  #0277BD,
-"light-blue-900":  #01579B,
-"light-blue-A100": #80D8FF,
-"light-blue-A200": #40C4FF,
-"light-blue-A400": #00B0FF,
-"light-blue-A700": #0091EA,
-"cyan-50":   #E0F7FA,
-"cyan-100":  #B2EBF2,
-"cyan-200":  #80DEEA,
-"cyan-300":  #4DD0E1,
-"cyan-400":  #26C6DA,
-"cyan-500":  #00BCD4,
-"cyan-600":  #00ACC1,
-"cyan-700":  #0097A7,
-"cyan-800":  #00838F,
-"cyan-900":  #006064,
-"cyan-A100": #84FFFF,
-"cyan-A200": #18FFFF,
-"cyan-A400": #00E5FF,
-"cyan-A700": #00B8D4,
-"teal-50":   #E0F2F1,
-"teal-100":  #B2DFDB,
-"teal-200":  #80CBC4,
-"teal-300":  #4DB6AC,
-"teal-400":  #26A69A,
-"teal-500":  #009688,
-"teal-600":  #00897B,
-"teal-700":  #00796B,
-"teal-800":  #00695C,
-"teal-900":  #004D40,
-"teal-A100": #A7FFEB,
-"teal-A200": #64FFDA,
-"teal-A400": #1DE9B6,
-"teal-A700": #00BFA5,
-"green-50":   #E8F5E9,
-"green-100":  #C8E6C9,
-"green-200":  #A5D6A7,
-"green-300":  #81C784,
-"green-400":  #66BB6A,
-"green-500":  #4CAF50,
-"green-600":  #43A047,
-"green-700":  #388E3C,
-"green-800":  #2E7D32,
-"green-900":  #1B5E20,
-"green-A100": #B9F6CA,
-"green-A200": #69F0AE,
-"green-A400": #00E676,
-"green-A700": #00C853,
-"light-green-50":   #F1F8E9,
-"light-green-100":  #DCEDC8,
-"light-green-200":  #C5E1A5,
-"light-green-300":  #AED581,
-"light-green-400":  #9CCC65,
-"light-green-500":  #8BC34A,
-"light-green-600":  #7CB342,
-"light-green-700":  #689F38,
-"light-green-800":  #558B2F,
-"light-green-900":  #33691E,
-"light-green-A100": #CCFF90,
-"light-green-A200": #B2FF59,
-"light-green-A400": #76FF03,
-"light-green-A700": #64DD17,
-"lime-50":   #F9FBE7,
-"lime-100":  #F0F4C3,
-"lime-200":  #E6EE9C,
-"lime-300":  #DCE775,
-"lime-400":  #D4E157,
-"lime-500":  #CDDC39,
-"lime-600":  #C0CA33,
-"lime-700":  #AFB42B,
-"lime-800":  #9E9D24,
-"lime-900":  #827717,
-"lime-A100": #F4FF81,
-"lime-A200": #EEFF41,
-"lime-A400": #C6FF00,
-"lime-A700": #AEEA00,
-"yellow-50":   #FFFDE7,
-"yellow-100":  #FFF9C4,
-"yellow-200":  #FFF59D,
-"yellow-300":  #FFF176,
-"yellow-400":  #FFEE58,
-"yellow-500":  #FFEB3B,
-"yellow-600":  #FDD835,
-"yellow-700":  #FBC02D,
-"yellow-800":  #F9A825,
-"yellow-900":  #F57F17,
-"yellow-A100": #FFFF8D,
-"yellow-A200": #FFFF00,
-"yellow-A400": #FFEA00,
-"yellow-A700": #FFD600,
-"amber-50":   #FFF8E1,
-"amber-100":  #FFECB3,
-"amber-200":  #FFE082,
-"amber-300":  #FFD54F,
-"amber-400":  #FFCA28,
-"amber-500":  #FFC107,
-"amber-600":  #FFB300,
-"amber-700":  #FFA000,
-"amber-800":  #FF8F00,
-"amber-900":  #FF6F00,
-"amber-A100": #FFE57F,
-"amber-A200": #FFD740,
-"amber-A400": #FFC400,
-"amber-A700": #FFAB00,
-"orange-50":   #FFF3E0,
-"orange-100":  #FFE0B2,
-"orange-200":  #FFCC80,
-"orange-300":  #FFB74D,
-"orange-400":  #FFA726,
-"orange-500":  #FF9800,
-"orange-600":  #FB8C00,
-"orange-700":  #F57C00,
-"orange-800":  #EF6C00,
-"orange-900":  #E65100,
-"orange-A100": #FFD180,
-"orange-A200": #FFAB40,
-"orange-A400": #FF9100,
-"orange-A700": #FF6D00,
-"deep-orange-50":   #FBE9E7,
-"deep-orange-100":  #FFCCBC,
-"deep-orange-200":  #FFAB91,
-"deep-orange-300":  #FF8A65,
-"deep-orange-400":  #FF7043,
-"deep-orange-500":  #FF5722,
-"deep-orange-600":  #F4511E,
-"deep-orange-700":  #E64A19,
-"deep-orange-800":  #D84315,
-"deep-orange-900":  #BF360C,
-"deep-orange-A100": #FF9E80,
-"deep-orange-A200": #FF6E40,
-"deep-orange-A400": #FF3D00,
-"deep-orange-A700": #DD2C00,
-"brown-50":   #EFEBE9,
-"brown-100":  #D7CCC8,
-"brown-200":  #BCAAA4,
-"brown-300":  #A1887F,
-"brown-400":  #8D6E63,
-"brown-500":  #795548,
-"brown-600":  #6D4C41,
-"brown-700":  #5D4037,
-"brown-800":  #4E342E,
-"brown-900":  #3E2723,
-"grey-50":   #FAFAFA,
-"grey-100":  #F5F5F5,
-"grey-200":  #EEEEEE,
-"grey-300":  #E0E0E0,
-"grey-400":  #BDBDBD,
-"grey-500":  #9E9E9E,
-"grey-600":  #757575,
-"grey-700":  #616161,
-"grey-800":  #424242,
-"grey-900":  #212121,
-"blue-grey-50":   #ECEFF1,
-"blue-grey-100":  #CFD8DC,
-"blue-grey-200":  #B0BEC5,
-"blue-grey-300":  #90A4AE,
-"blue-grey-400":  #78909C,
-"blue-grey-500":  #607D8B,
-"blue-grey-600":  #546E7A,
-"blue-grey-700":  #455A64,
-"blue-grey-800":  #37474F,
-"blue-grey-900":  #263238,
-"white-lighter": rgba(255,255,255,.12),
-"white-light":   rgba(255,255,255,.30),
-"white-dark":    rgba(255,255,255,.70),
-"white-darker":  rgba(255,255,255, 1),
-"black-lighter": rgba(0,0,0,.12),
-"black-light":   rgba(0,0,0,.26),
-"black-dark":    rgba(0,0,0,.54),
-"black-darker":  rgba(0,0,0,.87)
-);
-
+$material-colors: ( "red-50": #FFEBEE, "red-100": #FFCDD2, "red-200": #EF9A9A, "red-300": #E57373, "red-400": #EF5350, "red-500": #F44336, "red-600": #E53935, "red-700": #D32F2F, "red-800": #C62828, "red-900": #B71C1C, "red-A100": #FF8A80, "red-A200": #FF5252, "red-A400": #FF1744, "red-A700": #D50000, "pink-50": #FCE4EC, "pink-100": #F8BBD0, "pink-200": #F48FB1, "pink-300": #F06292, "pink-400": #EC407A, "pink-500": #E91E63, "pink-600": #D81B60, "pink-700": #C2185B, "pink-800": #AD1457, "pink-900": #880E4F, "pink-A100": #FF80AB, "pink-A200": #FF4081, "pink-A400": #F50057, "pink-A700": #C51162, "purple-50": #F3E5F5, "purple-100": #E1BEE7, "purple-200": #CE93D8, "purple-300": #BA68C8, "purple-400": #AB47BC, "purple-500": #9C27B0, "purple-600": #8E24AA, "purple-700": #7B1FA2, "purple-800": #6A1B9A, "purple-900": #4A148C, "purple-A100": #EA80FC, "purple-A200": #E040FB, "purple-A400": #D500F9, "purple-A700": #AA00FF, "deep-purple-50": #EDE7F6, "deep-purple-100": #D1C4E9, "deep-purple-200": #B39DDB, "deep-purple-300": #9575CD, "deep-purple-400": #7E57C2, "deep-purple-500": #673AB7, "deep-purple-600": #5E35B1, "deep-purple-700": #512DA8, "deep-purple-800": #4527A0, "deep-purple-900": #311B92, "deep-purple-A100": #B388FF, "deep-purple-A200": #7C4DFF, "deep-purple-A400": #651FFF, "deep-purple-A700": #6200EA, "indigo-50": #E8EAF6, "indigo-100": #C5CAE9, "indigo-200": #9FA8DA, "indigo-300": #7986CB, "indigo-400": #5C6BC0, "indigo-500": #3F51B5, "indigo-600": #3949AB, "indigo-700": #303F9F, "indigo-800": #283593, "indigo-900": #1A237E, "indigo-A100": #8C9EFF, "indigo-A200": #536DFE, "indigo-A400": #3D5AFE, "indigo-A700": #304FFE, "blue-50": #E3F2FD, "blue-100": #BBDEFB, "blue-200": #90CAF9, "blue-300": #64B5F6, "blue-400": #42A5F5, "blue-500": #2196F3, "blue-600": #1E88E5, "blue-700": #1976D2, "blue-800": #1565C0, "blue-900": #0D47A1, "blue-A100": #82B1FF, "blue-A200": #448AFF, "blue-A400": #2979FF, "blue-A700": #2962FF, "light-blue-50": #E1F5FE, "light-blue-100": #B3E5FC, "light-blue-200": #81D4FA, "light-blue-300": #4FC3F7, "light-blue-400": #29B6F6, "light-blue-500": #03A9F4, "light-blue-600": #039BE5, "light-blue-700": #0288D1, "light-blue-800": #0277BD, "light-blue-900": #01579B, "light-blue-A100": #80D8FF, "light-blue-A200": #40C4FF, "light-blue-A400": #00B0FF, "light-blue-A700": #0091EA, "cyan-50": #E0F7FA, "cyan-100": #B2EBF2, "cyan-200": #80DEEA, "cyan-300": #4DD0E1, "cyan-400": #26C6DA, "cyan-500": #00BCD4, "cyan-600": #00ACC1, "cyan-700": #0097A7, "cyan-800": #00838F, "cyan-900": #006064, "cyan-A100": #84FFFF, "cyan-A200": #18FFFF, "cyan-A400": #00E5FF, "cyan-A700": #00B8D4, "teal-50": #E0F2F1, "teal-100": #B2DFDB, "teal-200": #80CBC4, "teal-300": #4DB6AC, "teal-400": #26A69A, "teal-500": #009688, "teal-600": #00897B, "teal-700": #00796B, "teal-800": #00695C, "teal-900": #004D40, "teal-A100": #A7FFEB, "teal-A200": #64FFDA, "teal-A400": #1DE9B6, "teal-A700": #00BFA5, "green-50": #E8F5E9, "green-100": #C8E6C9, "green-200": #A5D6A7, "green-300": #81C784, "green-400": #66BB6A, "green-500": #4CAF50, "green-600": #43A047, "green-700": #388E3C, "green-800": #2E7D32, "green-900": #1B5E20, "green-A100": #B9F6CA, "green-A200": #69F0AE, "green-A400": #00E676, "green-A700": #00C853, "light-green-50": #F1F8E9, "light-green-100": #DCEDC8, "light-green-200": #C5E1A5, "light-green-300": #AED581, "light-green-400": #9CCC65, "light-green-500": #8BC34A, "light-green-600": #7CB342, "light-green-700": #689F38, "light-green-800": #558B2F, "light-green-900": #33691E, "light-green-A100": #CCFF90, "light-green-A200": #B2FF59, "light-green-A400": #76FF03, "light-green-A700": #64DD17, "lime-50": #F9FBE7, "lime-100": #F0F4C3, "lime-200": #E6EE9C, "lime-300": #DCE775, "lime-400": #D4E157, "lime-500": #CDDC39, "lime-600": #C0CA33, "lime-700": #AFB42B, "lime-800": #9E9D24, "lime-900": #827717, "lime-A100": #F4FF81, "lime-A200": #EEFF41, "lime-A400": #C6FF00, "lime-A700": #AEEA00, "yellow-50": #FFFDE7, "yellow-100": #FFF9C4, "yellow-200": #FFF59D, "yellow-300": #FFF176, "yellow-400": #FFEE58, "yellow-500": #FFEB3B, "yellow-600": #FDD835, "yellow-700": #FBC02D, "yellow-800": #F9A825, "yellow-900": #F57F17, "yellow-A100": #FFFF8D, "yellow-A200": #FFFF00, "yellow-A400": #FFEA00, "yellow-A700": #FFD600, "amber-50": #FFF8E1, "amber-100": #FFECB3, "amber-200": #FFE082, "amber-300": #FFD54F, "amber-400": #FFCA28, "amber-500": #FFC107, "amber-600": #FFB300, "amber-700": #FFA000, "amber-800": #FF8F00, "amber-900": #FF6F00, "amber-A100": #FFE57F, "amber-A200": #FFD740, "amber-A400": #FFC400, "amber-A700": #FFAB00, "orange-50": #FFF3E0, "orange-100": #FFE0B2, "orange-200": #FFCC80, "orange-300": #FFB74D, "orange-400": #FFA726, "orange-500": #FF9800, "orange-600": #FB8C00, "orange-700": #F57C00, "orange-800": #EF6C00, "orange-900": #E65100, "orange-A100": #FFD180, "orange-A200": #FFAB40, "orange-A400": #FF9100, "orange-A700": #FF6D00, "deep-orange-50": #FBE9E7, "deep-orange-100": #FFCCBC, "deep-orange-200": #FFAB91, "deep-orange-300": #FF8A65, "deep-orange-400": #FF7043, "deep-orange-500": #FF5722, "deep-orange-600": #F4511E, "deep-orange-700": #E64A19, "deep-orange-800": #D84315, "deep-orange-900": #BF360C, "deep-orange-A100": #FF9E80, "deep-orange-A200": #FF6E40, "deep-orange-A400": #FF3D00, "deep-orange-A700": #DD2C00, "brown-50": #EFEBE9, "brown-100": #D7CCC8, "brown-200": #BCAAA4, "brown-300": #A1887F, "brown-400": #8D6E63, "brown-500": #795548, "brown-600": #6D4C41, "brown-700": #5D4037, "brown-800": #4E342E, "brown-900": #3E2723, "grey-50": #FAFAFA, "grey-100": #F5F5F5, "grey-200": #EEEEEE, "grey-300": #E0E0E0, "grey-400": #BDBDBD, "grey-500": #9E9E9E, "grey-600": #757575, "grey-700": #616161, "grey-800": #424242, "grey-900": #212121, "blue-grey-50": #ECEFF1, "blue-grey-100": #CFD8DC, "blue-grey-200": #B0BEC5, "blue-grey-300": #90A4AE, "blue-grey-400": #78909C, "blue-grey-500": #607D8B, "blue-grey-600": #546E7A, "blue-grey-700": #455A64, "blue-grey-800": #37474F, "blue-grey-900": #263238, "white-lighter": rgba(255,255,255,.12), "white-light": rgba(255,255,255,.30), "white-dark": rgba(255,255,255,.70), "white-darker": rgba(255,255,255, 1), "black-lighter": rgba(0,0,0,.12), "black-light": rgba(0,0,0,.26), "black-dark": rgba(0,0,0,.54), "black-darker": rgba(0,0,0,.87) );
 @each $color-name, $color-code in $material-colors {
-    [f-bg-#{$color-name}] {
-        background-color:#{$color-code}
-    }
-		[f-text-#{$color-name}] {
-        color:#{$color-code}
-    }
+  [f-bg-#{$color-name}] {
+    background-color: #{$color-code};
+  }
+
+  [f-t-#{$color-name}] {
+    color: #{$color-code};
+  }
 }
 
 [f-color-primary] {
-	color:$primary !important;
+  color: $primary !important;
 }
- [f-color-secondary] {
-	color:$secondary !important;
+
+[f-color-secondary] {
+  color: $secondary !important;
 }
 
 [f-bg-primary] {
-	background-color:$primary !important;
+  background-color: $primary !important;
 }
+
 [f-bg-secondary] {
-	background-color:$secondary;
+  background-color: $secondary;
 }
 
 [f-bg-white] {
-	background-color:#FFF !important;
+  background-color: #FFF !important;
 }
+
 [f-bg-dark] {
-	background-color:#333 !important;
+  background-color: #333 !important;
 }
+
 [f-bg-black] {
-	background-color:#111 !important;
-}
-[f-text-white] {
-	color:#FFF;
-}
-[f-text-dark] {
-	color:$dark;
-}
-[f-text-faded] {
-	color:$faded;
+  background-color: #111 !important;
 }
 
-@include bg-faded(1);
-@include bg-faded(.9);
-@include bg-faded(.8);
-@include bg-faded(.7);
-@include bg-faded(.6);
-@include bg-faded(.5);
-@include bg-faded(.4);
-@include bg-faded(.3);
-@include bg-faded(.2);
-@include bg-faded(.1);
-@include bg-faded(.15);
-@include bg-faded(.05);
+[f-t-white] {
+  color: #FFF;
+}
 
+[f-t-dark] {
+  color: $dark;
+}
+
+[f-t-black] {
+  color: $faded;
+}
+@include bg-black(1);
+@include bg-black(.9);
+@include bg-black(.8);
+@include bg-black(.7);
+@include bg-black(.6);
+@include bg-black(.5);
+@include bg-black(.4);
+@include bg-black(.3);
+@include bg-black(.2);
+@include bg-black(.1);
+@include bg-black(.15);
+@include bg-black(.05);
 @mixin text-faded($amount) {
-	[f-text-faded-#{$amount * 100}] {
-		color : rgba(0,0,0,$amount) !important;
-	}
-	 [f-text-white-#{$amount * 100}] {
-		color : rgba(255,255,255,$amount) !important;
-	}
-}
+  [f-t-black-#{$amount * 100}] {
+    color: rgba(0,0,0,$amount) !important;
+  }
 
+  [f-t-white-#{$amount * 100}] {
+    color: rgba(255,255,255,$amount) !important;
+  }
+}
 // Text Color
 //
 // Simple Text Fading
 //
 // <div f-flex f-row>
-// 	<div f-width-50>
-// 		<div f-p-10px f-text-bold f-text-primary>f-text-primary</div>
-// 		<div f-p-10px f-text-bold f-text-secondary>f-text-secondary</div>
-// 		<div f-p-10px f-text-bold f-text-faded-100>f-text-faded-100</div>
-// 		<div f-p-10px f-text-bold f-text-faded-90>f-text-faded-90</div>
-// 		<div f-p-10px f-text-bold f-text-faded-80>f-text-faded-80</div>
-// 		<div f-p-10px f-text-bold f-text-faded-70>f-text-faded-70</div>
-// 		<div f-p-10px f-text-bold f-text-faded-60>f-text-faded-60</div>
-// 		<div f-p-10px f-text-bold f-text-faded-50>f-text-faded-50</div>
-// 		<div f-p-10px f-text-bold f-text-faded-40>f-text-faded-40</div>
-// 		<div f-p-10px f-text-bold f-text-faded-30>f-text-faded-30</div>
-// 		<div f-p-10px f-text-bold f-text-faded-20>f-text-faded-20</div>
-// 		<div f-p-10px f-text-bold f-text-faded-10>f-text-faded-10</div>
-// 		<div f-p-10px f-text-bold f-text-faded-5>f-text-faded-5</div>
+// 	<div f-w-50>
+// 		<div f-p-10px f-t-bold f-t-primary>f-t-primary</div>
+// 		<div f-p-10px f-t-bold f-t-secondary>f-t-secondary</div>
+// 		<div f-p-10px f-t-bold f-t-black-100>f-t-black-100</div>
+// 		<div f-p-10px f-t-bold f-t-black-90>f-t-black-90</div>
+// 		<div f-p-10px f-t-bold f-t-black-80>f-t-black-80</div>
+// 		<div f-p-10px f-t-bold f-t-black-70>f-t-black-70</div>
+// 		<div f-p-10px f-t-bold f-t-black-60>f-t-black-60</div>
+// 		<div f-p-10px f-t-bold f-t-black-50>f-t-black-50</div>
+// 		<div f-p-10px f-t-bold f-t-black-40>f-t-black-40</div>
+// 		<div f-p-10px f-t-bold f-t-black-30>f-t-black-30</div>
+// 		<div f-p-10px f-t-bold f-t-black-20>f-t-black-20</div>
+// 		<div f-p-10px f-t-bold f-t-black-10>f-t-black-10</div>
+// 		<div f-p-10px f-t-bold f-t-black-5>f-t-black-5</div>
 // 	</div>
-// 	<div f-width-50 f-bg-faded-90>
-// 		<div f-p-10px f-text-bold f-text-white-100>f-text-white-100</div>
-// 		<div f-p-10px f-text-bold f-text-white-90>f-text-white-90</div>
-// 		<div f-p-10px f-text-bold f-text-white-80>f-text-white-80</div>
-// 		<div f-p-10px f-text-bold f-text-white-70>f-text-white-70</div>
-// 		<div f-p-10px f-text-bold f-text-white-60>f-text-white-60</div>
-// 		<div f-p-10px f-text-bold f-text-white-50>f-text-white-50</div>
-// 		<div f-p-10px f-text-bold f-text-white-40>f-text-white-40</div>
-// 		<div f-p-10px f-text-bold f-text-white-30>f-text-white-30</div>
-// 		<div f-p-10px f-text-bold f-text-white-20>f-text-white-20</div>
-// 		<div f-p-10px f-text-bold f-text-white-10>f-text-white-10</div>
-// 		<div f-p-10px f-text-bold f-text-white-5>f-text-white-5</div>
+// 	<div f-w-50 f-bg-black-90>
+// 		<div f-p-10px f-t-bold f-t-white-100>f-t-white-100</div>
+// 		<div f-p-10px f-t-bold f-t-white-90>f-t-white-90</div>
+// 		<div f-p-10px f-t-bold f-t-white-80>f-t-white-80</div>
+// 		<div f-p-10px f-t-bold f-t-white-70>f-t-white-70</div>
+// 		<div f-p-10px f-t-bold f-t-white-60>f-t-white-60</div>
+// 		<div f-p-10px f-t-bold f-t-white-50>f-t-white-50</div>
+// 		<div f-p-10px f-t-bold f-t-white-40>f-t-white-40</div>
+// 		<div f-p-10px f-t-bold f-t-white-30>f-t-white-30</div>
+// 		<div f-p-10px f-t-bold f-t-white-20>f-t-white-20</div>
+// 		<div f-p-10px f-t-bold f-t-white-10>f-t-white-10</div>
+// 		<div f-p-10px f-t-bold f-t-white-5>f-t-white-5</div>
 // 	</div>
 // </div>
 //
 //
 // Style guide: Typography.colors
-
 @include text-faded(1);
 @include text-faded(.9);
 @include text-faded(.8);
@@ -376,285 +117,283 @@ $material-colors : (
 @include text-faded(.2);
 @include text-faded(.1);
 @include text-faded(.15);
-@include text-faded(.05);
-
-// Material Design Colors
+@include text-faded(.05); // Material Design Colors
 //
 // Oh-Flex contains all of the Material Design colors available for text or backgrounds.
 //
 // ```
 // <div f-bg-blue-700>I'm filled with Blue</div>
-// <div f-text-blue-500>I'm Blue Text</div>
+// <div f-t-blue-500>I'm Blue Text</div>
 // ```
 // <div f-flex f-row f-wrap>
-// <div style="background-color:#FFEBEE" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>red-50</div>
-// <div style="background-color:#FFCDD2" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>red-100</div>
-// <div style="background-color:#EF9A9A" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>red-200</div>
-// <div style="background-color:#E57373" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>red-300</div>
-// <div style="background-color:#EF5350" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>red-400</div>
-// <div style="background-color:#F44336" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>red-500</div>
-// <div style="background-color:#E53935" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>red-600</div>
-// <div style="background-color:#D32F2F" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>red-700</div>
-// <div style="background-color:#C62828" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>red-800</div>
-// <div style="background-color:#B71C1C" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>red-900</div>
-// <div style="background-color:#FF8A80" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>red-A100</div>
-// <div style="background-color:#FF5252" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>red-A200</div>
-// <div style="background-color:#FF1744" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>red-A400</div>
-// <div style="background-color:#D50000" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>red-A700</div>
-// <div style="background-color:#FCE4EC" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>pink-50</div>
-// <div style="background-color:#F8BBD0" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>pink-100</div>
-// <div style="background-color:#F48FB1" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>pink-200</div>
-// <div style="background-color:#F06292" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>pink-300</div>
-// <div style="background-color:#EC407A" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>pink-400</div>
-// <div style="background-color:#E91E63" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>pink-500</div>
-// <div style="background-color:#D81B60" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>pink-600</div>
-// <div style="background-color:#C2185B" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>pink-700</div>
-// <div style="background-color:#AD1457" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>pink-800</div>
-// <div style="background-color:#880E4F" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>pink-900</div>
-// <div style="background-color:#FF80AB" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>pink-A100</div>
-// <div style="background-color:#FF4081" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>pink-A200</div>
-// <div style="background-color:#F50057" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>pink-A400</div>
-// <div style="background-color:#C51162" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>pink-A700</div>
-// <div style="background-color:#F3E5F5" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>purple-50</div>
-// <div style="background-color:#E1BEE7" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>purple-100</div>
-// <div style="background-color:#CE93D8" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>purple-200</div>
-// <div style="background-color:#BA68C8" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>purple-300</div>
-// <div style="background-color:#AB47BC" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>purple-400</div>
-// <div style="background-color:#9C27B0" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>purple-500</div>
-// <div style="background-color:#8E24AA" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>purple-600</div>
-// <div style="background-color:#7B1FA2" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>purple-700</div>
-// <div style="background-color:#6A1B9A" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>purple-800</div>
-// <div style="background-color:#4A148C" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>purple-900</div>
-// <div style="background-color:#EA80FC" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>purple-A100</div>
-// <div style="background-color:#E040FB" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>purple-A200</div>
-// <div style="background-color:#D500F9" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>purple-A400</div>
-// <div style="background-color:#AA00FF" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>purple-A700</div>
-// <div style="background-color:#EDE7F6" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>deep-purple-50</div>
-// <div style="background-color:#D1C4E9" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>deep-purple-100</div>
-// <div style="background-color:#B39DDB" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>deep-purple-200</div>
-// <div style="background-color:#9575CD" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-purple-300</div>
-// <div style="background-color:#7E57C2" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-purple-400</div>
-// <div style="background-color:#673AB7" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-purple-500</div>
-// <div style="background-color:#5E35B1" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-purple-600</div>
-// <div style="background-color:#512DA8" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-purple-700</div>
-// <div style="background-color:#4527A0" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-purple-800</div>
-// <div style="background-color:#311B92" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-purple-900</div>
-// <div style="background-color:#B388FF" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-purple-A100</div>
-// <div style="background-color:#7C4DFF" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-purple-A200</div>
-// <div style="background-color:#651FFF" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-purple-A400</div>
-// <div style="background-color:#6200EA" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-purple-A700</div>
-// <div style="background-color:#E8EAF6" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>indigo-50</div>
-// <div style="background-color:#C5CAE9" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>indigo-100</div>
-// <div style="background-color:#9FA8DA" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>indigo-200</div>
-// <div style="background-color:#7986CB" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>indigo-300</div>
-// <div style="background-color:#5C6BC0" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>indigo-400</div>
-// <div style="background-color:#3F51B5" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>indigo-500</div>
-// <div style="background-color:#3949AB" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>indigo-600</div>
-// <div style="background-color:#303F9F" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>indigo-700</div>
-// <div style="background-color:#283593" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>indigo-800</div>
-// <div style="background-color:#1A237E" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>indigo-900</div>
-// <div style="background-color:#8C9EFF" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>indigo-A100</div>
-// <div style="background-color:#536DFE" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>indigo-A200</div>
-// <div style="background-color:#3D5AFE" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>indigo-A400</div>
-// <div style="background-color:#304FFE" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>indigo-A700</div>
-// <div style="background-color:#E3F2FD" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>blue-50</div>
-// <div style="background-color:#BBDEFB" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>blue-100</div>
-// <div style="background-color:#90CAF9" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>blue-200</div>
-// <div style="background-color:#64B5F6" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-300</div>
-// <div style="background-color:#42A5F5" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-400</div>
-// <div style="background-color:#2196F3" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-500</div>
-// <div style="background-color:#1E88E5" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-600</div>
-// <div style="background-color:#1976D2" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-700</div>
-// <div style="background-color:#1565C0" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-800</div>
-// <div style="background-color:#0D47A1" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-900</div>
-// <div style="background-color:#82B1FF" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-A100</div>
-// <div style="background-color:#448AFF" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-A200</div>
-// <div style="background-color:#2979FF" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-A400</div>
-// <div style="background-color:#2962FF" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-A700</div>
-// <div style="background-color:#E1F5FE" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>light-blue-50</div>
-// <div style="background-color:#B3E5FC" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>light-blue-100</div>
-// <div style="background-color:#81D4FA" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>light-blue-200</div>
-// <div style="background-color:#4FC3F7" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-blue-300</div>
-// <div style="background-color:#29B6F6" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-blue-400</div>
-// <div style="background-color:#03A9F4" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-blue-500</div>
-// <div style="background-color:#039BE5" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-blue-600</div>
-// <div style="background-color:#0288D1" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-blue-700</div>
-// <div style="background-color:#0277BD" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-blue-800</div>
-// <div style="background-color:#01579B" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-blue-900</div>
-// <div style="background-color:#80D8FF" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-blue-A100</div>
-// <div style="background-color:#40C4FF" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-blue-A200</div>
-// <div style="background-color:#00B0FF" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-blue-A400</div>
-// <div style="background-color:#0091EA" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-blue-A700</div>
-// <div style="background-color:#E0F7FA" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>cyan-50</div>
-// <div style="background-color:#B2EBF2" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>cyan-100</div>
-// <div style="background-color:#80DEEA" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>cyan-200</div>
-// <div style="background-color:#4DD0E1" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>cyan-300</div>
-// <div style="background-color:#26C6DA" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>cyan-400</div>
-// <div style="background-color:#00BCD4" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>cyan-500</div>
-// <div style="background-color:#00ACC1" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>cyan-600</div>
-// <div style="background-color:#0097A7" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>cyan-700</div>
-// <div style="background-color:#00838F" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>cyan-800</div>
-// <div style="background-color:#006064" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>cyan-900</div>
-// <div style="background-color:#84FFFF" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>cyan-A100</div>
-// <div style="background-color:#18FFFF" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>cyan-A200</div>
-// <div style="background-color:#00E5FF" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>cyan-A400</div>
-// <div style="background-color:#00B8D4" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>cyan-A700</div>
-// <div style="background-color:#E0F2F1" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>teal-50</div>
-// <div style="background-color:#B2DFDB" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>teal-100</div>
-// <div style="background-color:#80CBC4" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>teal-200</div>
-// <div style="background-color:#4DB6AC" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>teal-300</div>
-// <div style="background-color:#26A69A" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>teal-400</div>
-// <div style="background-color:#009688" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>teal-500</div>
-// <div style="background-color:#00897B" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>teal-600</div>
-// <div style="background-color:#00796B" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>teal-700</div>
-// <div style="background-color:#00695C" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>teal-800</div>
-// <div style="background-color:#004D40" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>teal-900</div>
-// <div style="background-color:#A7FFEB" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>teal-A100</div>
-// <div style="background-color:#64FFDA" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>teal-A200</div>
-// <div style="background-color:#1DE9B6" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>teal-A400</div>
-// <div style="background-color:#00BFA5" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>teal-A700</div>
-// <div style="background-color:#E8F5E9" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>green-50</div>
-// <div style="background-color:#C8E6C9" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>green-100</div>
-// <div style="background-color:#A5D6A7" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>green-200</div>
-// <div style="background-color:#81C784" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>green-300</div>
-// <div style="background-color:#66BB6A" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>green-400</div>
-// <div style="background-color:#4CAF50" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>green-500</div>
-// <div style="background-color:#43A047" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>green-600</div>
-// <div style="background-color:#388E3C" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>green-700</div>
-// <div style="background-color:#2E7D32" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>green-800</div>
-// <div style="background-color:#1B5E20" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>green-900</div>
-// <div style="background-color:#B9F6CA" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>green-A100</div>
-// <div style="background-color:#69F0AE" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>green-A200</div>
-// <div style="background-color:#00E676" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>green-A400</div>
-// <div style="background-color:#00C853" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>green-A700</div>
-// <div style="background-color:#F1F8E9" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>light-green-50</div>
-// <div style="background-color:#DCEDC8" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>light-green-100</div>
-// <div style="background-color:#C5E1A5" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>light-green-200</div>
-// <div style="background-color:#AED581" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-green-300</div>
-// <div style="background-color:#9CCC65" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-green-400</div>
-// <div style="background-color:#8BC34A" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-green-500</div>
-// <div style="background-color:#7CB342" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-green-600</div>
-// <div style="background-color:#689F38" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-green-700</div>
-// <div style="background-color:#558B2F" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-green-800</div>
-// <div style="background-color:#33691E" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-green-900</div>
-// <div style="background-color:#CCFF90" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-green-A100</div>
-// <div style="background-color:#B2FF59" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-green-A200</div>
-// <div style="background-color:#76FF03" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-green-A400</div>
-// <div style="background-color:#64DD17" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>light-green-A700</div>
-// <div style="background-color:#F9FBE7" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>lime-50</div>
-// <div style="background-color:#F0F4C3" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>lime-100</div>
-// <div style="background-color:#E6EE9C" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>lime-200</div>
-// <div style="background-color:#DCE775" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>lime-300</div>
-// <div style="background-color:#D4E157" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>lime-400</div>
-// <div style="background-color:#CDDC39" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>lime-500</div>
-// <div style="background-color:#C0CA33" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>lime-600</div>
-// <div style="background-color:#AFB42B" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>lime-700</div>
-// <div style="background-color:#9E9D24" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>lime-800</div>
-// <div style="background-color:#827717" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>lime-900</div>
-// <div style="background-color:#F4FF81" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>lime-A100</div>
-// <div style="background-color:#EEFF41" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>lime-A200</div>
-// <div style="background-color:#C6FF00" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>lime-A400</div>
-// <div style="background-color:#AEEA00" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>lime-A700</div>
-// <div style="background-color:#FFFDE7" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>yellow-50</div>
-// <div style="background-color:#FFF9C4" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>yellow-100</div>
-// <div style="background-color:#FFF59D" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>yellow-200</div>
-// <div style="background-color:#FFF176" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>yellow-300</div>
-// <div style="background-color:#FFEE58" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>yellow-400</div>
-// <div style="background-color:#FFEB3B" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>yellow-500</div>
-// <div style="background-color:#FDD835" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>yellow-600</div>
-// <div style="background-color:#FBC02D" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>yellow-700</div>
-// <div style="background-color:#F9A825" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>yellow-800</div>
-// <div style="background-color:#F57F17" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>yellow-900</div>
-// <div style="background-color:#FFFF8D" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>yellow-A100</div>
-// <div style="background-color:#FFFF00" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>yellow-A200</div>
-// <div style="background-color:#FFEA00" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>yellow-A400</div>
-// <div style="background-color:#FFD600" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>yellow-A700</div>
-// <div style="background-color:#FFF8E1" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>amber-50</div>
-// <div style="background-color:#FFECB3" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>amber-100</div>
-// <div style="background-color:#FFE082" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>amber-200</div>
-// <div style="background-color:#FFD54F" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>amber-300</div>
-// <div style="background-color:#FFCA28" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>amber-400</div>
-// <div style="background-color:#FFC107" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>amber-500</div>
-// <div style="background-color:#FFB300" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>amber-600</div>
-// <div style="background-color:#FFA000" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>amber-700</div>
-// <div style="background-color:#FF8F00" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>amber-800</div>
-// <div style="background-color:#FF6F00" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>amber-900</div>
-// <div style="background-color:#FFE57F" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>amber-A100</div>
-// <div style="background-color:#FFD740" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>amber-A200</div>
-// <div style="background-color:#FFC400" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>amber-A400</div>
-// <div style="background-color:#FFAB00" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>amber-A700</div>
-// <div style="background-color:#FFF3E0" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>orange-50</div>
-// <div style="background-color:#FFE0B2" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>orange-100</div>
-// <div style="background-color:#FFCC80" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>orange-200</div>
-// <div style="background-color:#FFB74D" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>orange-300</div>
-// <div style="background-color:#FFA726" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>orange-400</div>
-// <div style="background-color:#FF9800" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>orange-500</div>
-// <div style="background-color:#FB8C00" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>orange-600</div>
-// <div style="background-color:#F57C00" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>orange-700</div>
-// <div style="background-color:#EF6C00" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>orange-800</div>
-// <div style="background-color:#E65100" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>orange-900</div>
-// <div style="background-color:#FFD180" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>orange-A100</div>
-// <div style="background-color:#FFAB40" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>orange-A200</div>
-// <div style="background-color:#FF9100" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>orange-A400</div>
-// <div style="background-color:#FF6D00" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>orange-A700</div>
-// <div style="background-color:#FBE9E7" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>deep-orange-50</div>
-// <div style="background-color:#FFCCBC" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>deep-orange-100</div>
-// <div style="background-color:#FFAB91" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>deep-orange-200</div>
-// <div style="background-color:#FF8A65" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-orange-300</div>
-// <div style="background-color:#FF7043" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-orange-400</div>
-// <div style="background-color:#FF5722" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-orange-500</div>
-// <div style="background-color:#F4511E" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-orange-600</div>
-// <div style="background-color:#E64A19" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-orange-700</div>
-// <div style="background-color:#D84315" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-orange-800</div>
-// <div style="background-color:#BF360C" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-orange-900</div>
-// <div style="background-color:#FF9E80" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-orange-A100</div>
-// <div style="background-color:#FF6E40" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-orange-A200</div>
-// <div style="background-color:#FF3D00" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-orange-A400</div>
-// <div style="background-color:#DD2C00" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>deep-orange-A700</div>
-// <div style="background-color:#EFEBE9" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>brown-50</div>
-// <div style="background-color:#D7CCC8" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>brown-100</div>
-// <div style="background-color:#BCAAA4" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>brown-200</div>
-// <div style="background-color:#A1887F" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>brown-300</div>
-// <div style="background-color:#8D6E63" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>brown-400</div>
-// <div style="background-color:#795548" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>brown-500</div>
-// <div style="background-color:#6D4C41" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>brown-600</div>
-// <div style="background-color:#5D4037" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>brown-700</div>
-// <div style="background-color:#4E342E" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>brown-800</div>
-// <div style="background-color:#3E2723" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>brown-900</div>
-// <div style="background-color:#FAFAFA" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>grey-50</div>
-// <div style="background-color:#F5F5F5" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>grey-100</div>
-// <div style="background-color:#EEEEEE" f-width-40  f-m-2px f-text-white f-text-center f-text-dark f-p-8px>grey-200</div>
-// <div style="background-color:#E0E0E0" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>grey-300</div>
-// <div style="background-color:#BDBDBD" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>grey-400</div>
-// <div style="background-color:#9E9E9E" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>grey-500</div>
-// <div style="background-color:#757575" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>grey-600</div>
-// <div style="background-color:#616161" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>grey-700</div>
-// <div style="background-color:#424242" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>grey-800</div>
-// <div style="background-color:#212121" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>grey-900</div>
-// <div style="background-color:#ECEFF1" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-grey-50</div>
-// <div style="background-color:#CFD8DC" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-grey-100</div>
-// <div style="background-color:#B0BEC5" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-grey-200</div>
-// <div style="background-color:#90A4AE" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-grey-300</div>
-// <div style="background-color:#78909C" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-grey-400</div>
-// <div style="background-color:#607D8B" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-grey-500</div>
-// <div style="background-color:#546E7A" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-grey-600</div>
-// <div style="background-color:#455A64" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-grey-700</div>
-// <div style="background-color:#37474F" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-grey-800</div>
-// <div style="background-color:#263238" f-width-40  f-m-2px f-text-white f-text-center f-p-8px>blue-grey-900</div>
+// <div style="background-color:#FFEBEE" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>red-50</div>
+// <div style="background-color:#FFCDD2" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>red-100</div>
+// <div style="background-color:#EF9A9A" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>red-200</div>
+// <div style="background-color:#E57373" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>red-300</div>
+// <div style="background-color:#EF5350" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>red-400</div>
+// <div style="background-color:#F44336" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>red-500</div>
+// <div style="background-color:#E53935" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>red-600</div>
+// <div style="background-color:#D32F2F" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>red-700</div>
+// <div style="background-color:#C62828" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>red-800</div>
+// <div style="background-color:#B71C1C" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>red-900</div>
+// <div style="background-color:#FF8A80" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>red-A100</div>
+// <div style="background-color:#FF5252" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>red-A200</div>
+// <div style="background-color:#FF1744" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>red-A400</div>
+// <div style="background-color:#D50000" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>red-A700</div>
+// <div style="background-color:#FCE4EC" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>pink-50</div>
+// <div style="background-color:#F8BBD0" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>pink-100</div>
+// <div style="background-color:#F48FB1" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>pink-200</div>
+// <div style="background-color:#F06292" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>pink-300</div>
+// <div style="background-color:#EC407A" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>pink-400</div>
+// <div style="background-color:#E91E63" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>pink-500</div>
+// <div style="background-color:#D81B60" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>pink-600</div>
+// <div style="background-color:#C2185B" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>pink-700</div>
+// <div style="background-color:#AD1457" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>pink-800</div>
+// <div style="background-color:#880E4F" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>pink-900</div>
+// <div style="background-color:#FF80AB" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>pink-A100</div>
+// <div style="background-color:#FF4081" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>pink-A200</div>
+// <div style="background-color:#F50057" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>pink-A400</div>
+// <div style="background-color:#C51162" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>pink-A700</div>
+// <div style="background-color:#F3E5F5" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>purple-50</div>
+// <div style="background-color:#E1BEE7" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>purple-100</div>
+// <div style="background-color:#CE93D8" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>purple-200</div>
+// <div style="background-color:#BA68C8" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>purple-300</div>
+// <div style="background-color:#AB47BC" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>purple-400</div>
+// <div style="background-color:#9C27B0" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>purple-500</div>
+// <div style="background-color:#8E24AA" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>purple-600</div>
+// <div style="background-color:#7B1FA2" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>purple-700</div>
+// <div style="background-color:#6A1B9A" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>purple-800</div>
+// <div style="background-color:#4A148C" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>purple-900</div>
+// <div style="background-color:#EA80FC" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>purple-A100</div>
+// <div style="background-color:#E040FB" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>purple-A200</div>
+// <div style="background-color:#D500F9" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>purple-A400</div>
+// <div style="background-color:#AA00FF" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>purple-A700</div>
+// <div style="background-color:#EDE7F6" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>deep-purple-50</div>
+// <div style="background-color:#D1C4E9" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>deep-purple-100</div>
+// <div style="background-color:#B39DDB" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>deep-purple-200</div>
+// <div style="background-color:#9575CD" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-purple-300</div>
+// <div style="background-color:#7E57C2" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-purple-400</div>
+// <div style="background-color:#673AB7" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-purple-500</div>
+// <div style="background-color:#5E35B1" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-purple-600</div>
+// <div style="background-color:#512DA8" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-purple-700</div>
+// <div style="background-color:#4527A0" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-purple-800</div>
+// <div style="background-color:#311B92" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-purple-900</div>
+// <div style="background-color:#B388FF" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-purple-A100</div>
+// <div style="background-color:#7C4DFF" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-purple-A200</div>
+// <div style="background-color:#651FFF" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-purple-A400</div>
+// <div style="background-color:#6200EA" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-purple-A700</div>
+// <div style="background-color:#E8EAF6" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>indigo-50</div>
+// <div style="background-color:#C5CAE9" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>indigo-100</div>
+// <div style="background-color:#9FA8DA" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>indigo-200</div>
+// <div style="background-color:#7986CB" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>indigo-300</div>
+// <div style="background-color:#5C6BC0" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>indigo-400</div>
+// <div style="background-color:#3F51B5" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>indigo-500</div>
+// <div style="background-color:#3949AB" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>indigo-600</div>
+// <div style="background-color:#303F9F" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>indigo-700</div>
+// <div style="background-color:#283593" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>indigo-800</div>
+// <div style="background-color:#1A237E" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>indigo-900</div>
+// <div style="background-color:#8C9EFF" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>indigo-A100</div>
+// <div style="background-color:#536DFE" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>indigo-A200</div>
+// <div style="background-color:#3D5AFE" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>indigo-A400</div>
+// <div style="background-color:#304FFE" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>indigo-A700</div>
+// <div style="background-color:#E3F2FD" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>blue-50</div>
+// <div style="background-color:#BBDEFB" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>blue-100</div>
+// <div style="background-color:#90CAF9" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>blue-200</div>
+// <div style="background-color:#64B5F6" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-300</div>
+// <div style="background-color:#42A5F5" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-400</div>
+// <div style="background-color:#2196F3" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-500</div>
+// <div style="background-color:#1E88E5" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-600</div>
+// <div style="background-color:#1976D2" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-700</div>
+// <div style="background-color:#1565C0" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-800</div>
+// <div style="background-color:#0D47A1" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-900</div>
+// <div style="background-color:#82B1FF" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-A100</div>
+// <div style="background-color:#448AFF" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-A200</div>
+// <div style="background-color:#2979FF" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-A400</div>
+// <div style="background-color:#2962FF" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-A700</div>
+// <div style="background-color:#E1F5FE" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>light-blue-50</div>
+// <div style="background-color:#B3E5FC" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>light-blue-100</div>
+// <div style="background-color:#81D4FA" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>light-blue-200</div>
+// <div style="background-color:#4FC3F7" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-blue-300</div>
+// <div style="background-color:#29B6F6" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-blue-400</div>
+// <div style="background-color:#03A9F4" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-blue-500</div>
+// <div style="background-color:#039BE5" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-blue-600</div>
+// <div style="background-color:#0288D1" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-blue-700</div>
+// <div style="background-color:#0277BD" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-blue-800</div>
+// <div style="background-color:#01579B" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-blue-900</div>
+// <div style="background-color:#80D8FF" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-blue-A100</div>
+// <div style="background-color:#40C4FF" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-blue-A200</div>
+// <div style="background-color:#00B0FF" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-blue-A400</div>
+// <div style="background-color:#0091EA" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-blue-A700</div>
+// <div style="background-color:#E0F7FA" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>cyan-50</div>
+// <div style="background-color:#B2EBF2" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>cyan-100</div>
+// <div style="background-color:#80DEEA" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>cyan-200</div>
+// <div style="background-color:#4DD0E1" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>cyan-300</div>
+// <div style="background-color:#26C6DA" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>cyan-400</div>
+// <div style="background-color:#00BCD4" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>cyan-500</div>
+// <div style="background-color:#00ACC1" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>cyan-600</div>
+// <div style="background-color:#0097A7" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>cyan-700</div>
+// <div style="background-color:#00838F" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>cyan-800</div>
+// <div style="background-color:#006064" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>cyan-900</div>
+// <div style="background-color:#84FFFF" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>cyan-A100</div>
+// <div style="background-color:#18FFFF" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>cyan-A200</div>
+// <div style="background-color:#00E5FF" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>cyan-A400</div>
+// <div style="background-color:#00B8D4" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>cyan-A700</div>
+// <div style="background-color:#E0F2F1" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>teal-50</div>
+// <div style="background-color:#B2DFDB" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>teal-100</div>
+// <div style="background-color:#80CBC4" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>teal-200</div>
+// <div style="background-color:#4DB6AC" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>teal-300</div>
+// <div style="background-color:#26A69A" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>teal-400</div>
+// <div style="background-color:#009688" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>teal-500</div>
+// <div style="background-color:#00897B" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>teal-600</div>
+// <div style="background-color:#00796B" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>teal-700</div>
+// <div style="background-color:#00695C" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>teal-800</div>
+// <div style="background-color:#004D40" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>teal-900</div>
+// <div style="background-color:#A7FFEB" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>teal-A100</div>
+// <div style="background-color:#64FFDA" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>teal-A200</div>
+// <div style="background-color:#1DE9B6" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>teal-A400</div>
+// <div style="background-color:#00BFA5" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>teal-A700</div>
+// <div style="background-color:#E8F5E9" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>green-50</div>
+// <div style="background-color:#C8E6C9" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>green-100</div>
+// <div style="background-color:#A5D6A7" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>green-200</div>
+// <div style="background-color:#81C784" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>green-300</div>
+// <div style="background-color:#66BB6A" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>green-400</div>
+// <div style="background-color:#4CAF50" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>green-500</div>
+// <div style="background-color:#43A047" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>green-600</div>
+// <div style="background-color:#388E3C" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>green-700</div>
+// <div style="background-color:#2E7D32" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>green-800</div>
+// <div style="background-color:#1B5E20" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>green-900</div>
+// <div style="background-color:#B9F6CA" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>green-A100</div>
+// <div style="background-color:#69F0AE" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>green-A200</div>
+// <div style="background-color:#00E676" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>green-A400</div>
+// <div style="background-color:#00C853" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>green-A700</div>
+// <div style="background-color:#F1F8E9" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>light-green-50</div>
+// <div style="background-color:#DCEDC8" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>light-green-100</div>
+// <div style="background-color:#C5E1A5" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>light-green-200</div>
+// <div style="background-color:#AED581" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-green-300</div>
+// <div style="background-color:#9CCC65" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-green-400</div>
+// <div style="background-color:#8BC34A" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-green-500</div>
+// <div style="background-color:#7CB342" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-green-600</div>
+// <div style="background-color:#689F38" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-green-700</div>
+// <div style="background-color:#558B2F" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-green-800</div>
+// <div style="background-color:#33691E" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-green-900</div>
+// <div style="background-color:#CCFF90" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-green-A100</div>
+// <div style="background-color:#B2FF59" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-green-A200</div>
+// <div style="background-color:#76FF03" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-green-A400</div>
+// <div style="background-color:#64DD17" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>light-green-A700</div>
+// <div style="background-color:#F9FBE7" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>lime-50</div>
+// <div style="background-color:#F0F4C3" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>lime-100</div>
+// <div style="background-color:#E6EE9C" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>lime-200</div>
+// <div style="background-color:#DCE775" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>lime-300</div>
+// <div style="background-color:#D4E157" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>lime-400</div>
+// <div style="background-color:#CDDC39" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>lime-500</div>
+// <div style="background-color:#C0CA33" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>lime-600</div>
+// <div style="background-color:#AFB42B" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>lime-700</div>
+// <div style="background-color:#9E9D24" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>lime-800</div>
+// <div style="background-color:#827717" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>lime-900</div>
+// <div style="background-color:#F4FF81" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>lime-A100</div>
+// <div style="background-color:#EEFF41" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>lime-A200</div>
+// <div style="background-color:#C6FF00" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>lime-A400</div>
+// <div style="background-color:#AEEA00" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>lime-A700</div>
+// <div style="background-color:#FFFDE7" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>yellow-50</div>
+// <div style="background-color:#FFF9C4" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>yellow-100</div>
+// <div style="background-color:#FFF59D" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>yellow-200</div>
+// <div style="background-color:#FFF176" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>yellow-300</div>
+// <div style="background-color:#FFEE58" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>yellow-400</div>
+// <div style="background-color:#FFEB3B" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>yellow-500</div>
+// <div style="background-color:#FDD835" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>yellow-600</div>
+// <div style="background-color:#FBC02D" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>yellow-700</div>
+// <div style="background-color:#F9A825" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>yellow-800</div>
+// <div style="background-color:#F57F17" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>yellow-900</div>
+// <div style="background-color:#FFFF8D" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>yellow-A100</div>
+// <div style="background-color:#FFFF00" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>yellow-A200</div>
+// <div style="background-color:#FFEA00" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>yellow-A400</div>
+// <div style="background-color:#FFD600" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>yellow-A700</div>
+// <div style="background-color:#FFF8E1" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>amber-50</div>
+// <div style="background-color:#FFECB3" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>amber-100</div>
+// <div style="background-color:#FFE082" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>amber-200</div>
+// <div style="background-color:#FFD54F" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>amber-300</div>
+// <div style="background-color:#FFCA28" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>amber-400</div>
+// <div style="background-color:#FFC107" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>amber-500</div>
+// <div style="background-color:#FFB300" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>amber-600</div>
+// <div style="background-color:#FFA000" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>amber-700</div>
+// <div style="background-color:#FF8F00" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>amber-800</div>
+// <div style="background-color:#FF6F00" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>amber-900</div>
+// <div style="background-color:#FFE57F" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>amber-A100</div>
+// <div style="background-color:#FFD740" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>amber-A200</div>
+// <div style="background-color:#FFC400" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>amber-A400</div>
+// <div style="background-color:#FFAB00" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>amber-A700</div>
+// <div style="background-color:#FFF3E0" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>orange-50</div>
+// <div style="background-color:#FFE0B2" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>orange-100</div>
+// <div style="background-color:#FFCC80" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>orange-200</div>
+// <div style="background-color:#FFB74D" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>orange-300</div>
+// <div style="background-color:#FFA726" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>orange-400</div>
+// <div style="background-color:#FF9800" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>orange-500</div>
+// <div style="background-color:#FB8C00" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>orange-600</div>
+// <div style="background-color:#F57C00" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>orange-700</div>
+// <div style="background-color:#EF6C00" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>orange-800</div>
+// <div style="background-color:#E65100" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>orange-900</div>
+// <div style="background-color:#FFD180" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>orange-A100</div>
+// <div style="background-color:#FFAB40" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>orange-A200</div>
+// <div style="background-color:#FF9100" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>orange-A400</div>
+// <div style="background-color:#FF6D00" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>orange-A700</div>
+// <div style="background-color:#FBE9E7" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>deep-orange-50</div>
+// <div style="background-color:#FFCCBC" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>deep-orange-100</div>
+// <div style="background-color:#FFAB91" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>deep-orange-200</div>
+// <div style="background-color:#FF8A65" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-orange-300</div>
+// <div style="background-color:#FF7043" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-orange-400</div>
+// <div style="background-color:#FF5722" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-orange-500</div>
+// <div style="background-color:#F4511E" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-orange-600</div>
+// <div style="background-color:#E64A19" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-orange-700</div>
+// <div style="background-color:#D84315" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-orange-800</div>
+// <div style="background-color:#BF360C" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-orange-900</div>
+// <div style="background-color:#FF9E80" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-orange-A100</div>
+// <div style="background-color:#FF6E40" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-orange-A200</div>
+// <div style="background-color:#FF3D00" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-orange-A400</div>
+// <div style="background-color:#DD2C00" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>deep-orange-A700</div>
+// <div style="background-color:#EFEBE9" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>brown-50</div>
+// <div style="background-color:#D7CCC8" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>brown-100</div>
+// <div style="background-color:#BCAAA4" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>brown-200</div>
+// <div style="background-color:#A1887F" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>brown-300</div>
+// <div style="background-color:#8D6E63" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>brown-400</div>
+// <div style="background-color:#795548" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>brown-500</div>
+// <div style="background-color:#6D4C41" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>brown-600</div>
+// <div style="background-color:#5D4037" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>brown-700</div>
+// <div style="background-color:#4E342E" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>brown-800</div>
+// <div style="background-color:#3E2723" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>brown-900</div>
+// <div style="background-color:#FAFAFA" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>grey-50</div>
+// <div style="background-color:#F5F5F5" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>grey-100</div>
+// <div style="background-color:#EEEEEE" f-w-40  f-m-2px f-t-white f-t-center f-t-dark f-p-8px>grey-200</div>
+// <div style="background-color:#E0E0E0" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>grey-300</div>
+// <div style="background-color:#BDBDBD" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>grey-400</div>
+// <div style="background-color:#9E9E9E" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>grey-500</div>
+// <div style="background-color:#757575" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>grey-600</div>
+// <div style="background-color:#616161" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>grey-700</div>
+// <div style="background-color:#424242" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>grey-800</div>
+// <div style="background-color:#212121" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>grey-900</div>
+// <div style="background-color:#ECEFF1" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-grey-50</div>
+// <div style="background-color:#CFD8DC" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-grey-100</div>
+// <div style="background-color:#B0BEC5" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-grey-200</div>
+// <div style="background-color:#90A4AE" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-grey-300</div>
+// <div style="background-color:#78909C" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-grey-400</div>
+// <div style="background-color:#607D8B" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-grey-500</div>
+// <div style="background-color:#546E7A" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-grey-600</div>
+// <div style="background-color:#455A64" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-grey-700</div>
+// <div style="background-color:#37474F" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-grey-800</div>
+// <div style="background-color:#263238" f-w-40  f-m-2px f-t-white f-t-center f-p-8px>blue-grey-900</div>
 // </div>
 // <h2>Faded backgrounds</h2>
 // <div f-flex f-row f-wrap>
-// <div f-bg-faded-100 f-width-40  f-m-2px f-text-white f-text-center f-p-8px>f-bg-faded-100</div>
-// <div f-bg-faded-90 f-width-40  f-m-2px f-text-white f-text-center f-p-8px>f-bg-faded-90</div>
-// <div f-bg-faded-80 f-width-40  f-m-2px f-text-white f-text-center f-p-8px>f-bg-faded-80</div>
-// <div f-bg-faded-70 f-width-40  f-m-2px f-text-white f-text-center f-p-8px>f-bg-faded-70</div>
-// <div f-bg-faded-60 f-width-40  f-m-2px f-text-white f-text-center f-p-8px>f-bg-faded-60</div>
-// <div f-bg-faded-50 f-width-40  f-m-2px f-text-white f-text-center f-p-8px>f-bg-faded-50</div>
-// <div f-bg-faded-40 f-width-40  f-m-2px f-text-white f-text-center f-p-8px>f-bg-faded-40</div>
-// <div f-bg-faded-30 f-width-40  f-m-2px f-text-white f-text-center f-p-8px>f-bg-faded-30</div>
-// <div f-bg-faded-20 f-width-40  f-m-2px f-text-white f-text-center f-p-8px>f-bg-faded-20</div>
-// <div f-bg-faded-10 f-width-40  f-m-2px f-text-white f-text-center f-p-8px>f-bg-faded-10</div>
-// <div f-bg-faded-5 f-width-40  f-m-2px f-text-white f-text-center f-p-8px>f-bg-faded-5</div>
+// <div f-bg-black-100 f-w-40  f-m-2px f-t-white f-t-center f-p-8px>f-bg-black-100</div>
+// <div f-bg-black-90 f-w-40  f-m-2px f-t-white f-t-center f-p-8px>f-bg-black-90</div>
+// <div f-bg-black-80 f-w-40  f-m-2px f-t-white f-t-center f-p-8px>f-bg-black-80</div>
+// <div f-bg-black-70 f-w-40  f-m-2px f-t-white f-t-center f-p-8px>f-bg-black-70</div>
+// <div f-bg-black-60 f-w-40  f-m-2px f-t-white f-t-center f-p-8px>f-bg-black-60</div>
+// <div f-bg-black-50 f-w-40  f-m-2px f-t-white f-t-center f-p-8px>f-bg-black-50</div>
+// <div f-bg-black-40 f-w-40  f-m-2px f-t-white f-t-center f-p-8px>f-bg-black-40</div>
+// <div f-bg-black-30 f-w-40  f-m-2px f-t-white f-t-center f-p-8px>f-bg-black-30</div>
+// <div f-bg-black-20 f-w-40  f-m-2px f-t-white f-t-center f-p-8px>f-bg-black-20</div>
+// <div f-bg-black-10 f-w-40  f-m-2px f-t-white f-t-center f-p-8px>f-bg-black-10</div>
+// <div f-bg-black-5 f-w-40  f-m-2px f-t-white f-t-center f-p-8px>f-bg-black-5</div>
 // </div>
 //
 // Style guide: Colors.Material

@@ -17,7 +17,7 @@
 <body id="kss-node" >
 
   <div f-layout f-layout-aside id="app">
-    <aside f-collapse-phone :f-aside-open="menu_open" f-column f-flex f-width-160px f-min-width-20 f-max-width-260px f-bg-secondary>
+    <aside f-collapse-phone :f-aside-open="menu_open" f-column f-flex f-w-160px f-w-min-20 f-w-max-260px f-bg-secondary>
       <header f-header no-border>
         <div f-bg-secondary f-toolbar f-justify-center>
             <span f-rubber></span>
@@ -30,63 +30,67 @@
             <div f-title>Avatar</div>
             <!-- <span f-note>1</span> -->
           </a>
+          <a f-item href="section-borders.html">
+            <div f-title>Borders</div>
+            <!-- <span f-note>2</span> -->
+          </a>
           <a f-item href="section-buttons.html">
             <div f-title>Buttons</div>
-            <!-- <span f-note>2</span> -->
+            <!-- <span f-note>3</span> -->
           </a>
           <a f-item href="section-colors.html">
             <div f-title>Colors</div>
-            <!-- <span f-note>3</span> -->
+            <!-- <span f-note>4</span> -->
           </a>
           <a f-item href="section-flexbox.html">
             <div f-title>Flexbox</div>
-            <!-- <span f-note>4</span> -->
+            <!-- <span f-note>5</span> -->
           </a>
           <a f-item href="section-height-width.html">
             <div f-title>Height and Widths</div>
-            <!-- <span f-note>5</span> -->
+            <!-- <span f-note>6</span> -->
           </a>
           <a f-item href="section-inputs.html">
             <div f-title>Placeholder</div>
-            <!-- <span f-note>6</span> -->
+            <!-- <span f-note>7</span> -->
           </a>
           <a f-item href="section-layout.html">
             <div f-title>Layout</div>
-            <!-- <span f-note>7</span> -->
+            <!-- <span f-note>8</span> -->
           </a>
           <a f-item href="section-list.html">
             <div f-title>List</div>
-            <!-- <span f-note>8</span> -->
+            <!-- <span f-note>9</span> -->
           </a>
           <a f-item href="section-padding-margin.html">
             <div f-title>Padding &amp; Margins</div>
-            <!-- <span f-note>9</span> -->
+            <!-- <span f-note>10</span> -->
           </a>
           <a f-item href="section-shadows.html">
             <div f-title>Box Shadows</div>
-            <!-- <span f-note>10</span> -->
+            <!-- <span f-note>11</span> -->
           </a>
           <a f-item href="section-toolbar.html">
             <div f-title>Toolbar</div>
-            <!-- <span f-note>11</span> -->
+            <!-- <span f-note>12</span> -->
           </a>
           <a f-item href="section-typography.html">
             <div f-title>Typography</div>
-            <!-- <span f-note>12</span> -->
+            <!-- <span f-note>13</span> -->
           </a>
-        <div f-item-divider f-text-faded-40>
+        <div f-item-divider f-t-black-40>
           About
         </div>
         <div f-item>
           <div f-item-content>
             &copy; 2017 All Rights Reserved.
-            <a href="https://www.icorbin.com" f-text-faded-60>A Corbin Creation</a>
+            <a href="https://www.icorbin.com" f-t-black-60>A Corbin Creation</a>
           </div>
         </div>
       </div>
-      <footer f-footer no-border f-text-12px f-border-t-none>
+      <footer f-footer no-border f-t-12px f-b-t-none>
 
-        <div f-toolbar f-bg-faded-5>
+        <div f-toolbar f-bg-black-5>
           <a f-button clear f-rubber f-icon-only href="https://github.com/brandoncorbin/oh-flex">
             <i class="zmdi zmdi-github"></i>
           </a>
@@ -100,7 +104,7 @@
       <header f-header>
         <div f-toolbar>
           <div f-buttons-left>
-            <a v-on:click="toggleMenu" f-button clear f-text-blue-400 f-icon-only>
+            <a v-on:click="toggleMenu" f-button clear f-t-blue-400 f-icon-only>
               <i class="zmdi zmdi-menu"></i>
             </a>
           </div>
@@ -117,7 +121,7 @@
               <div f-title f-rubber>
                 Height and Widths
               </div>
-              <button clear f-button>s.5</button>
+              <button clear f-button>s.6</button>
             </div>
           </header>
         <div id="kssref-height-width" class="kss-section kss-section--depth-1 ">
@@ -126,7 +130,7 @@
             <h1 class="kss-title kss-title--level-1">
               <a class="kss-title__permalink" href="#kssref-height-width">
                 <span class="kss-title__ref">
-                  5
+                  6
                   <span class="kss-title__permalink-hash">
                       #Height-Width
                   </span>
@@ -137,50 +141,51 @@
 
 
               <div class="kss-description">
-                <p><strong>[f-width-100]</strong> - is 100%<br />
-<strong>[f-width-100px]</strong> - is 100px</p>
+                <h1 id="prefix-f-h-f-w">Prefix f-h &amp; f-w</h1>
+<p><strong>[f-w-100]</strong> - is 100%<br />
+<strong>[f-w-100px]</strong> - is 100px</p>
 <p><strong>Percentage Heights and Width</strong> are available for every 5%. 0, 5, 10, 15...<br />
 <strong>Pixel Heights and Widths</strong> are available for every 5px up to 400px</p>
 
-<p><p>Also available <strong>[f-max-width-{amount}]</strong>, <strong>[f-min-width-{amount}]</strong>, <strong>[f-max-height-{amount}]</strong>, <strong>[f-min-height-{amount}]</strong>,</p>
+<p><p>Also available <strong>[f-w-max-{amount}]</strong>, <strong>[f-w-min-{amount}]</strong>, <strong>[f-h-max-{amount}]</strong>, <strong>[f-h-min-{amount}]</strong>,</p>
 <div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap>
-  <div f-bg-white f-box-shadow-1 f-m-5px f-width-30px f-height-30px></div>
-  <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-height-40px></div>
-  <div f-bg-white f-box-shadow-1 f-m-5px f-width-50px f-height-50px></div>
-  <div f-bg-white f-box-shadow-1 f-m-5px f-width-60px f-height-60px></div>
-  <div f-bg-white f-box-shadow-1 f-m-5px f-width-70px f-height-70px></div>
-  <div f-bg-white f-box-shadow-1 f-m-5px f-width-80px f-height-80px></div>
-  <div f-bg-white f-box-shadow-1 f-m-5px f-width-90px f-height-90px></div>
-  <div f-bg-white f-box-shadow-1 f-m-5px f-width-100px f-height-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-w-30px f-h-30px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-w-40px f-h-40px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-w-50px f-h-50px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-w-60px f-h-60px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-w-70px f-h-70px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-w-80px f-h-80px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-w-90px f-h-90px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-w-100px f-h-100px></div>
 </div>
 
-<pre><code>  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-30px f-height-30px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-height-40px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-50px f-height-50px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-60px f-height-60px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-70px f-height-70px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-80px f-height-80px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-90px f-height-90px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-100px f-height-100px&gt;&lt;/div&gt;
+<pre><code>  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-30px f-h-30px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-40px f-h-40px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-50px f-h-50px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-60px f-h-60px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-70px f-h-70px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-80px f-h-80px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-90px f-h-90px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-100px f-h-100px&gt;&lt;/div&gt;
 </code></pre><div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap>
-  <div f-bg-white f-box-shadow-1 f-m-5px f-width-30px f-height-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-height-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-5px f-width-50px f-height-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-5px f-width-60px f-height-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-5px f-width-70px f-height-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-5px f-width-80px f-height-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-5px f-width-90px f-height-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-5px f-width-100px f-height-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-w-30px f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-w-40px f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-w-50px f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-w-60px f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-w-70px f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-w-80px f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-w-90px f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-5px f-w-100px f-h-100px></div>
 </div>
 
-<pre><code>  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-30px f-height-100px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-40px f-height-100px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-50px f-height-100px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-60px f-height-100px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-70px f-height-100px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-80px f-height-100px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-90px f-height-100px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-width-100px f-height-100px&gt;&lt;/div&gt;
+<pre><code>  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-30px f-h-100px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-40px f-h-100px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-50px f-h-100px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-60px f-h-100px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-70px f-h-100px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-80px f-h-100px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-90px f-h-100px&gt;&lt;/div&gt;
+  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-100px f-h-100px&gt;&lt;/div&gt;
 </code></pre>
               </div>
 

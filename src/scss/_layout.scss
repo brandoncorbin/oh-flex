@@ -7,7 +7,7 @@
 // for handling scrolling of the main content.
 //
 // <h2>Standard Header Content Footer</h2>
-// <div style="position:relative;" f-round f-bg-green-200 f-width-90 f-height-200px>
+// <div style="position:relative;" f-round f-bg-green-200 f-w-90 f-h-200px>
 //   <div f-layout>
 //     <header f-header f-bg-green-400>Header</header>
 //     <main f-content f-bg-green-100>Content</main>
@@ -23,14 +23,14 @@
 //   </div>
 // ```
 // <h2>Multi Menu Layout</h2>
-// <div style="position:relative;" f-round f-bg-blue-300 f-width-90 f-height-200px>
+// <div style="position:relative;" f-round f-bg-blue-300 f-w-90 f-h-200px>
 //   <div f-layout f-layout-aside>
-//     <aside f-width-10 f-justify-center f-align-center f-bg-blue-100>1</aside>
-//     <aside f-width-20 f-justify-center f-align-center f-bg-blue-300>Menu 2</aside>
+//     <aside f-w-10 f-justify-center f-align-center f-bg-blue-100>1</aside>
+//     <aside f-w-20 f-justify-center f-align-center f-bg-blue-300>Menu 2</aside>
 //     <main>
-//       <header f-header f-text-white f-bg-blue-600 f-justify-center f-align-center >Header</header>
+//       <header f-header f-t-white f-bg-blue-600 f-justify-center f-align-center >Header</header>
 //       <main f-content f-bg-blue-400 f-justify-center f-align-center >Content</main>
-//       <footer f-footer f-text-white f-bg-blue-600 f-justify-center f-align-center >Footer</footer>
+//       <footer f-footer f-t-white f-bg-blue-600 f-justify-center f-align-center >Footer</footer>
 //     </main>
 //   </div>
 // </div>

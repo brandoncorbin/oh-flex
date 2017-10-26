@@ -22,6 +22,18 @@ HTML Attributes that control:
 - ... and more
 
 
+### Character Mapin
+
+- w = width
+- h = height
+- b = border
+- m = margin
+- p = padding
+- t = text
+- bs = box-shadow
+- av = avatar
+
+
 
 [Full documentation and examples](https://brandoncorbin.github.io/oh-flex)
 
@@ -30,7 +42,7 @@ HTML Attributes that control:
 
 #### The Easy Way
 
-Simply embed oh-flex.css directly into your web page using unpkg. 
+Simply embed oh-flex.css directly into your web page using unpkg.
 
 ```
 <link rel="stylesheet" href="https://unpkg.com/oh-flex"  />

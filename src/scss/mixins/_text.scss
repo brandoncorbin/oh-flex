@@ -1,5 +1,5 @@
 @mixin text-size($size) {
-  [f-text-#{$size}] {
+  [f-t-#{$size}] {
     font-size:#{$size} !important;
     line-height:#{$size+3}
   }

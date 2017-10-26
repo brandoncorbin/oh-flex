@@ -1,72 +1,177 @@
+//
+// Borders
+//
+// # Prefix f-b
+//
+// oh-flex currently only supports border weights up to 2px
+// and colors of primary, the default light, and white
+//
+//
+// <div f-p-20px f-row>
+//  <div f-p-20px f-bg-white f-b f-m-r-20px>
+//     All<br> **f-b**
+//  </div>
+//  <div f-p-20px f-bg-white f-b-t f-m-r-10px>
+//     Top<br> **f-b-t**
+//  </div>
+//  <div f-p-20px f-bg-white f-b-b f-m-r-10px>
+//     Bottom<br> **f-b-b**
+//  </div>
+//  <div f-p-20px f-bg-white f-b-l f-m-r-10px>
+//     Left<br> **f-b-l**
+//  </div>
+//  <div f-p-20px f-bg-white f-b-r>
+//     Right<br> **f-b-r**
+//  </div>
+// </div>
+//
+// <div f-p-20px f-row f-bg-blue-900>
+//  <div f-p-20px  f-b-white f-t-white f-m-r-20px>
+//     All<br> **f-b-white**
+//  </div>
+//  <div f-p-20px  f-b-t-white f-t-white   f-m-r-10px>
+//     Top<br> **f-b-t-white**
+//  </div>
+//  <div f-p-20px  f-b-b-white f-t-white   f-m-r-10px>
+//     Bottom<br> **f-b-b-white**
+//  </div>
+//  <div f-p-20px  f-b-l-white f-t-white   f-m-r-10px>
+//     Left<br> **f-b-l-white**
+//  </div>
+//  <div f-p-20px  f-b-r-white f-t-white  >
+//     Right<br> **f-b-r-white**
+//  </div>
+// </div>
+//
+// ### Border Width
+//
+// <div f-p-20px f-row>
+//  <div f-p-20px f-bg-white f-b f-m-r-20px f-b-2px>
+//     Border Width<br> **f-b-2px**
+//  </div>
+//  <div f-p-20px f-b-primary f-b f-m-r-10px>
+//     Primary<br> **f-b-primary**
+//  </div>
+// </div>
+//
+// Style guide: borders
 
-[f-border-none] {
-  border:none !important;
-}
-[f-border-t-none] {
-  border-top:none !important;
-}
-[f-border-b-none] {
-  border-bottom:none !important;
-}
-[f-border-l-none] {
-  border-left:none !important;
-}
-[f-border-r-none] {
-  border-right:none !important;
+[f-b-none] {
+  border: none !important;
 }
 
-[f-border-r-faded] {
-  border-right:solid 1px rgba($faded,0.2) !important;
-}
-[f-border-t-faded] {
-  border-top:solid 1px rgba($faded,0.2) !important;
-}
-[f-border-l-faded] {
-  border-left:solid 1px rgba($faded,0.2) !important;
-}
-[f-border-b-faded] {
-  border-bottom:solid 1px rgba($faded,0.2) !important;
+[f-b-t-none] {
+  border-top: none !important;
 }
 
-[f-border-r-primary] {
-  border-right:solid 1px $primary !important;
+[f-b-b-none] {
+  border-bottom: none !important;
 }
-[f-border-t-primary] {
-  border-top:solid 1px $primary !important;
+
+[f-b-l-none] {
+  border-left: none !important;
 }
-[f-border-l-primary] {
-  border-left:solid 1px $primary !important;
+
+[f-b-r-none] {
+  border-right: none !important;
 }
-[f-border-b-primary] {
-  border-bottom:solid 1px $primary !important;
+
+[f-b] {
+  border: solid 1px rgba($faded,0.2);
 }
-[f-border-1px] {
-  border-width:1px !important;
+
+[f-b-r] {
+  border-right: solid 1px rgba($faded,0.2) !important;
 }
-[f-border-2px] {
-  border-width:2px !important;
+
+[f-b-t] {
+  border-top: solid 1px rgba($faded,0.2) !important;
 }
-[f-border-b-1px] {
-  border-bottom-width:1px !important;
+
+[f-b-l] {
+  border-left: solid 1px rgba($faded,0.2) !important;
 }
-[f-border-t-1px] {
-  border-top-width:1px !important;
+
+[f-b-b] {
+  border-bottom: solid 1px rgba($faded,0.2) !important;
 }
-[f-border-l-1px] {
-  border-left-width:1px !important;
+
+[f-b-white] {
+  border: solid 1px rgba(#FFF,0.7);
 }
-[f-border-r-1px] {
-  border-right-width:1px !important;
+
+[f-b-r-white] {
+  border-right: solid 1px rgba(#FFF,0.7) !important;
 }
-[f-border-b-2px] {
-  border-bottom-width:2px !important;
+
+[f-b-t-white] {
+  border-top: solid 1px rgba(#FFF,0.7) !important;
 }
-[f-border-t-2px] {
-  border-top-width:2px !important;
+
+[f-b-l-white] {
+  border-left: solid 1px rgba(#FFF,0.7) !important;
 }
-[f-border-l-2px] {
-  border-left-width:2px !important;
+
+[f-b-b-white] {
+  border-bottom: solid 1px rgba(#FFF,0.7) !important;
 }
-[f-border-r-2px] {
-  border-right-width:2px !important;
+
+[f-b-primary] {
+  border: solid 1px $primary !important;
+}
+
+[f-b-r-primary] {
+  border-right: solid 1px $primary !important;
+}
+
+[f-b-t-primary] {
+  border-top: solid 1px $primary !important;
+}
+
+[f-b-l-primary] {
+  border-left: solid 1px $primary !important;
+}
+
+[f-b-b-primary] {
+  border-bottom: solid 1px $primary !important;
+}
+
+[f-b-1px] {
+  border-width: 1px !important;
+}
+
+[f-b-2px] {
+  border-width: 2px !important;
+}
+
+[f-b-b-1px] {
+  border-bottom-width: 1px !important;
+}
+
+[f-b-t-1px] {
+  border-top-width: 1px !important;
+}
+
+[f-b-l-1px] {
+  border-left-width: 1px !important;
+}
+
+[f-b-r-1px] {
+  border-right-width: 1px !important;
+}
+
+[f-b-b-2px] {
+  border-bottom-width: 2px !important;
+}
+
+[f-b-t-2px] {
+  border-top-width: 2px !important;
+}
+
+[f-b-l-2px] {
+  border-left-width: 2px !important;
+}
+
+[f-b-r-2px] {
+  border-right-width: 2px !important;
 }

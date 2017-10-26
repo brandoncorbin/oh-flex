@@ -17,7 +17,7 @@
 <body id="kss-node" >
 
   <div f-layout f-layout-aside id="app">
-    <aside f-collapse-phone :f-aside-open="menu_open" f-column f-flex f-width-160px f-min-width-20 f-max-width-260px f-bg-secondary>
+    <aside f-collapse-phone :f-aside-open="menu_open" f-column f-flex f-w-160px f-w-min-20 f-w-max-260px f-bg-secondary>
       <header f-header no-border>
         <div f-bg-secondary f-toolbar f-justify-center>
             <span f-rubber></span>
@@ -30,69 +30,73 @@
             <div f-title>Avatar</div>
             <!-- <span f-note>1</span> -->
           </a>
+          <a f-item href="section-borders.html">
+            <div f-title>Borders</div>
+            <!-- <span f-note>2</span> -->
+          </a>
           <a f-item href="section-buttons.html">
             <div f-title>Buttons</div>
-            <!-- <span f-note>2</span> -->
+            <!-- <span f-note>3</span> -->
           </a>
           <a f-item href="section-colors.html">
             <div f-title>Colors</div>
-            <!-- <span f-note>3</span> -->
+            <!-- <span f-note>4</span> -->
           </a>
           <a f-item href="section-flexbox.html">
             <div f-title>Flexbox</div>
-            <!-- <span f-note>4</span> -->
+            <!-- <span f-note>5</span> -->
           </a>
-              <a f-item f-bg-faded-inverse-10 f-text-normal href="section-flexbox.html#kssref-flexbox-alignment">
-                <div f-title f-text-14px>
-                  - Flexbox Align
+              <a f-item f-bg-white-10 f-t-normal href="section-flexbox.html#kssref-flexbox-alignment">
+                <div f-title f-t-14px>
+                  - Flexbox
                 </div>
-                <!-- <span>4.1</span> -->
+                <!-- <span>5.1</span> -->
               </a>
           <a f-item href="section-height-width.html">
             <div f-title>Height and Widths</div>
-            <!-- <span f-note>5</span> -->
+            <!-- <span f-note>6</span> -->
           </a>
           <a f-item href="section-inputs.html">
             <div f-title>Placeholder</div>
-            <!-- <span f-note>6</span> -->
+            <!-- <span f-note>7</span> -->
           </a>
           <a f-item href="section-layout.html">
             <div f-title>Layout</div>
-            <!-- <span f-note>7</span> -->
+            <!-- <span f-note>8</span> -->
           </a>
           <a f-item href="section-list.html">
             <div f-title>List</div>
-            <!-- <span f-note>8</span> -->
+            <!-- <span f-note>9</span> -->
           </a>
           <a f-item href="section-padding-margin.html">
             <div f-title>Padding &amp; Margins</div>
-            <!-- <span f-note>9</span> -->
+            <!-- <span f-note>10</span> -->
           </a>
           <a f-item href="section-shadows.html">
             <div f-title>Box Shadows</div>
-            <!-- <span f-note>10</span> -->
+            <!-- <span f-note>11</span> -->
           </a>
           <a f-item href="section-toolbar.html">
             <div f-title>Toolbar</div>
-            <!-- <span f-note>11</span> -->
+            <!-- <span f-note>12</span> -->
           </a>
           <a f-item href="section-typography.html">
             <div f-title>Typography</div>
-            <!-- <span f-note>12</span> -->
+            <!-- <span f-note>13</span> -->
           </a>
-        <div f-item-divider f-text-faded-40>
+        <div f-item-divider f-t-black-40>
           About
         </div>
         <div f-item>
           <div f-item-content>
             &copy; 2017 All Rights Reserved.
-            <a href="https://www.icorbin.com" f-text-faded-60>A Corbin Creation</a>
+            <a href="https://www.icorbin.com" f-t-black-60>A Corbin Creation</a>
           </div>
         </div>
       </div>
-      <footer f-footer no-border f-text-12px f-border-t-none>
+      <footer f-footer no-border f-t-12px f-b-t-none>
 
-        <div f-toolbar f-bg-faded-5>
+        <div f-toolbar f-bg-black-5>
           <a f-button clear f-rubber f-icon-only href="https://github.com/brandoncorbin/oh-flex">
             <i class="zmdi zmdi-github"></i>
           </a>
@@ -106,7 +110,7 @@
       <header f-header>
         <div f-toolbar>
           <div f-buttons-left>
-            <a v-on:click="toggleMenu" f-button clear f-text-blue-400 f-icon-only>
+            <a v-on:click="toggleMenu" f-button clear f-t-blue-400 f-icon-only>
               <i class="zmdi zmdi-menu"></i>
             </a>
           </div>
@@ -123,7 +127,7 @@
               <div f-title f-rubber>
                 Flexbox
               </div>
-              <button clear f-button>s.4</button>
+              <button clear f-button>s.5</button>
             </div>
           </header>
         <div id="kssref-flexbox" class="kss-section kss-section--depth-1 ">
@@ -132,7 +136,7 @@
             <h1 class="kss-title kss-title--level-1">
               <a class="kss-title__permalink" href="#kssref-flexbox">
                 <span class="kss-title__ref">
-                  4
+                  5
                   <span class="kss-title__permalink-hash">
                       #Flexbox
                   </span>
@@ -142,56 +146,10 @@
             </h1>
 
 
-              <div class="kss-description">
-                <p>Let&#39;s start flexing! Sure your friend using IE 10 and below might not like you that much
-but really... should we care what they think?</p>
- <h2>Flexbox Row with variable widths</h2>
-
- <div  f-bg-blue-100 f-row f-p-30px f-wrap f-m-t-20px>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
-</div>
-
-<pre><code> &lt;div  f-bg-blue-100 f-row f-p-30px f-wrap f-m-t-20px&gt;
-  &lt;div f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px&gt;&lt;/div&gt;
-  &lt;div f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px&gt;&lt;/div&gt;
-  &lt;div f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px&gt;&lt;/div&gt;
-  &lt;div f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px&gt;&lt;/div&gt;
-  &lt;div f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px&gt;&lt;/div&gt;
-  &lt;div f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px&gt;&lt;/div&gt;
-  &lt;div f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px&gt;&lt;/div&gt;
-  &lt;div f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px&gt;&lt;/div&gt;
- &lt;/div&gt;
-</code></pre> <h2>Flexbox Column with variable widths</h2>
-
- <div  f-bg-blue-100 f-column f-p-30px f-wrap f-m-t-20px>
-  <div f-bg-white f-box-shadow-1 f-m-b-10px f-max-height-10px f-min-height-1px f-height-30px f-grow f-shrink f-width-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-b-10px f-max-height-100 f-min-height-20px f-height-30px f-grow f-shrink f-width-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-b-10px f-max-height-10px f-min-height-1px f-height-30px f-grow f-shrink f-width-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-b-10px f-max-height-100 f-min-height-20px f-height-30px f-grow f-shrink f-width-100px></div>
-</div>
-
-<pre><code> &lt;div  f-bg-blue-100  f-column f-p-30px f-wrap f-m-t-20px&gt;
-  &lt;div  f-m-b-10px f-max-height-10px f-min-height-1px f-height-30px f-grow f-shrink f-width-100px&gt;&lt;/div&gt;
-  &lt;div  f-m-b-10px f-max-height-100 f-min-height-20px f-height-30px f-grow f-shrink f-width-100px&gt;&lt;/div&gt;
-  &lt;div  f-m-b-10px f-max-height-10px f-min-height-1px f-height-30px f-grow f-shrink f-width-100px&gt;&lt;/div&gt;
-  &lt;div  f-m-b-10px f-max-height-100 f-min-height-20px f-height-30px f-grow f-shrink f-width-100px&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-              </div>
 
           </div>
 
 
-            <div class="kss-source kss-style">
-              Source: <code>_flex-box.scss</code>, line 1
-            </div>
 
         </div>
         <section id="kssref-flexbox-alignment" class="kss-section kss-section--depth-2 ">
@@ -200,18 +158,69 @@ but really... should we care what they think?</p>
             <h2 class="kss-title kss-title--level-2">
               <a class="kss-title__permalink" href="#kssref-flexbox-alignment">
                 <span class="kss-title__ref">
-                  4.1
+                  5.1
                   <span class="kss-title__permalink-hash">
                       #Flexbox.alignment
                   </span>
                 </span>
-                Flexbox Align
+                Flexbox
               </a>
             </h2>
 
 
               <div class="kss-description">
                 <p>Let&#39;s start flexing! Sure your friend using IE 10 and below might not like you that much
+but really... should we care what they think?</p>
+ <h2>Using Rubber!</h2>
+
+<p> Rubber is a flexible box - it will take up any available space.</p>
+ <div f-toolbar>
+   <button f-button f-w-30px f-stiff>Left</button>
+   <div f-rubber f-bg-black-10 f-t-center>RUBBER!</div>
+   <button f-button f-w-30px f-stiff>Right</button>
+ </div>
+
+ <h2>Flexbox Row with variable widths</h2>
+
+ <div  f-bg-blue-100 f-row f-p-30px f-wrap f-m-t-20px>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px></div>
+</div>
+
+<pre><code> &lt;div  f-bg-blue-100 f-row f-p-30px f-wrap f-m-t-20px&gt;
+  &lt;div f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px&gt;&lt;/div&gt;
+  &lt;div f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px&gt;&lt;/div&gt;
+  &lt;div f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px&gt;&lt;/div&gt;
+  &lt;div f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px&gt;&lt;/div&gt;
+  &lt;div f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px&gt;&lt;/div&gt;
+  &lt;div f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px&gt;&lt;/div&gt;
+  &lt;div f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px&gt;&lt;/div&gt;
+  &lt;div f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px&gt;&lt;/div&gt;
+ &lt;/div&gt;
+</code></pre> <h2>Flexbox Column with variable widths</h2>
+
+ <div  f-bg-blue-100 f-column f-p-30px f-wrap f-m-t-20px>
+  <div f-bg-white f-box-shadow-1 f-m-b-10px f-h-max-10px f-h-min-1px f-h-30px f-grow f-shrink f-w-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-b-10px f-h-max-100 f-h-min-20px f-h-30px f-grow f-shrink f-w-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-b-10px f-h-max-10px f-h-min-1px f-h-30px f-grow f-shrink f-w-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-b-10px f-h-max-100 f-h-min-20px f-h-30px f-grow f-shrink f-w-100px></div>
+</div>
+
+<pre><code> &lt;div  f-bg-blue-100  f-column f-p-30px f-wrap f-m-t-20px&gt;
+  &lt;div  f-m-b-10px f-h-max-10px f-h-min-1px f-h-30px f-grow f-shrink f-w-100px&gt;&lt;/div&gt;
+  &lt;div  f-m-b-10px f-h-max-100 f-h-min-20px f-h-30px f-grow f-shrink f-w-100px&gt;&lt;/div&gt;
+  &lt;div  f-m-b-10px f-h-max-10px f-h-min-1px f-h-30px f-grow f-shrink f-w-100px&gt;&lt;/div&gt;
+  &lt;div  f-m-b-10px f-h-max-100 f-h-min-20px f-h-30px f-grow f-shrink f-w-100px&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p>Style guide: Flexbox</p>
+<p>Flexbox Align</p>
+<p>Let&#39;s start flexing! Sure your friend using IE 10 and below might not like you that much
 but really... should we care what they think?</p>
 
               </div>
@@ -220,7 +229,7 @@ but really... should we care what they think?</p>
 
 
             <div class="kss-source kss-style">
-              Source: <code>_flex-box.scss</code>, line 54
+              Source: <code>_flex-box.scss</code>, line 1
             </div>
 
         </section>

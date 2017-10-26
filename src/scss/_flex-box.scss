@@ -4,29 +4,39 @@
 // Let's start flexing! Sure your friend using IE 10 and below might not like you that much
 // but really... should we care what they think?
 //
+//  <h2>Using Rubber!</h2>
+//
+//  Rubber is a flexible box - it will take up any available space.
+//
+//  <div f-toolbar>
+//    <button f-button f-w-30px f-stiff>Left</button>
+//    <div f-rubber f-bg-black-10 f-t-center>RUBBER!</div>
+//    <button f-button f-w-30px f-stiff>Right</button>
+//  </div>
+//
 //  <h2>Flexbox Row with variable widths</h2>
 //
 //  <div  f-bg-blue-100 f-row f-p-30px f-wrap f-m-t-20px>
-//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px></div>
 // </div>
 //
 // ```
 //  <div  f-bg-blue-100 f-row f-p-30px f-wrap f-m-t-20px>
-//   <div f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
-//   <div f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
-//   <div f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
-//   <div f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
-//   <div f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
-//   <div f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
-//   <div f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
-//   <div f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
+//   <div f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px></div>
+//   <div f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px></div>
+//   <div f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px></div>
+//   <div f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px></div>
+//   <div f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px></div>
+//   <div f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px></div>
+//   <div f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px></div>
+//   <div f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px></div>
 //  </div>
 // ```
 //
@@ -34,23 +44,22 @@
 //  <h2>Flexbox Column with variable widths</h2>
 //
 //  <div  f-bg-blue-100 f-column f-p-30px f-wrap f-m-t-20px>
-//   <div f-bg-white f-box-shadow-1 f-m-b-10px f-max-height-10px f-min-height-1px f-height-30px f-grow f-shrink f-width-100px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-b-10px f-max-height-100 f-min-height-20px f-height-30px f-grow f-shrink f-width-100px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-b-10px f-max-height-10px f-min-height-1px f-height-30px f-grow f-shrink f-width-100px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-b-10px f-max-height-100 f-min-height-20px f-height-30px f-grow f-shrink f-width-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-b-10px f-h-max-10px f-h-min-1px f-h-30px f-grow f-shrink f-w-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-b-10px f-h-max-100 f-h-min-20px f-h-30px f-grow f-shrink f-w-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-b-10px f-h-max-10px f-h-min-1px f-h-30px f-grow f-shrink f-w-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-b-10px f-h-max-100 f-h-min-20px f-h-30px f-grow f-shrink f-w-100px></div>
 // </div>
 //
 // ```
 //  <div  f-bg-blue-100  f-column f-p-30px f-wrap f-m-t-20px>
-//   <div  f-m-b-10px f-max-height-10px f-min-height-1px f-height-30px f-grow f-shrink f-width-100px></div>
-//   <div  f-m-b-10px f-max-height-100 f-min-height-20px f-height-30px f-grow f-shrink f-width-100px></div>
-//   <div  f-m-b-10px f-max-height-10px f-min-height-1px f-height-30px f-grow f-shrink f-width-100px></div>
-//   <div  f-m-b-10px f-max-height-100 f-min-height-20px f-height-30px f-grow f-shrink f-width-100px></div>
+//   <div  f-m-b-10px f-h-max-10px f-h-min-1px f-h-30px f-grow f-shrink f-w-100px></div>
+//   <div  f-m-b-10px f-h-max-100 f-h-min-20px f-h-30px f-grow f-shrink f-w-100px></div>
+//   <div  f-m-b-10px f-h-max-10px f-h-min-1px f-h-30px f-grow f-shrink f-w-100px></div>
+//   <div  f-m-b-10px f-h-max-100 f-h-min-20px f-h-30px f-grow f-shrink f-w-100px></div>
 // </div>
 // ```
 //
 // Style guide: Flexbox
-
 //
 // Flexbox Align
 //
@@ -67,7 +76,6 @@
   @include align-items(center);
 }
 
-
 [f-align-start] {
   @include flexbox();
   @include align-items(flex-start);
@@ -83,22 +91,20 @@
   @include flex-wrap(wrap);
 }
 
-
 [f-row] {
   @include flexbox();
   @include flex-direction(row);
 }
+
 [f-column] {
   @include flexbox();
   @include flex-direction(column);
 }
 
-
 [f-align-end] {
   @include flexbox();
   @include align-items(flex-end);
 }
-
 
 [f-justify-center] {
   @include flexbox();
@@ -106,45 +112,48 @@
 }
 
 [f-rubber] {
-  width:100%;
-  height:100%;
+  width     : 100%;
+  height    : 100%;
   @include flex-grow(1);
   @include flex-shrink(1);
-  min-width:1px;
-  min-height:1px;
-  max-height:100%;
-  max-width:100%;
+  min-width : 1px;
+  min-height: 1px;
+  max-height: 100%;
+  max-width : 100%;
 }
 
+[f-stiff] {
+  @include flex-grow(0);
+  @include flex-shrink(0);
+}
 
 [f-justify-around] {
   @include flexbox();
   @include justify-content(space-around);
 }
 
-
 [f-justify-between] {
   @include flexbox();
   @include justify-content(space-between);
 }
-
 
 [f-justify-end] {
   @include flexbox();
   @include justify-content(flex-end);
 }
 
-
 [f-flex] {
   @include flexbox();
 }
 
-[f-flex-column],[f-column] {
+[f-column],
+[f-flex-column] {
   @include flexbox();
   @include flex-direction(column);
 }
 
-[f-flex-row],[f-row] {
+[f-flex-row],
+[f-row] {
   @include flexbox();
   @include flex-direction(row);
 }
