@@ -5,194 +5,187 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../../lib/oh-flex.css" />
-    <title>Brandon Corbin - Product Developer - Portfolio</title>
+  <title>Brandon Corbin - Product Developer - Portfolio</title>
   <script src="https://unpkg.com/vue"></script>
   <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
 
 </head>
-<body f-no-bounce f>
-  <div f-layout f-layout-aside   id="app">
+<body class="f">
+  <div id="app">
+    <div f-layout f-layout-aside>
 
-    <!-- START Message List View -->
-    <aside f-width-30 f-collapse-phone f-bg-blue-600 :f-aside-open="menu_open">
-      <div f-layout>
-        <header f-header>
-          <div f-toolbar f-bg-blue-800>
-            <div f-buttons-left>
-              <a href="../../" f-button clear f-text-white f-icon-only>
-                <i class="zmdi zmdi-arrow-left"></i>
-              </a>
+      <!-- START Message List View -->
+      <aside f-width-30 f-collapse-phone f-bg-blue-600 :f-aside-open="menu_open">
+        <div f-layout>
+          <header f-header>
+            <div f-toolbar f-bg-blue-800>
+              <div f-buttons-left>
+                <a href="../../" f-button clear f-text-white f-icon-only>
+                  <i class="zmdi zmdi-arrow-left"></i>
+                </a>
+              </div>
+              <input v-model="searchTerm" v-on:keyup="search" placeholder="Search"  f-placeholder-center f-placeholder-inverse f-input f-rubber f-input-round f-input-faded  f-width-100 type="search" round-lg />
             </div>
-            <input v-model="searchTerm" v-on:keyup="search" placeholder="Search"  f-placeholder-center f-placeholder-inverse f-input f-rubber f-input-round f-input-faded  f-width-100 type="search" round-lg />
-          </div>
 
-        </header>
+          </header>
 
-        <section f-content v-if="searchResults" id="searchResults">
-          <div f-item-divider f-text-blue-100 clear  f-p-t-10px f-p-b-10px>
-            <div f-item-content>
-              Search {{searchTerm}}
+          <section f-content v-if="searchResults" id="searchResults">
+            <div f-item-divider f-text-blue-100 clear  f-p-t-10px f-p-b-10px>
+              <div f-item-content>
+                Search {{searchTerm}}
+              </div>
+              <button f-button clear f-text-white v-on:click="searchTerm = null; searchResults = null">Clear</button>
             </div>
-            <button f-button clear f-text-white v-on:click="searchTerm = null; searchResults = null">Clear</button>
-          </div>
 
-          <a f-item clear f-align-center v-on:click="selectItem(project)" v-for="project in searchResults" :selected="selected == project">
-            <div f-avatar-square sm f-m-r-12px><img v-bind:src="project.avatar" /> </div>
-            <div f-item-content f-rubber>
-              <div f-title f-text-white> {{ project.title }}</div>
-              <p  f-truncate f-text-blue-300 f-note>
-                {{project.summary}}
-              </p>
+            <a f-item clear f-align-center v-on:click="selectItem(project)" v-for="project in searchResults" :selected="selected == project">
+              <div f-avatar-square sm f-m-r-12px><img v-bind:src="project.avatar" /> </div>
+              <div f-item-content f-rubber>
+                <div f-title f-text-white> {{ project.title }}</div>
+                <p  f-truncate f-text-blue-300 f-note>
+                  {{project.summary}}
+                </p>
+              </div>
+              <div>
+                <i class="zmdi zmdi-chevron-right" f-text-22px f-text-white-60></i>
+              </div>
+            </a>
+          </section> <!-- end Search Results -->
+
+          <section f-content v-if="!searchResults">
+
+            <div f-item-divider f-text-blue-100 clear  f-p-t-10px f-p-b-10px v-if="resume.about">
+              About
             </div>
-            <div>
-              <i class="zmdi zmdi-chevron-right" f-text-22px f-text-white-60></i>
+
+            <a f-item clear f-align-center v-on:click="selectItem(about)" v-for="about in resume.about" :selected="selected == about">
+              <div f-avatar-square sm f-m-r-12px><img v-bind:src="about.avatar" /> </div>
+              <div f-item-content f-rubber>
+                <div f-title f-text-white> {{ about.title }}</div>
+                <p  f-truncate f-text-blue-300 f-note>
+                  {{about.summary}}
+                </p>
+              </div>
+              <div>
+                <i f-m-l-6px class="zmdi zmdi-chevron-right" f-text-22px f-text-white-60></i>
+              </div>
+            </a>
+
+            <div f-item-divider f-text-blue-100 clear  f-p-t-10px f-p-b-10px>
+              Products
             </div>
-          </a>
-        </section> <!-- end Search Results -->
 
-        <section f-content v-if="!searchResults">
+            <a f-item clear f-align-center v-on:click="selectItem(project)" v-for="project in resume.projects" :selected="selected == project">
+              <div f-avatar-square sm f-m-r-12px><img v-bind:src="project.avatar" /> </div>
+              <div f-item-content f-rubber>
+                <div f-title f-text-white> {{ project.title }}</div>
+                <p  f-truncate f-text-blue-300 f-note>
+                  {{project.summary}}
+                </p>
+              </div>
+              <div>
+                <i f-m-l-6px class="zmdi zmdi-chevron-right" f-text-22px f-text-white-60></i>
+              </div>
+            </a>
 
-          <div f-item-divider f-text-blue-100 clear  f-p-t-10px f-p-b-10px v-if="resume.about">
-            About
-          </div>
-
-          <a f-item clear f-align-center v-on:click="selectItem(about)" v-for="about in resume.about" :selected="selected == about">
-            <div f-avatar-square sm f-m-r-12px><img v-bind:src="about.avatar" /> </div>
-            <div f-item-content f-rubber>
-              <div f-title f-text-white> {{ about.title }}</div>
-              <p  f-truncate f-text-blue-300 f-note>
-                {{about.summary}}
-              </p>
+            <div f-item-divider f-text-blue-100 clear f-p-t-10px f-p-b-10px>
+              Experience
             </div>
-            <div>
-              <i f-m-l-6px class="zmdi zmdi-chevron-right" f-text-22px f-text-white-60></i>
+
+            <a f-item clear  f-align-center v-on:click="selectItem(job)" v-for="job in resume.experience" :selected="selected == job">
+              <div f-avatar-square sm f-m-r-12px><img v-bind:src="job.avatar" /> </div>
+              <div f-item-content f-rubber>
+                <div f-title f-text-white> {{ job.title }}</div>
+                <p  f-truncate f-text-blue-300 f-note>
+                  {{job.company}}
+                </p>
+                <p  f-truncate f-text-blue-200 f-note>
+                  {{job.start}} to {{job.end}}
+                </p>
+              </div>
+              <div>
+                <i f-m-l-6px class="zmdi zmdi-chevron-right" f-text-22px f-text-white-60></i>
+              </div>
+            </a>
+
+          </section>
+
+        </div>
+      </aside>
+      <main f-rubber f-collapse-phone>
+        <div f-layout id="main-layout">
+          <header f-header f-bg-blue-800>
+            <div f-toolbar f-toolbar-inverse >
+              <button  f-button clear f-icon-only v-on:click="toggleMenu"><i class="zmdi zmdi-menu"></i></button>
+              <span f-rubber></span>
+              <div f-text-center f-title>
+                {{ title }}
+              </div>
+              <span f-rubber></span>
+              <button f-button clear f-primary f-icon-only><i class="zmdi zmdi-info-outline"></i></button>
             </div>
-          </a>
+          </header>
+          <div f-content f-contain-700px>
 
-          <div f-item-divider f-text-blue-100 clear  f-p-t-10px f-p-b-10px>
-            Products
-          </div>
+            <article f-item-divider f-no-lines clear></article>
+            <article f-item f-no-lines f-m-b-10px>
+              <div f-avatar-square f-m-r-12px f-box-shadow-1 lg v-if="selected.avatar">
+                <img v-bind:src="selected.avatar" />
+              </div>
+              <div f-item-content>
+                <div f-title>{{selected.title}}</div>
+                <p f-note>
+                  <span v-if="selected.type=='job'">
+                    <strong f-text-faded-100>{{selected.company}}</strong> <br />{{selected.start}} to {{selected.end}}
+                  </span>
+                  <span v-if="selected.summary">
+                    {{selected.summary}}
+                  </span>
+                </p>
+              </div>
+            </article>
 
-          <a f-item clear f-align-center v-on:click="selectItem(project)" v-for="project in resume.projects" :selected="selected == project">
-            <div f-avatar-square sm f-m-r-12px><img v-bind:src="project.avatar" /> </div>
-            <div f-item-content f-rubber>
-              <div f-title f-text-white> {{ project.title }}</div>
-              <p  f-truncate f-text-blue-300 f-note>
-                {{project.summary}}
-              </p>
-            </div>
-            <div>
-              <i f-m-l-6px class="zmdi zmdi-chevron-right" f-text-22px f-text-white-60></i>
-            </div>
-          </a>
+            <div  v-if="selected.resources" f-bg-blue-50 f-height-30 f-scroll-x f-p-30px>
+              <div f-scroll-panel f-flex f-row f-m-r-20px f-height-100>
+                  <img v-on:click="showResource(resource)" f-bg-white f-hover-zoom f-shrink-off f-m-r-20px f-box-shadow-1 v-for="resource in selected.resources"  v-bind:src="resource.src" height="100%" f-m-r-10px />
 
-          <div f-item-divider f-text-blue-100 clear f-p-t-10px f-p-b-10px>
-            Experience
-          </div>
-
-          <a f-item clear  f-align-center v-on:click="selectItem(job)" v-for="job in resume.experience" :selected="selected == job">
-            <div f-avatar-square sm f-m-r-12px><img v-bind:src="job.avatar" /> </div>
-            <div f-item-content f-rubber>
-              <div f-title f-text-white> {{ job.title }}</div>
-              <p  f-truncate f-text-blue-300 f-note>
-                {{job.company}}
-              </p>
-              <p  f-truncate f-text-blue-200 f-note>
-                {{job.start}} to {{job.end}}
-              </p>
-            </div>
-            <div>
-              <i f-m-l-6px class="zmdi zmdi-chevron-right" f-text-22px f-text-white-60></i>
-            </div>
-          </a>
-
-        </section>
-
-      </div>
-    </aside>
-    <main f-rubber f-collapse-phone>
-      <div f-layout id="main-layout">
-        <header f-header f-bg-blue-800>
-          <div f-toolbar f-toolbar-inverse >
-            <button  f-button clear f-icon-only v-on:click="toggleMenu"><i class="zmdi zmdi-menu"></i></button>
-            <span f-rubber></span>
-            <div f-text-center f-title>
-              {{ title }}
-            </div>
-            <span f-rubber></span>
-            <button f-button clear f-primary f-icon-only><i class="zmdi zmdi-info-outline"></i></button>
-          </div>
-        </header>
-        <div f-content f-contain-700px>
-
-          <article f-item-divider f-no-lines clear></article>
-          <article f-item f-no-lines f-m-b-10px>
-            <div f-avatar-square f-m-r-12px f-box-shadow-1 lg v-if="selected.avatar">
-              <img v-bind:src="selected.avatar" />
-            </div>
-            <div f-item-content>
-              <div f-title>{{selected.title}}</div>
-              <p f-note>
-                <span v-if="selected.type=='job'">
-                  <strong f-text-faded-100>{{selected.company}}</strong> <br />{{selected.start}} to {{selected.end}}
-                </span>
-                <span v-if="selected.summary">
-                  {{selected.summary}}
-                </span>
-              </p>
-            </div>
-          </article>
-
-
-
-          <div  v-if="selected.resources" f-bg-blue-50 f-height-30 f-scroll-x f-p-30px>
-            <div f-scroll-panel f-flex f-row f-m-r-20px f-height-100>
-                <img v-on:click="showResource(resource)" f-bg-white f-hover-zoom f-shrink-off f-m-r-20px f-box-shadow-1 v-for="resource in selected.resources"  v-bind:src="resource.src" height="100%" f-m-r-10px />
-
-                <div f-width-10px>&nbsp;</div>
-            </div>
-          </div>
-
-
-
-
-
-          <article f-item v-if="selected.technologies" f-wrap f-p-t-28px f-border-none f-justify-center f-align-center>
-            <div f-bg-blue-400 f-m-b-4px f-p-l-12px f-p-r-12px f-text-white f-round-lg f-text-12px f-tag f-p-4px f-m-r-5px v-for="tech in selected.technologies">
-              {{tech}}
-            </div>
-          </article>
-
-          <article f-item :f-border-b-faded="index < selected.description.length -1" :f-border-b-none="index == selected.description.length -1" v-for="(para, index) in selected.description">
-            <p f-note v-html="para">
-
-            </p>
-          </article>
-
-
-          <article f-item-divider clear f-border-t-none f-border-bottom-faded v-if="selected.links">
-            <div f-p-b-6px f-p-t-6px f-text-14px f-text-bolder f-text-dark>Learn More</div>
-          </article>
-
-          <a f-item v-for="link in selected.links" v-bind:href="link.href">
-            <i v-bind:class="link.icon" f-m-r-10px f-icon-md f-text-blue-200 v-if="link.icon"></i>
-            <div f-item-content>
-              <div f-title f-text-normal>
-                {{link.title}}
+                  <div f-width-10px>&nbsp;</div>
               </div>
             </div>
-            <i class="zmdi zmdi-chevron-right" /></i>
-          </a>
 
-          <article f-item-divider f-no-lines clear v-if="selected.links">
-          </article>
 
-        </div><!-- end f-content -->
-      </div>
-    </main>
+            <article f-item v-if="selected.technologies" f-wrap f-p-t-28px f-border-none f-justify-center f-align-center>
+              <div f-bg-blue-400 f-m-b-4px f-p-l-12px f-p-r-12px f-text-white f-round-lg f-text-12px f-tag f-p-4px f-m-r-5px v-for="tech in selected.technologies">
+                {{tech}}
+              </div>
+            </article>
 
+            <article f-item :f-border-b-faded="index < selected.description.length -1" :f-border-b-none="index == selected.description.length -1" v-for="(para, index) in selected.description">
+              <p f-note v-html="para"></p>
+            </article>
+
+            <article f-item-divider clear f-border-t-none f-border-bottom-faded v-if="selected.links">
+              <div f-p-b-6px f-p-t-6px f-text-14px f-text-bolder f-text-dark>Learn More</div>
+            </article>
+
+            <a f-item v-for="link in selected.links" v-bind:href="link.href">
+              <i v-bind:class="link.icon" f-m-r-10px f-icon-md f-text-blue-200 v-if="link.icon"></i>
+              <div f-item-content>
+                <div f-title f-text-normal>
+                  {{link.title}}
+                </div>
+              </div>
+              <i class="zmdi zmdi-chevron-right" /></i>
+            </a>
+
+            <article f-item-divider f-no-lines clear v-if="selected.links">
+            </article>
+
+          </div><!-- end f-content -->
+        </div>
+      </main>
+
+    </div> <!-- end f-layout -->
     <div f-modal :f-modal-hidden="!show_resource_modal" :f-modal-show="!show_resource_modal" >
       <div f-modal-window f-layout  v-if="active_resource">
         <header f-header>
@@ -223,18 +216,14 @@
         Preparing...
       </span>
     </div>
-
-
-
-  </div> <!-- end f-layout -->
-
+  </div>
   <script>
 
-  var hammertime = new Hammer(document.body, {});
-  hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-  hammertime.on('swipe', function(ev) {
-    console.log(ev);
-  });
+  // var hammertime = new Hammer(document.body, {});
+  // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+  // hammertime.on('swipe', function(ev) {
+  //   console.log(ev);
+  // });
 </script>
 <script src="portfolio.js"></script>
 

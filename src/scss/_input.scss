@@ -1,0 +1,87 @@
+// Placeholder
+//
+// Control how a place holder in an input looks
+//
+//
+// #### Centered Placeholder
+//
+// <div f-p-16px>
+//  <input f-p-6px f-round f-text-16px f-border-none f-width-90 f-lg f-bg-faded-10 type="text" placeholder="Centered Placeholder" f-placeholder-center />
+// </div>
+//
+// ```
+//  <input f-p-6px f-round f-text-16px f-border-none f-width-90 f-lg  type="text" placeholder="Centered Placeholder" f-placeholder-center />
+// ```
+//
+// #### Inverse
+//
+// <div f-bg-blue-100 f-p-16px  f-m-t-20px>
+//  <input f-input f-lg f-bg-blue-700 type="text" placeholder="Centered Placeholder" f-placeholder-center f-placeholder-inverse />
+// </div>
+//
+// ```
+//  <input f-p-10px f-round f-text-16px f-border-none f-width-90 f-lg f-bg-blue-100 type="text" placeholder="Centered Placeholder" f-placeholder-center />
+// ```
+//
+// Style guide: Inputs
+
+[f-input] {
+  border      : solid 1px rgba(0,0,0,0.1);
+  border-style: solid;
+  font-size   : 16px;
+  padding     : 6px 12px;
+
+  &[f-input-round] {
+    border-radius: 20px;
+  }
+
+  &[f-input-faded] {
+    background-color: rgba(0,0,0,0.1);
+  }
+}
+
+[f-placeholder-inverse] {
+  color: #FFF;
+
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: rgba(255,255,255,0.4);
+  }
+
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba(255,255,255,0.4);
+  }
+
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgba(255,255,255,0.4);
+  }
+
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgba(255,255,255,0.4);
+  }
+}
+
+[f-placeholder-center] {
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    text-align: center;
+  }
+
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    text-align: center;
+  }
+
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    text-align: center;
+  }
+
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    text-align: center;
+  }
+}

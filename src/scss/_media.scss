@@ -1,64 +1,79 @@
 /* Desktops and laptops ----------- */
-@media only screen and (max-width : 1824px) {
-
-}
-
+@media only screen and (max-width: 1824px) {}
 /* iPads (landscape) ----------- */
-@media only screen and (max-width : 1224px)   {
-
-}
-
+@media only screen and (max-width: 1224px) {}
 /* iPads (portrait) ----------- */
-@media only screen and (min-width : 1024px  ) {
+@media only screen and (min-width: 1024px) {
   [f-show-md] {
-    display:inherit;
+    display: inherit;
   }
+
   [f-show-md] {
-    display:inherit;
+    display: inherit;
   }
 }
-
 /* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 768px) {
+@media only screen and (min-width: 768px) {
   [f-show-md] {
-    display:none !important;
+    display: none !important;
   }
+
   [f-show-md-down] {
-    display:none;
+    display: none;
+
     [f-hide-sm] {
-      display:none;
+      display: none;
     }
   }
 }
 
+.media-sm {
+  display: none;
+
+  [f-hide-sm] {
+    display: none !important;
+  }
+
+  [f-show-sm] {
+    display: inherit;
+  }
+
+  [f-show-md] {
+    display: none !important;
+  }
+
+  [f-show-lg] {
+    display: none !important;
+  }
+}
 /* Big smartphones (portrait) (ie: Galaxy 3 has 360)*/
-@media only screen and (max-width : 640px ) {
-  [f-hide-md] {
-    display:none !important;
-  }
-  [f-show-md] {
-    display:inherit;
-  }
-  [f-hide-md-down] {
-    display:none !important;
-    [f-hide-sm ]{
-      display:none !important;
-    }
-  }
-  [f-show-md-down] {
-    display:inherit;
-    [f-hide-sm] {
-      display:inherit;
-    }
-  }
+@media only screen and (max-width: 640px) {
+   @extend .media-sm;
+  // // [f-hide-md] {
+  // //   display:none !important;
+  // // }
+  // [f-show-md] {
+  //   display:inherit;
+  // }
+  // [f-show-sm] {
+  //   display:none;
+  // }
+  // [f-hide-md-down] {
+  //   display:none !important;
+  //   [f-hide-sm ]{
+  //     display:none !important;
+  //   }
+  // }
+  // [f-show-md-down] {
+  //   display:inherit;
+  //   [f-hide-sm] {
+  //     display:inherit;
+  //   }
+  // }
+  //
+  //
 }
-
 /* Smartphones (portrait) (ie: Galaxy 1) */
-@media only screen and (max-width :   321px) {
-  [f-hide-md] {
-    display:none !important;
-  }
-  [f-show-md] {
-    display:inherit;
-  }
+@media only screen and (max-width: 321px) {
+   @extend .media-sm;
 }

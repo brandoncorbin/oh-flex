@@ -30,46 +30,70 @@
             <div f-title>Avatar</div>
             <!-- <span f-note>1</span> -->
           </a>
+          <a f-item href="section-buttons.html">
+            <div f-title>Buttons</div>
+            <!-- <span f-note>2</span> -->
+          </a>
           <a f-item href="section-colors.html">
             <div f-title>Colors</div>
-            <!-- <span f-note>2</span> -->
+            <!-- <span f-note>3</span> -->
           </a>
           <a f-item href="section-flexbox.html">
             <div f-title>Flexbox</div>
-            <!-- <span f-note>3</span> -->
+            <!-- <span f-note>4</span> -->
           </a>
           <a f-item href="section-height-width.html">
             <div f-title>Height and Widths</div>
-            <!-- <span f-note>4</span> -->
+            <!-- <span f-note>5</span> -->
           </a>
           <a f-item href="section-inputs.html">
-            <div f-title>Inputs</div>
-            <!-- <span f-note>5</span> -->
+            <div f-title>Placeholder</div>
+            <!-- <span f-note>6</span> -->
           </a>
           <a f-item href="section-layout.html">
             <div f-title>Layout</div>
-            <!-- <span f-note>6</span> -->
+            <!-- <span f-note>7</span> -->
           </a>
           <a f-item href="section-list.html">
             <div f-title>List</div>
-            <!-- <span f-note>7</span> -->
+            <!-- <span f-note>8</span> -->
           </a>
           <a f-item href="section-padding-margin.html">
             <div f-title>Padding &amp; Margins</div>
-            <!-- <span f-note>8</span> -->
+            <!-- <span f-note>9</span> -->
+          </a>
+          <a f-item href="section-shadows.html">
+            <div f-title>Box Shadows</div>
+            <!-- <span f-note>10</span> -->
           </a>
           <a f-item href="section-toolbar.html">
             <div f-title>Toolbar</div>
-            <!-- <span f-note>9</span> -->
+            <!-- <span f-note>11</span> -->
           </a>
           <a f-item href="section-typography.html">
             <div f-title>Typography</div>
-            <!-- <span f-note>10</span> -->
+            <!-- <span f-note>12</span> -->
           </a>
+        <div f-item-divider f-text-faded-40>
+          About
+        </div>
+        <div f-item>
+          <div f-item-content>
+            &copy; 2017 All Rights Reserved.
+            <a href="https://www.icorbin.com" f-text-faded-60>A Corbin Creation</a>
+          </div>
+        </div>
       </div>
-      <footer f-footer no-border f-text-12px f-p-10px f-border-t-none>
-        Copyright 2017. <br  />All Rights Reserved.<br  />
-        <a href="https://www.icorbin.com" f-text-faded-60>A Corbin Creation</a>
+      <footer f-footer no-border f-text-12px f-border-t-none>
+
+        <div f-toolbar f-bg-faded-5>
+          <a f-button clear f-rubber f-icon-only href="https://github.com/brandoncorbin/oh-flex">
+            <i class="zmdi zmdi-github"></i>
+          </a>
+          <a f-button clear f-rubber f-icon-only href="../">
+            <i class="zmdi zmdi-home"></i>
+          </a>
+        </div>
       </footer>
     </aside>
     <main f-content f-layout  f-collapse-phone>
@@ -88,12 +112,12 @@
 
 
     <div f-content>
-          <header f-header>
+          <header f-header f-m-b-20px>
             <div f-toolbar>
               <div f-title f-rubber>
                 Layout
               </div>
-              <button clear f-button>s.6</button>
+              <button clear f-button>s.7</button>
             </div>
           </header>
         <div id="kssref-layout" class="kss-section kss-section--depth-1 is-fullscreen">
@@ -102,7 +126,7 @@
             <h1 class="kss-title kss-title--level-1">
               <a class="kss-title__permalink" href="#kssref-layout">
                 <span class="kss-title__ref">
-                  6
+                  7
                   <span class="kss-title__permalink-hash">
                       #Layout
                   </span>
@@ -224,6 +248,12 @@ var app = new Vue({
     methods: {
       toggleMenu: function() {
         this.menu_open = !this.menu_open;
+      }
+    },
+    created: function() {
+      if(!localStorage.getItem('not_first_54321')) {
+        this.menu_open = true;
+        localStorage.setItem('not_first_54321', true);
       }
     },
     data: {

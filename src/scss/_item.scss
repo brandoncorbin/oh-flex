@@ -70,9 +70,10 @@ $icon-xl: 38px; // Icon Control
   }
 }
 
-[f-no-lines],[no-lines] {
-  border-bottom:none;
-  border-top:none;
+[f-no-lines],
+[no-lines] {
+  border-bottom: none;
+  border-top   : none;
 }
 
 [f-icon-sm],
@@ -127,11 +128,15 @@ $icon-xl: 38px; // Icon Control
   }
 }
 
-[f-note] {
+p[f-note] {
   margin: 2px 0;
-  padding: 0;
+}
+
+[f-note] {
+  margin   : 2px 0;
+  padding  : 0;
   font-size: $font-size;
-  color: $faded;
+  color    : $faded;
 
   &.darken,
   &[darken] {
@@ -155,21 +160,19 @@ $icon-xl: 38px; // Icon Control
 
   [f-title] {
     line-height: $font-size-md + 4px;
-    font-size: $font-size-md;
+    font-size  : $font-size-md;
     @extend .truncate;
   }
 
   [f-item-left] {
     margin-right: 8px;
-    margin-left: -8px;
+    margin-left : -8px;
   }
 
   [f-item-right] {
     margin-left: 8px;
-    text-align: right;
+    text-align : right;
   }
-
-
 
   [item-right] {
     padding-left: 6px;
@@ -182,15 +185,15 @@ $icon-xl: 38px; // Icon Control
 
 [f-item-divider] {
   @include f-item();
-  min-height: 16px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  min-height      : 16px;
+  padding-top     : 4px;
+  padding-bottom  : 4px;
   background-color: rgba(0,0,0,0.1);
-  color: $faded;
-  line-height: 30px;
+  color           : $faded;
+  line-height     : 30px;
+
   &.clear,
   &[clear] {
     background-color: transparent;
-
   }
 }

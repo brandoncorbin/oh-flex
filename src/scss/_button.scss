@@ -1,115 +1,161 @@
-
-
-@mixin fbutton($background, $font-color, $height) {
-  display:inline-block;
-  vertical-align: middle;
-  @include flexbox();
-  @include flex-direction(row);
-  @include justify-content(center);
-  @include align-items(center);
-  white-space:nowrap;
-  color:$font-color;
-  font-size:$height * 0.46;
-  height:$height;
-  max-height:$height;
-  background-color:$background;
-  border:solid 1px darken($background,10%);
-  padding-left:8px;
-  padding-right:8px;
-  border-radius:2px;
-  text-decoration: none;
-}
-
 [f-hover-fade] {
   transition: all 0.3s ease-out;
+
   &:hover {
     transition: all 0.3s ease-out;
-    opacity: 0.6;
+    opacity   : 0.6;
   }
 }
+
 [f-hover-zoom] {
   transition: all 0.3s ease-out;
+
   &:hover {
     transition: all 0.3s ease-out;
-    transform: scale(1.1);
+    transform : scale(1.1);
   }
 }
+//
+// Buttons
+//
+//
+// <button f-button clear f-primary>Clear Button</button>
+//
+// ```
+// <button f-button clear f-primary>Button</button>
+// ```
+//
+// <button f-button>Button</button>
+//
+// ```
+// <button f-button>Button</button>
+// ```
+//
+// <button f-button-primary>Button</button>
+//
+// ```
+// <button f-button-primary>Button</button>
+// ```
+//
+// <button f-button-dark>Button</button>
+//
+// ```
+// <button f-button-dark>Button</button>
+// ```
+//
+// <button f-button-dark round>Round Button</button>
+//
+// ```
+// <button f-button-dark round>Round Button</button>
+// ```
+//
+// <button f-button-inverse f-bg-green-700 f-hover-zoom>Round Button</button>
+//
+// ```
+// <button f-button-inverse f-bg-green-700 f-hover-zoom>Colored Button w/ Zoom</button>
+// ```
+//
+// <button f-button-inverse f-box-shadow-1 f-text-18px f-min-height-60px f-p-14px f-p-r-30px f-p-l-30px f-bg-pink-700 f-hover-fade>Mega Button!</button>
+//
+// ```
+// <button f-button-inverse f-box-shadow-1 f-text-18px f-min-height-60px f-p-14px f-p-r-30px f-p-l-30px f-bg-pink-700 f-hover-fade>Mega Button!</button>
+// ```
+//
+// Style guide: Buttons
+//
 
-[f-button] {
-  @include fbutton(#FFF, $faded, 30px);
-}
 [f-button-primary] {
-  @include fbutton($primary, #FFF, 30px);
-}
-[f-button-dark] {
-  @include fbutton($dark, #FFF, 30px);
+  @include f-button($primary, #FFF, 30px);
 }
 
-[f-button][round] {
-  border-radius:22px;
+[f-button-dark] {
+  @include f-button($dark, #FFF, 30px);
+}
+
+[f-button-inverse] {
+  @include f-button(transparent, #FFF, 30px);
 }
 
 [f-button] {
-  display:inline-block;
-  vertical-align: middle;
-  @include flexbox();
-  @include flex-direction(row);
-  @include justify-content(center);
-  @include align-items(center);
-  white-space:nowrap;
-
-  color:$dark;
-
+  // display       : inline-block;
+  // vertical-align: middle;
+  // @include flexbox();
+  // @include flex-direction(row);
+  // @include justify-content(center);
+  // @include align-items(center);
+  // white-space   : nowrap;
+  // color         : $dark;
   &[f-square] {
-    border-radius:0px;
+    border-radius: 0;
+  }
+
+  &[f-round] {
+    border-radius: 22px !important;
   }
 
   &[clear] {
+    border-radius   : 0;
+    border          : none;
+    background-color: transparent;
+    border-style    : none;
+    font-size       : $font-size-md;
 
-    border-radius:0px;
-    border: none;
-    background-color:transparent;
-    border-style:none;
-    font-size:$font-size-md;
-    &[f-primary], &.f-primary {
-      color:$primary;
+    &.f-primary,
+    &[f-primary] {
+      color: $primary;
     }
-    transition:all 0.2s ease-out;
-    &:hover {
+    transition      : all 0.2s ease-out;
 
-      color:saturate(lighten($primary,20%),40%);
+    &:hover {
+      color: saturate(lighten($primary,20%),40%);
     }
   }
+
   &[f-icon-only] {
-    font-size:$font-size-xl !important;
-    i,icon,span {
-      font-size:$font-size-xl !important;
+    font-size: $font-size-xl !important;
+
+    i,
+    icon,
+    span {
+      font-size: $font-size-xl !important;
+
       &:before {
-        font-size:$font-size-xl !important;
+        font-size: $font-size-xl !important;
       }
     }
   }
+
   i {
-    margin-left:6px;
-    margin-right:6px;
+    margin-left : 6px;
+    margin-right: 6px;
   }
   outline-style: none !important;
+
   &[f-sm] {
-    font-size:12px;
+    font-size: 12px;
+
     i {
-      font-size:14px;
+      font-size: 14px;
+
       &:before {
-        font-size:14px;
+        font-size: 14px;
       }
     }
   }
+
   &[f-md] {
-    font-size:14px;
+    font-size: 14px;
+
     i {
-      font-size:16px;
+      font-size: 16px;
+
       &:before {
-        font-size:16px;
+        font-size: 16px;
       }
     }
   }
+}
+
+[f-button] {
+  @include f-button(#FFF, $faded, 30px);
 }

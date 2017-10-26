@@ -30,52 +30,76 @@
             <div f-title>Avatar</div>
             <!-- <span f-note>1</span> -->
           </a>
+          <a f-item href="section-buttons.html">
+            <div f-title>Buttons</div>
+            <!-- <span f-note>2</span> -->
+          </a>
           <a f-item href="section-colors.html">
             <div f-title>Colors</div>
-            <!-- <span f-note>2</span> -->
+            <!-- <span f-note>3</span> -->
           </a>
           <a f-item href="section-flexbox.html">
             <div f-title>Flexbox</div>
-            <!-- <span f-note>3</span> -->
+            <!-- <span f-note>4</span> -->
           </a>
               <a f-item f-bg-faded-inverse-10 f-text-normal href="section-flexbox.html#kssref-flexbox-alignment">
                 <div f-title f-text-14px>
                   - Flexbox Align
                 </div>
-                <!-- <span>3.1</span> -->
+                <!-- <span>4.1</span> -->
               </a>
           <a f-item href="section-height-width.html">
             <div f-title>Height and Widths</div>
-            <!-- <span f-note>4</span> -->
+            <!-- <span f-note>5</span> -->
           </a>
           <a f-item href="section-inputs.html">
-            <div f-title>Inputs</div>
-            <!-- <span f-note>5</span> -->
+            <div f-title>Placeholder</div>
+            <!-- <span f-note>6</span> -->
           </a>
           <a f-item href="section-layout.html">
             <div f-title>Layout</div>
-            <!-- <span f-note>6</span> -->
+            <!-- <span f-note>7</span> -->
           </a>
           <a f-item href="section-list.html">
             <div f-title>List</div>
-            <!-- <span f-note>7</span> -->
+            <!-- <span f-note>8</span> -->
           </a>
           <a f-item href="section-padding-margin.html">
             <div f-title>Padding &amp; Margins</div>
-            <!-- <span f-note>8</span> -->
+            <!-- <span f-note>9</span> -->
+          </a>
+          <a f-item href="section-shadows.html">
+            <div f-title>Box Shadows</div>
+            <!-- <span f-note>10</span> -->
           </a>
           <a f-item href="section-toolbar.html">
             <div f-title>Toolbar</div>
-            <!-- <span f-note>9</span> -->
+            <!-- <span f-note>11</span> -->
           </a>
           <a f-item href="section-typography.html">
             <div f-title>Typography</div>
-            <!-- <span f-note>10</span> -->
+            <!-- <span f-note>12</span> -->
           </a>
+        <div f-item-divider f-text-faded-40>
+          About
+        </div>
+        <div f-item>
+          <div f-item-content>
+            &copy; 2017 All Rights Reserved.
+            <a href="https://www.icorbin.com" f-text-faded-60>A Corbin Creation</a>
+          </div>
+        </div>
       </div>
-      <footer f-footer no-border f-text-12px f-p-10px f-border-t-none>
-        Copyright 2017. <br  />All Rights Reserved.<br  />
-        <a href="https://www.icorbin.com" f-text-faded-60>A Corbin Creation</a>
+      <footer f-footer no-border f-text-12px f-border-t-none>
+
+        <div f-toolbar f-bg-faded-5>
+          <a f-button clear f-rubber f-icon-only href="https://github.com/brandoncorbin/oh-flex">
+            <i class="zmdi zmdi-github"></i>
+          </a>
+          <a f-button clear f-rubber f-icon-only href="../">
+            <i class="zmdi zmdi-home"></i>
+          </a>
+        </div>
       </footer>
     </aside>
     <main f-content f-layout  f-collapse-phone>
@@ -94,12 +118,12 @@
 
 
     <div f-content>
-          <header f-header>
+          <header f-header f-m-b-20px>
             <div f-toolbar>
               <div f-title f-rubber>
                 Flexbox
               </div>
-              <button clear f-button>s.3</button>
+              <button clear f-button>s.4</button>
             </div>
           </header>
         <div id="kssref-flexbox" class="kss-section kss-section--depth-1 ">
@@ -108,7 +132,7 @@
             <h1 class="kss-title kss-title--level-1">
               <a class="kss-title__permalink" href="#kssref-flexbox">
                 <span class="kss-title__ref">
-                  3
+                  4
                   <span class="kss-title__permalink-hash">
                       #Flexbox
                   </span>
@@ -123,7 +147,7 @@
 but really... should we care what they think?</p>
  <h2>Flexbox Row with variable widths</h2>
 
- <div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap f-m-t-20px>
+ <div  f-bg-blue-100 f-row f-p-30px f-wrap f-m-t-20px>
   <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
   <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
   <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px></div>
@@ -134,7 +158,7 @@ but really... should we care what they think?</p>
   <div f-bg-white f-box-shadow-1 f-m-l-10px f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px></div>
 </div>
 
-<pre><code> &lt;div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap f-m-t-20px&gt;
+<pre><code> &lt;div  f-bg-blue-100 f-row f-p-30px f-wrap f-m-t-20px&gt;
   &lt;div f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px&gt;&lt;/div&gt;
   &lt;div f-max-width-100 f-min-width-20px f-width-30px f-grow f-shrink f-height-100px&gt;&lt;/div&gt;
   &lt;div f-max-width-20px f-min-width-10px f-width-30px f-grow f-shrink f-height-100px&gt;&lt;/div&gt;
@@ -146,14 +170,14 @@ but really... should we care what they think?</p>
  &lt;/div&gt;
 </code></pre> <h2>Flexbox Column with variable widths</h2>
 
- <div  f-bg-blue-100 f-flex f-column f-p-30px f-wrap f-m-t-20px>
+ <div  f-bg-blue-100 f-column f-p-30px f-wrap f-m-t-20px>
   <div f-bg-white f-box-shadow-1 f-m-b-10px f-max-height-10px f-min-height-1px f-height-30px f-grow f-shrink f-width-100px></div>
   <div f-bg-white f-box-shadow-1 f-m-b-10px f-max-height-100 f-min-height-20px f-height-30px f-grow f-shrink f-width-100px></div>
   <div f-bg-white f-box-shadow-1 f-m-b-10px f-max-height-10px f-min-height-1px f-height-30px f-grow f-shrink f-width-100px></div>
   <div f-bg-white f-box-shadow-1 f-m-b-10px f-max-height-100 f-min-height-20px f-height-30px f-grow f-shrink f-width-100px></div>
 </div>
 
-<pre><code> &lt;div  f-bg-blue-100 f-flex f-column f-p-30px f-wrap f-m-t-20px&gt;
+<pre><code> &lt;div  f-bg-blue-100  f-column f-p-30px f-wrap f-m-t-20px&gt;
   &lt;div  f-m-b-10px f-max-height-10px f-min-height-1px f-height-30px f-grow f-shrink f-width-100px&gt;&lt;/div&gt;
   &lt;div  f-m-b-10px f-max-height-100 f-min-height-20px f-height-30px f-grow f-shrink f-width-100px&gt;&lt;/div&gt;
   &lt;div  f-m-b-10px f-max-height-10px f-min-height-1px f-height-30px f-grow f-shrink f-width-100px&gt;&lt;/div&gt;
@@ -176,7 +200,7 @@ but really... should we care what they think?</p>
             <h2 class="kss-title kss-title--level-2">
               <a class="kss-title__permalink" href="#kssref-flexbox-alignment">
                 <span class="kss-title__ref">
-                  3.1
+                  4.1
                   <span class="kss-title__permalink-hash">
                       #Flexbox.alignment
                   </span>
@@ -260,6 +284,12 @@ var app = new Vue({
     methods: {
       toggleMenu: function() {
         this.menu_open = !this.menu_open;
+      }
+    },
+    created: function() {
+      if(!localStorage.getItem('not_first_54321')) {
+        this.menu_open = true;
+        localStorage.setItem('not_first_54321', true);
       }
     },
     data: {

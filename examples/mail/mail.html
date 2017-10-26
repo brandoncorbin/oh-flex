@@ -84,7 +84,7 @@
       <div f-layout>
         <header f-header>
           <div f-toolbar f-toolbar-light>
-            <div f-buttons-left f-show-md-down><a f-button clear v-on:click="toggleMailboxMenu"><i class="zmdi zmdi-menu"></i></a></div>
+            <div f-buttons-left f-show-md-down f-icon-only f-primary><a f-button f-icon-only clear v-on:click="toggleMailboxMenu"><i class="zmdi zmdi-menu"></i></a></div>
             <span f-rubber></span>
             <button f-button  clear f-primary f-text-16px>Edit</button>
           </div>
@@ -117,6 +117,22 @@
             <div f-content>
               <div f-row f-justify-between>
                 <div f-title>no-reply@email.apple.com</div>
+                <div class="rubber"></div>
+                <div f-note>Yesterday</div>
+              </div>
+              <p f-note darken>
+                Your App Review Feedback
+              </p>
+              <p f-note class="truncate-2">
+                Changes needed for Nomie iOS. Thank you for submitting Nomie for review, we have found...
+              </p>
+            </div>
+          </a>
+
+          <a f-item clear f-align-start v-for="i in [0,1,3,4,5,6]">
+            <div f-content>
+              <div f-row f-justify-between>
+                <div f-title>no-reply-{{i}}@email.apple.com</div>
                 <div class="rubber"></div>
                 <div f-note>Yesterday</div>
               </div>

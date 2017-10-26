@@ -30,46 +30,70 @@
             <div f-title>Avatar</div>
             <!-- <span f-note>1</span> -->
           </a>
+          <a f-item href="section-buttons.html">
+            <div f-title>Buttons</div>
+            <!-- <span f-note>2</span> -->
+          </a>
           <a f-item href="section-colors.html">
             <div f-title>Colors</div>
-            <!-- <span f-note>2</span> -->
+            <!-- <span f-note>3</span> -->
           </a>
           <a f-item href="section-flexbox.html">
             <div f-title>Flexbox</div>
-            <!-- <span f-note>3</span> -->
+            <!-- <span f-note>4</span> -->
           </a>
           <a f-item href="section-height-width.html">
             <div f-title>Height and Widths</div>
-            <!-- <span f-note>4</span> -->
+            <!-- <span f-note>5</span> -->
           </a>
           <a f-item href="section-inputs.html">
-            <div f-title>Inputs</div>
-            <!-- <span f-note>5</span> -->
+            <div f-title>Placeholder</div>
+            <!-- <span f-note>6</span> -->
           </a>
           <a f-item href="section-layout.html">
             <div f-title>Layout</div>
-            <!-- <span f-note>6</span> -->
+            <!-- <span f-note>7</span> -->
           </a>
           <a f-item href="section-list.html">
             <div f-title>List</div>
-            <!-- <span f-note>7</span> -->
+            <!-- <span f-note>8</span> -->
           </a>
           <a f-item href="section-padding-margin.html">
             <div f-title>Padding &amp; Margins</div>
-            <!-- <span f-note>8</span> -->
+            <!-- <span f-note>9</span> -->
+          </a>
+          <a f-item href="section-shadows.html">
+            <div f-title>Box Shadows</div>
+            <!-- <span f-note>10</span> -->
           </a>
           <a f-item href="section-toolbar.html">
             <div f-title>Toolbar</div>
-            <!-- <span f-note>9</span> -->
+            <!-- <span f-note>11</span> -->
           </a>
           <a f-item href="section-typography.html">
             <div f-title>Typography</div>
-            <!-- <span f-note>10</span> -->
+            <!-- <span f-note>12</span> -->
           </a>
+        <div f-item-divider f-text-faded-40>
+          About
+        </div>
+        <div f-item>
+          <div f-item-content>
+            &copy; 2017 All Rights Reserved.
+            <a href="https://www.icorbin.com" f-text-faded-60>A Corbin Creation</a>
+          </div>
+        </div>
       </div>
-      <footer f-footer no-border f-text-12px f-p-10px f-border-t-none>
-        Copyright 2017. <br  />All Rights Reserved.<br  />
-        <a href="https://www.icorbin.com" f-text-faded-60>A Corbin Creation</a>
+      <footer f-footer no-border f-text-12px f-border-t-none>
+
+        <div f-toolbar f-bg-faded-5>
+          <a f-button clear f-rubber f-icon-only href="https://github.com/brandoncorbin/oh-flex">
+            <i class="zmdi zmdi-github"></i>
+          </a>
+          <a f-button clear f-rubber f-icon-only href="../">
+            <i class="zmdi zmdi-home"></i>
+          </a>
+        </div>
       </footer>
     </aside>
     <main f-content f-layout  f-collapse-phone>
@@ -88,7 +112,7 @@
 
 
     <div f-content>
-          <header f-header>
+          <header f-header f-m-b-20px>
             <div f-toolbar>
               <div f-title f-rubber>
                 Avatar
@@ -122,11 +146,11 @@
   <figure f-bg-white f-avatar f-avatar-xl><img src="https://robohash.org/777" /></figure>
 </div>
 
-<pre><code>  &lt;figure f-bg-white f-avatar&gt;&lt;img src=&quot;https://robohash.org/234&quot; /&gt;&lt;/figure&gt;
-  &lt;figure f-bg-white f-avatar f-avatar-sm&gt;&lt;img src=&quot;https://robohash.org/445&quot; /&gt;&lt;/figure&gt;
-  &lt;figure f-bg-white f-avatar f-avatar-md&gt;&lt;img src=&quot;https://robohash.org/555&quot; /&gt;&lt;/figure&gt;
-  &lt;figure f-bg-white f-avatar f-avatar-lg&gt;&lt;img src=&quot;https://robohash.org/666&quot; /&gt;&lt;/figure&gt;
-  &lt;figure f-bg-white f-avatar f-avatar-xl&gt;&lt;img src=&quot;https://robohash.org/777&quot; /&gt;&lt;/figure&gt;
+<pre><code>  &lt;figure  f-avatar&gt;&lt;img src=&quot;https://robohash.org/234&quot; /&gt;&lt;/figure&gt;
+  &lt;figure  f-avatar f-avatar-sm&gt;&lt;img src=&quot;https://robohash.org/445&quot; /&gt;&lt;/figure&gt;
+  &lt;figure  f-avatar f-avatar-md&gt;&lt;img src=&quot;https://robohash.org/555&quot; /&gt;&lt;/figure&gt;
+  &lt;figure  f-avatar f-avatar-lg&gt;&lt;img src=&quot;https://robohash.org/666&quot; /&gt;&lt;/figure&gt;
+  &lt;figure  f-avatar f-avatar-xl&gt;&lt;img src=&quot;https://robohash.org/777&quot; /&gt;&lt;/figure&gt;
 </code></pre><div f-bg-faded-80 f-p-20px f-flex f-row f-align-center f-justify-center f-wrap>
   <figure f-bg-white f-avatar-square><img src="https://robohash.org/234" /></figure>
   <figure f-bg-white f-avatar-square f-avatar-sm><img src="https://robohash.org/445" /></figure>
@@ -135,11 +159,11 @@
   <figure f-bg-white f-avatar-square f-avatar-xl><img src="https://robohash.org/777" /></figure>
 </div>
 
-<pre><code>  &lt;figure f-bg-white f-avatar-square&gt;&lt;img src=&quot;https://robohash.org/234&quot; /&gt;&lt;/figure&gt;
-  &lt;figure f-bg-white f-avatar-square f-avatar-sm&gt;&lt;img src=&quot;https://robohash.org/445&quot; /&gt;&lt;/figure&gt;
-  &lt;figure f-bg-white f-avatar-square f-avatar-md&gt;&lt;img src=&quot;https://robohash.org/555&quot; /&gt;&lt;/figure&gt;
-  &lt;figure f-bg-white f-avatar-square f-avatar-lg&gt;&lt;img src=&quot;https://robohash.org/666&quot; /&gt;&lt;/figure&gt;
-  &lt;figure f-bg-white f-avatar-square f-avatar-xl&gt;&lt;img src=&quot;https://robohash.org/777&quot; /&gt;&lt;/figure&gt;
+<pre><code>  &lt;figure  f-avatar-square&gt;&lt;img src=&quot;https://robohash.org/234&quot; /&gt;&lt;/figure&gt;
+  &lt;figure  f-avatar-square f-avatar-sm&gt;&lt;img src=&quot;https://robohash.org/445&quot; /&gt;&lt;/figure&gt;
+  &lt;figure  f-avatar-square f-avatar-md&gt;&lt;img src=&quot;https://robohash.org/555&quot; /&gt;&lt;/figure&gt;
+  &lt;figure  f-avatar-square f-avatar-lg&gt;&lt;img src=&quot;https://robohash.org/666&quot; /&gt;&lt;/figure&gt;
+  &lt;figure  f-avatar-square f-avatar-xl&gt;&lt;img src=&quot;https://robohash.org/777&quot; /&gt;&lt;/figure&gt;
 </code></pre><h2 id="optional-attributes">Optional Attributes</h2>
 <h3 id="f-avatar-size-">f-avatar-{size}</h3>
 <ul>
@@ -223,6 +247,12 @@ var app = new Vue({
     methods: {
       toggleMenu: function() {
         this.menu_open = !this.menu_open;
+      }
+    },
+    created: function() {
+      if(!localStorage.getItem('not_first_54321')) {
+        this.menu_open = true;
+        localStorage.setItem('not_first_54321', true);
       }
     },
     data: {

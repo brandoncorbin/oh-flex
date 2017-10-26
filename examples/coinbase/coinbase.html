@@ -10,8 +10,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
   <title>Oh Flex | Facebook Example</title>
 </head>
-<body class="f" style="background-color:#F4F7FA">
-  <div f-layout id="app">
+<body class="f" style="background-color:#F4F7FA" >
+  <div f-show-sm f-layout f-bg-blue-800 f-text-white f-column f-text-center f-justify-center f-align-center>
+    This demo best view on a wide screen.<br />
+    <span f-text-bolder>Rotate your device.</span>
+  </div>
+  <div f-show-lg f-layout id="app" f-min-width-700px f-width-700px>
     <header f-header>
       <div f-bg-blue-800>
         <div f-toolbar f-contain-1180px f-bg-blue-800 f-min-height-70px>

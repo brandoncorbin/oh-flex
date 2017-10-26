@@ -54,7 +54,7 @@
   font-family:$font-family;
   font-size:$font-size-base;
   min-width:100%;
-  position:absolute;
+  position:fixed;
   top:0;
   bottom:0;
   left:0;
@@ -64,6 +64,10 @@
   @include flex-direction(column);
   @include justify-content(stretch);
   @include align-items(center);
+
+  [f-layout] {
+    position:absolute;
+  }
 
   [f-header] {
     width:100%;
@@ -230,7 +234,7 @@
         }
         @include flex-shrink(0);
         overflow: hidden;
-        box-shadow:inset -6px 0px 10px rgba(0,0,0,0.1);
+        // box-shadow:inset -6px 0px 10px rgba(0,0,0,0.1);
         max-width:1px;
         width:1px;
         min-width:1px;

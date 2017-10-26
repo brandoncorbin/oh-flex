@@ -43,10 +43,26 @@
             {{/if}}
           {{/if}}
         {{/each}}
+        <div f-item-divider f-text-faded-40>
+          About
+        </div>
+        <div f-item>
+          <div f-item-content>
+            &copy; 2017 All Rights Reserved.
+            <a href="https://www.icorbin.com" f-text-faded-60>A Corbin Creation</a>
+          </div>
+        </div>
       </div>
-      <footer f-footer no-border f-text-12px f-p-10px f-border-t-none>
-        Copyright 2017. <br  />All Rights Reserved.<br  />
-        <a href="https://www.icorbin.com" f-text-faded-60>A Corbin Creation</a>
+      <footer f-footer no-border f-text-12px f-border-t-none>
+
+        <div f-toolbar f-bg-faded-5>
+          <a f-button clear f-rubber f-icon-only href="https://github.com/brandoncorbin/oh-flex">
+            <i class="zmdi zmdi-github"></i>
+          </a>
+          <a f-button clear f-rubber f-icon-only href="../">
+            <i class="zmdi zmdi-home"></i>
+          </a>
+        </div>
       </footer>
     </aside>
     <main f-content f-layout  f-collapse-phone>
@@ -65,11 +81,9 @@
     {{#if template.isHomepage}}
       {{#if homepage}}
         <div f-content>
-
           <div id="kssref-0" f-p-20px>
             {{{homepage}}}
           </div>
-
         </div>
       {{/if}}
     {{else}}
@@ -84,7 +98,7 @@
       }}
       {{#each sections}}
         {{#if @first}}
-          <header f-header>
+          <header f-header f-m-b-20px>
             <div f-toolbar>
               <div f-title f-rubber>
                 {{header}}
@@ -314,6 +328,12 @@ var app = new Vue({
     methods: {
       toggleMenu: function() {
         this.menu_open = !this.menu_open;
+      }
+    },
+    created: function() {
+      if(!localStorage.getItem('not_first_54321')) {
+        this.menu_open = true;
+        localStorage.setItem('not_first_54321', true);
       }
     },
     data: {

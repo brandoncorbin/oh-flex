@@ -1,4 +1,19 @@
-@mixin f-button() {
-
-
-};
+@mixin f-button($background, $font-color, $height) {
+  display         : inline-block;
+  vertical-align  : middle;
+  @include flexbox();
+  @include flex-direction(row);
+  @include justify-content(center);
+  @include align-items(center);
+  white-space     : nowrap;
+  color           : $font-color;
+  font-size       : $height * 0.46;
+  height          : $height;
+  max-height      : $height;
+  background-color: $background;
+  border          : solid 1px darken($background,10%);
+  padding-left    : 8px;
+  padding-right   : 8px;
+  border-radius   : 2px;
+  text-decoration : none;
+}
