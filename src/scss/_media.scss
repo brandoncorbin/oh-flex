@@ -1,79 +1,103 @@
-/* Desktops and laptops ----------- */
-@media only screen and (max-width: 1824px) {}
-/* iPads (landscape) ----------- */
-@media only screen and (max-width: 1224px) {}
-/* iPads (portrait) ----------- */
-@media only screen and (min-width: 1024px) {
-  [f-show-md] {
-    display: inherit;
-  }
+//
+// Media Queries
+//
+// Since we're embracing flex, let's embrace the idea that there that are 3 main states for modern web views.
+//
+// By default any tag with a f-show- or f-hide- are hidden by default, then the media query is applied.
+//
+// **Phone, Tablet, Desktop** - everything else can fall close enough to one of these.
+//
+// <div f-p-20px f-bg-red-200 f-t-white f-show-phone>
+//  f-show-phone
+// </div>
+//
+// <div f-p-20px f-bg-orange-200 f-t-white  f-show-tablet>
+//  f-show-tablet
+// </div>
+//
+// <div f-p-20px f-bg-purple-200 f-t-white  f-show-desktop>
+//   f-show-desktop
+// </div>
+//
+//
+//
+// Style guide: Show / Hide
+//
 
-  [f-show-md] {
-    display: inherit;
-  }
-}
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width: 768px) {
-  [f-show-md] {
-    display: none !important;
-  }
-
-  [f-show-md-down] {
-    display: none;
-
-    [f-hide-sm] {
-      display: none;
-    }
-  }
-}
-
-.media-sm {
+[f-hide-desktop],
+[f-hide-phone],
+[f-hide-tablet],
+[f-show-desktop],
+[f-show-phone],
+[f-show-tablet] {
   display: none;
-
-  [f-hide-sm] {
+}
+@include phone() {
+  [f-hide-phone] {
     display: none !important;
   }
 
-  [f-show-sm] {
+  [f-show-phone] {
     display: inherit;
   }
 
-  [f-show-md] {
+  [f-hide-tablet-down] {
     display: none !important;
   }
 
-  [f-show-lg] {
+  [f-hide-desktop-down] {
     display: none !important;
   }
 }
-/* Big smartphones (portrait) (ie: Galaxy 3 has 360)*/
-@media only screen and (max-width: 640px) {
-   @extend .media-sm;
-  // // [f-hide-md] {
-  // //   display:none !important;
-  // // }
-  // [f-show-md] {
-  //   display:inherit;
-  // }
-  // [f-show-sm] {
-  //   display:none;
-  // }
-  // [f-hide-md-down] {
-  //   display:none !important;
-  //   [f-hide-sm ]{
-  //     display:none !important;
-  //   }
-  // }
-  // [f-show-md-down] {
-  //   display:inherit;
-  //   [f-hide-sm] {
-  //     display:inherit;
-  //   }
-  // }
-  //
-  //
+// end phone
+@include tablet() {
+  [f-hide-tablet] {
+    display: none !important;
+  }
+
+  [f-hide-tablet-down] {
+    display: none !important;
+  }
+
+  [f-hide-tablet-up] {
+    display: none !important;
+  }
+
+  [f-show-tablet] {
+    display: inherit;
+  }
+
+  [f-hide-desktop-down] {
+    display: none !important;
+  }
+
+  [f-hide-phone] {
+    display: inherit;
+  }
 }
-/* Smartphones (portrait) (ie: Galaxy 1) */
-@media only screen and (max-width: 321px) {
-   @extend .media-sm;
+// end tablet
+@include desktop() {
+  [f-hide-desktop] {
+    display: none !important;
+  }
+
+  [f-hide-phone] {
+    display: inherit;
+  }
+
+  [f-hide-tablet] {
+    display: inherit;
+  }
+
+  [f-hide-tablet-up] {
+    display: none !important;
+  }
+
+  [f-hide-desktop-down] {
+    display: none !important;
+  }
+
+  [f-show-desktop] {
+    display: inherit;
+  }
 }

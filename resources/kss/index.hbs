@@ -25,244 +25,248 @@
         </div>
       </header>
       <div f-content>
-        {{#each menu}}
-          <a f-item href="section-{{referenceURI}}.html">
-            <div f-title>{{header}}</div>
-            <!-- <span f-note>{{referenceNumber}}</span> -->
-          </a>
-          {{#if isActive}}
-            {{#if children}}
-              {{#each children}}
-              <a f-item f-bg-white-10 f-t-normal href="section-{{../referenceURI}}.html#kssref-{{referenceURI}}">
-                <div f-title f-t-14px>
-                  - {{header}}
-                </div>
-                <!-- <span>{{referenceNumber}}</span> -->
-              </a>
-              {{/each}}
+
+          {{#each menu}}
+            <a f-item href="section-{{referenceURI}}.html">
+              <div f-title>{{header}}</div>
+              <!-- <span f-note>{{referenceNumber}}</span> -->
+            </a>
+            {{#if isActive}}
+              {{#if children}}
+                {{#each children}}
+                <a f-item f-bg-white-10 f-t-normal href="section-{{../referenceURI}}.html#kssref-{{referenceURI}}">
+                  <div f-title f-t-14px>
+                    - {{header}}
+                  </div>
+                  <!-- <span>{{referenceNumber}}</span> -->
+                </a>
+                {{/each}}
+              {{/if}}
             {{/if}}
-          {{/if}}
-        {{/each}}
-        <div f-item-divider f-t-black-40>
-          About
-        </div>
-        <div f-item>
-          <div f-item-content>
-            &copy; 2017 All Rights Reserved.
-            <a href="https://www.icorbin.com" f-t-black-60>A Corbin Creation</a>
+          {{/each}}
+          <div f-item-divider f-t-black-40>
+            About
+          </div>
+          <div f-item>
+            <div f-item-content>
+              &copy; 2017 All Rights Reserved.
+              <a href="https://www.icorbin.com" f-t-black-60>A Corbin Creation</a>
+            </div>
           </div>
         </div>
-      </div>
-      <footer f-footer no-border f-t-12px f-b-t-none>
+        <footer f-footer no-border f-t-12px f-b-t-none>
 
-        <div f-toolbar f-bg-black-5>
-          <a f-button clear f-rubber f-icon-only href="https://github.com/brandoncorbin/oh-flex">
-            <i class="zmdi zmdi-github"></i>
-          </a>
-          <a f-button clear f-rubber f-icon-only href="../">
-            <i class="zmdi zmdi-home"></i>
-          </a>
-        </div>
-      </footer>
-    </aside>
-    <main f-content f-layout  f-collapse-phone>
-      <header f-header>
-        <div f-toolbar>
-          <div f-buttons-left>
-            <a v-on:click="toggleMenu" f-button clear f-t-blue-400 f-icon-only>
-              <i class="zmdi zmdi-menu"></i>
+          <div f-toolbar f-bg-black-5>
+            <a f-button clear f-rubber f-icon-only href="https://github.com/brandoncorbin/oh-flex">
+              <i class="zmdi zmdi-github"></i>
+            </a>
+            <a f-button clear f-rubber f-icon-only href="../">
+              <i class="zmdi zmdi-home"></i>
             </a>
           </div>
-          <div f-title f-rubber>
-            Oh-Flex Docs
-          </div>
-        </div>
-      </header>
-    {{#if template.isHomepage}}
-      {{#if homepage}}
-        <div f-content>
-          <div id="kssref-0" f-p-20px>
-            {{{homepage}}}
-          </div>
-        </div>
-      {{/if}}
-    {{else}}
-
-
-    <div f-content>
-      {{!
-        Display each section, in order.
-
-        The "root" element comes first in this loop, and can be detected using
-        the "#if @first" block as seen below.
-      }}
-      {{#each sections}}
-        {{#if @first}}
-          <header f-header f-m-b-20px>
-            <div f-toolbar>
-              <div f-title f-rubber>
-                {{header}}
-              </div>
-              <button clear f-button>s.{{referenceNumber}}</button>
-            </div>
-          </header>
-        {{/if}}
-        <{{#if @first}}div{{else}}section{{/if}} id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}} {{#if @root.template.isItem}}is-fullscreen{{/if}}">
-
-          <div f-p-l-20px f-p-r-20px f-p-b-20px class="kss-style">
-            <h{{depth}} class="kss-title kss-title--level-{{depth}}">
-              <a class="kss-title__permalink" href="#kssref-{{referenceURI}}">
-                <span class="kss-title__ref">
-                  {{referenceNumber}}
-                  <span class="kss-title__permalink-hash">
-                    {{#if @root.hasNumericReferences}}
-                      #permalink
-                    {{else}}
-                      #{{reference}}
-                    {{/if}}
-                  </span>
-                </span>
-                {{header}}
+        </footer>
+      </aside>
+      <main f-content f-layout  f-collapse-phone>
+        <header f-header>
+          <div f-toolbar>
+            <div f-buttons-left>
+              <a v-on:click="toggleMenu" f-button clear f-t-blue-400 f-icon-only>
+                <i class="zmdi zmdi-menu"></i>
               </a>
-            </h{{depth}}>
-
-            {{#if example}}
-              <p class="kss-toolbar">
-                {{#unless @root.template.isItem}}
-                  <a href="#kssref-{{referenceURI}}" data-kss-fullscreen="kssref-{{referenceURI}}">
-                    <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                    <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                      <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
-                    </svg>
-                    <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                      <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
-                    </svg>
-                  </a>
-                  <a href="item-{{referenceURI}}.html" target="_blank">
-                    <span class="kss-toolbar__tooltip">Open in new window</span>
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                      <rect x="0" y="20" width="40" height="44" fill="#fff"/>
-                      <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
-                      <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
-                      <rect x="24" y="0" width="40" height="44" fill="#fff"/>
-                      <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
-                      <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
-                    </svg>
-                  </a>
-                {{/unless}}
-                <a href="#kssref-{{referenceURI}}" data-kss-guides="true">
-                  <span class="kss-toolbar__tooltip">Toggle example guides</span>
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                    <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
-                    <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
-                    <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
-                    <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
-                    <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
-                    <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
-                    <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
-                    <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
-                    <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
-                    <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
-                    <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
-                    <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
-                    <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
-                    <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
-                    <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
-                    <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
-                  </svg>
-                </a>
-                <a href="#kssref-{{referenceURI}}" data-kss-markup="true">
-                  <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                    <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
-                    <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
-                  </svg>
-                </a>
-              </p>
-            {{/if}}
-
-            {{#if description}}
-              <div class="kss-description">
-                {{{description}}}
-              </div>
-            {{/if}}
-
-            {{#if parameters}}
-              <div class="kss-parameters__title">Parameters:</div>
-              <ul class="kss-parameters">
-              {{#each parameters}}
-                <li class="kss-parameters__item">
-                  <div class="kss-parameters__name"><code>{{name}}</code></div>
-                  <div class="kss-parameters__description">
-                    {{{description}}}
-                    {{#if defaultValue}}
-                      <div class="kss-parameters__default-value">
-                        Defaults to: <code>{{defaultValue}}</code>
-                      </div>
-                    {{/if}}
-                  </div>
-                </li>
-              {{/each}}
-              </ul>
-            {{/if}}
+            </div>
+            <div f-title f-rubber>
+              Oh-Flex Docs
+            </div>
           </div>
+        </header>
+      {{#if template.isHomepage}}
+        {{#if homepage}}
+          <div f-content>
+            <div id="kssref-0" f-p-20px>
+              {{{homepage}}}
+            </div>
+          </div>
+        {{/if}}
+      {{else}}
 
-          {{#if example}}
-            <div class="kss-modifier__wrapper">
-              <div class="kss-modifier__heading kss-style">
-                Example{{#if modifiers}}s{{/if}}
+
+      <div f-content>
+
+
+
+        {{!
+          Display each section, in order.
+
+          The "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        }}
+        {{#each sections}}
+          {{#if @first}}
+            <header f-header f-m-b-20px>
+              <div f-toolbar>
+                <div f-title f-rubber>
+                  {{header}}
+                </div>
+                <button clear f-button>s.{{referenceNumber}}</button>
               </div>
+            </header>
+          {{/if}}
+          <{{#if @first}}div{{else}}section{{/if}} id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}} {{#if @root.template.isItem}}is-fullscreen{{/if}}">
 
-              {{#if modifiers}}
-                <div class="kss-modifier__default-name kss-style">
-                  Default styling
+            <div f-p-b-20px class="kss-style">
+              <h{{depth}} class="kss-title kss-title--level-{{depth}}">
+                <a class="kss-title__permalink" href="#kssref-{{referenceURI}}">
+                  <span class="kss-title__ref">
+                    {{referenceNumber}}
+                    <span class="kss-title__permalink-hash">
+                      {{#if @root.hasNumericReferences}}
+                        #permalink
+                      {{else}}
+                        #{{reference}}
+                      {{/if}}
+                    </span>
+                  </span>
+                  {{header}}
+                </a>
+              </h{{depth}}>
+
+              {{#if example}}
+                <p class="kss-toolbar">
+                  {{#unless @root.template.isItem}}
+                    <a href="#kssref-{{referenceURI}}" data-kss-fullscreen="kssref-{{referenceURI}}">
+                      <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                      <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                        <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                      </svg>
+                      <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                        <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                      </svg>
+                    </a>
+                    <a href="item-{{referenceURI}}.html" target="_blank">
+                      <span class="kss-toolbar__tooltip">Open in new window</span>
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                        <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                        <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                        <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                        <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                        <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                        <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                      </svg>
+                    </a>
+                  {{/unless}}
+                  <a href="#kssref-{{referenceURI}}" data-kss-guides="true">
+                    <span class="kss-toolbar__tooltip">Toggle example guides</span>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                      <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                      <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                      <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                      <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                      <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                      <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                      <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                      <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                      <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                      <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                      <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                      <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                      <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                      <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                      <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                      <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+                    </svg>
+                  </a>
+                  <a href="#kssref-{{referenceURI}}" data-kss-markup="true">
+                    <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                      <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                      <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+                    </svg>
+                  </a>
+                </p>
+              {{/if}}
+
+              {{#if description}}
+                <div class="kss-description"  f-p-20px>
+                  {{{description}}}
                 </div>
               {{/if}}
 
-              <div class="kss-modifier__example">
-                {{{example}}}
-                <div class="kss-modifier__example-footer"></div>
-              </div>
+              {{#if parameters}}
+                <div class="kss-parameters__title">Parameters:</div>
+                <ul class="kss-parameters">
+                {{#each parameters}}
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>{{name}}</code></div>
+                    <div class="kss-parameters__description">
+                      {{{description}}}
+                      {{#if defaultValue}}
+                        <div class="kss-parameters__default-value">
+                          Defaults to: <code>{{defaultValue}}</code>
+                        </div>
+                      {{/if}}
+                    </div>
+                  </li>
+                {{/each}}
+                </ul>
+              {{/if}}
+            </div>
 
-              {{#each modifiers}}
-                <div class="kss-modifier__name kss-style">
-                  {{name}}
+            {{#if example}}
+              <div class="kss-modifier__wrapper">
+                <div class="kss-modifier__heading kss-style">
+                  Example{{#if modifiers}}s{{/if}}
                 </div>
-                <div class="kss-modifier__description kss-style">
-                  {{{description}}}
-                </div>
+
+                {{#if modifiers}}
+                  <div class="kss-modifier__default-name kss-style">
+                    Default styling
+                  </div>
+                {{/if}}
+
                 <div class="kss-modifier__example">
-                  {{{markup}}}
+                  {{{example}}}
                   <div class="kss-modifier__example-footer"></div>
                 </div>
-              {{/each}}
-            </div>
 
-            {{#if markup}}
-              <details class="kss-markup kss-style">
-                <summary>
-                  {{#if markupFile }}
-                    Markup: <code>{{ markupFile }}</code>
-                  {{else}}
-                    Markup
-                  {{/if}}
-                </summary>
-                <pre class="prettyprint linenums lang-html"><code class="html" data-language="html">{{markup}}</code></pre>
-              </details>
+                {{#each modifiers}}
+                  <div class="kss-modifier__name kss-style">
+                    {{name}}
+                  </div>
+                  <div class="kss-modifier__description kss-style">
+                    {{{description}}}
+                  </div>
+                  <div class="kss-modifier__example">
+                    {{{markup}}}
+                    <div class="kss-modifier__example-footer"></div>
+                  </div>
+                {{/each}}
+              </div>
+
+              {{#if markup}}
+                <details class="kss-markup kss-style">
+                  <summary>
+                    {{#if markupFile }}
+                      Markup: <code>{{ markupFile }}</code>
+                    {{else}}
+                      Markup
+                    {{/if}}
+                  </summary>
+                  <pre class="prettyprint linenums lang-html"><code class="html" data-language="html">{{markup}}</code></pre>
+                </details>
+              {{/if}}
             {{/if}}
-          {{/if}}
 
-          {{#if source.filename}}
-            <div class="kss-source kss-style">
-              Source: <code>{{source.filename}}</code>, line {{source.line}}
-            </div>
-          {{/if}}
+            {{#if source.filename}}
+              <div class="kss-source kss-style">
+                Source: <code>{{source.filename}}</code>, line {{source.line}}
+              </div>
+            {{/if}}
 
-        </{{#if @first}}div{{else}}section{{/if}}>
-      {{/each}}
-    {{/if}}
+          </{{#if @first}}div{{else}}section{{/if}}>
+        {{/each}}
+      {{/if}}
 
-    </div> <!-- end inner f-content -->
+      </div> <!-- end inner f-content -->
 
 
   </main>

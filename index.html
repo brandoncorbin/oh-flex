@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="lib/oh-flex.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-    <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/vue"></script>
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
   <title>Oh Flex | CSS toolkit for developer who hate CSS</title>
 
 </head>
+
 <body class="f">
   <div f-layout f-layout-aside id="app">
     <aside f-collapse-phone :f-aside-open="menu_open" f-w-160px f-w-min-120px f-w-max-200px f-bg-secondary>
       <header f-header no-border>
         <div f-bg-secondary f-toolbar f-justify-center>
-            <span f-rubber></span>
-            <img src="examples/resources/brand/oh-flex-logo.png" height="30" />
-            <span f-rubber></span>
+          <span f-rubber></span>
+          <img src="examples/resources/brand/oh-flex-logo.png" height="30" />
+          <span f-rubber></span>
         </div>
       </header>
       <div f-content>
-
       </div>
       <footer f-footer no-border f-t-12px f-p-10px f-b-t-none>
-        Copyright 2017. <br  />All Rights Reserved.<br  />
+        Copyright 2017. <br />All Rights Reserved.<br />
         <a href="https://www.icorbin.com" f-t-black-60>A Corbin Creation</a>
       </footer>
     </aside>
     <main f-collapse-phone f-content>
       <header f-header>
-        <div f-toolbar-light f-toolbar >
-          <button f-button clear f-t-red-700 icon-only v-on:click="toggleMenu">
+        <div f-toolbar-light f-toolbar>
+          <button f-button clear f-hide-tablet-up f-t-red-700 icon-only v-on:click="toggleMenu">
             <i class="zmdi zmdi-menu"></i>
           </button>
           <span f-rubber></span>
@@ -50,9 +51,9 @@
         <div f-list f-contain>
           <div f-item f-m-t-20px>
             <div f-item-content f-t-center f-w-100 f-align-center f-justify-center f-m-b-20px>
-              <p f-note f-t-black-60 f-p-b-10px f-t-20px f-w-55 >
+              <p f-note f-t-black-60 f-p-b-10px f-t-20px f-w-55>
                 Flexible Designs with no custom CSS<br />
-                 <small f-t-14px f-t-black-50><strong>Oh-Flex Objective</strong>: Help non-designers build flexible and beautiful interfaces using only HTML attributes.</small>
+                <small f-t-14px f-t-black-50><strong>Oh-Flex Objective</strong>: Help non-designers build flexible and beautiful interfaces using only HTML attributes.</small>
               </p>
 
             </div>
@@ -137,7 +138,7 @@
               <textarea rows="1" f-p-5px f-m-t-5px f-m-b-5px f-round-sm f-bg-black-60 f-t-white-90 f-t-16px>
 npm install oh-flex --save-dev
               </textarea>
-              <div f-title f-t-12px f-t-black-60 >In your own SASS file</div>
+              <div f-title f-t-12px f-t-black-60>In your own SASS file</div>
               <textarea rows="1" f-p-5px f-m-t-5px f-round-sm f-bg-black-60 f-t-white-90 f-t-16px>
 @import '~oh-flex/src/oh-flex'
               </textarea>
@@ -179,13 +180,11 @@ npm install oh-flex --save-dev
             <div f-item-content>
               <p f-note f-p-b-10px>
                 I've been a product consultant for most of my adult life. Often I'm brought in to help development teams with little or no UI or UX skills build products that don't suck - without a dedicated creative resource.
-                <br><br>
-                Time and time again I would see the following: Dev team starts a new project using whatever the year's hottest UI framework is - and all starts off swimmingly. Then they start hitting all of the outlier design patterns that aren't included in their framework - and the hacking begins.  It's usually an innocent: "I'll just through it over here in main.css", but over the years the once tame "main.css" has turned into a 12 headed monster.
-                <br><br>
-                A year ago, I was presented with the previous scenario and I postulated that if they hated CSS so much, then why not just get rid of custom CSS all together?
-                <br><br>
-                All of the CSS and attributes I've used over the years has now be combined into a single CSS file that can be added to any project using any UI framework - without causing any UI interference.
-            </p>
+                <br><br> Time and time again I would see the following: Dev team starts a new project using whatever the year's hottest UI framework is - and all starts off swimmingly. Then they start hitting all of the outlier design patterns that aren't
+                included in their framework - and the hacking begins. It's usually an innocent: "I'll just through it over here in main.css", but over the years the once tame "main.css" has turned into a 12 headed monster.
+                <br><br> A year ago, I was presented with the previous scenario and I postulated that if they hated CSS so much, then why not just get rid of custom CSS all together?
+                <br><br> All of the CSS and attributes I've used over the years has now be combined into a single CSS file that can be added to any project using any UI framework - without causing any UI interference.
+              </p>
             </div>
           </article>
 
@@ -196,10 +195,10 @@ npm install oh-flex --save-dev
           <article f-item>
             <div f-item-content>
               <div f-title>
-                  Insane Flexibility
+                Insane Flexibility
               </div>
               <p f-note>
-                  Oh-Flex should work with any existing UI library - including Bootstrap, Angular Material, SemanticUI, etc. Everyhting is prefixed as to not mess up any existing design.
+                Oh-Flex should work with any existing UI library - including Bootstrap, Angular Material, SemanticUI, etc. Everyhting is prefixed as to not mess up any existing design.
               </p>
             </div>
           </article>
@@ -208,10 +207,10 @@ npm install oh-flex --save-dev
           <article f-item>
             <div f-item-content>
               <div f-title>
-                  Flexbox
+                Flexbox
               </div>
               <p f-note>
-                  .f-rubber, .f-flex, .f-row, .f-column, .f-grow, .f-shrink
+                .f-rubber, .f-flex, .f-row, .f-column, .f-grow, .f-shrink
               </p>
             </div>
           </article>
@@ -219,10 +218,10 @@ npm install oh-flex --save-dev
           <article f-item>
             <div f-item-content>
               <div f-title>
-                  List Item
+                List Item
               </div>
               <p f-note>
-                 A sensible and simple list item using flexbox
+                A sensible and simple list item using flexbox
               </p>
             </div>
           </article>
@@ -230,10 +229,10 @@ npm install oh-flex --save-dev
           <article f-item>
             <div f-item-content>
               <div f-title>
-                  Toolbar
+                Toolbar
               </div>
               <p f-note>
-                 A highlevel toolbar class for creating flexible and responsive toolbars.
+                A highlevel toolbar class for creating flexible and responsive toolbars.
               </p>
             </div>
           </article>
@@ -241,10 +240,10 @@ npm install oh-flex --save-dev
           <a f-item href="/docs/section-layout.html">
             <div f-item-content>
               <div f-title>
-                  Layout Control
+                Layout Control
               </div>
               <p f-note>
-                 Have sticky headers and footers, side menus and the likes - without a bunch of crazy code.
+                Have sticky headers and footers, side menus and the likes - without a bunch of crazy code.
               </p>
             </div>
             <span f-button clear icon-only>
@@ -255,10 +254,10 @@ npm install oh-flex --save-dev
           <article f-item>
             <div f-item-content>
               <div f-title>
-                  Margin and Padding
+                Margin and Padding
               </div>
               <p f-note>
-                 Pixel level control of padding and margin with shortcuts. .f-p-20px adds 20px padding on all sides. While .f-p-b-10px adds padding to the bottom.
+                Pixel level control of padding and margin with shortcuts. .f-p-20px adds 20px padding on all sides. While .f-p-b-10px adds padding to the bottom.
               </p>
             </div>
           </article>
@@ -269,7 +268,7 @@ npm install oh-flex --save-dev
                 Font Size and Colors
               </div>
               <p f-note>
-                 Pixel level font control .f-t-20px .f-t-bolder .f-t-bold
+                Pixel level font control .f-t-20px .f-t-bolder .f-t-bold
               </p>
             </div>
             <span f-button clear icon-only>
@@ -291,21 +290,25 @@ npm install oh-flex --save-dev
       </article>
 
     </main>
-  </div> <!-- end f-layout -->
+  </div>
+  <!-- end f-layout -->
   <script>
-
-  var app = new Vue({
+    var app = new Vue(
+    {
       el: '#app',
-      methods: {
-        toggleMenu: function() {
+      methods:
+      {
+        toggleMenu: function()
+        {
           this.menu_open = !this.menu_open;
         }
       },
-      data: {
-        menu_open : false
+      data:
+      {
+        menu_open: false
       }
-  })
-
+    })
   </script>
 </body>
+
 </html>

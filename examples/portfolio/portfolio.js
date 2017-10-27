@@ -1,12 +1,12 @@
 var resume = {
+  title: "Hi, I'm Brandon",
   about: [{
     type: "about",
     avatar: "https://pbs.twimg.com/profile_images/820704707530342400/IMbih0qs_400x400.jpg",
-    summary: "Product Developer",
+    summary: "Product Architect",
     title: "Brandon Corbin",
     description: [
-      "What would a resume of 2018 look like? It should be fluid and always active. It should be authentic and real, and not just a bunch of fluffy words.  You're now looking at my answer to that question.",
-      "Hi, I'm Brandon Corbin a Product Designer/Developer/Architect with a passion for health & behavior tracking, understanding the human condition, and helping others discover their full potential.",
+      "Hi, I'm Brandon Corbin, a Product Architect with a passion for educating others, health & behavior tracking, and understanding the human condition.",
       "<strong f-p-b-6px f-p-t-6px f-t-14px f-t-bolder f-t-dark>Strengths</strong>",
       "Turning really rough ideas into functional prototypes and MVP's.",
       "Discovering new ways of turning existing data/services into new product offerings.",
@@ -75,8 +75,9 @@ var resume = {
         }
       ],
       description: [
-        'HappyData, LCC was created to help people understand their behaviors beyond "gut feels". Using incredibly simple tools to collect and monitor behaviors and emotions.',
-        'Currently Nomie, FreakyPeaky and TrackTeam are all part of the HappyData product offering.',
+        'Founded in 2015',
+        'Holder of Nomie and other technologies that focus on understanding and improving the human condition.',
+        'Consulting with healthcare organizations and universities on methods of collecting behaviorial data.',
       ]
     },
     {
@@ -99,7 +100,15 @@ var resume = {
       }, {
         src: "https://snaps.nomie.io/Screen-Shot-2017-10-25-10-25-26.png",
         summary: "Farmhand - Extended Bootstrap"
-      }]
+      }],
+      description: [
+        "Brought in to prove that a mobile application could be built using IFBI's existing technology stack.",
+        "Created the standard mobile platform for all mobile apps moving forward.",
+        "Created Farmhand, a highlight customized version of Twitter Bootstrap 3 and 4, as well as a set of additional classes allowing development to avoid using CSS. Farmhand is now used in all web-based projects, including their corporate site.",
+        "Provided UI and UX guidence, training and documentation.",
+        "Created Farmanac, a mobile application for Farmers",
+        "Worked with external company to launch white label Telematics app."
+      ]
     },
     {
       type: "job",
@@ -110,7 +119,7 @@ var resume = {
       end: "2015",
       description: [
         "Speed Commerce, a public company, acquired Fifth Gear for ~50M in early 2014.",
-        "My role as Director of Marketing and team quickly became responsible for a complete overhaul of the SpeedCommerce brand.",
+        "My Marketing team quickly became responsible for a complete overhaul of the SpeedCommerce brand.",
         "Within the first 90 days of the acquisition, SpeedCommerce's new brand and the website was launched."
       ],
       technologies: ['Branding', 'Marketing', 'Sales', 'Leadership', 'Direction', 'Innovation'],
@@ -141,7 +150,7 @@ var resume = {
         "Created and managed Fifth Gear's User Experience division",
         "Learned an incredible amount about e-commcerce fulfillment, warehousing, and ERP platforms",
         "Invented and deployed Mojo - a high-level UI framework that integrated with Fifth Gear's proprietary e-commerce platform.",
-        "Successfully launched 15+ high volume e-commerce sites",
+        "Successfully launched 15+ high volume e-commerce sites using Magento, BigCommerce, Shopify and our own internal e-commerce platform.",
         "Created Switchboard, a centralized hub to capture and manage all incoming sales leads.",
         "Created some pretty bad ass t-shirts"
       ],
@@ -173,7 +182,7 @@ var resume = {
       technologies: ['resumes', 'video', 'php', 'cloud', 'monogdb', 'startup'],
       description: [
         "Designed, coded and delivered responsive video resume platform in less than 3 months",
-        "Created first in-house recording studio.",
+        "Created first in-house video recording studio.",
         "Created processes and procedures for capturing, editing and processing of video resumes."
       ],
       resources: [{
@@ -201,18 +210,12 @@ var resume = {
     }
 
   ],
-  passions: [{
-    title: "Nomie",
-    summary: "The little app that helps people change their lives.",
-    avatar: "https://pbs.twimg.com/profile_images/754338173967228929/9gZktlkA_400x400.jpg",
-    technologies: ['Javascript', 'Cordova', 'Ionic', 'ES6', 'Firebase', 'Offline', 'AngularV1']
-  }, ],
   projects: [{
       type: "project",
       title: "Nomie",
-      summary: "The little app that helps people change their lives.",
+      summary: "Private track the good and bad in your life.",
       avatar: "https://pbs.twimg.com/profile_images/754338173967228929/9gZktlkA_400x400.jpg",
-      technologies: ['Javascript', 'Cordova', 'Ionic', 'ES6', 'Firebase', 'Offline', 'AngularV1'],
+      technologies: ['Javascript', 'Cordova', 'Ionic', 'ES6', 'Dropbox', 'CouchDB', 'API', 'Offline', 'AngularV1'],
       links: [{
           title: "Nomie.io",
           href: "https://nomie.io"
@@ -233,10 +236,11 @@ var resume = {
         summary: 'Deep Dive'
       }],
       description: [
-        'For too many years of crazy highs / debilitating lows, and not listening to the doctors and therapists telling me I needed to keep a "feelings journal", I decided it was time to give it a try.',
-        'After trying all of the available apps for life tracking, it became perfectly clear: if I was going to track my life, I needed something stupidly easily. Nomie had to be built. I closed all of my other side-projects and started coding.',
-        '3 months later I released an MVP of Nomie (called Mento at the time) - that stored everyone\'s data in Firebase, a cloud database now owned by Google. The problem was people track INSANELY private things with Nomie. So much in fact that I started freaking out knowing NO ONE should have this data but the user. I completely shutdown the MVP, and rebuilt it for offline only, this was the birth of Nomie.',
-        'Nomie truly has given me a new perspective on my life and "how I work". It helps me remember the good when things ain\'t so good.'
+        'I wanted a way to privately track all the good and bad things in my life - and after years of trying every app, it was clear. No one was going to build the app I need.',
+        'The Nomie MVP was created within 3 months for iOS and Android.',
+        'Nomie has over 150,000 installs and has helped thousands of people get their demons in check.',
+        'With a tap of a button you can track when, where, and how you are feeling about any thing that is relevant to you.',
+        'Nomie is 100% free, no accounts, no data in the cloud. To pull data into Nomie you can subscribe to the Nomie API for a small yearly subscription fee.'
       ]
     },
     {
@@ -244,7 +248,7 @@ var resume = {
       title: "TrackTeam",
       summary: "Teams that track together, stay together",
       avatar: "https://pbs.twimg.com/profile_images/891782145861197824/kjkOGIR__400x400.jpg",
-      technologies: ['Javascript', 'Cordova', 'Ionic2', 'ES6', 'Angular', 'AWS', 'Dokku', 'CloudFlare', 'Serverless', 'Babel'],
+      technologies: ['Javascript', 'Cordova', 'PWA', 'Ionic2', 'ES6', 'Angular', 'AWS', 'Dokku', 'CloudFlare', 'Serverless', 'Babel'],
       resources: [{
           src: 'https://snaps.nomie.io/pb-OEWbw2Z42U.png',
           summary: 'Life tracking in the cloud'
@@ -267,14 +271,39 @@ var resume = {
         }
       ],
       description: [
-        'While Nomie was completely offline and private, TrackTeam is tracking in the clouds with friends.',
-        'Built using Serverless, AWS and Ionic 2, TrackTeam is available natively as well as in the browser.',
-        'TrackTeam is still in closed beta'
+        'Where Nomie is completely offline and private - TrackTeam is 100% in the cloud and available every where (iOS, Android, Desktop, PWA).',
+        'TrackTeam allows users to track together, or to invite observers (like your doctor) to monitor your data in real-time.',
+        'TrackTeam is still in closed beta, and was built using Serverless, AWS, Ionic 2, and existing Nomie technology.'
       ],
       links: [{
         title: "TrackTeam Web Login",
         href: "https://app.trackteam.io"
       }]
+    },
+    {
+      type: "project",
+      title: "Viki",
+      summary: "Sales Assistant Bot",
+      avatar: "https://snaps.nomie.io/pb-T3W2ZIyq2o.png",
+      technologies: ['Javascript', 'Node', 'Alexa', 'Azure', 'AWS', 'Bot Design', 'Email', 'Reporting'],
+      resources: [{
+          src: "https://snaps.nomie.io/pb-W37DkAhmzg.png",
+          summary: "Viki's ecommerce site query reply "
+        },
+        {
+          src: "https://snaps.nomie.io/viki-screenshot.png",
+          summary: "Automated list compilation"
+        },
+        {
+          src: 'https://snaps.nomie.io/Screen-Shot-2017-10-25-09-28-46.png',
+          summary: 'Creating a list'
+        }
+      ],
+      description: [
+        'I inherited lead list generation when I took over marketing at Fifth Gear. My team found the process absolutely soul-sucking - so I decided we needed to find a better way.',
+        'Viki was our solution - a virtual sales assistant that could help our sales team build highly targeted lead lists, and detailed information about any prospect.',
+        'Sales members could also email Viki an e-commerce site, and she would reply with a full report providing the common data points our sales teams used to gauge a prospects potential.'
+      ]
     },
     {
       type: "project",
@@ -303,9 +332,9 @@ var resume = {
       ],
       description: [
         'Build flexible User Interfaces with only HTML attributes.',
-        "I've been a product consultant for most of my adult life. Often I'm brought in to help development teams with little or no UI or UX skills build products that don't suck - without a dedicated creative resource. ",
-        'Time and time again I would see the following: Dev team starts a new project using the year\'s hottest UI framework and everything starts off swimmingly. Then they start hitting all of the outlier design patterns that aren\'t included in their framework - and the hacking begins.  It\'s usually an innocent: "I\'ll just through it over here in main.css", but over the years the once tame "main.css" has turned into a 12 headed monster.',
-        "A year ago, I was presented with the previous scenario and I postulated that if they hated CSS so much, then why not just get rid of custom CSS all together?",
+        "I've been a product consultant for most of my adult life. Often I'm brought in to help development teams with little or no UI or UX skills, build products that don't suck. ",
+        'Time and time again I would see the following: the Dev team starts a new project using the year\'s hottest UI framework and everything starts off swimmingly. Then they start hitting all of the outlier design patterns that aren\'t included in their framework - and the hacking begins.  It\'s usually an innocent: "I\'ll just through it over here in main.css", but over the years the once tame "main.css" turns into a 12 headed monster.',
+        "A year ago, I was presented with the previous scenario and I postulated that if they hated CSS so much, then why not try and eliminate the need for custom CSS?",
         "All of the CSS and attributes I've used over the years has now be combined into a single CSS file that can be added to any project using any UI framework - without causing any UI interference."
       ],
       links: [{
@@ -322,31 +351,7 @@ var resume = {
         }
       ]
     },
-    {
-      type: "project",
-      title: "Viki",
-      summary: "Sales Assistant Bot",
-      avatar: "https://snaps.nomie.io/pb-T3W2ZIyq2o.png",
-      technologies: ['Javascript', 'Node', 'Alexa', 'Azure', 'AWS', 'Bot Design', 'Email', 'Reporting'],
-      resources: [{
-          src: "https://snaps.nomie.io/pb-W37DkAhmzg.png",
-          summary: "Viki's ecommerce site query reply "
-        },
-        {
-          src: "https://snaps.nomie.io/viki-screenshot.png",
-          summary: "Automated list compilation"
-        },
-        {
-          src: 'https://snaps.nomie.io/Screen-Shot-2017-10-25-09-28-46.png',
-          summary: 'Creating a list'
-        }
-      ],
-      description: [
-        'I inherited lead list generation when I took over marketing at Fifth Gear. My team found the process absolutely soul-sucking - so I decided needed to find a better way.',
-        'Viki was our solution - a virtual sales assistant that could help our sales team build highly targeted lead lists, and detailed information about any prospect.',
-        'Sales members could also email Viki an e-commerce site, and she would reply with a full report providing the common data points our sales teams used to gauge a prospects potential.'
-      ]
-    },
+
     {
       type: 'project',
       title: 'Branding',
@@ -387,8 +392,8 @@ var resume = {
       ],
       description: [
         "Thanks to my father's printing business, I landed my first logo design project at the ripe age of 13. Racs International Cleaning used that awful $50 logo for over a decade.",
-        "In 1994 I redesigned the Carmel Highschool Crest for a Journalism project. It's still being used today (and it' was awful too)",
-        "My heart will always belong to the art of print, design, and branding. But my love for creating wholistically awesome products is what drives me these days"
+        "In 1994 I redesigned the Carmel Highschool Crest for a Journalism project. It's still being used today (and it was awful too)",
+        "My heart will always belong to the art of print, design, and branding. But my love for creating holistically awesome products is what drives me these days."
       ]
     }
   ]
@@ -405,21 +410,39 @@ var app = new Vue({
     searchResults: null,
     messages: [],
     selected: {},
-    title: "Brandon's Work",
+    title: resume.title,
     resume: resume
   },
   created: function() {
     this.selected = resume.about[0]
   },
   methods: {
+    url2html: function(url) {
+      return url2html(url).get();
+    },
+    track: function(type, category, action, label) {
+      var pack = {
+        hitType: type || "event",
+        eventCategory: category || "unknown",
+        eventAction: action || "unknown",
+        eventLabel: label || null
+      };
+      gtag(pack.hitType, pack.eventCategory, {
+        event_action: action || "unknown",
+        event_category: category || "general",
+        event_label: label || null
+      });
+    },
     selectItem: function(project) {
       this.menu_open = false;
       this.selected = project;
       this.title = project.title;
+      this.track("event", project.type, project.title);
     },
     showResource: function(resource) {
       this.show_resource_modal = true;
       this.active_resource = resource;
+      this.track("event", "resource", resource.summary);
     },
     hideResource: function($event) {
       $event.preventDefault()
@@ -437,6 +460,7 @@ var app = new Vue({
         }
         i++;
       });
+
       return activeIndex;
     },
     previousResource: function() {
@@ -449,6 +473,9 @@ var app = new Vue({
       } else {
         this.active_resource = this.selected.resources[currentIndex - 1];
       }
+
+      this.track("event", "resource", "previous-resource", this.active_resource.summary);
+
     },
     nextResource: function() {
       let total = this.selected.resources.length;
@@ -460,6 +487,9 @@ var app = new Vue({
       } else {
         this.active_resource = this.selected.resources[0];
       }
+
+      this.track("event", "resource", "next-resource", this.active_resource.summary);
+
     },
     search: function() {
       var searchResults = [];
@@ -482,7 +512,9 @@ var app = new Vue({
       }
     },
     toggleMenu: function() {
+      this.track("event", "menu-toggle", (this.menu_open) ? 'close' : 'open');
       this.menu_open = !this.menu_open;
+
     }
   }
 })

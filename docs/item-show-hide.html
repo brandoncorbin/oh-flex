@@ -63,12 +63,6 @@
               <div f-title>List</div>
               <!-- <span f-note>9</span> -->
             </a>
-                <a f-item f-bg-white-10 f-t-normal href="section-list.html#kssref-list-item">
-                  <div f-title f-t-14px>
-                    - List Item
-                  </div>
-                  <!-- <span>9.1</span> -->
-                </a>
             <a f-item href="section-padding-margin.html">
               <div f-title>Padding &amp; Margins</div>
               <!-- <span f-note>10</span> -->
@@ -133,31 +127,52 @@
             <header f-header f-m-b-20px>
               <div f-toolbar>
                 <div f-title f-rubber>
-                  List
+                  Media Queries
                 </div>
-                <button clear f-button>s.9</button>
+                <button clear f-button>s.12</button>
               </div>
             </header>
-          <div id="kssref-list" class="kss-section kss-section--depth-1 is-fullscreen">
+          <div id="kssref-show-hide" class="kss-section kss-section--depth-1 is-fullscreen">
 
             <div f-p-b-20px class="kss-style">
               <h1 class="kss-title kss-title--level-1">
-                <a class="kss-title__permalink" href="#kssref-list">
+                <a class="kss-title__permalink" href="#kssref-show-hide">
                   <span class="kss-title__ref">
-                    9
+                    12
                     <span class="kss-title__permalink-hash">
-                        #List
+                        #Show / Hide
                     </span>
                   </span>
-                  List
+                  Media Queries
                 </a>
               </h1>
 
 
+                <div class="kss-description"  f-p-20px>
+                  <p>Since we&#39;re embracing flex, let&#39;s embrace the idea that there that are 3 main states for modern web views.</p>
+<p>By default any tag with a f-show- or f-hide- are hidden by default, then the media query is applied.</p>
+<p><strong>Phone, Tablet, Desktop</strong> - everything else can fall close enough to one of these.</p>
+<div f-p-20px f-bg-red-200 f-t-white f-show-phone>
+ f-show-phone
+</div>
+
+<div f-p-20px f-bg-orange-200 f-t-white  f-show-tablet>
+ f-show-tablet
+</div>
+
+<div f-p-20px f-bg-purple-200 f-t-white  f-show-desktop>
+  f-show-desktop
+</div>
+
+
+                </div>
 
             </div>
 
 
+              <div class="kss-source kss-style">
+                Source: <code>_media.scss</code>, line 1
+              </div>
 
           </div>
 

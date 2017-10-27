@@ -64,7 +64,7 @@
 [f-w-100] {
   width: 100%;
 }
-// Percentages
+// Percentages and Widths up to 100
 @for $i from 0 to 101 {
    @if $i % 5 == 0{
     [f-w-#{$i}] {
@@ -90,11 +90,35 @@
     [f-h-min-#{$i}] {
       min-height: #{$i + 0%};
     }
+
+    [f-w-#{$i}px] {
+      width: #{$i * 1px};
+    }
+
+    [f-h-#{$i}px] {
+      height: #{$i * 1px};
+    }
+
+    [f-w-min-#{$i}px] {
+      min-width: #{$i * 1px};
+    }
+
+    [f-h-min-#{$i}px] {
+      min-height: #{$i * 1px};
+    }
+
+    [f-w-max-#{$i}px] {
+      max-width: #{$i * 1px};
+    }
+
+    [f-h-max-#{$i}px] {
+      max-height: #{$i * 1px};
+    }
   }
 }
-//Pixels
-@for $i from 1 to 401 {
-   @if $i % 5 == 0{
+//Pixels from 100 to 900 / every 25
+@for $i from 100 to 900 {
+   @if $i % 25 == 0{
     [f-w-#{$i}px] {
       width: #{$i * 1px};
     }

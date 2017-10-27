@@ -3,6 +3,7 @@
   "version": "2.0.1-pre",
   "description": "Set of Flex and Styles lib",
   "main": "lib/oh-flex.css",
+  "public" : false,
   "scripts": {
     "server:start": "browser-sync start --server './' --files './' --index ",
     "compile:scss": "node-sass --include-path scss src/oh-flex.scss lib/oh-flex.css  --output-style compressed",
