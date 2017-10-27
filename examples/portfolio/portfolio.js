@@ -77,6 +77,27 @@ var resume = {
           summary: 'Tracker Stats'
         }
       ],
+      links: [{
+          title: 'Happy Data Homepage',
+          src: 'https://www.happydata.org',
+          icon: 'zmdi zmdi-smartphone-iphone'
+        },
+        {
+          title: 'Nomie Homepage',
+          src: 'https://nomie.io',
+          icon: 'zmdi zmdi-apps'
+        },
+        {
+          title: 'Nomie 2 for iOS',
+          src: 'https://itunes.apple.com/us/app/nomie-pro/id1190618299?ls=1&mt=8',
+          icon: 'zmdi zmdi-apple'
+        },
+        {
+          title: 'Nomie 2 for Android',
+          src: "https://play.google.com/store/apps/details?id=io.nomie.pro&hl=en",
+          icon: "zmdi zmdi-android"
+        }
+      ],
       description: [
         'Founded in 2015',
         'Holder of Nomie and other technologies that focus on understanding and improving the human condition.',
@@ -105,13 +126,22 @@ var resume = {
         src: "https://snaps.nomie.io/Screen-Shot-2017-10-25-10-25-26.png",
         summary: "Farmhand - Extended Bootstrap"
       }],
+      links: [{
+          title: 'Indiana Farm Bureau Insurance',
+          src: 'https://www.infarbureau.com'
+        },
+        {
+          title: 'Indiana Farm Bureau, Inc.',
+          src: 'https://www.infarbureau.org'
+        }
+      ],
       description: [
-        "Brought in to prove that a mobile application could be built using IFBI's existing technology stack.",
+        "Brought in to create a cross platform mobile app prototype using IFBI's existing technology stack.",
         "Created the standard mobile platform for all mobile apps moving forward.",
         "Created Farmhand, a highlight customized version of Twitter Bootstrap 3 and 4, as well as a set of additional classes allowing development to avoid using CSS. Farmhand is now used in all web-based projects, including their corporate site.",
         "Provided UI and UX guidence, training and documentation.",
         "Worked directly with external partners to launch Telematics app.",
-        "<div  f-m-t-20px f-p-b-6px f-p-t-20px f-t-14px f-t-bolder f-t-dark>My Animate Pitch</div> https://youtu.be/20qnLuF4Csg?t=15s"
+        "<div  f-m-t-20px f-p-b-6px f-p-t-20px f-t-14px f-t-bolder f-t-dark>Gave a mean pitch at the Indy Civic hackathon for Animate</div> https://youtu.be/20qnLuF4Csg?t=15s"
       ]
     },
     {
@@ -221,13 +251,25 @@ var resume = {
       avatar: "https://pbs.twimg.com/profile_images/754338173967228929/9gZktlkA_400x400.jpg",
       technologies: ['Javascript', 'Cordova', 'Ionic', 'ES6', 'Dropbox', 'CouchDB', 'API', 'Offline', 'AngularV1'],
       links: [{
-          title: "Nomie.io",
-          href: "https://nomie.io"
+          title: 'Nomie Homepage',
+          src: 'https://nomie.io',
+          icon: 'zmdi zmdi-apps'
+        },
+        {
+          title: 'Nomie 2 for iOS',
+          src: 'https://itunes.apple.com/us/app/nomie-pro/id1190618299?ls=1&mt=8',
+          icon: 'zmdi zmdi-apple'
+        },
+        {
+          title: 'Nomie 2 for Android',
+          src: "https://play.google.com/store/apps/details?id=io.nomie.pro&hl=en",
+          icon: "zmdi zmdi-android"
         },
         {
           title: "/r/nomie",
-          href: "https://reddit.com/r/nomie"
-        }
+          href: "https://reddit.com/r/nomie",
+          icon: 'zmdi zmdi-reddit'
+        },
       ],
       resources: [{
         src: 'https://snaps.nomie.io/pb-bcHRyU9sCA.png',
