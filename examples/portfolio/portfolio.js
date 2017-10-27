@@ -1,5 +1,5 @@
 var resume = {
-  title: "Hi, I'm Brandon",
+  title: "Let's Build Something!",
   about: [{
     type: "about",
     avatar: "https://pbs.twimg.com/profile_images/820704707530342400/IMbih0qs_400x400.jpg",
@@ -45,11 +45,11 @@ var resume = {
         href: 'https://github.com/brandoncorbin',
         icon: 'zmdi zmdi-github'
       },
-      {
-        title: 'Watch me pitch',
-        href: 'https://youtu.be/20qnLuF4Csg?t=15s',
-        icon: 'zmdi zmdi-youtube'
-      },
+      // {
+      //   title: 'Watch me pitch',
+      //   href: 'https://youtu.be/20qnLuF4Csg?t=15s',
+      //   icon: 'zmdi zmdi-youtube'
+      // },
       {
         title: 'Email Me',
         href: 'mailto:portfolio@icorbin.com',
@@ -447,6 +447,14 @@ var resume = {
   ]
 };
 
+window.addEventListener("load", function() {
+  // Set a timeout...
+  setTimeout(function() {
+    // Hide the address bar!
+    window.scrollTo(0, 1);
+  }, 0);
+});
+
 var app = new Vue({
   el: '#app',
   data: {
@@ -462,7 +470,7 @@ var app = new Vue({
     resume: resume
   },
   created: function() {
-    this.selected = resume.about[0]
+    this.selected = resume.about[0];
   },
   methods: {
     url2html: function(content) {

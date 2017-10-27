@@ -210,14 +210,22 @@ write CSS. Instead, use Oh-Flex to nudge things around.
 &lt;div f-m-l-10px f-m-t-12px&gt; &lt;/div&gt;
 &lt;div f-m-l-10px f-m-t-14px&gt; &lt;/div&gt;
 &lt;div f-m-l-10px f-m-t-16px&gt; &lt;/div&gt;
-</code></pre>
+</code></pre><h3 id="iphone-x-safe-padding">iPhone X Safe Padding</h3>
+<p>Oh-Flex does support iOS 11&#39;s constant(safe-area-inset-right) - to avoid having content under
+that god awful black toe at the top of the iPhone when it&#39;s rotated.</p>
+<p>You&#39;ll need the following meta in your head  for this to work</p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1, viewport-fit=cover&quot;&gt;
+</code></pre><p>```</p>
+<div f-p-l-safe-area f-p-r-safe-area>I&#39;m save from these things!</div>
+
+
                 </div>
 
             </div>
 
 
               <div class="kss-source kss-style">
-                Source: <code>_box-size.scss</code>, line 123
+                Source: <code>_box-size.scss</code>, line 155
               </div>
 
           </div>

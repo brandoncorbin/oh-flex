@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1, viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../../lib/oh-flex.css" />
   <title>Brandon Corbin - Product Developer - Portfolio</title>
   <script src="https://unpkg.com/url2html@1.1.1/dist/url2html.js"></script>
   <script src="https://unpkg.com/vue"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -39,7 +39,7 @@
 
       <!-- START Message List View -->
       <aside f-w-30 f-collapse-phone f-bg-grey-900 :f-aside-open="menu_open">
-        <div f-layout>
+        <div f-layout f-p-l-safe-area>
           <header f-header>
             <div f-toolbar f-bg-grey-900>
               <!-- <div f-buttons-left>
@@ -158,12 +158,12 @@
                 {{ title }}
               </div>
               <span f-rubber></span>
-              <button f-button clear f-t-amber-600 f-icon-only>
-                <!-- <i f-t-grey-600 class="zmdi zmdi-info-outline"></i> -->
-              </button>
+              <a href="mailto:portfolio@icorbin.com" f-button clear f-t-amber-600 f-icon-only>
+                <i f-t-grey-600 class="zmdi zmdi-comment-outline"></i>
+              </a>
             </div>
           </header>
-          <div f-content f-contain-700px>
+          <div f-content f-contain-700px f-p-r-safe-area>
 
             <article f-item-divider f-no-lines clear>
 

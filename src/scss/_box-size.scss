@@ -57,6 +57,14 @@
 //
 // Style guide: Height-Width
 
+[f-p-r-safe-area] {
+  padding-right: constant(safe-area-inset-right) !important;
+}
+
+[f-p-l-safe-area] {
+  padding-left: constant(safe-area-inset-left) !important;
+}
+
 [f-h-100] {
   height: 100%;
 }
@@ -214,6 +222,22 @@
 // <div f-m-l-10px f-m-t-14px> </div>
 // <div f-m-l-10px f-m-t-16px> </div>
 // ```
+//
+// ### iPhone X Safe Padding
+//
+// Oh-Flex does support iOS 11's constant(safe-area-inset-right) - to avoid having content under
+// that god awful black toe at the top of the iPhone when it's rotated.
+//
+// You'll need the following meta in your head  for this to work
+//
+// ```
+// <meta name="viewport" content="width=device-width,initial-scale=1, viewport-fit=cover">
+// ```
+//
+// ```
+// <div f-p-l-safe-area f-p-r-safe-area>I'm save from these things!</div>
+//
+//
 //
 // Style guide: Padding-Margin
 
