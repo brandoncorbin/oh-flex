@@ -65,18 +65,19 @@
 //
 
 [f-button-primary] {
-  @include f-button($primary, #FFF, 30px);
+  @include f-button($primary, #FFF, transparent, 38px);
 }
 
 [f-button-dark] {
-  @include f-button($dark, #FFF, 30px);
+  @include f-button($dark, #FFF, transparent, 38px);
 }
 
 [f-button-inverse] {
-  @include f-button(transparent, #FFF, 30px);
+  @include f-button(transparent, #FFF, #FFF, 38px);
 }
 
 [f-button] {
+  @include f-button(transparent, $dark, lighten($dark,20%), 38px);
   // display       : inline-block;
   // vertical-align: middle;
   // @include flexbox();
@@ -87,10 +88,6 @@
   // color         : $dark;
   &[f-square] {
     border-radius: 0;
-  }
-
-  &[f-round] {
-    border-radius: 22px !important;
   }
 
   &[clear] {
@@ -154,8 +151,4 @@
       }
     }
   }
-}
-
-[f-button] {
-  @include f-button(#FFF, $faded, 30px);
 }

@@ -17,7 +17,8 @@
     "dev": "concurrently \"npm run server:start\" \"npm run watch:scss\"",
     "release:patch": "npm-bump patch",
     "release:minor": "npm-bump minor",
-    "release:major": "npm-bump major"
+    "release:major": "npm-bump major",
+    "deploy" : "aws s3 sync examples/portfolio/ s3://www.corbinux.com && aws s3 sync lib/ s3://www.corbinux.com/lib"
   },
   "watch": {
     "test": "{src,test}/*.spec.js"

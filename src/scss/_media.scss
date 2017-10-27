@@ -101,3 +101,22 @@
     display: inherit;
   }
 }
+
+.url2html-youtube,
+[f-video-responsive] {
+  @include phone() {
+    margin: 6px 0;
+    width : 100%;
+    height: 250px;
+  }
+  @include tablet() {
+    margin: 6px 0;
+    width : 100%;
+    height: 320px;
+  }
+  @include desktop() {
+    margin: 6px 0;
+    width : 100%;
+    height: 320px;
+  }
+}

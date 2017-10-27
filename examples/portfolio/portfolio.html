@@ -47,7 +47,7 @@
                   <i class="zmdi zmdi-arrow-left"></i>
                 </a>
               </div> -->
-              <input v-model="searchTerm" v-on:keyup="search" f-b-white-5 placeholder="Search" f-placeholder-center f-placeholder-inverse f-input f-rubber f-input-round f-input-black f-w-100 type="search" round-lg />
+              <input v-model="searchTerm" v-on:keyup="search" f-b-white-5 placeholder="Search" f-placeholder-center f-placeholder-inverse f-input f-rubber f-input-round f-input-black f-w-100 type="text" round-lg />
             </div>
 
           </header>
@@ -165,7 +165,10 @@
           </header>
           <div f-content f-contain-700px>
 
-            <article f-item-divider f-no-lines clear></article>
+            <article f-item-divider f-no-lines clear>
+
+
+            </article>
             <article f-item f-no-lines f-m-b-10px>
               <div f-avatar-square f-m-r-12px f-box-shadow-1 lg v-if="selected.avatar">
                 <img v-bind:src="selected.avatar" />
@@ -200,7 +203,7 @@
             </article>
 
             <article f-item :f-b-b="index < selected.description.length -1" :f-b-b-none="index == selected.description.length -1" v-for="(para, index) in selected.description">
-              <p f-note v-html="para" f-t-16px></p>
+              <p f-note v-html="url2html(para)" f-w-100 f-t-16px></p>
             </article>
 
             <article f-item-divider clear f-b-t-none f-b-bottom-black v-if="selected.links">

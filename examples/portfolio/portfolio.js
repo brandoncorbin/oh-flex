@@ -6,15 +6,18 @@ var resume = {
     summary: "Product Architect",
     title: "Brandon Corbin",
     description: [
-      "Hi, I'm Brandon Corbin, a Product Architect with a passion for educating others, health & behavior tracking, and understanding the human condition.",
-      "<strong f-p-b-6px f-p-t-6px f-t-14px f-t-bolder f-t-dark>Strengths</strong>",
+      "<div f-t-24px f-t-blue-600>Hi, I'm Brandon Corbin, a Product Architect with a passion for educating others, health & behavior tracking, and creating simple solutions for complex problems.</div>",
+      "<div f-p-b-6px f-p-t-20px f-t-14px f-t-bolder f-t-dark>Strengths</div>",
       "Turning really rough ideas into functional prototypes and MVP's.",
       "Discovering new ways of turning existing data/services into new product offerings.",
       "Managing and mentoring creatives",
       "Finding creative and simple solutions to seemingly overwhelming problems.",
-      "Getting others excited about various technologies."
+      "Getting others excited about various technologies.",
+      "<div f-p-b-6px f-p-t-20px f-t-14px f-t-bolder f-t-dark>Nomie Pitch</div>https://youtu.be/1y-9KYQPbxc",
+      "<div  f-m-t-20px f-p-b-6px f-p-t-20px f-t-14px f-t-bolder f-t-dark>My Animate Pitch</div> https://youtu.be/20qnLuF4Csg?t=15s"
+
     ],
-    resources: [{
+    resourcesx: [{
         src: "https://snaps.nomie.io/Screen-Shot-2017-10-25-14-23-32.png",
         summary: "Brandon & Sons - Ireland"
       },
@@ -78,6 +81,7 @@ var resume = {
         'Founded in 2015',
         'Holder of Nomie and other technologies that focus on understanding and improving the human condition.',
         'Consulting with healthcare organizations and universities on methods of collecting behaviorial data.',
+        "<div f-p-b-6px f-p-t-20px f-t-14px f-t-bolder f-t-dark>Nomie Pitch</div>https://youtu.be/1y-9KYQPbxc",
       ]
     },
     {
@@ -106,8 +110,8 @@ var resume = {
         "Created the standard mobile platform for all mobile apps moving forward.",
         "Created Farmhand, a highlight customized version of Twitter Bootstrap 3 and 4, as well as a set of additional classes allowing development to avoid using CSS. Farmhand is now used in all web-based projects, including their corporate site.",
         "Provided UI and UX guidence, training and documentation.",
-        "Created Farmanac, a mobile application for Farmers",
-        "Worked with external company to launch white label Telematics app."
+        "Worked directly with external partners to launch Telematics app.",
+        "<div  f-m-t-20px f-p-b-6px f-p-t-20px f-t-14px f-t-bolder f-t-dark>My Animate Pitch</div> https://youtu.be/20qnLuF4Csg?t=15s"
       ]
     },
     {
@@ -239,8 +243,10 @@ var resume = {
         'I wanted a way to privately track all the good and bad things in my life - and after years of trying every app, it was clear. No one was going to build the app I need.',
         'The Nomie MVP was created within 3 months for iOS and Android.',
         'Nomie has over 150,000 installs and has helped thousands of people get their demons in check.',
+        '<div f-title f-m-b-10px>Nomie 1 Preview</div> https://youtu.be/UvjizZDgmrU',
         'With a tap of a button you can track when, where, and how you are feeling about any thing that is relevant to you.',
         'Nomie is 100% free, no accounts, no data in the cloud. To pull data into Nomie you can subscribe to the Nomie API for a small yearly subscription fee.'
+
       ]
     },
     {
@@ -417,8 +423,8 @@ var app = new Vue({
     this.selected = resume.about[0]
   },
   methods: {
-    url2html: function(url) {
-      return url2html(url).get();
+    url2html: function(content) {
+      return url2html().parse(content);
     },
     track: function(type, category, action, label) {
       var pack = {

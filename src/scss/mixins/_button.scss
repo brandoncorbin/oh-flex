@@ -1,19 +1,69 @@
-@mixin f-button($background, $font-color, $height) {
-  display         : inline-block;
-  vertical-align  : middle;
-  @include flexbox();
-  @include flex-direction(row);
-  @include justify-content(center);
+@mixin f-button-hover($color) {
+  &:before {
+    content         : "";
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    right           : 0;
+    bottom          : 0;
+    background-color: $color;
+    display         : block;
+    z-index         : 1;
+    transition      : all 0.2s ease-out;
+  }
+}
+@mixin f-button($background, $font-color, $border:#EEE, $height:66px) {
+   @include flexbox();
   @include align-items(center);
+  @include justify-content(center);
+  z-index         : 2;
+  vertical-align  : middle;
   white-space     : nowrap;
+  text-align      : center;
   color           : $font-color;
   font-size       : $height * 0.46;
   height          : $height;
   max-height      : $height;
   background-color: $background;
-  border          : solid 1px darken($background,10%);
-  padding-left    : 8px;
-  padding-right   : 8px;
-  border-radius   : 2px;
+  border          : solid 1px $border;
+  padding-left    : 12px;
+  padding-right   : 12px;
+  border-radius   : 4px;
   text-decoration : none;
+  position        : relative;
+  overflow        : hidden;
+  transition      : all 0.2s ease-in;
+  outline-style   : none;
+
+  &:before {
+    background-color: transparent;
+    transition      : all 0.2s ease-in;
+    content         : "";
+  }
+
+  &:active {
+    @include f-button-hover(rgba(0,0,0,0.35));
+  }
+
+  &:focus,
+  &:hover {
+    overflow: hidden !important;
+    @include f-button-hover(rgba(255,255,255,0.15));
+    // @include box-shadow(2, $background);
+  }
+  // &[f-hover] {
+  //   transition: all 0.4s ease-out;
+  //
+  //   &:focus,
+  //   &:hover {
+  //     @include f-button-hover(red);
+  //     // @include box-shadow(2, $background);
+  //     // transition: all 0.4s ease-in;
+  //   }
+  // }
+  &[f-round] {
+    border-radius: 20px;
+    padding-left : 16px;
+    padding-right: 16px;
+  }
 }
