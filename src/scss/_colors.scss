@@ -117,9 +117,8 @@ $material-colors: ( "red-50": #FFEBEE, "red-100": #FFCDD2, "red-200": #EF9A9A, "
 @include text-faded(.2);
 @include text-faded(.1);
 @include text-faded(.15);
-@include text-faded(.05); // Material Design Colors
-//
-// Oh-Flex contains all of the Material Design colors available for text or backgrounds.
+@include text-faded(.05);
+// Material Design Colors
 //
 // ```
 // <div f-bg-blue-700>I'm filled with Blue</div>
