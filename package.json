@@ -37,13 +37,13 @@
     "concurrently": "3.5.0",
     "kss": "3.0.0-beta.18",
     "node-sass": "4.5.3",
+    "npm-bump": "0.0.23",
     "sass": "^1.0.0-beta.2",
     "sassdocjs": "0.1.0",
     "watch": "1.0.2",
     "webpack": "2.7.0"
   },
   "dependencies": {
-    "npm-bump": "0.0.23",
     "riot": "3.7.3"
   },
   "deprecated": {
