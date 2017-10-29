@@ -13,6 +13,22 @@
   <link rel="stylesheet" href="kss-assets/kss.css">
   <link rel="stylesheet" href="../lib/oh-flex.css">
 
+
+  <style type="text/css">
+  .kss-style pre {
+    padding:16px;
+    margin-left:-20px;
+    margin-right:-20px;
+    margin-top:26px;
+    margin-bottom:26px;
+  }
+    .kss-style pre, .kss-style code, .kss-style kbd, .kss-style samp {
+      background-color:rgb(45, 45, 45);
+      color:rgb(226, 176, 47);
+      border-radius:0px;
+    }
+  </style>
+
 </head>
 <body id="kss-node" >
 
@@ -40,18 +56,30 @@
               <!-- <span f-note>3</span> -->
             </a>
             <a f-item href="section-colors.html">
-              <div f-title>Colors</div>
+              <div f-title>Material Colors</div>
               <!-- <span f-note>4</span> -->
             </a>
             <a f-item href="section-flexbox.html">
               <div f-title>Flexbox</div>
               <!-- <span f-note>5</span> -->
             </a>
-                <a f-item f-bg-white-10 f-t-normal href="section-flexbox.html#kssref-flexbox-alignment">
+                <a f-item f-bg-white-10 f-t-normal href="section-flexbox.html#kssref-flexbox-align">
                   <div f-title f-t-14px>
-                    - Flexbox
+                    - Align
                   </div>
                   <!-- <span>5.1</span> -->
+                </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-flexbox.html#kssref-flexbox-justify">
+                  <div f-title f-t-14px>
+                    - Justify
+                  </div>
+                  <!-- <span>5.2</span> -->
+                </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-flexbox.html#kssref-flexbox-row-column">
+                  <div f-title f-t-14px>
+                    -  Row &amp; Column
+                  </div>
+                  <!-- <span>5.3</span> -->
                 </a>
             <a f-item href="section-height-width.html">
               <div f-title>Height and Widths</div>
@@ -111,7 +139,7 @@
           </div>
         </footer>
       </aside>
-      <main f-content f-layout  f-collapse-phone>
+      <main f-content  f-collapse-phone>
         <header f-header>
           <div f-toolbar>
             <div f-buttons-left>
@@ -128,66 +156,200 @@
 
       <div f-content>
 
+        <div f-contain-900px>
 
-
-            <header f-header f-m-b-20px>
-              <div f-toolbar>
-                <div f-title f-rubber>
-                  Flexbox
+              <header f-header f-m-b-20px>
+                <div f-toolbar f-bg-white>
+                  <div f-title f-rubber>
+                    Flexbox
+                  </div>
+                  <button clear f-button>s.5</button>
                 </div>
-                <button clear f-button>s.5</button>
-              </div>
-            </header>
-          <div id="kssref-flexbox" class="kss-section kss-section--depth-1 ">
+              </header>
+            <div f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-flexbox" class="kss-section kss-section--depth-1 ">
 
-            <div f-p-b-20px class="kss-style">
-              <h1 class="kss-title kss-title--level-1">
-                <a class="kss-title__permalink" href="#kssref-flexbox">
-                  <span class="kss-title__ref">
-                    5
-                    <span class="kss-title__permalink-hash">
-                        #Flexbox
+              <div  class="kss-style">
+                <div f-h1 f-title f-m-t-6px class="title--level-1">
+                  <a class="" f-t-grey-900 href="#kssref-flexbox">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>5</span>
+                      <span f-t-grey-800>Flexbox</span>
+                      <span class="kss-title__permalink-hash">
+                          #Flexbox
+                      </span>
                     </span>
-                  </span>
-                  Flexbox
-                </a>
-              </h1>
+
+                  </a>
+                </div>
 
 
+                  <div class="kss-description"  f-p-b-20px>
+                    <p>Let&#39;s start flexing! Sure your friend using IE 10 and below might not like you that much
+but really... should we care what they think?</p>
+
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_flex-box.scss</code>, line 1
+                </div>
 
             </div>
+            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-flexbox-align" class="kss-section kss-section--depth-2 ">
 
-
-
-          </div>
-          <section id="kssref-flexbox-alignment" class="kss-section kss-section--depth-2 ">
-
-            <div f-p-b-20px class="kss-style">
-              <h2 class="kss-title kss-title--level-2">
-                <a class="kss-title__permalink" href="#kssref-flexbox-alignment">
-                  <span class="kss-title__ref">
-                    5.1
-                    <span class="kss-title__permalink-hash">
-                        #Flexbox.alignment
+              <div  class="kss-style">
+                <div f-h2 f-title f-m-t-6px class="title--level-2">
+                  <a class="" f-t-grey-900 href="#kssref-flexbox-align">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>5.1</span>
+                      <span f-t-grey-800>Align</span>
+                      <span class="kss-title__permalink-hash">
+                          #Flexbox.align
+                      </span>
                     </span>
-                  </span>
-                  Flexbox
-                </a>
-              </h2>
+
+                  </a>
+                </div>
 
 
-                <div class="kss-description"  f-p-20px>
-                  <p>Let&#39;s start flexing! Sure your friend using IE 10 and below might not like you that much
-but really... should we care what they think?</p>
- <h2>Using Rubber!</h2>
+                  <div class="kss-description"  f-p-b-20px>
+                    <ul>
+  <li><strong>f-align-start</strong> Aligns to the start of the parent element.</li>
+  <li><strong>f-align-center</strong> Aligns center the parent element.</li>
+  <li><strong>f-align-end</strong> Aligns to the end of the parent element.</li>
+</ul>
 
-<p> Rubber is a flexible box - it will take up any available space.</p>
- <div f-toolbar>
-   <button f-button f-w-30px f-stiff>Left</button>
-   <div f-rubber f-bg-black-10 f-t-center>RUBBER!</div>
-   <button f-button f-w-30px f-stiff>Right</button>
+<p><div f-align-end f-row>
+ <div f-w-30 f-h-90px f-align-center f-m-r-10px f-bg-orange-300 f-p-20px>
+   <div f-h-50px f-w-50px f-bg-white f-box-shadow-1></div>
  </div>
+ <div f-w-30 f-h-90px f-align-start f-m-r-10px f-bg-orange-400 f-p-20px>
+   <div f-h-50px f-w-50px f-bg-white f-box-shadow-1></div>
+ </div>
+ <div f-w-30 f-h-90px f-align-end f-m-r-10px f-bg-orange-500 f-p-20px>
+   <div f-h-50px f-w-50px f-bg-white f-box-shadow-1></div>
+ </div>
+</div></p>
+<pre><code>&lt;div f-align-end f-row f-p-30px f-h-90px f-bg-orange-400&gt;
+ &lt;div f-h-50px f-w-50px f-bg-white f-box-shadow-1&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                  </div>
 
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_flex-box.scss</code>, line 10
+                </div>
+
+            </section>
+            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-flexbox-justify" class="kss-section kss-section--depth-2 ">
+
+              <div  class="kss-style">
+                <div f-h2 f-title f-m-t-6px class="title--level-2">
+                  <a class="" f-t-grey-900 href="#kssref-flexbox-justify">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>5.2</span>
+                      <span f-t-grey-800>Justify</span>
+                      <span class="kss-title__permalink-hash">
+                          #Flexbox.justify
+                      </span>
+                    </span>
+
+                  </a>
+                </div>
+
+
+                  <div class="kss-description"  f-p-b-20px>
+                    <p> Use justify to stretch, spread and control the format of children elements.</p>
+<ul>
+  <li><strong>f-justify-center</strong> </li>
+  <li><strong>f-justify-start</strong>.</li>
+  <li><strong>f-justify-between</strong></li>
+ <li><strong>f-justify-around</strong></li>
+</ul>
+
+<h3 id="f-justify-between">f-justify-between</h3>
+<div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-between f-m-t-20px>
+ <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px></div>
+ <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px></div>
+ <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px></div>
+</div>
+
+<pre><code>&lt;div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-between f-m-t-20px&gt;
+ &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px&gt;&lt;/div&gt;
+ &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px&gt;&lt;/div&gt;
+ &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h3 id="f-justify-around">f-justify-around</h3>
+<div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-around f-m-t-20px>
+ <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px></div>
+ <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px></div>
+ <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px></div>
+</div>
+
+<pre><code>&lt;div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-around f-m-t-20px&gt;
+ &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px&gt;&lt;/div&gt;
+ &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px&gt;&lt;/div&gt;
+ &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h3 id="f-justify-stretch">f-justify-stretch</h3>
+<div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-stretch f-m-t-20px>
+ <div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-300 f-p-20px></div>
+ <div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-400 f-p-20px></div>
+ <div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-500 f-p-20px></div>
+</div>
+
+<pre><code>&lt;div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-stretch f-m-t-20px&gt;
+ &lt;div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-300 f-p-20px&gt;&lt;/div&gt;
+ &lt;div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-400 f-p-20px&gt;&lt;/div&gt;
+ &lt;div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-500 f-p-20px&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h3 id="f-justify-center">f-justify-center</h3>
+<div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-center f-m-t-20px>
+ <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px></div>
+ <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px></div>
+ <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px></div>
+</div>
+
+<pre><code>&lt;div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-center f-m-t-20px&gt;
+ &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px&gt;&lt;/div&gt;
+ &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px&gt;&lt;/div&gt;
+ &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_flex-box.scss</code>, line 122
+                </div>
+
+            </section>
+            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-flexbox-row-column" class="kss-section kss-section--depth-2 ">
+
+              <div  class="kss-style">
+                <div f-h2 f-title f-m-t-6px class="title--level-2">
+                  <a class="" f-t-grey-900 href="#kssref-flexbox-row-column">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>5.3</span>
+                      <span f-t-grey-800> Row &amp; Column</span>
+                      <span class="kss-title__permalink-hash">
+                          #Flexbox.row-column
+                      </span>
+                    </span>
+
+                  </a>
+                </div>
+
+
+                  <div class="kss-description"  f-p-b-20px>
+                    <p> Rows and columns are targeted with the <code>f-row</code> and <code>f-column</code></p>
  <h2>Flexbox Row with variable widths</h2>
 
  <div  f-bg-blue-100 f-row f-p-30px f-wrap f-m-t-20px>
@@ -226,21 +388,22 @@ but really... should we care what they think?</p>
   &lt;div  f-m-b-10px f-h-max-10px f-h-min-1px f-h-30px f-grow f-shrink f-w-100px&gt;&lt;/div&gt;
   &lt;div  f-m-b-10px f-h-max-100 f-h-min-20px f-h-30px f-grow f-shrink f-w-100px&gt;&lt;/div&gt;
 &lt;/div&gt;
-</code></pre><p>Style guide: Flexbox</p>
-<p>Flexbox Align</p>
-<p>Let&#39;s start flexing! Sure your friend using IE 10 and below might not like you that much
-but really... should we care what they think?</p>
+</code></pre>
+                  </div>
 
-                </div>
-
-            </div>
-
-
-              <div class="kss-source kss-style">
-                Source: <code>_flex-box.scss</code>, line 1
               </div>
 
-          </section>
+
+                <div class="kss-source kss-style">
+                  Source: <code>_flex-box.scss</code>, line 57
+                </div>
+
+            </section>
+
+        </div> <!-- end content -wrapper>
+
+
+
 
       </div> <!-- end inner f-content -->
 

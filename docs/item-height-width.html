@@ -13,6 +13,22 @@
   <link rel="stylesheet" href="kss-assets/kss.css">
   <link rel="stylesheet" href="../lib/oh-flex.css">
 
+
+  <style type="text/css">
+  .kss-style pre {
+    padding:16px;
+    margin-left:-20px;
+    margin-right:-20px;
+    margin-top:26px;
+    margin-bottom:26px;
+  }
+    .kss-style pre, .kss-style code, .kss-style kbd, .kss-style samp {
+      background-color:rgb(45, 45, 45);
+      color:rgb(226, 176, 47);
+      border-radius:0px;
+    }
+  </style>
+
 </head>
 <body id="kss-node" class="kss-fullscreen-mode">
 
@@ -40,7 +56,7 @@
               <!-- <span f-note>3</span> -->
             </a>
             <a f-item href="section-colors.html">
-              <div f-title>Colors</div>
+              <div f-title>Material Colors</div>
               <!-- <span f-note>4</span> -->
             </a>
             <a f-item href="section-flexbox.html">
@@ -105,7 +121,7 @@
           </div>
         </footer>
       </aside>
-      <main f-content f-layout  f-collapse-phone>
+      <main f-content  f-collapse-phone>
         <header f-header>
           <div f-toolbar>
             <div f-buttons-left>
@@ -122,40 +138,53 @@
 
       <div f-content>
 
+        <div f-contain-900px>
 
-
-            <header f-header f-m-b-20px>
-              <div f-toolbar>
-                <div f-title f-rubber>
-                  Height and Widths
+              <header f-header f-m-b-20px>
+                <div f-toolbar f-bg-white>
+                  <div f-title f-rubber>
+                    Height and Widths
+                  </div>
+                  <button clear f-button>s.6</button>
                 </div>
-                <button clear f-button>s.6</button>
-              </div>
-            </header>
-          <div id="kssref-height-width" class="kss-section kss-section--depth-1 is-fullscreen">
+              </header>
+            <div f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-height-width" class="kss-section kss-section--depth-1 is-fullscreen">
 
-            <div f-p-b-20px class="kss-style">
-              <h1 class="kss-title kss-title--level-1">
-                <a class="kss-title__permalink" href="#kssref-height-width">
-                  <span class="kss-title__ref">
-                    6
-                    <span class="kss-title__permalink-hash">
-                        #Height-Width
+              <div  class="kss-style">
+                <div f-h1 f-title f-m-t-6px class="title--level-1">
+                  <a class="" f-t-grey-900 href="#kssref-height-width">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>6</span>
+                      <span f-t-grey-800>Height and Widths</span>
+                      <span class="kss-title__permalink-hash">
+                          #Height-Width
+                      </span>
                     </span>
-                  </span>
-                  Height and Widths
-                </a>
-              </h1>
+
+                  </a>
+                </div>
 
 
-                <div class="kss-description"  f-p-20px>
-                  <h1 id="prefix-f-h-f-w">Prefix f-h &amp; f-w</h1>
-<p><strong>[f-w-100]</strong> - is 100%<br />
-<strong>[f-w-100px]</strong> - is 100px</p>
-<p><strong>Percentage Heights and Width</strong> are available for every 5%. 0, 5, 10, 15...<br />
-<strong>Pixel Heights and Widths</strong> are available for every 5px up to 400px</p>
+                  <div class="kss-description"  f-p-b-20px>
+                    <p>Control the height and width of any element, you can use both percentages and pixels.</p>
+<h3 id="0-to-100-percent">0 to 100 percent</h3>
+<p>Widths / heights are available for each percent up to 100%.</p>
+<h3 id="0-to-101-pixels">0 to 101 pixels</h3>
+<p>Widths / heights are available for each pixel up to 101px.</p>
+<h3 id="100-to-900-pixels">100 to 900 pixels</h3>
+<p>Widths / heights are available for every 25 pixels... 100px, 125px, 150px, ...</p>
+<ul>
+<li><strong>f-w-100</strong> -  width: 100%</li>
+<li><strong>f-w-max-100</strong> - max-width: 100%</li>
+<li><strong>f-w-min-50</strong> - min-width: 50%</li>
+</ul>
 
-<p><p>Also available <strong>[f-w-max-{amount}]</strong>, <strong>[f-w-min-{amount}]</strong>, <strong>[f-h-max-{amount}]</strong>, <strong>[f-h-min-{amount}]</strong>,</p>
+<ul>
+<li><strong>f-h-40px</strong> -  height: 40px</li>
+<li><strong>f-h-max-200px</strong> - max-height: 200px</li>
+<li><strong>f-h-min-125px</strong> - min-height: 120px</li>
+</ul>
+
 <div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap>
   <div f-bg-white f-box-shadow-1 f-m-5px f-w-30px f-h-30px></div>
   <div f-bg-white f-box-shadow-1 f-m-5px f-w-40px f-h-40px></div>
@@ -167,14 +196,14 @@
   <div f-bg-white f-box-shadow-1 f-m-5px f-w-100px f-h-100px></div>
 </div>
 
-<pre><code>  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-30px f-h-30px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-40px f-h-40px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-50px f-h-50px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-60px f-h-60px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-70px f-h-70px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-80px f-h-80px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-90px f-h-90px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-100px f-h-100px&gt;&lt;/div&gt;
+<pre><code>  &lt;div f-w-30px f-h-30px&gt;&lt;/div&gt;
+  &lt;div f-w-40px f-h-40px&gt;&lt;/div&gt;
+  &lt;div f-w-50px f-h-50px&gt;&lt;/div&gt;
+  &lt;div f-w-60px f-h-60px&gt;&lt;/div&gt;
+  &lt;div f-w-70px f-h-70px&gt;&lt;/div&gt;
+  &lt;div f-w-80px f-h-80px&gt;&lt;/div&gt;
+  &lt;div f-w-90px f-h-90px&gt;&lt;/div&gt;
+  &lt;div f-w-100px f-h-100px&gt;&lt;/div&gt;
 </code></pre><div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap>
   <div f-bg-white f-box-shadow-1 f-m-5px f-w-30px f-h-100px></div>
   <div f-bg-white f-box-shadow-1 f-m-5px f-w-40px f-h-100px></div>
@@ -186,25 +215,44 @@
   <div f-bg-white f-box-shadow-1 f-m-5px f-w-100px f-h-100px></div>
 </div>
 
-<pre><code>  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-30px f-h-100px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-40px f-h-100px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-50px f-h-100px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-60px f-h-100px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-70px f-h-100px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-80px f-h-100px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-90px f-h-100px&gt;&lt;/div&gt;
-  &lt;div f-bg-white f-box-shadow-1 f-m-5px f-w-100px f-h-100px&gt;&lt;/div&gt;
+<pre><code>  &lt;div  f-w-30px f-h-100px&gt;&lt;/div&gt;
+  &lt;div  f-w-40px f-h-100px&gt;&lt;/div&gt;
+  &lt;div  f-w-50px f-h-100px&gt;&lt;/div&gt;
+  &lt;div  f-w-60px f-h-100px&gt;&lt;/div&gt;
+  &lt;div  f-w-70px f-h-100px&gt;&lt;/div&gt;
+  &lt;div  f-w-80px f-h-100px&gt;&lt;/div&gt;
+  &lt;div  f-w-90px f-h-100px&gt;&lt;/div&gt;
+  &lt;div  f-w-100px f-h-100px&gt;&lt;/div&gt;
+</code></pre><p><h2 f-m-b-16px >Width Percentage</h2>
+ <div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap>
+  <div  f-w-10 f-h-100px f-bg-green-400></div>
+  <div  f-w-15 f-h-100px f-bg-red-100></div>
+  <div  f-w-25 f-h-100px f-bg-orange-400></div>
+  <div  f-w-50 f-h-100px f-bg-red-500></div>
+  <div  f-w-100 f-h-100px f-bg-blue-700></div>
+</div></p>
+<pre><code> &lt;div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap&gt;
+  &lt;div  f-w-10 f-h-100px f-bg-green-400&gt;&lt;/div&gt;
+  &lt;div  f-w-15 f-h-100px f-bg-red-100&gt;&lt;/div&gt;
+  &lt;div  f-w-25 f-h-100px f-bg-orange-900&gt;&lt;/div&gt;
+  &lt;div  f-w-50 f-h-100px f-bg-red-500&gt;&lt;/div&gt;
+  &lt;div  f-w-100 f-h-100px f-bg-blue-700&gt;&lt;/div&gt;
 </code></pre>
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_box-size.scss</code>, line 1
                 </div>
 
             </div>
 
+        </div> <!-- end content -wrapper>
 
-              <div class="kss-source kss-style">
-                Source: <code>_box-size.scss</code>, line 1
-              </div>
 
-          </div>
+
 
       </div> <!-- end inner f-content -->
 

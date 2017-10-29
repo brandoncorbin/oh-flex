@@ -1,14 +1,27 @@
 // Height and Widths
 //
-// #  Prefix f-h & f-w
+// Control the height and width of any element, you can use both percentages and pixels.
 //
+// ### 0 to 100 percent
+// Widths / heights are available for each percent up to 100%.
 //
-// <p><strong>[f-w-100]</strong> - is 100%<br />
-// <strong>[f-w-100px]</strong> - is 100px</p>
-// <p><strong>Percentage Heights and Width</strong> are available for every 5%. 0, 5, 10, 15...<br />
-// <strong>Pixel Heights and Widths</strong> are available for every 5px up to 400px</p>
+// ### 0 to 101 pixels
+// Widths / heights are available for each pixel up to 101px.
 //
-// <p>Also available <strong>[f-w-max-{amount}]</strong>, <strong>[f-w-min-{amount}]</strong>, <strong>[f-h-max-{amount}]</strong>, <strong>[f-h-min-{amount}]</strong>,
+// ### 100 to 900 pixels
+// Widths / heights are available for every 25 pixels... 100px, 125px, 150px, ...
+//
+// <ul>
+// <li><strong>f-w-100</strong> -  width: 100%</li>
+// <li><strong>f-w-max-100</strong> - max-width: 100%</li>
+// <li><strong>f-w-min-50</strong> - min-width: 50%</li>
+// </ul>
+//
+// <ul>
+// <li><strong>f-h-40px</strong> -  height: 40px</li>
+// <li><strong>f-h-max-200px</strong> - max-height: 200px</li>
+// <li><strong>f-h-min-125px</strong> - min-height: 120px</li>
+// </ul>
 //
 // <div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap>
 //   <div f-bg-white f-box-shadow-1 f-m-5px f-w-30px f-h-30px></div>
@@ -22,14 +35,14 @@
 // </div>
 //
 // ```
-//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-30px f-h-30px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-40px f-h-40px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-50px f-h-50px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-60px f-h-60px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-70px f-h-70px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-80px f-h-80px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-90px f-h-90px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-100px f-h-100px></div>
+//   <div f-w-30px f-h-30px></div>
+//   <div f-w-40px f-h-40px></div>
+//   <div f-w-50px f-h-50px></div>
+//   <div f-w-60px f-h-60px></div>
+//   <div f-w-70px f-h-70px></div>
+//   <div f-w-80px f-h-80px></div>
+//   <div f-w-90px f-h-90px></div>
+//   <div f-w-100px f-h-100px></div>
 // ```
 //
 // <div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap>
@@ -44,16 +57,33 @@
 // </div>
 //
 // ```
-//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-30px f-h-100px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-40px f-h-100px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-50px f-h-100px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-60px f-h-100px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-70px f-h-100px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-80px f-h-100px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-90px f-h-100px></div>
-//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-100px f-h-100px></div>
+//   <div  f-w-30px f-h-100px></div>
+//   <div  f-w-40px f-h-100px></div>
+//   <div  f-w-50px f-h-100px></div>
+//   <div  f-w-60px f-h-100px></div>
+//   <div  f-w-70px f-h-100px></div>
+//   <div  f-w-80px f-h-100px></div>
+//   <div  f-w-90px f-h-100px></div>
+//   <div  f-w-100px f-h-100px></div>
 // ```
 //
+// <h2 f-m-b-16px >Width Percentage</h2>
+//  <div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap>
+//   <div  f-w-10 f-h-100px f-bg-green-400></div>
+//   <div  f-w-15 f-h-100px f-bg-red-100></div>
+//   <div  f-w-25 f-h-100px f-bg-orange-400></div>
+//   <div  f-w-50 f-h-100px f-bg-red-500></div>
+//   <div  f-w-100 f-h-100px f-bg-blue-700></div>
+// </div>
+//
+//  ```
+//  <div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap>
+//   <div  f-w-10 f-h-100px f-bg-green-400></div>
+//   <div  f-w-15 f-h-100px f-bg-red-100></div>
+//   <div  f-w-25 f-h-100px f-bg-orange-900></div>
+//   <div  f-w-50 f-h-100px f-bg-red-500></div>
+//   <div  f-w-100 f-h-100px f-bg-blue-700></div>
+//  ```
 //
 // Style guide: Height-Width
 

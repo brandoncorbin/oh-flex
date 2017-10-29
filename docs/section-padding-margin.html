@@ -13,6 +13,22 @@
   <link rel="stylesheet" href="kss-assets/kss.css">
   <link rel="stylesheet" href="../lib/oh-flex.css">
 
+
+  <style type="text/css">
+  .kss-style pre {
+    padding:16px;
+    margin-left:-20px;
+    margin-right:-20px;
+    margin-top:26px;
+    margin-bottom:26px;
+  }
+    .kss-style pre, .kss-style code, .kss-style kbd, .kss-style samp {
+      background-color:rgb(45, 45, 45);
+      color:rgb(226, 176, 47);
+      border-radius:0px;
+    }
+  </style>
+
 </head>
 <body id="kss-node" >
 
@@ -40,7 +56,7 @@
               <!-- <span f-note>3</span> -->
             </a>
             <a f-item href="section-colors.html">
-              <div f-title>Colors</div>
+              <div f-title>Material Colors</div>
               <!-- <span f-note>4</span> -->
             </a>
             <a f-item href="section-flexbox.html">
@@ -105,7 +121,7 @@
           </div>
         </footer>
       </aside>
-      <main f-content f-layout  f-collapse-phone>
+      <main f-content  f-collapse-phone>
         <header f-header>
           <div f-toolbar>
             <div f-buttons-left>
@@ -122,34 +138,35 @@
 
       <div f-content>
 
+        <div f-contain-900px>
 
-
-            <header f-header f-m-b-20px>
-              <div f-toolbar>
-                <div f-title f-rubber>
-                  Padding &amp; Margins
+              <header f-header f-m-b-20px>
+                <div f-toolbar f-bg-white>
+                  <div f-title f-rubber>
+                    Padding &amp; Margins
+                  </div>
+                  <button clear f-button>s.10</button>
                 </div>
-                <button clear f-button>s.10</button>
-              </div>
-            </header>
-          <div id="kssref-padding-margin" class="kss-section kss-section--depth-1 ">
+              </header>
+            <div f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-padding-margin" class="kss-section kss-section--depth-1 ">
 
-            <div f-p-b-20px class="kss-style">
-              <h1 class="kss-title kss-title--level-1">
-                <a class="kss-title__permalink" href="#kssref-padding-margin">
-                  <span class="kss-title__ref">
-                    10
-                    <span class="kss-title__permalink-hash">
-                        #Padding-Margin
+              <div  class="kss-style">
+                <div f-h1 f-title f-m-t-6px class="title--level-1">
+                  <a class="" f-t-grey-900 href="#kssref-padding-margin">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>10</span>
+                      <span f-t-grey-800>Padding &amp; Margins</span>
+                      <span class="kss-title__permalink-hash">
+                          #Padding-Margin
+                      </span>
                     </span>
-                  </span>
-                  Padding &amp; Margins
-                </a>
-              </h1>
+
+                  </a>
+                </div>
 
 
-                <div class="kss-description"  f-p-20px>
-                  <p>Padding and margins are one of the biggest problems with existing UI frameworks.
+                  <div class="kss-description"  f-p-b-20px>
+                    <p>Padding and margins are one of the biggest problems with existing UI frameworks.
 When you absolutely need to tweak some padding or margin, you shouldn&#39;t be forced to
 write CSS. Instead, use Oh-Flex to nudge things around.
  <h2>Padding</h2>
@@ -219,16 +236,21 @@ that god awful black toe at the top of the iPhone when it&#39;s rotated.</p>
 <div f-p-l-safe-area f-p-r-safe-area>I&#39;m save from these things!</div>
 
 
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_box-size.scss</code>, line 185
                 </div>
 
             </div>
 
+        </div> <!-- end content -wrapper>
 
-              <div class="kss-source kss-style">
-                Source: <code>_box-size.scss</code>, line 155
-              </div>
 
-          </div>
+
 
       </div> <!-- end inner f-content -->
 

@@ -13,6 +13,22 @@
   <link rel="stylesheet" href="kss-assets/kss.css">
   <link rel="stylesheet" href="../lib/oh-flex.css">
 
+
+  <style type="text/css">
+  .kss-style pre {
+    padding:16px;
+    margin-left:-20px;
+    margin-right:-20px;
+    margin-top:26px;
+    margin-bottom:26px;
+  }
+    .kss-style pre, .kss-style code, .kss-style kbd, .kss-style samp {
+      background-color:rgb(45, 45, 45);
+      color:rgb(226, 176, 47);
+      border-radius:0px;
+    }
+  </style>
+
 </head>
 <body id="kss-node" class="kss-fullscreen-mode">
 
@@ -40,7 +56,7 @@
               <!-- <span f-note>3</span> -->
             </a>
             <a f-item href="section-colors.html">
-              <div f-title>Colors</div>
+              <div f-title>Material Colors</div>
               <!-- <span f-note>4</span> -->
             </a>
             <a f-item href="section-flexbox.html">
@@ -105,7 +121,7 @@
           </div>
         </footer>
       </aside>
-      <main f-content f-layout  f-collapse-phone>
+      <main f-content  f-collapse-phone>
         <header f-header>
           <div f-toolbar>
             <div f-buttons-left>
@@ -122,34 +138,35 @@
 
       <div f-content>
 
+        <div f-contain-900px>
 
-
-            <header f-header f-m-b-20px>
-              <div f-toolbar>
-                <div f-title f-rubber>
-                  Media Queries
+              <header f-header f-m-b-20px>
+                <div f-toolbar f-bg-white>
+                  <div f-title f-rubber>
+                    Media Queries
+                  </div>
+                  <button clear f-button>s.12</button>
                 </div>
-                <button clear f-button>s.12</button>
-              </div>
-            </header>
-          <div id="kssref-show-hide" class="kss-section kss-section--depth-1 is-fullscreen">
+              </header>
+            <div f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-show-hide" class="kss-section kss-section--depth-1 is-fullscreen">
 
-            <div f-p-b-20px class="kss-style">
-              <h1 class="kss-title kss-title--level-1">
-                <a class="kss-title__permalink" href="#kssref-show-hide">
-                  <span class="kss-title__ref">
-                    12
-                    <span class="kss-title__permalink-hash">
-                        #Show / Hide
+              <div  class="kss-style">
+                <div f-h1 f-title f-m-t-6px class="title--level-1">
+                  <a class="" f-t-grey-900 href="#kssref-show-hide">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>12</span>
+                      <span f-t-grey-800>Media Queries</span>
+                      <span class="kss-title__permalink-hash">
+                          #Show / Hide
+                      </span>
                     </span>
-                  </span>
-                  Media Queries
-                </a>
-              </h1>
+
+                  </a>
+                </div>
 
 
-                <div class="kss-description"  f-p-20px>
-                  <p>Since we&#39;re embracing flex, let&#39;s embrace the idea that there that are 3 main states for modern web views.</p>
+                  <div class="kss-description"  f-p-b-20px>
+                    <p>Since we&#39;re embracing flex, let&#39;s embrace the idea that there that are 3 main states for modern web views.</p>
 <p>By default any tag with a f-show- or f-hide- are hidden by default, then the media query is applied.</p>
 <p><strong>Phone, Tablet, Desktop</strong> - everything else can fall close enough to one of these.</p>
 <div f-p-20px f-bg-red-200 f-t-white f-show-phone>
@@ -165,16 +182,21 @@
 </div>
 
 
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_media.scss</code>, line 1
                 </div>
 
             </div>
 
+        </div> <!-- end content -wrapper>
 
-              <div class="kss-source kss-style">
-                Source: <code>_media.scss</code>, line 1
-              </div>
 
-          </div>
+
 
       </div> <!-- end inner f-content -->
 

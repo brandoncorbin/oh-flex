@@ -30,7 +30,7 @@
   </style>
 
 </head>
-<body id="kss-node" >
+<body id="kss-node" class="kss-fullscreen-mode">
 
   <div f-layout f-layout-aside id="app">
     <aside f-collapse-phone :f-aside-open="menu_open" f-column f-flex f-w-160px f-w-min-20 f-w-max-260px f-bg-secondary>
@@ -99,24 +99,6 @@
               <div f-title>Typography</div>
               <!-- <span f-note>14</span> -->
             </a>
-                <a f-item f-bg-white-10 f-t-normal href="section-typography.html#kssref-typography-colors">
-                  <div f-title f-t-14px>
-                    - Text Color
-                  </div>
-                  <!-- <span>14.1</span> -->
-                </a>
-                <a f-item f-bg-white-10 f-t-normal href="section-typography.html#kssref-typography-icons">
-                  <div f-title f-t-14px>
-                    - Icon
-                  </div>
-                  <!-- <span>14.2</span> -->
-                </a>
-                <a f-item f-bg-white-10 f-t-normal href="section-typography.html#kssref-typography-size">
-                  <div f-title f-t-14px>
-                    - Font Size
-                  </div>
-                  <!-- <span>14.3</span> -->
-                </a>
           <div f-item-divider f-t-black-40>
             About
           </div>
@@ -161,21 +143,21 @@
               <header f-header f-m-b-20px>
                 <div f-toolbar f-bg-white>
                   <div f-title f-rubber>
-                    Typography
+                    Justify
                   </div>
-                  <button clear f-button>s.14</button>
+                  <button clear f-button>s.5.2</button>
                 </div>
               </header>
-            <div f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-typography" class="kss-section kss-section--depth-1 ">
+            <div f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-flexbox-justify" class="kss-section kss-section--depth-2 is-fullscreen">
 
               <div  class="kss-style">
-                <div f-h1 f-title f-m-t-6px class="title--level-1">
-                  <a class="" f-t-grey-900 href="#kssref-typography">
+                <div f-h2 f-title f-m-t-6px class="title--level-2">
+                  <a class="" f-t-grey-900 href="#kssref-flexbox-justify">
                     <span f-t-22px>
-                      <span  f-t-grey-500 f-t-normal>14</span>
-                      <span f-t-grey-800>Typography</span>
+                      <span  f-t-grey-500 f-t-normal>5.2</span>
+                      <span f-t-grey-800>Justify</span>
                       <span class="kss-title__permalink-hash">
-                          #Typography
+                          #Flexbox.justify
                       </span>
                     </span>
 
@@ -183,153 +165,74 @@
                 </div>
 
 
+                  <div class="kss-description"  f-p-b-20px>
+                    <p> Use justify to stretch, spread and control the format of children elements.</p>
+<ul>
+  <li><strong>f-justify-center</strong> </li>
+  <li><strong>f-justify-start</strong>.</li>
+  <li><strong>f-justify-between</strong></li>
+ <li><strong>f-justify-around</strong></li>
+</ul>
+
+<h3 id="f-justify-between">f-justify-between</h3>
+<div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-between f-m-t-20px>
+ <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px></div>
+ <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px></div>
+ <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px></div>
+</div>
+
+<pre><code>&lt;div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-between f-m-t-20px&gt;
+ &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px&gt;&lt;/div&gt;
+ &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px&gt;&lt;/div&gt;
+ &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h3 id="f-justify-around">f-justify-around</h3>
+<div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-around f-m-t-20px>
+ <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px></div>
+ <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px></div>
+ <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px></div>
+</div>
+
+<pre><code>&lt;div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-around f-m-t-20px&gt;
+ &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px&gt;&lt;/div&gt;
+ &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px&gt;&lt;/div&gt;
+ &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h3 id="f-justify-stretch">f-justify-stretch</h3>
+<div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-stretch f-m-t-20px>
+ <div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-300 f-p-20px></div>
+ <div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-400 f-p-20px></div>
+ <div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-500 f-p-20px></div>
+</div>
+
+<pre><code>&lt;div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-stretch f-m-t-20px&gt;
+ &lt;div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-300 f-p-20px&gt;&lt;/div&gt;
+ &lt;div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-400 f-p-20px&gt;&lt;/div&gt;
+ &lt;div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-500 f-p-20px&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h3 id="f-justify-center">f-justify-center</h3>
+<div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-center f-m-t-20px>
+ <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px></div>
+ <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px></div>
+ <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px></div>
+</div>
+
+<pre><code>&lt;div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-center f-m-t-20px&gt;
+ &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px&gt;&lt;/div&gt;
+ &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px&gt;&lt;/div&gt;
+ &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                  </div>
 
               </div>
 
 
+                <div class="kss-source kss-style">
+                  Source: <code>_flex-box.scss</code>, line 122
+                </div>
 
             </div>
-            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-typography-colors" class="kss-section kss-section--depth-2 ">
-
-              <div  class="kss-style">
-                <div f-h2 f-title f-m-t-6px class="title--level-2">
-                  <a class="" f-t-grey-900 href="#kssref-typography-colors">
-                    <span f-t-22px>
-                      <span  f-t-grey-500 f-t-normal>14.1</span>
-                      <span f-t-grey-800>Text Color</span>
-                      <span class="kss-title__permalink-hash">
-                          #Typography.colors
-                      </span>
-                    </span>
-
-                  </a>
-                </div>
-
-
-                  <div class="kss-description"  f-p-b-20px>
-                    <p>Simple Text Fading</p>
-<div f-flex f-row>
-    <div f-w-50>
-        <div f-p-10px f-t-bold f-t-primary>f-t-primary</div>
-        <div f-p-10px f-t-bold f-t-secondary>f-t-secondary</div>
-        <div f-p-10px f-t-bold f-t-black-100>f-t-black-100</div>
-        <div f-p-10px f-t-bold f-t-black-90>f-t-black-90</div>
-        <div f-p-10px f-t-bold f-t-black-80>f-t-black-80</div>
-        <div f-p-10px f-t-bold f-t-black-70>f-t-black-70</div>
-        <div f-p-10px f-t-bold f-t-black-60>f-t-black-60</div>
-        <div f-p-10px f-t-bold f-t-black-50>f-t-black-50</div>
-        <div f-p-10px f-t-bold f-t-black-40>f-t-black-40</div>
-        <div f-p-10px f-t-bold f-t-black-30>f-t-black-30</div>
-        <div f-p-10px f-t-bold f-t-black-20>f-t-black-20</div>
-        <div f-p-10px f-t-bold f-t-black-10>f-t-black-10</div>
-        <div f-p-10px f-t-bold f-t-black-5>f-t-black-5</div>
-    </div>
-    <div f-w-50 f-bg-black-90>
-        <div f-p-10px f-t-bold f-t-white-100>f-t-white-100</div>
-        <div f-p-10px f-t-bold f-t-white-90>f-t-white-90</div>
-        <div f-p-10px f-t-bold f-t-white-80>f-t-white-80</div>
-        <div f-p-10px f-t-bold f-t-white-70>f-t-white-70</div>
-        <div f-p-10px f-t-bold f-t-white-60>f-t-white-60</div>
-        <div f-p-10px f-t-bold f-t-white-50>f-t-white-50</div>
-        <div f-p-10px f-t-bold f-t-white-40>f-t-white-40</div>
-        <div f-p-10px f-t-bold f-t-white-30>f-t-white-30</div>
-        <div f-p-10px f-t-bold f-t-white-20>f-t-white-20</div>
-        <div f-p-10px f-t-bold f-t-white-10>f-t-white-10</div>
-        <div f-p-10px f-t-bold f-t-white-5>f-t-white-5</div>
-    </div>
-</div>
-                  </div>
-
-              </div>
-
-
-                <div class="kss-source kss-style">
-                  Source: <code>_colors.scss</code>, line 72
-                </div>
-
-            </section>
-            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-typography-icons" class="kss-section kss-section--depth-2 ">
-
-              <div  class="kss-style">
-                <div f-h2 f-title f-m-t-6px class="title--level-2">
-                  <a class="" f-t-grey-900 href="#kssref-typography-icons">
-                    <span f-t-22px>
-                      <span  f-t-grey-500 f-t-normal>14.2</span>
-                      <span f-t-grey-800>Icon</span>
-                      <span class="kss-title__permalink-hash">
-                          #Typography.Icons
-                      </span>
-                    </span>
-
-                  </a>
-                </div>
-
-
-                  <div class="kss-description"  f-p-b-20px>
-                    <p>Oh Flex doesn&#39;t contain an icon pack. Instead, you should use one of the million amazing that already exist.
-However, universally controlling the various icon pack font sizes is a gamble. Here I try to make a
-general icon size controller.</p>
-<h3 id="f-icon-sm">f-icon-sm</h3>
-<h3 id="f-icon-md">f-icon-md</h3>
-<h3 id="f-icon-lg">f-icon-lg</h3>
-
-                  </div>
-
-              </div>
-
-
-                <div class="kss-source kss-style">
-                  Source: <code>_item.scss</code>, line 47
-                </div>
-
-            </section>
-            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-typography-size" class="kss-section kss-section--depth-2 ">
-
-              <div  class="kss-style">
-                <div f-h2 f-title f-m-t-6px class="title--level-2">
-                  <a class="" f-t-grey-900 href="#kssref-typography-size">
-                    <span f-t-22px>
-                      <span  f-t-grey-500 f-t-normal>14.3</span>
-                      <span f-t-grey-800>Font Size</span>
-                      <span class="kss-title__permalink-hash">
-                          #Typography.size
-                      </span>
-                    </span>
-
-                  </a>
-                </div>
-
-
-                  <div class="kss-description"  f-p-b-20px>
-                    <p>Markdown:</p>
-<ul>
-<li f-t-8px>.f-t-8px</li>
-<li f-t-10px>.f-t-10px</li>
-<li f-t-12px>.f-t-12px</li>
-<li f-t-14px>.f-t-14px</li>
-<li f-t-16px>.f-t-16px</li>
-<li f-t-18px>.f-t-18px</li>
-<li f-t-20px>.f-t-20px</li>
-<li f-t-22px>.f-t-22px</li>
-<li f-t-24px>.f-t-24px</li>
-<li f-t-26px>.f-t-26px</li>
-<li f-t-28px>.f-t-28px</li>
-<li f-t-30px>.f-t-30px</li>
-<li f-t-32px>.f-t-32px</li>
-<li f-t-36px>.f-t-36px</li>
-<li f-t-40px>.f-t-40px</li>
-<li f-t-42px>.f-t-42px</li>
-</ul>
-                  </div>
-
-              </div>
-
-
-                <div class="kss-source kss-style">
-                  Source: <code>_text.scss</code>, line 1
-                </div>
-
-            </section>
 
         </div> <!-- end content -wrapper>
 

@@ -13,6 +13,22 @@
   <link rel="stylesheet" href="kss-assets/kss.css">
   <link rel="stylesheet" href="../lib/oh-flex.css">
 
+
+  <style type="text/css">
+  .kss-style pre {
+    padding:16px;
+    margin-left:-20px;
+    margin-right:-20px;
+    margin-top:26px;
+    margin-bottom:26px;
+  }
+    .kss-style pre, .kss-style code, .kss-style kbd, .kss-style samp {
+      background-color:rgb(45, 45, 45);
+      color:rgb(226, 176, 47);
+      border-radius:0px;
+    }
+  </style>
+
 </head>
 <body id="kss-node" class="kss-fullscreen-mode">
 
@@ -40,7 +56,7 @@
               <!-- <span f-note>3</span> -->
             </a>
             <a f-item href="section-colors.html">
-              <div f-title>Colors</div>
+              <div f-title>Material Colors</div>
               <!-- <span f-note>4</span> -->
             </a>
             <a f-item href="section-flexbox.html">
@@ -91,7 +107,7 @@
                 </a>
                 <a f-item f-bg-white-10 f-t-normal href="section-typography.html#kssref-typography-icons">
                   <div f-title f-t-14px>
-                    - Oh Flex doesn&#x27;t contain an icon pack. Instead, you should use one of the million amazing that already exist. However, universally controlling the various icon pack font sizes is a gamble. Here I try to make a general icon size controller.
+                    - Icon
                   </div>
                   <!-- <span>14.2</span> -->
                 </a>
@@ -123,7 +139,7 @@
           </div>
         </footer>
       </aside>
-      <main f-content f-layout  f-collapse-phone>
+      <main f-content  f-collapse-phone>
         <header f-header>
           <div f-toolbar>
             <div f-buttons-left>
@@ -140,38 +156,44 @@
 
       <div f-content>
 
+        <div f-contain-900px>
 
-
-            <header f-header f-m-b-20px>
-              <div f-toolbar>
-                <div f-title f-rubber>
-                  Typography
+              <header f-header f-m-b-20px>
+                <div f-toolbar f-bg-white>
+                  <div f-title f-rubber>
+                    Typography
+                  </div>
+                  <button clear f-button>s.14</button>
                 </div>
-                <button clear f-button>s.14</button>
-              </div>
-            </header>
-          <div id="kssref-typography" class="kss-section kss-section--depth-1 is-fullscreen">
+              </header>
+            <div f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-typography" class="kss-section kss-section--depth-1 is-fullscreen">
 
-            <div f-p-b-20px class="kss-style">
-              <h1 class="kss-title kss-title--level-1">
-                <a class="kss-title__permalink" href="#kssref-typography">
-                  <span class="kss-title__ref">
-                    14
-                    <span class="kss-title__permalink-hash">
-                        #Typography
+              <div  class="kss-style">
+                <div f-h1 f-title f-m-t-6px class="title--level-1">
+                  <a class="" f-t-grey-900 href="#kssref-typography">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>14</span>
+                      <span f-t-grey-800>Typography</span>
+                      <span class="kss-title__permalink-hash">
+                          #Typography
+                      </span>
                     </span>
-                  </span>
-                  Typography
-                </a>
-              </h1>
+
+                  </a>
+                </div>
+
+
+
+              </div>
 
 
 
             </div>
 
+        </div> <!-- end content -wrapper>
 
 
-          </div>
+
 
       </div> <!-- end inner f-content -->
 

@@ -13,6 +13,22 @@
   <link rel="stylesheet" href="kss-assets/kss.css">
   <link rel="stylesheet" href="../lib/oh-flex.css">
 
+
+  <style type="text/css">
+  .kss-style pre {
+    padding:16px;
+    margin-left:-20px;
+    margin-right:-20px;
+    margin-top:26px;
+    margin-bottom:26px;
+  }
+    .kss-style pre, .kss-style code, .kss-style kbd, .kss-style samp {
+      background-color:rgb(45, 45, 45);
+      color:rgb(226, 176, 47);
+      border-radius:0px;
+    }
+  </style>
+
 </head>
 <body id="kss-node" class="kss-fullscreen-mode">
 
@@ -105,7 +121,7 @@
           </div>
         </footer>
       </aside>
-      <main f-content f-layout  f-collapse-phone>
+      <main f-content  f-collapse-phone>
         <header f-header>
           <div f-toolbar>
             <div f-buttons-left>
@@ -122,42 +138,42 @@
 
       <div f-content>
 
+        <div f-contain-900px>
 
-
-            <header f-header f-m-b-20px>
-              <div f-toolbar>
-                <div f-title f-rubber>
-                  Flexbox
+              <header f-header f-m-b-20px>
+                <div f-toolbar f-bg-white>
+                  <div f-title f-rubber>
+                    Flexbox
+                  </div>
+                  <button clear f-button>s.5.1</button>
                 </div>
-                <button clear f-button>s.5.1</button>
-              </div>
-            </header>
-          <div id="kssref-flexbox-alignment" class="kss-section kss-section--depth-2 is-fullscreen">
+              </header>
+            <div f-p-20px f-box-shadow-3 id="kssref-flexbox-alignment" class="kss-section kss-section--depth-2 is-fullscreen">
 
-            <div f-p-b-20px class="kss-style">
-              <h2 class="kss-title kss-title--level-2">
-                <a class="kss-title__permalink" href="#kssref-flexbox-alignment">
-                  <span class="kss-title__ref">
-                    5.1
-                    <span class="kss-title__permalink-hash">
-                        #Flexbox.alignment
+              <div  class="kss-style">
+                <h2 class="kss-title kss-title--level-2">
+                  <a class="kss-title__permalink" href="#kssref-flexbox-alignment">
+                    <span class="kss-title__ref">
+                      5.1
+                      <span class="kss-title__permalink-hash">
+                          #Flexbox.alignment
+                      </span>
                     </span>
-                  </span>
-                  Flexbox
-                </a>
-              </h2>
+                    Flexbox
+                  </a>
+                </h2>
 
 
-                <div class="kss-description"  f-p-20px>
-                  <p>Let&#39;s start flexing! Sure your friend using IE 10 and below might not like you that much
+                  <div class="kss-description"  f-p-b-20px>
+                    <p>Let&#39;s start flexing! Sure your friend using IE 10 and below might not like you that much
 but really... should we care what they think?</p>
  <h2>Using Rubber!</h2>
 
 <p> Rubber is a flexible box - it will take up any available space.</p>
  <div f-toolbar>
-   <button f-button f-w-30px f-stiff>Left</button>
+   <button f-button f-w-min-30px f-stiff>Left</button>
    <div f-rubber f-bg-black-10 f-t-center>RUBBER!</div>
-   <button f-button f-w-30px f-stiff>Right</button>
+   <button f-button f-w-min-30px f-stiff>Right</button>
  </div>
 
  <h2>Flexbox Row with variable widths</h2>
@@ -203,16 +219,21 @@ but really... should we care what they think?</p>
 <p>Let&#39;s start flexing! Sure your friend using IE 10 and below might not like you that much
 but really... should we care what they think?</p>
 
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_flex-box.scss</code>, line 1
                 </div>
 
             </div>
 
+        </div> <!-- end content -wrapper>
 
-              <div class="kss-source kss-style">
-                Source: <code>_flex-box.scss</code>, line 1
-              </div>
 
-          </div>
+
 
       </div> <!-- end inner f-content -->
 

@@ -13,6 +13,22 @@
   <link rel="stylesheet" href="kss-assets/kss.css">
   <link rel="stylesheet" href="../lib/oh-flex.css">
 
+
+  <style type="text/css">
+  .kss-style pre {
+    padding:16px;
+    margin-left:-20px;
+    margin-right:-20px;
+    margin-top:26px;
+    margin-bottom:26px;
+  }
+    .kss-style pre, .kss-style code, .kss-style kbd, .kss-style samp {
+      background-color:rgb(45, 45, 45);
+      color:rgb(226, 176, 47);
+      border-radius:0px;
+    }
+  </style>
+
 </head>
 <body id="kss-node" >
 
@@ -40,7 +56,7 @@
               <!-- <span f-note>3</span> -->
             </a>
             <a f-item href="section-colors.html">
-              <div f-title>Colors</div>
+              <div f-title>Material Colors</div>
               <!-- <span f-note>4</span> -->
             </a>
             <a f-item href="section-flexbox.html">
@@ -105,7 +121,7 @@
           </div>
         </footer>
       </aside>
-      <main f-content f-layout  f-collapse-phone>
+      <main f-content  f-collapse-phone>
         <header f-header>
           <div f-toolbar>
             <div f-buttons-left>
@@ -122,34 +138,35 @@
 
       <div f-content>
 
+        <div f-contain-900px>
 
-
-            <header f-header f-m-b-20px>
-              <div f-toolbar>
-                <div f-title f-rubber>
-                  Layout
+              <header f-header f-m-b-20px>
+                <div f-toolbar f-bg-white>
+                  <div f-title f-rubber>
+                    Layout
+                  </div>
+                  <button clear f-button>s.8</button>
                 </div>
-                <button clear f-button>s.8</button>
-              </div>
-            </header>
-          <div id="kssref-layout" class="kss-section kss-section--depth-1 ">
+              </header>
+            <div f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-layout" class="kss-section kss-section--depth-1 ">
 
-            <div f-p-b-20px class="kss-style">
-              <h1 class="kss-title kss-title--level-1">
-                <a class="kss-title__permalink" href="#kssref-layout">
-                  <span class="kss-title__ref">
-                    8
-                    <span class="kss-title__permalink-hash">
-                        #Layout
+              <div  class="kss-style">
+                <div f-h1 f-title f-m-t-6px class="title--level-1">
+                  <a class="" f-t-grey-900 href="#kssref-layout">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>8</span>
+                      <span f-t-grey-800>Layout</span>
+                      <span class="kss-title__permalink-hash">
+                          #Layout
+                      </span>
                     </span>
-                  </span>
-                  Layout
-                </a>
-              </h1>
+
+                  </a>
+                </div>
 
 
-                <div class="kss-description"  f-p-20px>
-                  <p>Structure pages with headers, footers, asides and more.</p>
+                  <div class="kss-description"  f-p-b-20px>
+                    <p>Structure pages with headers, footers, asides and more.</p>
 <p>Header and footer will always be at their respective locations (top and bottom)
 f-content will be rubbery and flex with the allowed space. It also is responsible
 for handling scrolling of the main content.</p>
@@ -190,16 +207,21 @@ for handling scrolling of the main content.</p>
   &lt;/main&gt;
 &lt;/div&gt;
 </code></pre>
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_layout.scss</code>, line 1
                 </div>
 
             </div>
 
+        </div> <!-- end content -wrapper>
 
-              <div class="kss-source kss-style">
-                Source: <code>_layout.scss</code>, line 1
-              </div>
 
-          </div>
+
 
       </div> <!-- end inner f-content -->
 

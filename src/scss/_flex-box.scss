@@ -4,15 +4,59 @@
 // Let's start flexing! Sure your friend using IE 10 and below might not like you that much
 // but really... should we care what they think?
 //
-//  <h2>Using Rubber!</h2>
+// Style guide: Flexbox
+
+[f-flex] {}
 //
-//  Rubber is a flexible box - it will take up any available space.
+// Align
 //
-//  <div f-toolbar>
-//    <button f-button f-w-30px f-stiff>Left</button>
-//    <div f-rubber f-bg-black-10 f-t-center>RUBBER!</div>
-//    <button f-button f-w-30px f-stiff>Right</button>
+// <ul>
+//   <li><strong>f-align-start</strong> Aligns to the start of the parent element.</li>
+//   <li><strong>f-align-center</strong> Aligns center the parent element.</li>
+//   <li><strong>f-align-end</strong> Aligns to the end of the parent element.</li>
+// </ul>
+//
+// <div f-align-end f-row>
+//  <div f-w-30 f-h-90px f-align-center f-m-r-10px f-bg-orange-300 f-p-20px>
+//    <div f-h-50px f-w-50px f-bg-white f-box-shadow-1></div>
 //  </div>
+//  <div f-w-30 f-h-90px f-align-start f-m-r-10px f-bg-orange-400 f-p-20px>
+//    <div f-h-50px f-w-50px f-bg-white f-box-shadow-1></div>
+//  </div>
+//  <div f-w-30 f-h-90px f-align-end f-m-r-10px f-bg-orange-500 f-p-20px>
+//    <div f-h-50px f-w-50px f-bg-white f-box-shadow-1></div>
+//  </div>
+// </div>
+// ```
+// <div f-align-end f-row f-p-30px f-h-90px f-bg-orange-400>
+//  <div f-h-50px f-w-50px f-bg-white f-box-shadow-1></div>
+// </div>
+// ```
+//
+// Style guide: Flexbox.align
+
+[f-align-center] {
+  @include flexbox();
+  @include align-items(center);
+}
+
+[f-align-start] {
+  @include flexbox();
+  @include align-items(flex-start);
+}
+
+[f-align-end] {
+  @include flexbox();
+  @include align-items(flex-end);
+}
+
+[f-wrap] {
+  @include flexbox();
+  @include flex-wrap(wrap);
+}
+//  Row & Column
+//
+//  Rows and columns are targeted with the ``f-row`` and ``f-column``
 //
 //  <h2>Flexbox Row with variable widths</h2>
 //
@@ -59,37 +103,7 @@
 // </div>
 // ```
 //
-// Style guide: Flexbox
-//
-// Flexbox Align
-//
-// Let's start flexing! Sure your friend using IE 10 and below might not like you that much
-// but really... should we care what they think?
-//
-//
-//
-//
-// Style guide: Flexbox.alignment
-
-[f-align-center] {
-  @include flexbox();
-  @include align-items(center);
-}
-
-[f-align-start] {
-  @include flexbox();
-  @include align-items(flex-start);
-}
-
-[f-align-end] {
-  @include flexbox();
-  @include align-items(flex-end);
-}
-
-[f-wrap] {
-  @include flexbox();
-  @include flex-wrap(wrap);
-}
+// Style guide: Flexbox.row-column
 
 [f-row] {
   @include flexbox();
@@ -105,6 +119,85 @@
   @include flexbox();
   @include align-items(flex-end);
 }
+//
+// Justify
+//
+//  Use justify to stretch, spread and control the format of children elements.
+//
+// <ul>
+//   <li><strong>f-justify-center</strong> </li>
+//   <li><strong>f-justify-start</strong>.</li>
+//   <li><strong>f-justify-between</strong></li>
+//  <li><strong>f-justify-around</strong></li>
+// </ul>
+//
+// ### f-justify-between
+//
+// <div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-between f-m-t-20px>
+//  <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px></div>
+//  <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px></div>
+//  <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px></div>
+// </div>
+//
+// ```
+// <div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-between f-m-t-20px>
+//  <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px></div>
+//  <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px></div>
+//  <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px></div>
+// </div>
+// ```
+//
+// ### f-justify-around
+//
+// <div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-around f-m-t-20px>
+//  <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px></div>
+//  <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px></div>
+//  <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px></div>
+// </div>
+//
+// ```
+// <div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-around f-m-t-20px>
+//  <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px></div>
+//  <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px></div>
+//  <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px></div>
+// </div>
+// ```
+//
+// ### f-justify-stretch
+//
+// <div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-stretch f-m-t-20px>
+//  <div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-300 f-p-20px></div>
+//  <div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-400 f-p-20px></div>
+//  <div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-500 f-p-20px></div>
+// </div>
+//
+// ```
+// <div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-stretch f-m-t-20px>
+//  <div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-300 f-p-20px></div>
+//  <div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-400 f-p-20px></div>
+//  <div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-500 f-p-20px></div>
+// </div>
+// ```
+//
+// ### f-justify-center
+//
+// <div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-center f-m-t-20px>
+//  <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px></div>
+//  <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px></div>
+//  <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px></div>
+// </div>
+//
+// ```
+// <div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-center f-m-t-20px>
+//  <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px></div>
+//  <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px></div>
+//  <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px></div>
+// </div>
+// ```
+//
+//
+//
+// Style guide: Flexbox.justify
 
 [f-justify-center] {
   @include flexbox();
@@ -130,6 +223,11 @@
 [f-justify-around] {
   @include flexbox();
   @include justify-content(space-around);
+}
+
+[f-justify-stretch] {
+  @include flexbox();
+  @include justify-content(stretch);
 }
 
 [f-justify-between] {

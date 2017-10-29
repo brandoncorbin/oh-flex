@@ -13,6 +13,22 @@
   <link rel="stylesheet" href="kss-assets/kss.css">
   <link rel="stylesheet" href="../lib/oh-flex.css">
 
+
+  <style type="text/css">
+  .kss-style pre {
+    padding:16px;
+    margin-left:-20px;
+    margin-right:-20px;
+    margin-top:26px;
+    margin-bottom:26px;
+  }
+    .kss-style pre, .kss-style code, .kss-style kbd, .kss-style samp {
+      background-color:rgb(45, 45, 45);
+      color:rgb(226, 176, 47);
+      border-radius:0px;
+    }
+  </style>
+
 </head>
 <body id="kss-node" class="kss-fullscreen-mode">
 
@@ -40,7 +56,7 @@
               <!-- <span f-note>3</span> -->
             </a>
             <a f-item href="section-colors.html">
-              <div f-title>Colors</div>
+              <div f-title>Material Colors</div>
               <!-- <span f-note>4</span> -->
             </a>
             <a f-item href="section-flexbox.html">
@@ -105,7 +121,7 @@
           </div>
         </footer>
       </aside>
-      <main f-content f-layout  f-collapse-phone>
+      <main f-content  f-collapse-phone>
         <header f-header>
           <div f-toolbar>
             <div f-buttons-left>
@@ -122,34 +138,35 @@
 
       <div f-content>
 
+        <div f-contain-900px>
 
-
-            <header f-header f-m-b-20px>
-              <div f-toolbar>
-                <div f-title f-rubber>
-                  List Item
+              <header f-header f-m-b-20px>
+                <div f-toolbar f-bg-white>
+                  <div f-title f-rubber>
+                    List Item
+                  </div>
+                  <button clear f-button>s.9.1</button>
                 </div>
-                <button clear f-button>s.9.1</button>
-              </div>
-            </header>
-          <div id="kssref-list-item" class="kss-section kss-section--depth-2 is-fullscreen">
+              </header>
+            <div f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-list-item" class="kss-section kss-section--depth-2 is-fullscreen">
 
-            <div f-p-b-20px class="kss-style">
-              <h2 class="kss-title kss-title--level-2">
-                <a class="kss-title__permalink" href="#kssref-list-item">
-                  <span class="kss-title__ref">
-                    9.1
-                    <span class="kss-title__permalink-hash">
-                        #List.Item
+              <div  class="kss-style">
+                <div f-h2 f-title f-m-t-6px class="title--level-2">
+                  <a class="" f-t-grey-900 href="#kssref-list-item">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>9.1</span>
+                      <span f-t-grey-800>List Item</span>
+                      <span class="kss-title__permalink-hash">
+                          #List.Item
+                      </span>
                     </span>
-                  </span>
-                  List Item
-                </a>
-              </h2>
+
+                  </a>
+                </div>
 
 
-                <div class="kss-description"  f-p-20px>
-                  <p>A simple to use List item</p>
+                  <div class="kss-description"  f-p-b-20px>
+                    <p>A simple to use List item</p>
 <div f-round f-bg-white f-box-shadow-2 f-contain f-m-b-10px>
 <article f-item>
   <div f-avatar>
@@ -184,16 +201,21 @@
    &lt;p f-note f-item-right&gt;More&lt;/p&gt;
 &lt;/article&gt;
 </code></pre>
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_item.scss</code>, line 1
                 </div>
 
             </div>
 
+        </div> <!-- end content -wrapper>
 
-              <div class="kss-source kss-style">
-                Source: <code>_item.scss</code>, line 1
-              </div>
 
-          </div>
+
 
       </div> <!-- end inner f-content -->
 
