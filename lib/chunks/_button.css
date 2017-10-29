@@ -1,0 +1,318 @@
+[f-hover-fade] {
+  transition: all 0.3s ease-out; }
+  [f-hover-fade]:hover {
+    transition: all 0.3s ease-out;
+    opacity: 0.6; }
+
+[f-hover-zoom] {
+  transition: all 0.3s ease-out; }
+  [f-hover-zoom]:hover {
+    transition: all 0.3s ease-out;
+    transform: scale(1.1); }
+
+[f-button-primary] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  z-index: 2;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
+  color: #FFF;
+  font-size: 17.48px;
+  height: 38px;
+  max-height: 38px;
+  background-color: #006dfe;
+  border: solid 1px transparent;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in;
+  outline-style: none; }
+  [f-button-primary]:before {
+    background-color: transparent;
+    transition: all 0.2s ease-in;
+    content: ""; }
+  [f-button-primary]:active:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    display: block;
+    z-index: 1;
+    transition: all 0.2s ease-out; }
+  [f-button-primary]:focus, [f-button-primary]:hover {
+    overflow: hidden !important; }
+    [f-button-primary]:focus:before, [f-button-primary]:hover:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.15);
+      display: block;
+      z-index: 1;
+      transition: all 0.2s ease-out; }
+  [f-button-primary][f-round] {
+    border-radius: 20px;
+    padding-left: 16px;
+    padding-right: 16px; }
+
+[f-button-dark] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  z-index: 2;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
+  color: #FFF;
+  font-size: 17.48px;
+  height: 38px;
+  max-height: 38px;
+  background-color: #222;
+  border: solid 1px transparent;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in;
+  outline-style: none; }
+  [f-button-dark]:before {
+    background-color: transparent;
+    transition: all 0.2s ease-in;
+    content: ""; }
+  [f-button-dark]:active:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    display: block;
+    z-index: 1;
+    transition: all 0.2s ease-out; }
+  [f-button-dark]:focus, [f-button-dark]:hover {
+    overflow: hidden !important; }
+    [f-button-dark]:focus:before, [f-button-dark]:hover:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.15);
+      display: block;
+      z-index: 1;
+      transition: all 0.2s ease-out; }
+  [f-button-dark][f-round] {
+    border-radius: 20px;
+    padding-left: 16px;
+    padding-right: 16px; }
+
+[f-button-inverse] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  z-index: 2;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
+  color: #FFF;
+  font-size: 17.48px;
+  height: 38px;
+  max-height: 38px;
+  background-color: transparent;
+  border: solid 1px #FFF;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in;
+  outline-style: none; }
+  [f-button-inverse]:before {
+    background-color: transparent;
+    transition: all 0.2s ease-in;
+    content: ""; }
+  [f-button-inverse]:active:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    display: block;
+    z-index: 1;
+    transition: all 0.2s ease-out; }
+  [f-button-inverse]:focus, [f-button-inverse]:hover {
+    overflow: hidden !important; }
+    [f-button-inverse]:focus:before, [f-button-inverse]:hover:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.15);
+      display: block;
+      z-index: 1;
+      transition: all 0.2s ease-out; }
+  [f-button-inverse][f-round] {
+    border-radius: 20px;
+    padding-left: 16px;
+    padding-right: 16px; }
+
+[f-button] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  z-index: 2;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
+  color: #222;
+  font-size: 17.48px;
+  height: 38px;
+  max-height: 38px;
+  background-color: transparent;
+  border: solid 1px #555555;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in;
+  outline-style: none;
+  outline-style: none !important; }
+  [f-button]:before {
+    background-color: transparent;
+    transition: all 0.2s ease-in;
+    content: ""; }
+  [f-button]:active:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    display: block;
+    z-index: 1;
+    transition: all 0.2s ease-out; }
+  [f-button]:focus, [f-button]:hover {
+    overflow: hidden !important; }
+    [f-button]:focus:before, [f-button]:hover:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.15);
+      display: block;
+      z-index: 1;
+      transition: all 0.2s ease-out; }
+  [f-button][f-round] {
+    border-radius: 20px;
+    padding-left: 16px;
+    padding-right: 16px; }
+  [f-button][f-square] {
+    border-radius: 0; }
+  [f-button][clear] {
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+    border-style: none;
+    font-size: 16.8px;
+    transition: all 0.2s ease-out; }
+    [f-button][clear].f-primary, [f-button][clear][f-primary] {
+      color: #006dfe; }
+    [f-button][clear]:hover {
+      color: #65a7ff; }
+  [f-button][f-icon-only] {
+    font-size: 22.4px !important; }
+    [f-button][f-icon-only] i,
+    [f-button][f-icon-only] icon,
+    [f-button][f-icon-only] span {
+      font-size: 22.4px !important; }
+      [f-button][f-icon-only] i:before,
+      [f-button][f-icon-only] icon:before,
+      [f-button][f-icon-only] span:before {
+        font-size: 22.4px !important; }
+  [f-button] i {
+    margin-left: 6px;
+    margin-right: 6px; }
+  [f-button][f-sm] {
+    font-size: 12px; }
+    [f-button][f-sm] i {
+      font-size: 14px; }
+      [f-button][f-sm] i:before {
+        font-size: 14px; }
+  [f-button][f-md] {
+    font-size: 14px; }
+    [f-button][f-md] i {
+      font-size: 16px; }
+      [f-button][f-md] i:before {
+        font-size: 16px; }

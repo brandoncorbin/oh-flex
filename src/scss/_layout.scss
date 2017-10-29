@@ -1,3 +1,5 @@
+@import '_variables';
+@import 'mixins/mixins'; //
 // Layout
 //
 // Structure pages with headers, footers, asides and more.
@@ -6,7 +8,29 @@
 // f-content will be rubbery and flex with the allowed space. It also is responsible
 // for handling scrolling of the main content.
 //
-// <h2>Standard Header Content Footer</h2>
+// Style guide: Layout
+
+.f-aside-open {
+  transition  : all 0.2s ease-out;
+
+  &:after {
+    transition: all 0.2s ease-out;
+    left      : -40px;
+    color     : rgba(0,0,0,0);
+  }
+  max-width   : 80% !important;
+  width       : 80% !important;
+  min-width   : 80% !important;
+  padding-left: 1px;
+
+  * {
+    opacity: 1;
+  }
+}
+//
+//
+// Header Content Footer Layout
+//
 // <div style="position:relative;" f-round f-bg-green-200 f-w-90 f-h-200px>
 //   <div f-layout>
 //     <header f-header f-bg-green-400>Header</header>
@@ -22,33 +46,9 @@
 //     <footer f-footer>Footer</footer>
 //   </div>
 // ```
-// <h2>Multi Menu Layout</h2>
-// <div style="position:relative;" f-round f-bg-blue-300 f-w-90 f-h-200px>
-//   <div f-layout f-layout-aside>
-//     <aside f-w-10 f-justify-center f-align-center f-bg-blue-100>1</aside>
-//     <aside f-w-20 f-justify-center f-align-center f-bg-blue-300>Menu 2</aside>
-//     <main>
-//       <header f-header f-t-white f-bg-blue-600 f-justify-center f-align-center >Header</header>
-//       <main f-content f-bg-blue-400 f-justify-center f-align-center >Content</main>
-//       <footer f-footer f-t-white f-bg-blue-600 f-justify-center f-align-center >Footer</footer>
-//     </main>
-//   </div>
-// </div>
 //
-// ```
-// <div f-layout f-layout-aside>
-//   <aside>Menu 1</aside>
-//   <aside>Menu 2</aside>
-//   <main>
-//     <header f-header>Header</header>
-//     <main f-content>Content</main>
-//     <footer f-footer>Footer</footer>
-//   </main>
-// </div>
-// ```
+// Style guide: Layout.atypical
 //
-//
-// Style guide: Layout
 
 [f-layout] {
   font-family: $font-family;
@@ -109,6 +109,7 @@
     @include justify-content(stretch);
     @include align-items(flex-start);
 
+    [f-aside],
     aside {
       @include flexbox();
       @include flex-direction(column);
@@ -120,6 +121,7 @@
       z-index     : 1;
     }
 
+    [f-main],
     main {
       position: relative;
       height  : 100%;
@@ -132,6 +134,36 @@
   }
   // end-master-menu-left
 }
+//
+// Side Menu Layout
+//
+//
+// <div style="position:relative;" f-round f-bg-blue-300 f-w-90 f-h-200px>
+//   <div f-layout f-layout-aside>
+//     <aside f-w-10 f-justify-center f-align-center f-bg-blue-100>1</aside>
+//     <aside f-w-20 f-justify-center f-align-center f-bg-blue-300>Menu 2</aside>
+//     <main>
+//       <header f-header f-t-white f-bg-blue-600 f-justify-center f-align-center >Header</header>
+//       <main f-content f-bg-blue-400 f-justify-center f-align-center >Content</main>
+//       <footer f-footer f-t-white f-bg-blue-600 f-justify-center f-align-center >Footer</footer>
+//     </main>
+//   </div>
+// </div>
+//
+// ```
+// <div f-layout f-layout-aside>
+//   <aside f-w-10>Menu 1</aside>
+//   <aside f-w-20>Menu 2</aside>
+//   <main>
+//     <header f-header>Header</header>
+//     <main f-content>Content</main>
+//     <footer f-footer>Footer</footer>
+//   </main>
+// </div>
+// ```
+//
+//
+// Style guide: Layout.aside-menu
 
 [f-contain] {
   max-width   : $contain-max-width;
@@ -186,24 +218,39 @@
     margin-left : auto;
   }
 }
-
-.f-aside-open {
-  transition  : all 0.2s ease-out;
-
-  &:after {
-    transition: all 0.2s ease-out;
-    left      : -40px;
-    color     : rgba(0,0,0,0);
-  }
-  max-width   : 80% !important;
-  width       : 80% !important;
-  min-width   : 80% !important;
-  padding-left: 1px;
-
-  * {
-    opacity: 1;
-  }
-}
+//
+// Containing a View
+//
+// Oh-Flex offers 6 different widths to contain your content.
+// When content is "contained", it will never be larger than
+// the specified size, and will automatically center in the available space.
+//
+// <div f-contain-700px f-bg-red-600 f-p-20px f-m-b-20px>
+//   <div f-bg-white f-m-10px f-p-10px f-round f-box-shadow-2>f-contain-700px</div>
+// </div>
+//
+// <div f-contain-800px f-bg-red-600 f-p-20px f-m-b-20px>
+//   <div f-bg-white f-m-10px f-p-10px f-round f-box-shadow-2>f-contain-800px</div>
+// </div>
+//
+// <div f-contain-900px f-bg-red-600 f-p-20px f-m-b-20px>
+//   <div f-bg-white f-m-10px f-p-10px f-round f-box-shadow-2>f-contain-900px</div>
+// </div>
+//
+// <div f-contain-1024px f-bg-red-600 f-p-20px f-m-b-20px>
+//   <div f-bg-white f-m-10px f-p-10px f-round f-box-shadow-2>f-contain-1024px</div>
+// </div>
+//
+// <div f-contain-1080px f-bg-red-600 f-p-20px f-m-b-20px>
+//   <div f-bg-white f-m-10px f-p-10px f-round f-box-shadow-2>f-contain-1080px</div>
+// </div>
+//
+// <div f-contain-1180px f-bg-red-600 f-p-20px f-m-b-20px>
+//   <div f-bg-white f-m-10px f-p-10px f-round f-box-shadow-2>f-contain-1180px</div>
+// </div>
+//
+// Style guide: Layout.site-contain
+//
 @include phone() {
   [f-layout-aside] {
     main[f-collapse-phone] {
@@ -278,3 +325,13 @@
   }
   // f-layout-aside
 }
+//
+// Layout Only CSS
+//
+// Only want the layout features of Oh-flex?
+// ````
+// <link href="https://unpkg.com/oh-flex/lib/chunks/_layout.css" rel="stylesheet" />
+// ```
+//
+//
+// Style guide: Layout.xtra

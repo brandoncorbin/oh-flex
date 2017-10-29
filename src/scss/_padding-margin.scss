@@ -1,0 +1,169 @@
+//
+// Padding & Margins
+//
+// Padding and margins are one of the biggest problems with existing UI frameworks.
+// When you absolutely need to tweak some padding or margin, you shouldn't be forced to
+// write CSS. Instead, use Oh-Flex to nudge things around.
+//
+// Style guide: Padding-Margin
+//
+
+[f-m-auto] {
+  margin-left : auto;
+  margin-right: auto;
+}
+
+[f-p-r-safe-area] {
+  padding-right: constant(safe-area-inset-right) !important;
+}
+
+[f-p-l-safe-area] {
+  padding-left: constant(safe-area-inset-left) !important;
+}
+//
+// Margin
+//
+// <dl>
+//    <li><strong>f-m-{size}</strong>: margin:{size}</li>
+//      <li><strong>f-m-t-{size}</strong>: margin-top:{size}</li>
+//     <li><strong>f-m-b-{size}</strong>: margin-bottom:{size}</li>
+//     <li><strong>f-m-l-{size}</strong>: margin-left:{size}</li>
+//     <li><strong>f-m-r-{size}</strong>: margin-right:{size}</li>
+//  </dl>
+//
+// <div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap f-m-t-20px>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-2px  f-h-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-4px  f-h-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-6px  f-h-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-8px  f-h-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-10px  f-h-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-12px  f-h-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-14px  f-h-100px></div>
+//   <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-16px  f-h-100px></div>
+// </div>
+//
+// ```
+// <div f-m-l-10px f-m-t-2px> </div>
+// <div f-m-l-10px f-m-t-4px> </div>
+// <div f-m-l-10px f-m-t-6px> </div>
+// <div f-m-l-10px f-m-t-8px> </div>
+// <div f-m-l-10px f-m-t-10px> </div>
+// <div f-m-l-10px f-m-t-12px> </div>
+// <div f-m-l-10px f-m-t-14px> </div>
+// <div f-m-l-10px f-m-t-16px> </div>
+// ```
+//
+// Style guide: Padding-Margin.margin
+
+[f-m-l-auto] {
+  margin-left: auto;
+}
+// Safe Area
+//
+// Oh-Flex does support iOS 11's constant(safe-area-inset-right) - to avoid having content under
+// that god awful black toe at the top of the iPhone when it's rotated.
+//
+// You'll need the following meta in your head  for this to work
+//
+// ```
+// <meta name="viewport" content="width=device-width,initial-scale=1, viewport-fit=cover">
+// ```
+//
+// ```
+// <div f-p-l-safe-area f-p-r-safe-area f-bg-green-100>I'm safe from these things!</div>
+//
+//
+//
+// Style guide: Padding-Margin.x-safearea
+
+[f-m-r-auto] {
+  margin-right: auto;
+}
+//
+//  Padding
+//
+//  <p>Padding supports up sizes between 1px and 31px</p>
+//
+//  <dl>
+//    <li><strong>f-p-{size}</strong>: padding:{size}</li>
+//      <li><strong>f-p-t-{size}</strong>: padding-top:{size}</li>
+//     <li><strong>f-p-b-{size}</strong>: padding-bottom:{size}</li>
+//     <li><strong>f-p-l-{size}</strong>: padding-left:{size}</li>
+//     <li><strong>f-p-r-{size}</strong>: padding-right:{size}</li>
+//  </dl>
+//
+// <div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-40px f-p-t-2px  f-h-100px><div f-bg-blue-600 f-h-20px f-w-20px></div> </div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-40px f-p-t-6px  f-h-100px><div f-bg-blue-600 f-h-20px f-w-20px></div> </div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-40px f-p-t-10px  f-h-100px><div f-bg-blue-600 f-h-20px f-w-20px></div> </div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-40px f-p-t-15px  f-h-100px><div f-bg-blue-600 f-h-20px f-w-20px></div> </div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-40px f-p-t-18px  f-h-100px><div f-bg-blue-600 f-h-20px f-w-20px></div> </div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-40px f-p-t-20px  f-h-100px><div f-bg-blue-600 f-h-20px f-w-20px></div> </div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-40px f-p-t-26px  f-h-100px><div f-bg-blue-600 f-h-20px f-w-20px></div> </div>
+//   <div f-bg-white f-box-shadow-1 f-m-5px f-w-40px f-p-t-30px  f-h-100px><div f-bg-blue-600 f-h-20px f-w-20px></div> </div>
+// </div>
+//
+//  ```
+// <div  f-m-5px f-w-40px f-p-t-2px  f-h-100><div f-bg-blue-600 f-h-20px f-w-20px></div> </div>
+// <div  f-m-5px f-w-40px f-p-t-6px  f-h-100><div f-bg-blue-600 f-h-20px f-w-20px></div> </div>
+// <div  f-m-5px f-w-40px f-p-t-10px  f-h-100><div f-bg-blue-600 f-h-20px f-w-20px></div> </div>
+// <div  f-m-5px f-w-40px f-p-t-15px  f-h-100><div f-bg-blue-600 f-h-20px f-w-20px></div> </div>
+// <div  f-m-5px f-w-40px f-p-t-18px  f-h-100><div f-bg-blue-600 f-h-20px f-w-20px></div> </div>
+// <div  f-m-5px f-w-40px f-p-t-20px  f-h-100><div f-bg-blue-600 f-h-20px f-w-20px></div> </div>
+// <div  f-m-5px f-w-40px f-p-t-26px  f-h-100><div f-bg-blue-600 f-h-20px f-w-20px></div> </div>
+// <div  f-m-5px f-w-40px f-p-t-30px  f-h-100><div f-bg-blue-600 f-h-20px f-w-20px></div> </div>
+//  ```
+//
+// Style guide: Padding-Margin.padding
+//
+@for $i from 0 to 31 {
+  [f-m-#{$i}px] {
+    margin: #{$i * 1px};
+  }
+
+  [f-m-l-#{$i}px] {
+    margin-left: #{$i * 1px};
+  }
+
+  [f-m-r-#{$i}px] {
+    margin-right: #{$i * 1px};
+  }
+
+  [f-m-b-#{$i}px] {
+    margin-bottom: #{$i * 1px};
+  }
+
+  [f-m-t-#{$i}px] {
+    margin-top: #{$i * 1px};
+  }
+
+  [f-p-#{$i}px] {
+    padding: #{$i * 1px};
+  }
+
+  [f-p-l-#{$i}px] {
+    padding-left: #{$i * 1px};
+  }
+
+  [f-p-r-#{$i}px] {
+    padding-right: #{$i * 1px};
+  }
+
+  [f-p-b-#{$i}px] {
+    padding-bottom: #{$i * 1px};
+  }
+
+  [f-p-t-#{$i}px] {
+    padding-top: #{$i * 1px};
+  }
+}
+//
+// Padding / Margin Only CSS
+//
+// Only want the padding-margin features of Oh-flex?
+// ````
+// <link href="https://unpkg.com/oh-flex/lib/chunks/_padding-margin.css" rel="stylesheet" />
+// ```
+//
+//
+// Style guide: Padding-Margin.xtra

@@ -15,6 +15,46 @@
 
 
   <style type="text/css">
+  .kss-title--level-1 {
+    display: none; }
+
+  .kss-source {
+    display:none !important;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: solid 1px #EEE;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 10px; }
+
+  #kss-node .kss-section {
+    margin-bottom: 20px; }
+
+  .kss-style .kss-title__ref {
+    border-top: solid 1px #EEE;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 10px !important;
+    margin-bottom: 5px;
+    color: #CCC !important; }
+
+  .kss-style h1 {
+    font-size: 30px; }
+
+  .kss-style h2 {
+    font-size: 24px; }
+
+  .kss-style h3 {
+    font-size: 22px; }
+
+  .kss-style dl,
+  .kss-style ul {
+    list-style: none; }
+
+  .kss-style kbd,
+  .kss-style pre,
+  .kss-style samp {
+    font-size: 13px; }
   .kss-style pre {
     padding:16px;
     margin-left:-20px;
@@ -56,10 +96,10 @@
               <!-- <span f-note>3</span> -->
             </a>
             <a f-item href="section-colors.html">
-              <div f-title>Material Colors</div>
+              <div f-title>Colors</div>
               <!-- <span f-note>4</span> -->
             </a>
-            <a f-item href="section-flexbox.html">
+            <a f-item href="section-flex.html">
               <div f-title>Flexbox</div>
               <!-- <span f-note>5</span> -->
             </a>
@@ -95,6 +135,12 @@
               <div f-title>Toolbar</div>
               <!-- <span f-note>13</span> -->
             </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-toolbar.html#kssref-toolbar-xtra">
+                  <div f-title f-t-14px>
+                    - Toolbar Only CSS
+                  </div>
+                  <!-- <span>13.1</span> -->
+                </a>
             <a f-item href="section-typography.html">
               <div f-title>Typography</div>
               <!-- <span f-note>14</span> -->
@@ -253,10 +299,42 @@
 
 
                 <div class="kss-source kss-style">
-                  Source: <code>_toolbar.scss</code>, line 1
+                  Source: <code>_toolbar.scss</code>, line 3
                 </div>
 
             </div>
+            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-toolbar-xtra" class="kss-section kss-section--depth-2 ">
+
+              <div  class="kss-style">
+                <div f-h2 f-title f-m-t-6px class="title--level-2">
+                  <a class="" f-t-grey-900 href="#kssref-toolbar-xtra">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>13.1</span>
+                      <span f-t-grey-800>Toolbar Only CSS</span>
+                      <span class="kss-title__permalink-hash">
+                          #Toolbar.xtra
+                      </span>
+                    </span>
+
+                  </a>
+                </div>
+
+
+                  <div class="kss-description"  f-p-b-20px>
+                    <p>Only want the toolbar feature of Oh-flex?</p>
+<pre><code class="lang-`">&lt;link href=&quot;https://unpkg.com/oh-flex/lib/chunks/_toolbar.css&quot; rel=&quot;stylesheet&quot; /&gt;
+</code></pre>
+
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_toolbar.scss</code>, line 119
+                </div>
+
+            </section>
 
         </div> <!-- end content -wrapper>
 

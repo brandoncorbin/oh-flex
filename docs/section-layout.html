@@ -15,6 +15,46 @@
 
 
   <style type="text/css">
+  .kss-title--level-1 {
+    display: none; }
+
+  .kss-source {
+    display:none !important;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: solid 1px #EEE;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 10px; }
+
+  #kss-node .kss-section {
+    margin-bottom: 20px; }
+
+  .kss-style .kss-title__ref {
+    border-top: solid 1px #EEE;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 10px !important;
+    margin-bottom: 5px;
+    color: #CCC !important; }
+
+  .kss-style h1 {
+    font-size: 30px; }
+
+  .kss-style h2 {
+    font-size: 24px; }
+
+  .kss-style h3 {
+    font-size: 22px; }
+
+  .kss-style dl,
+  .kss-style ul {
+    list-style: none; }
+
+  .kss-style kbd,
+  .kss-style pre,
+  .kss-style samp {
+    font-size: 13px; }
   .kss-style pre {
     padding:16px;
     margin-left:-20px;
@@ -56,10 +96,10 @@
               <!-- <span f-note>3</span> -->
             </a>
             <a f-item href="section-colors.html">
-              <div f-title>Material Colors</div>
+              <div f-title>Colors</div>
               <!-- <span f-note>4</span> -->
             </a>
-            <a f-item href="section-flexbox.html">
+            <a f-item href="section-flex.html">
               <div f-title>Flexbox</div>
               <!-- <span f-note>5</span> -->
             </a>
@@ -75,6 +115,30 @@
               <div f-title>Layout</div>
               <!-- <span f-note>8</span> -->
             </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-layout.html#kssref-layout-aside-menu">
+                  <div f-title f-t-14px>
+                    - Side Menu Layout
+                  </div>
+                  <!-- <span>8.1</span> -->
+                </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-layout.html#kssref-layout-atypical">
+                  <div f-title f-t-14px>
+                    - Header Content Footer Layout
+                  </div>
+                  <!-- <span>8.2</span> -->
+                </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-layout.html#kssref-layout-site-contain">
+                  <div f-title f-t-14px>
+                    - Containing a View
+                  </div>
+                  <!-- <span>8.3</span> -->
+                </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-layout.html#kssref-layout-xtra">
+                  <div f-title f-t-14px>
+                    - Layout Only CSS
+                  </div>
+                  <!-- <span>8.4</span> -->
+                </a>
             <a f-item href="section-list.html">
               <div f-title>List</div>
               <!-- <span f-note>9</span> -->
@@ -170,22 +234,36 @@
 <p>Header and footer will always be at their respective locations (top and bottom)
 f-content will be rubbery and flex with the allowed space. It also is responsible
 for handling scrolling of the main content.</p>
-<p><h2>Standard Header Content Footer</h2></p>
-<div style="position:relative;" f-round f-bg-green-200 f-w-90 f-h-200px>
-  <div f-layout>
-    <header f-header f-bg-green-400>Header</header>
-    <main f-content f-bg-green-100>Content</main>
-    <footer f-footer f-bg-green-500>Footer</footer>
-  </div>
-</div>
 
-<pre><code>  &lt;div f-layout&gt;
-    &lt;header f-header&gt;Header&lt;/header&gt;
-    &lt;main f-content&gt;Content&lt;/main&gt;
-    &lt;footer f-footer&gt;Footer&lt;/footer&gt;
-  &lt;/div&gt;
-</code></pre><p><h2>Multi Menu Layout</h2></p>
-<div style="position:relative;" f-round f-bg-blue-300 f-w-90 f-h-200px>
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_layout.scss</code>, line 3
+                </div>
+
+            </div>
+            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-layout-aside-menu" class="kss-section kss-section--depth-2 ">
+
+              <div  class="kss-style">
+                <div f-h2 f-title f-m-t-6px class="title--level-2">
+                  <a class="" f-t-grey-900 href="#kssref-layout-aside-menu">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>8.1</span>
+                      <span f-t-grey-800>Side Menu Layout</span>
+                      <span class="kss-title__permalink-hash">
+                          #Layout.aside-menu
+                      </span>
+                    </span>
+
+                  </a>
+                </div>
+
+
+                  <div class="kss-description"  f-p-b-20px>
+                    <div style="position:relative;" f-round f-bg-blue-300 f-w-90 f-h-200px>
   <div f-layout f-layout-aside>
     <aside f-w-10 f-justify-center f-align-center f-bg-blue-100>1</aside>
     <aside f-w-20 f-justify-center f-align-center f-bg-blue-300>Menu 2</aside>
@@ -198,8 +276,8 @@ for handling scrolling of the main content.</p>
 </div>
 
 <pre><code>&lt;div f-layout f-layout-aside&gt;
-  &lt;aside&gt;Menu 1&lt;/aside&gt;
-  &lt;aside&gt;Menu 2&lt;/aside&gt;
+  &lt;aside f-w-10&gt;Menu 1&lt;/aside&gt;
+  &lt;aside f-w-20&gt;Menu 2&lt;/aside&gt;
   &lt;main&gt;
     &lt;header f-header&gt;Header&lt;/header&gt;
     &lt;main f-content&gt;Content&lt;/main&gt;
@@ -213,10 +291,138 @@ for handling scrolling of the main content.</p>
 
 
                 <div class="kss-source kss-style">
-                  Source: <code>_layout.scss</code>, line 1
+                  Source: <code>_layout.scss</code>, line 137
                 </div>
 
-            </div>
+            </section>
+            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-layout-atypical" class="kss-section kss-section--depth-2 ">
+
+              <div  class="kss-style">
+                <div f-h2 f-title f-m-t-6px class="title--level-2">
+                  <a class="" f-t-grey-900 href="#kssref-layout-atypical">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>8.2</span>
+                      <span f-t-grey-800>Header Content Footer Layout</span>
+                      <span class="kss-title__permalink-hash">
+                          #Layout.atypical
+                      </span>
+                    </span>
+
+                  </a>
+                </div>
+
+
+                  <div class="kss-description"  f-p-b-20px>
+                    <div style="position:relative;" f-round f-bg-green-200 f-w-90 f-h-200px>
+  <div f-layout>
+    <header f-header f-bg-green-400>Header</header>
+    <main f-content f-bg-green-100>Content</main>
+    <footer f-footer f-bg-green-500>Footer</footer>
+  </div>
+</div>
+
+<pre><code>  &lt;div f-layout&gt;
+    &lt;header f-header&gt;Header&lt;/header&gt;
+    &lt;main f-content&gt;Content&lt;/main&gt;
+    &lt;footer f-footer&gt;Footer&lt;/footer&gt;
+  &lt;/div&gt;
+</code></pre>
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_layout.scss</code>, line 30
+                </div>
+
+            </section>
+            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-layout-site-contain" class="kss-section kss-section--depth-2 ">
+
+              <div  class="kss-style">
+                <div f-h2 f-title f-m-t-6px class="title--level-2">
+                  <a class="" f-t-grey-900 href="#kssref-layout-site-contain">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>8.3</span>
+                      <span f-t-grey-800>Containing a View</span>
+                      <span class="kss-title__permalink-hash">
+                          #Layout.site-contain
+                      </span>
+                    </span>
+
+                  </a>
+                </div>
+
+
+                  <div class="kss-description"  f-p-b-20px>
+                    <p>Oh-Flex offers 6 different widths to contain your content.
+When content is &quot;contained&quot;, it will never be larger than
+the specified size, and will automatically center in the available space.</p>
+<div f-contain-700px f-bg-red-600 f-p-20px f-m-b-20px>
+  <div f-bg-white f-m-10px f-p-10px f-round f-box-shadow-2>f-contain-700px</div>
+</div>
+
+<div f-contain-800px f-bg-red-600 f-p-20px f-m-b-20px>
+  <div f-bg-white f-m-10px f-p-10px f-round f-box-shadow-2>f-contain-800px</div>
+</div>
+
+<div f-contain-900px f-bg-red-600 f-p-20px f-m-b-20px>
+  <div f-bg-white f-m-10px f-p-10px f-round f-box-shadow-2>f-contain-900px</div>
+</div>
+
+<div f-contain-1024px f-bg-red-600 f-p-20px f-m-b-20px>
+  <div f-bg-white f-m-10px f-p-10px f-round f-box-shadow-2>f-contain-1024px</div>
+</div>
+
+<div f-contain-1080px f-bg-red-600 f-p-20px f-m-b-20px>
+  <div f-bg-white f-m-10px f-p-10px f-round f-box-shadow-2>f-contain-1080px</div>
+</div>
+
+<div f-contain-1180px f-bg-red-600 f-p-20px f-m-b-20px>
+  <div f-bg-white f-m-10px f-p-10px f-round f-box-shadow-2>f-contain-1180px</div>
+</div>
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_layout.scss</code>, line 221
+                </div>
+
+            </section>
+            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-layout-xtra" class="kss-section kss-section--depth-2 ">
+
+              <div  class="kss-style">
+                <div f-h2 f-title f-m-t-6px class="title--level-2">
+                  <a class="" f-t-grey-900 href="#kssref-layout-xtra">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>8.4</span>
+                      <span f-t-grey-800>Layout Only CSS</span>
+                      <span class="kss-title__permalink-hash">
+                          #Layout.xtra
+                      </span>
+                    </span>
+
+                  </a>
+                </div>
+
+
+                  <div class="kss-description"  f-p-b-20px>
+                    <p>Only want the layout features of Oh-flex?</p>
+<pre><code class="lang-`">&lt;link href=&quot;https://unpkg.com/oh-flex/lib/chunks/_layout.css&quot; rel=&quot;stylesheet&quot; /&gt;
+</code></pre>
+
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_layout.scss</code>, line 328
+                </div>
+
+            </section>
 
         </div> <!-- end content -wrapper>
 

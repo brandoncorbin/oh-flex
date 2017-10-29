@@ -15,6 +15,46 @@
 
 
   <style type="text/css">
+  .kss-title--level-1 {
+    display: none; }
+
+  .kss-source {
+    display:none !important;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: solid 1px #EEE;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 10px; }
+
+  #kss-node .kss-section {
+    margin-bottom: 20px; }
+
+  .kss-style .kss-title__ref {
+    border-top: solid 1px #EEE;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 10px !important;
+    margin-bottom: 5px;
+    color: #CCC !important; }
+
+  .kss-style h1 {
+    font-size: 30px; }
+
+  .kss-style h2 {
+    font-size: 24px; }
+
+  .kss-style h3 {
+    font-size: 22px; }
+
+  .kss-style dl,
+  .kss-style ul {
+    list-style: none; }
+
+  .kss-style kbd,
+  .kss-style pre,
+  .kss-style samp {
+    font-size: 13px; }
   .kss-style pre {
     padding:16px;
     margin-left:-20px;
@@ -56,10 +96,10 @@
               <!-- <span f-note>3</span> -->
             </a>
             <a f-item href="section-colors.html">
-              <div f-title>Material Colors</div>
+              <div f-title>Colors</div>
               <!-- <span f-note>4</span> -->
             </a>
-            <a f-item href="section-flexbox.html">
+            <a f-item href="section-flex.html">
               <div f-title>Flexbox</div>
               <!-- <span f-note>5</span> -->
             </a>
@@ -145,7 +185,7 @@
                   <div f-title f-rubber>
                     Icon
                   </div>
-                  <button clear f-button>s.14.2</button>
+                  <button clear f-button>s.14.1</button>
                 </div>
               </header>
             <div f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-typography-icons" class="kss-section kss-section--depth-2 is-fullscreen">
@@ -154,7 +194,7 @@
                 <div f-h2 f-title f-m-t-6px class="title--level-2">
                   <a class="" f-t-grey-900 href="#kssref-typography-icons">
                     <span f-t-22px>
-                      <span  f-t-grey-500 f-t-normal>14.2</span>
+                      <span  f-t-grey-500 f-t-normal>14.1</span>
                       <span f-t-grey-800>Icon</span>
                       <span class="kss-title__permalink-hash">
                           #Typography.Icons
@@ -170,8 +210,13 @@
 However, universally controlling the various icon pack font sizes is a gamble. Here I try to make a
 general icon size controller.</p>
 <h3 id="f-icon-sm">f-icon-sm</h3>
+<p><i f-icon-sm class="zmdi zmdi-help"></i></p>
 <h3 id="f-icon-md">f-icon-md</h3>
+<p> <i f-icon-md class="zmdi zmdi-help"></i></p>
 <h3 id="f-icon-lg">f-icon-lg</h3>
+<p><i f-icon-lg class="zmdi zmdi-help"></i></p>
+<h3 id="f-icon-xl">f-icon-xl</h3>
+<p><i f-icon-xl class="zmdi zmdi-help"></i></p>
 
                   </div>
 
@@ -179,7 +224,7 @@ general icon size controller.</p>
 
 
                 <div class="kss-source kss-style">
-                  Source: <code>_item.scss</code>, line 47
+                  Source: <code>_text.scss</code>, line 174
                 </div>
 
             </div>

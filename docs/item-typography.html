@@ -15,6 +15,46 @@
 
 
   <style type="text/css">
+  .kss-title--level-1 {
+    display: none; }
+
+  .kss-source {
+    display:none !important;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: solid 1px #EEE;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 10px; }
+
+  #kss-node .kss-section {
+    margin-bottom: 20px; }
+
+  .kss-style .kss-title__ref {
+    border-top: solid 1px #EEE;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 10px !important;
+    margin-bottom: 5px;
+    color: #CCC !important; }
+
+  .kss-style h1 {
+    font-size: 30px; }
+
+  .kss-style h2 {
+    font-size: 24px; }
+
+  .kss-style h3 {
+    font-size: 22px; }
+
+  .kss-style dl,
+  .kss-style ul {
+    list-style: none; }
+
+  .kss-style kbd,
+  .kss-style pre,
+  .kss-style samp {
+    font-size: 13px; }
   .kss-style pre {
     padding:16px;
     margin-left:-20px;
@@ -56,10 +96,10 @@
               <!-- <span f-note>3</span> -->
             </a>
             <a f-item href="section-colors.html">
-              <div f-title>Material Colors</div>
+              <div f-title>Colors</div>
               <!-- <span f-note>4</span> -->
             </a>
-            <a f-item href="section-flexbox.html">
+            <a f-item href="section-flex.html">
               <div f-title>Flexbox</div>
               <!-- <span f-note>5</span> -->
             </a>
@@ -99,23 +139,29 @@
               <div f-title>Typography</div>
               <!-- <span f-note>14</span> -->
             </a>
-                <a f-item f-bg-white-10 f-t-normal href="section-typography.html#kssref-typography-colors">
-                  <div f-title f-t-14px>
-                    - Text Color
-                  </div>
-                  <!-- <span>14.1</span> -->
-                </a>
                 <a f-item f-bg-white-10 f-t-normal href="section-typography.html#kssref-typography-icons">
                   <div f-title f-t-14px>
                     - Icon
                   </div>
-                  <!-- <span>14.2</span> -->
+                  <!-- <span>14.1</span> -->
                 </a>
                 <a f-item f-bg-white-10 f-t-normal href="section-typography.html#kssref-typography-size">
                   <div f-title f-t-14px>
                     - Font Size
                   </div>
+                  <!-- <span>14.2</span> -->
+                </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-typography.html#kssref-typography-style">
+                  <div f-title f-t-14px>
+                    - Text Styling
+                  </div>
                   <!-- <span>14.3</span> -->
+                </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-typography.html#kssref-typography-xtra">
+                  <div f-title f-t-14px>
+                    - Text Only CSS
+                  </div>
+                  <!-- <span>14.4</span> -->
                 </a>
           <div f-item-divider f-t-black-40>
             About
@@ -183,10 +229,18 @@
                 </div>
 
 
+                  <div class="kss-description"  f-p-b-20px>
+                    <p>Oh-Flex comes with a standard set of attributes to control
+text and font attributes.</p>
+
+                  </div>
 
               </div>
 
 
+                <div class="kss-source kss-style">
+                  Source: <code>_text.scss</code>, line 1
+                </div>
 
             </div>
 

@@ -15,6 +15,46 @@
 
 
   <style type="text/css">
+  .kss-title--level-1 {
+    display: none; }
+
+  .kss-source {
+    display:none !important;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: solid 1px #EEE;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 10px; }
+
+  #kss-node .kss-section {
+    margin-bottom: 20px; }
+
+  .kss-style .kss-title__ref {
+    border-top: solid 1px #EEE;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 10px !important;
+    margin-bottom: 5px;
+    color: #CCC !important; }
+
+  .kss-style h1 {
+    font-size: 30px; }
+
+  .kss-style h2 {
+    font-size: 24px; }
+
+  .kss-style h3 {
+    font-size: 22px; }
+
+  .kss-style dl,
+  .kss-style ul {
+    list-style: none; }
+
+  .kss-style kbd,
+  .kss-style pre,
+  .kss-style samp {
+    font-size: 13px; }
   .kss-style pre {
     padding:16px;
     margin-left:-20px;
@@ -56,10 +96,10 @@
               <!-- <span f-note>3</span> -->
             </a>
             <a f-item href="section-colors.html">
-              <div f-title>Material Colors</div>
+              <div f-title>Colors</div>
               <!-- <span f-note>4</span> -->
             </a>
-            <a f-item href="section-flexbox.html">
+            <a f-item href="section-flex.html">
               <div f-title>Flexbox</div>
               <!-- <span f-note>5</span> -->
             </a>
@@ -75,6 +115,30 @@
               <div f-title>Layout</div>
               <!-- <span f-note>8</span> -->
             </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-layout.html#kssref-layout-aside-menu">
+                  <div f-title f-t-14px>
+                    - Side Menu Layout
+                  </div>
+                  <!-- <span>8.1</span> -->
+                </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-layout.html#kssref-layout-atypical">
+                  <div f-title f-t-14px>
+                    - Header Content Footer Layout
+                  </div>
+                  <!-- <span>8.2</span> -->
+                </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-layout.html#kssref-layout-site-contain">
+                  <div f-title f-t-14px>
+                    - Containing a View
+                  </div>
+                  <!-- <span>8.3</span> -->
+                </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-layout.html#kssref-layout-xtra">
+                  <div f-title f-t-14px>
+                    - Layout Only CSS
+                  </div>
+                  <!-- <span>8.4</span> -->
+                </a>
             <a f-item href="section-list.html">
               <div f-title>List</div>
               <!-- <span f-note>9</span> -->
@@ -170,50 +234,14 @@
 <p>Header and footer will always be at their respective locations (top and bottom)
 f-content will be rubbery and flex with the allowed space. It also is responsible
 for handling scrolling of the main content.</p>
-<p><h2>Standard Header Content Footer</h2></p>
-<div style="position:relative;" f-round f-bg-green-200 f-w-90 f-h-200px>
-  <div f-layout>
-    <header f-header f-bg-green-400>Header</header>
-    <main f-content f-bg-green-100>Content</main>
-    <footer f-footer f-bg-green-500>Footer</footer>
-  </div>
-</div>
 
-<pre><code>  &lt;div f-layout&gt;
-    &lt;header f-header&gt;Header&lt;/header&gt;
-    &lt;main f-content&gt;Content&lt;/main&gt;
-    &lt;footer f-footer&gt;Footer&lt;/footer&gt;
-  &lt;/div&gt;
-</code></pre><p><h2>Multi Menu Layout</h2></p>
-<div style="position:relative;" f-round f-bg-blue-300 f-w-90 f-h-200px>
-  <div f-layout f-layout-aside>
-    <aside f-w-10 f-justify-center f-align-center f-bg-blue-100>1</aside>
-    <aside f-w-20 f-justify-center f-align-center f-bg-blue-300>Menu 2</aside>
-    <main>
-      <header f-header f-t-white f-bg-blue-600 f-justify-center f-align-center >Header</header>
-      <main f-content f-bg-blue-400 f-justify-center f-align-center >Content</main>
-      <footer f-footer f-t-white f-bg-blue-600 f-justify-center f-align-center >Footer</footer>
-    </main>
-  </div>
-</div>
-
-<pre><code>&lt;div f-layout f-layout-aside&gt;
-  &lt;aside&gt;Menu 1&lt;/aside&gt;
-  &lt;aside&gt;Menu 2&lt;/aside&gt;
-  &lt;main&gt;
-    &lt;header f-header&gt;Header&lt;/header&gt;
-    &lt;main f-content&gt;Content&lt;/main&gt;
-    &lt;footer f-footer&gt;Footer&lt;/footer&gt;
-  &lt;/main&gt;
-&lt;/div&gt;
-</code></pre>
                   </div>
 
               </div>
 
 
                 <div class="kss-source kss-style">
-                  Source: <code>_layout.scss</code>, line 1
+                  Source: <code>_layout.scss</code>, line 3
                 </div>
 
             </div>

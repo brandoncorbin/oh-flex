@@ -1,0 +1,66 @@
+[f-hide-desktop],
+[f-hide-phone],
+[f-hide-tablet],
+[f-show-desktop],
+[f-show-phone],
+[f-show-tablet] {
+  display: none; }
+
+@media (min-width: 0) and (max-width: 599px) {
+  [f-hide-phone] {
+    display: none !important; }
+  [f-show-phone] {
+    display: inherit; }
+  [f-hide-tablet-down] {
+    display: none !important; }
+  [f-hide-desktop-down] {
+    display: none !important; } }
+
+@media (min-width: 600px) and (max-width: 999px) {
+  [f-hide-tablet] {
+    display: none !important; }
+  [f-hide-tablet-down] {
+    display: none !important; }
+  [f-hide-tablet-up] {
+    display: none !important; }
+  [f-show-tablet] {
+    display: inherit; }
+  [f-hide-desktop-down] {
+    display: none !important; }
+  [f-hide-phone] {
+    display: inherit; } }
+
+@media (min-width: 1000px) {
+  [f-hide-desktop] {
+    display: none !important; }
+  [f-hide-phone] {
+    display: inherit; }
+  [f-hide-tablet] {
+    display: inherit; }
+  [f-hide-tablet-up] {
+    display: none !important; }
+  [f-hide-desktop-down] {
+    display: none !important; }
+  [f-show-desktop] {
+    display: inherit; } }
+
+@media (min-width: 0) and (max-width: 599px) {
+  .url2html-youtube,
+  [f-video-responsive] {
+    margin: 6px 0;
+    width: 100%;
+    height: 250px; } }
+
+@media (min-width: 600px) and (max-width: 999px) {
+  .url2html-youtube,
+  [f-video-responsive] {
+    margin: 6px 0;
+    width: 100%;
+    height: 320px; } }
+
+@media (min-width: 1000px) {
+  .url2html-youtube,
+  [f-video-responsive] {
+    margin: 6px 0;
+    width: 100%;
+    height: 320px; } }

@@ -1,3 +1,6 @@
+@import '_variables';
+@import 'mixins/mixins';
+
 [f-hover-fade] {
   transition: all 0.3s ease-out;
 
@@ -152,3 +155,13 @@
     }
   }
 }
+//
+// Button Only CSS
+//
+// Only want the button features of Oh-flex?
+// ````
+// <link href="https://unpkg.com/oh-flex/lib/chunks/_button.css" rel="stylesheet" />
+// ```
+//
+//
+// Style guide: Buttons.xtra

@@ -15,6 +15,46 @@
 
 
   <style type="text/css">
+  .kss-title--level-1 {
+    display: none; }
+
+  .kss-source {
+    display:none !important;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: solid 1px #EEE;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 10px; }
+
+  #kss-node .kss-section {
+    margin-bottom: 20px; }
+
+  .kss-style .kss-title__ref {
+    border-top: solid 1px #EEE;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 10px !important;
+    margin-bottom: 5px;
+    color: #CCC !important; }
+
+  .kss-style h1 {
+    font-size: 30px; }
+
+  .kss-style h2 {
+    font-size: 24px; }
+
+  .kss-style h3 {
+    font-size: 22px; }
+
+  .kss-style dl,
+  .kss-style ul {
+    list-style: none; }
+
+  .kss-style kbd,
+  .kss-style pre,
+  .kss-style samp {
+    font-size: 13px; }
   .kss-style pre {
     padding:16px;
     margin-left:-20px;
@@ -56,10 +96,10 @@
               <!-- <span f-note>3</span> -->
             </a>
             <a f-item href="section-colors.html">
-              <div f-title>Material Colors</div>
+              <div f-title>Colors</div>
               <!-- <span f-note>4</span> -->
             </a>
-            <a f-item href="section-flexbox.html">
+            <a f-item href="section-flex.html">
               <div f-title>Flexbox</div>
               <!-- <span f-note>5</span> -->
             </a>
@@ -99,23 +139,29 @@
               <div f-title>Typography</div>
               <!-- <span f-note>14</span> -->
             </a>
-                <a f-item f-bg-white-10 f-t-normal href="section-typography.html#kssref-typography-colors">
-                  <div f-title f-t-14px>
-                    - Text Color
-                  </div>
-                  <!-- <span>14.1</span> -->
-                </a>
                 <a f-item f-bg-white-10 f-t-normal href="section-typography.html#kssref-typography-icons">
                   <div f-title f-t-14px>
                     - Icon
                   </div>
-                  <!-- <span>14.2</span> -->
+                  <!-- <span>14.1</span> -->
                 </a>
                 <a f-item f-bg-white-10 f-t-normal href="section-typography.html#kssref-typography-size">
                   <div f-title f-t-14px>
                     - Font Size
                   </div>
+                  <!-- <span>14.2</span> -->
+                </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-typography.html#kssref-typography-style">
+                  <div f-title f-t-14px>
+                    - Text Styling
+                  </div>
                   <!-- <span>14.3</span> -->
+                </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-typography.html#kssref-typography-xtra">
+                  <div f-title f-t-14px>
+                    - Text Only CSS
+                  </div>
+                  <!-- <span>14.4</span> -->
                 </a>
           <div f-item-divider f-t-black-40>
             About
@@ -183,78 +229,27 @@
                 </div>
 
 
-
-              </div>
-
-
-
-            </div>
-            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-typography-colors" class="kss-section kss-section--depth-2 ">
-
-              <div  class="kss-style">
-                <div f-h2 f-title f-m-t-6px class="title--level-2">
-                  <a class="" f-t-grey-900 href="#kssref-typography-colors">
-                    <span f-t-22px>
-                      <span  f-t-grey-500 f-t-normal>14.1</span>
-                      <span f-t-grey-800>Text Color</span>
-                      <span class="kss-title__permalink-hash">
-                          #Typography.colors
-                      </span>
-                    </span>
-
-                  </a>
-                </div>
-
-
                   <div class="kss-description"  f-p-b-20px>
-                    <p>Simple Text Fading</p>
-<div f-flex f-row>
-    <div f-w-50>
-        <div f-p-10px f-t-bold f-t-primary>f-t-primary</div>
-        <div f-p-10px f-t-bold f-t-secondary>f-t-secondary</div>
-        <div f-p-10px f-t-bold f-t-black-100>f-t-black-100</div>
-        <div f-p-10px f-t-bold f-t-black-90>f-t-black-90</div>
-        <div f-p-10px f-t-bold f-t-black-80>f-t-black-80</div>
-        <div f-p-10px f-t-bold f-t-black-70>f-t-black-70</div>
-        <div f-p-10px f-t-bold f-t-black-60>f-t-black-60</div>
-        <div f-p-10px f-t-bold f-t-black-50>f-t-black-50</div>
-        <div f-p-10px f-t-bold f-t-black-40>f-t-black-40</div>
-        <div f-p-10px f-t-bold f-t-black-30>f-t-black-30</div>
-        <div f-p-10px f-t-bold f-t-black-20>f-t-black-20</div>
-        <div f-p-10px f-t-bold f-t-black-10>f-t-black-10</div>
-        <div f-p-10px f-t-bold f-t-black-5>f-t-black-5</div>
-    </div>
-    <div f-w-50 f-bg-black-90>
-        <div f-p-10px f-t-bold f-t-white-100>f-t-white-100</div>
-        <div f-p-10px f-t-bold f-t-white-90>f-t-white-90</div>
-        <div f-p-10px f-t-bold f-t-white-80>f-t-white-80</div>
-        <div f-p-10px f-t-bold f-t-white-70>f-t-white-70</div>
-        <div f-p-10px f-t-bold f-t-white-60>f-t-white-60</div>
-        <div f-p-10px f-t-bold f-t-white-50>f-t-white-50</div>
-        <div f-p-10px f-t-bold f-t-white-40>f-t-white-40</div>
-        <div f-p-10px f-t-bold f-t-white-30>f-t-white-30</div>
-        <div f-p-10px f-t-bold f-t-white-20>f-t-white-20</div>
-        <div f-p-10px f-t-bold f-t-white-10>f-t-white-10</div>
-        <div f-p-10px f-t-bold f-t-white-5>f-t-white-5</div>
-    </div>
-</div>
+                    <p>Oh-Flex comes with a standard set of attributes to control
+text and font attributes.</p>
+
                   </div>
 
               </div>
 
 
                 <div class="kss-source kss-style">
-                  Source: <code>_colors.scss</code>, line 72
+                  Source: <code>_text.scss</code>, line 1
                 </div>
 
-            </section>
+            </div>
             <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-typography-icons" class="kss-section kss-section--depth-2 ">
 
               <div  class="kss-style">
                 <div f-h2 f-title f-m-t-6px class="title--level-2">
                   <a class="" f-t-grey-900 href="#kssref-typography-icons">
                     <span f-t-22px>
-                      <span  f-t-grey-500 f-t-normal>14.2</span>
+                      <span  f-t-grey-500 f-t-normal>14.1</span>
                       <span f-t-grey-800>Icon</span>
                       <span class="kss-title__permalink-hash">
                           #Typography.Icons
@@ -270,8 +265,13 @@
 However, universally controlling the various icon pack font sizes is a gamble. Here I try to make a
 general icon size controller.</p>
 <h3 id="f-icon-sm">f-icon-sm</h3>
+<p><i f-icon-sm class="zmdi zmdi-help"></i></p>
 <h3 id="f-icon-md">f-icon-md</h3>
+<p> <i f-icon-md class="zmdi zmdi-help"></i></p>
 <h3 id="f-icon-lg">f-icon-lg</h3>
+<p><i f-icon-lg class="zmdi zmdi-help"></i></p>
+<h3 id="f-icon-xl">f-icon-xl</h3>
+<p><i f-icon-xl class="zmdi zmdi-help"></i></p>
 
                   </div>
 
@@ -279,7 +279,7 @@ general icon size controller.</p>
 
 
                 <div class="kss-source kss-style">
-                  Source: <code>_item.scss</code>, line 47
+                  Source: <code>_text.scss</code>, line 174
                 </div>
 
             </section>
@@ -289,7 +289,7 @@ general icon size controller.</p>
                 <div f-h2 f-title f-m-t-6px class="title--level-2">
                   <a class="" f-t-grey-900 href="#kssref-typography-size">
                     <span f-t-22px>
-                      <span  f-t-grey-500 f-t-normal>14.3</span>
+                      <span  f-t-grey-500 f-t-normal>14.2</span>
                       <span f-t-grey-800>Font Size</span>
                       <span class="kss-title__permalink-hash">
                           #Typography.size
@@ -326,7 +326,84 @@ general icon size controller.</p>
 
 
                 <div class="kss-source kss-style">
-                  Source: <code>_text.scss</code>, line 1
+                  Source: <code>_text.scss</code>, line 11
+                </div>
+
+            </section>
+            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-typography-style" class="kss-section kss-section--depth-2 ">
+
+              <div  class="kss-style">
+                <div f-h2 f-title f-m-t-6px class="title--level-2">
+                  <a class="" f-t-grey-900 href="#kssref-typography-style">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>14.3</span>
+                      <span f-t-grey-800>Text Styling</span>
+                      <span class="kss-title__permalink-hash">
+                          #Typography.style
+                      </span>
+                    </span>
+
+                  </a>
+                </div>
+
+
+                  <div class="kss-description"  f-p-b-20px>
+                    <div f-t-thin f-t-22px f-b-b f-p-10px f-p-l-0px>f-t-thin</div>
+<div f-t-bold f-t-22px f-b-b f-p-10px f-p-l-0px>f-t-bold</div>
+<div f-t-bolder f-t-22px f-b-b f-p-10px f-p-l-0px>f-t-bolder</div>
+<div f-t-uppercase f-t-22px f-b-b f-p-10px f-p-l-0px>f-t-uppercase</div>
+<div f-t-left f-t-22px f-b-b f-p-10px f-p-l-0px>f-t-left</div>
+<div f-t-right f-t-22px f-b-b f-p-10px f-p-l-0px>f-t-right</div>
+<div f-t-center f-t-22px f-b-b f-p-10px f-p-l-0px>f-t-center</div>
+<div f-t-spread f-t-22px f-b-b f-p-10px f-p-l-0px>f-t-spread</div>
+<div f-w-max-50 f-m-t-20px f-b-b f-p-10px f-p-l-0px f-m-b-20px f-bg-grey-100 f-p-6px f-truncate>
+  <strong>f-truncate</strong> This should be cut off at one line when it runs out of space
+</div>
+<div f-w-50 f-m-t-20px f-m-b-20px f-bg-grey-100 f-p-6px f-truncate-2>
+  <strong>f-truncate-2</strong> Consectetur esse id fugiat dolor non ex duis laboris labore qui nulla officia reprehenderit mollit ut aute est. Id aliquip ex et id amet qui laborum elit consequat magna. Pariatur voluptate nulla dolor commodo exercitation magna mollit eiusmod ipsum reprehenderit eiusmod ut minim dolore. Labore et reprehenderit anim minim commodo ad excepteur ea elit et. Cillum ut ipsum qui dolor ut do sit et irure officia proident..
+</div>
+<div f-w-50 f-m-t-20px f-m-b-20px f-bg-grey-100 f-p-6px f-truncate-3>
+  <strong>f-truncate-3</strong> Anim ipsum id incididunt elit ea qui aute tempor do incididunt pariatur anim sit laboris consectetur. Amet dolore labore aliqua eu do laborum elit commodo occaecat ex fugiat reprehenderit consequat fugiat sit. In commodo cillum incididunt pariatur magna non dolore et. Ea eu aute mollit incididunt laborum sit ipsum est esse voluptate in dolor minim Lorem. Adipisicing quis eu fugiat Lorem elit eiusmod velit ipsum labore fugiat culpa consequat ea..
+</div>
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_text.scss</code>, line 52
+                </div>
+
+            </section>
+            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-typography-xtra" class="kss-section kss-section--depth-2 ">
+
+              <div  class="kss-style">
+                <div f-h2 f-title f-m-t-6px class="title--level-2">
+                  <a class="" f-t-grey-900 href="#kssref-typography-xtra">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>14.4</span>
+                      <span f-t-grey-800>Text Only CSS</span>
+                      <span class="kss-title__permalink-hash">
+                          #Typography.xtra
+                      </span>
+                    </span>
+
+                  </a>
+                </div>
+
+
+                  <div class="kss-description"  f-p-b-20px>
+                    <p>Only want the text features of Oh-flex?</p>
+<pre><code class="lang-`">&lt;link href=&quot;https://unpkg.com/oh-flex/lib/chunks/_text.css&quot; rel=&quot;stylesheet&quot; /&gt;
+</code></pre>
+
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_text.scss</code>, line 275
                 </div>
 
             </section>

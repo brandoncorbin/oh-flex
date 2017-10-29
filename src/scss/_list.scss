@@ -1,3 +1,6 @@
+@import '_variables';
+@import 'mixins/mixins';
+
 [f-list-style-none] {
-  list-style:none;
+  list-style: none;
 }

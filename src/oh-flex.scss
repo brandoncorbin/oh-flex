@@ -1,8 +1,10 @@
 @import 'scss/mixins/mixins';
 @import 'scss/variables';
 @import 'scss/item';
+@import 'scss/padding-margin';
 @import 'scss/toolbar';
 @import 'scss/media';
+@import 'scss/opacity';
 @import 'scss/box-shadow';
 @import 'scss/modal';
 @import 'scss/list';
@@ -14,6 +16,6 @@
 @import 'scss/input';
 @import 'scss/layout';
 @import 'scss/body';
-@import 'scss/flex-box';
+@import 'scss/flex';
 @import 'scss/colors';
 @import 'scss/border';

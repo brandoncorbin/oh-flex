@@ -15,6 +15,46 @@
 
 
   <style type="text/css">
+  .kss-title--level-1 {
+    display: none; }
+
+  .kss-source {
+    display:none !important;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: solid 1px #EEE;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 10px; }
+
+  #kss-node .kss-section {
+    margin-bottom: 20px; }
+
+  .kss-style .kss-title__ref {
+    border-top: solid 1px #EEE;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 10px !important;
+    margin-bottom: 5px;
+    color: #CCC !important; }
+
+  .kss-style h1 {
+    font-size: 30px; }
+
+  .kss-style h2 {
+    font-size: 24px; }
+
+  .kss-style h3 {
+    font-size: 22px; }
+
+  .kss-style dl,
+  .kss-style ul {
+    list-style: none; }
+
+  .kss-style kbd,
+  .kss-style pre,
+  .kss-style samp {
+    font-size: 13px; }
   .kss-style pre {
     padding:16px;
     margin-left:-20px;
@@ -56,66 +96,52 @@
               <!-- <span f-note>3</span> -->
             </a>
             <a f-item href="section-colors.html">
-              <div f-title>Material Colors</div>
+              <div f-title>Colors</div>
               <!-- <span f-note>4</span> -->
+            </a>
+            <a f-item href="section-flex.html">
+              <div f-title>Flex</div>
+              <!-- <span f-note>5</span> -->
             </a>
             <a f-item href="section-flexbox.html">
               <div f-title>Flexbox</div>
-              <!-- <span f-note>5</span> -->
+              <!-- <span f-note>6</span> -->
             </a>
-                <a f-item f-bg-white-10 f-t-normal href="section-flexbox.html#kssref-flexbox-align">
-                  <div f-title f-t-14px>
-                    - Align
-                  </div>
-                  <!-- <span>5.1</span> -->
-                </a>
-                <a f-item f-bg-white-10 f-t-normal href="section-flexbox.html#kssref-flexbox-justify">
-                  <div f-title f-t-14px>
-                    - Justify
-                  </div>
-                  <!-- <span>5.2</span> -->
-                </a>
-                <a f-item f-bg-white-10 f-t-normal href="section-flexbox.html#kssref-flexbox-row-column">
-                  <div f-title f-t-14px>
-                    -  Row &amp; Column
-                  </div>
-                  <!-- <span>5.3</span> -->
-                </a>
             <a f-item href="section-height-width.html">
               <div f-title>Height and Widths</div>
-              <!-- <span f-note>6</span> -->
+              <!-- <span f-note>7</span> -->
             </a>
             <a f-item href="section-inputs.html">
               <div f-title>Placeholder</div>
-              <!-- <span f-note>7</span> -->
+              <!-- <span f-note>8</span> -->
             </a>
             <a f-item href="section-layout.html">
               <div f-title>Layout</div>
-              <!-- <span f-note>8</span> -->
+              <!-- <span f-note>9</span> -->
             </a>
             <a f-item href="section-list.html">
               <div f-title>List</div>
-              <!-- <span f-note>9</span> -->
+              <!-- <span f-note>10</span> -->
             </a>
             <a f-item href="section-padding-margin.html">
               <div f-title>Padding &amp; Margins</div>
-              <!-- <span f-note>10</span> -->
+              <!-- <span f-note>11</span> -->
             </a>
             <a f-item href="section-shadows.html">
               <div f-title>Box Shadows</div>
-              <!-- <span f-note>11</span> -->
+              <!-- <span f-note>12</span> -->
             </a>
             <a f-item href="section-show-hide.html">
               <div f-title>Media Queries</div>
-              <!-- <span f-note>12</span> -->
+              <!-- <span f-note>13</span> -->
             </a>
             <a f-item href="section-toolbar.html">
               <div f-title>Toolbar</div>
-              <!-- <span f-note>13</span> -->
+              <!-- <span f-note>14</span> -->
             </a>
             <a f-item href="section-typography.html">
               <div f-title>Typography</div>
-              <!-- <span f-note>14</span> -->
+              <!-- <span f-note>15</span> -->
             </a>
           <div f-item-divider f-t-black-40>
             About
@@ -163,7 +189,7 @@
                   <div f-title f-rubber>
                     Flexbox
                   </div>
-                  <button clear f-button>s.5</button>
+                  <button clear f-button>s.6</button>
                 </div>
               </header>
             <div f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-flexbox" class="kss-section kss-section--depth-1 ">
@@ -172,7 +198,7 @@
                 <div f-h1 f-title f-m-t-6px class="title--level-1">
                   <a class="" f-t-grey-900 href="#kssref-flexbox">
                     <span f-t-22px>
-                      <span  f-t-grey-500 f-t-normal>5</span>
+                      <span  f-t-grey-500 f-t-normal>6</span>
                       <span f-t-grey-800>Flexbox</span>
                       <span class="kss-title__permalink-hash">
                           #Flexbox
@@ -193,212 +219,10 @@ but really... should we care what they think?</p>
 
 
                 <div class="kss-source kss-style">
-                  Source: <code>_flex-box.scss</code>, line 1
+                  Source: <code>_flex.scss</code>, line 3
                 </div>
 
             </div>
-            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-flexbox-align" class="kss-section kss-section--depth-2 ">
-
-              <div  class="kss-style">
-                <div f-h2 f-title f-m-t-6px class="title--level-2">
-                  <a class="" f-t-grey-900 href="#kssref-flexbox-align">
-                    <span f-t-22px>
-                      <span  f-t-grey-500 f-t-normal>5.1</span>
-                      <span f-t-grey-800>Align</span>
-                      <span class="kss-title__permalink-hash">
-                          #Flexbox.align
-                      </span>
-                    </span>
-
-                  </a>
-                </div>
-
-
-                  <div class="kss-description"  f-p-b-20px>
-                    <ul>
-  <li><strong>f-align-start</strong> Aligns to the start of the parent element.</li>
-  <li><strong>f-align-center</strong> Aligns center the parent element.</li>
-  <li><strong>f-align-end</strong> Aligns to the end of the parent element.</li>
-</ul>
-
-<p><div f-align-end f-row>
- <div f-w-30 f-h-90px f-align-center f-m-r-10px f-bg-orange-300 f-p-20px>
-   <div f-h-50px f-w-50px f-bg-white f-box-shadow-1></div>
- </div>
- <div f-w-30 f-h-90px f-align-start f-m-r-10px f-bg-orange-400 f-p-20px>
-   <div f-h-50px f-w-50px f-bg-white f-box-shadow-1></div>
- </div>
- <div f-w-30 f-h-90px f-align-end f-m-r-10px f-bg-orange-500 f-p-20px>
-   <div f-h-50px f-w-50px f-bg-white f-box-shadow-1></div>
- </div>
-</div></p>
-<pre><code>&lt;div f-align-end f-row f-p-30px f-h-90px f-bg-orange-400&gt;
- &lt;div f-h-50px f-w-50px f-bg-white f-box-shadow-1&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-                  </div>
-
-              </div>
-
-
-                <div class="kss-source kss-style">
-                  Source: <code>_flex-box.scss</code>, line 10
-                </div>
-
-            </section>
-            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-flexbox-justify" class="kss-section kss-section--depth-2 ">
-
-              <div  class="kss-style">
-                <div f-h2 f-title f-m-t-6px class="title--level-2">
-                  <a class="" f-t-grey-900 href="#kssref-flexbox-justify">
-                    <span f-t-22px>
-                      <span  f-t-grey-500 f-t-normal>5.2</span>
-                      <span f-t-grey-800>Justify</span>
-                      <span class="kss-title__permalink-hash">
-                          #Flexbox.justify
-                      </span>
-                    </span>
-
-                  </a>
-                </div>
-
-
-                  <div class="kss-description"  f-p-b-20px>
-                    <p> Use justify to stretch, spread and control the format of children elements.</p>
-<ul>
-  <li><strong>f-justify-center</strong> </li>
-  <li><strong>f-justify-start</strong>.</li>
-  <li><strong>f-justify-between</strong></li>
- <li><strong>f-justify-around</strong></li>
-</ul>
-
-<h3 id="f-justify-between">f-justify-between</h3>
-<div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-between f-m-t-20px>
- <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px></div>
- <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px></div>
- <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px></div>
-</div>
-
-<pre><code>&lt;div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-between f-m-t-20px&gt;
- &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px&gt;&lt;/div&gt;
- &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px&gt;&lt;/div&gt;
- &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre><h3 id="f-justify-around">f-justify-around</h3>
-<div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-around f-m-t-20px>
- <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px></div>
- <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px></div>
- <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px></div>
-</div>
-
-<pre><code>&lt;div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-around f-m-t-20px&gt;
- &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px&gt;&lt;/div&gt;
- &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px&gt;&lt;/div&gt;
- &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre><h3 id="f-justify-stretch">f-justify-stretch</h3>
-<div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-stretch f-m-t-20px>
- <div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-300 f-p-20px></div>
- <div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-400 f-p-20px></div>
- <div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-500 f-p-20px></div>
-</div>
-
-<pre><code>&lt;div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-stretch f-m-t-20px&gt;
- &lt;div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-300 f-p-20px&gt;&lt;/div&gt;
- &lt;div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-400 f-p-20px&gt;&lt;/div&gt;
- &lt;div  f-h-30px f-w-min-20 f-w-max-100  f-m-r-10px f-bg-orange-500 f-p-20px&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre><h3 id="f-justify-center">f-justify-center</h3>
-<div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-center f-m-t-20px>
- <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px></div>
- <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px></div>
- <div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px></div>
-</div>
-
-<pre><code>&lt;div f-align-end f-row f-bg-orange-50 f-p-20px f-justify-center f-m-t-20px&gt;
- &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-300 f-p-20px&gt;&lt;/div&gt;
- &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-400 f-p-20px&gt;&lt;/div&gt;
- &lt;div  f-h-30px f-w-20px f-m-r-10px f-bg-orange-500 f-p-20px&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-                  </div>
-
-              </div>
-
-
-                <div class="kss-source kss-style">
-                  Source: <code>_flex-box.scss</code>, line 122
-                </div>
-
-            </section>
-            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-flexbox-row-column" class="kss-section kss-section--depth-2 ">
-
-              <div  class="kss-style">
-                <div f-h2 f-title f-m-t-6px class="title--level-2">
-                  <a class="" f-t-grey-900 href="#kssref-flexbox-row-column">
-                    <span f-t-22px>
-                      <span  f-t-grey-500 f-t-normal>5.3</span>
-                      <span f-t-grey-800> Row &amp; Column</span>
-                      <span class="kss-title__permalink-hash">
-                          #Flexbox.row-column
-                      </span>
-                    </span>
-
-                  </a>
-                </div>
-
-
-                  <div class="kss-description"  f-p-b-20px>
-                    <p> Rows and columns are targeted with the <code>f-row</code> and <code>f-column</code></p>
- <h2>Flexbox Row with variable widths</h2>
-
- <div  f-bg-blue-100 f-row f-p-30px f-wrap f-m-t-20px>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px></div>
-</div>
-
-<pre><code> &lt;div  f-bg-blue-100 f-row f-p-30px f-wrap f-m-t-20px&gt;
-  &lt;div f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px&gt;&lt;/div&gt;
-  &lt;div f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px&gt;&lt;/div&gt;
-  &lt;div f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px&gt;&lt;/div&gt;
-  &lt;div f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px&gt;&lt;/div&gt;
-  &lt;div f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px&gt;&lt;/div&gt;
-  &lt;div f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px&gt;&lt;/div&gt;
-  &lt;div f-w-max-20px f-w-min-10px f-w-30px f-grow f-shrink f-h-100px&gt;&lt;/div&gt;
-  &lt;div f-w-max-100 f-w-min-20px f-w-30px f-grow f-shrink f-h-100px&gt;&lt;/div&gt;
- &lt;/div&gt;
-</code></pre> <h2>Flexbox Column with variable widths</h2>
-
- <div  f-bg-blue-100 f-column f-p-30px f-wrap f-m-t-20px>
-  <div f-bg-white f-box-shadow-1 f-m-b-10px f-h-max-10px f-h-min-1px f-h-30px f-grow f-shrink f-w-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-b-10px f-h-max-100 f-h-min-20px f-h-30px f-grow f-shrink f-w-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-b-10px f-h-max-10px f-h-min-1px f-h-30px f-grow f-shrink f-w-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-b-10px f-h-max-100 f-h-min-20px f-h-30px f-grow f-shrink f-w-100px></div>
-</div>
-
-<pre><code> &lt;div  f-bg-blue-100  f-column f-p-30px f-wrap f-m-t-20px&gt;
-  &lt;div  f-m-b-10px f-h-max-10px f-h-min-1px f-h-30px f-grow f-shrink f-w-100px&gt;&lt;/div&gt;
-  &lt;div  f-m-b-10px f-h-max-100 f-h-min-20px f-h-30px f-grow f-shrink f-w-100px&gt;&lt;/div&gt;
-  &lt;div  f-m-b-10px f-h-max-10px f-h-min-1px f-h-30px f-grow f-shrink f-w-100px&gt;&lt;/div&gt;
-  &lt;div  f-m-b-10px f-h-max-100 f-h-min-20px f-h-30px f-grow f-shrink f-w-100px&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-                  </div>
-
-              </div>
-
-
-                <div class="kss-source kss-style">
-                  Source: <code>_flex-box.scss</code>, line 57
-                </div>
-
-            </section>
 
         </div> <!-- end content -wrapper>
 

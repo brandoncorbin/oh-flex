@@ -1,0 +1,42 @@
+[f-avatar-square],
+[f-avatar] {
+  display: inline-block;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -moz-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -moz-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%; }
+  [f-avatar-square] img,
+  [f-avatar] img {
+    width: 104% !important; }
+  [f-avatar-square][f-avatar-sm], [f-avatar-square][sm],
+  [f-avatar][f-avatar-sm],
+  [f-avatar][sm] {
+    width: 30px !important;
+    height: 30px !important; }
+  [f-avatar-square][f-avatar-md], [f-avatar-square][md],
+  [f-avatar][f-avatar-md],
+  [f-avatar][md] {
+    width: 45px !important;
+    height: 45px !important; }
+  [f-avatar-square][f-avatar-lg], [f-avatar-square][lg],
+  [f-avatar][f-avatar-lg],
+  [f-avatar][lg] {
+    width: 70px !important;
+    height: 70px !important; }
+  [f-avatar-square][f-avatar-xl], [f-avatar-square][xl],
+  [f-avatar][f-avatar-xl],
+  [f-avatar][xl] {
+    width: 120px !important;
+    height: 120px !important; }
+  [f-avatar-square][f-avatar-square],
+  [f-avatar][f-avatar-square] {
+    border-radius: 4px; }

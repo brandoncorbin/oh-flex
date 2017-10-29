@@ -15,6 +15,46 @@
 
 
   <style type="text/css">
+  .kss-title--level-1 {
+    display: none; }
+
+  .kss-source {
+    display:none !important;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: solid 1px #EEE;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 10px; }
+
+  #kss-node .kss-section {
+    margin-bottom: 20px; }
+
+  .kss-style .kss-title__ref {
+    border-top: solid 1px #EEE;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 10px !important;
+    margin-bottom: 5px;
+    color: #CCC !important; }
+
+  .kss-style h1 {
+    font-size: 30px; }
+
+  .kss-style h2 {
+    font-size: 24px; }
+
+  .kss-style h3 {
+    font-size: 22px; }
+
+  .kss-style dl,
+  .kss-style ul {
+    list-style: none; }
+
+  .kss-style kbd,
+  .kss-style pre,
+  .kss-style samp {
+    font-size: 13px; }
   .kss-style pre {
     padding:16px;
     margin-left:-20px;
@@ -56,10 +96,10 @@
               <!-- <span f-note>3</span> -->
             </a>
             <a f-item href="section-colors.html">
-              <div f-title>Material Colors</div>
+              <div f-title>Colors</div>
               <!-- <span f-note>4</span> -->
             </a>
-            <a f-item href="section-flexbox.html">
+            <a f-item href="section-flex.html">
               <div f-title>Flexbox</div>
               <!-- <span f-note>5</span> -->
             </a>
@@ -83,6 +123,30 @@
               <div f-title>Padding &amp; Margins</div>
               <!-- <span f-note>10</span> -->
             </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-padding-margin.html#kssref-padding-margin-margin">
+                  <div f-title f-t-14px>
+                    - Margin
+                  </div>
+                  <!-- <span>10.1</span> -->
+                </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-padding-margin.html#kssref-padding-margin-padding">
+                  <div f-title f-t-14px>
+                    -  Padding
+                  </div>
+                  <!-- <span>10.2</span> -->
+                </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-padding-margin.html#kssref-padding-margin-x-safearea">
+                  <div f-title f-t-14px>
+                    - Safe Area
+                  </div>
+                  <!-- <span>10.3</span> -->
+                </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-padding-margin.html#kssref-padding-margin-xtra">
+                  <div f-title f-t-14px>
+                    - Padding / Margin Only CSS
+                  </div>
+                  <!-- <span>10.4</span> -->
+                </a>
             <a f-item href="section-shadows.html">
               <div f-title>Box Shadows</div>
               <!-- <span f-note>11</span> -->
@@ -168,9 +232,94 @@
                   <div class="kss-description"  f-p-b-20px>
                     <p>Padding and margins are one of the biggest problems with existing UI frameworks.
 When you absolutely need to tweak some padding or margin, you shouldn&#39;t be forced to
-write CSS. Instead, use Oh-Flex to nudge things around.
- <h2>Padding</h2>
- <p>Padding supports up sizes between 1px and 31px</p></p>
+write CSS. Instead, use Oh-Flex to nudge things around.</p>
+
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_padding-margin.scss</code>, line 1
+                </div>
+
+            </div>
+            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-padding-margin-margin" class="kss-section kss-section--depth-2 ">
+
+              <div  class="kss-style">
+                <div f-h2 f-title f-m-t-6px class="title--level-2">
+                  <a class="" f-t-grey-900 href="#kssref-padding-margin-margin">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>10.1</span>
+                      <span f-t-grey-800>Margin</span>
+                      <span class="kss-title__permalink-hash">
+                          #Padding-Margin.margin
+                      </span>
+                    </span>
+
+                  </a>
+                </div>
+
+
+                  <div class="kss-description"  f-p-b-20px>
+                    <dl>
+   <li><strong>f-m-{size}</strong>: margin:{size}</li>
+     <li><strong>f-m-t-{size}</strong>: margin-top:{size}</li>
+    <li><strong>f-m-b-{size}</strong>: margin-bottom:{size}</li>
+    <li><strong>f-m-l-{size}</strong>: margin-left:{size}</li>
+    <li><strong>f-m-r-{size}</strong>: margin-right:{size}</li>
+ </dl>
+
+<div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap f-m-t-20px>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-2px  f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-4px  f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-6px  f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-8px  f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-10px  f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-12px  f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-14px  f-h-100px></div>
+  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-16px  f-h-100px></div>
+</div>
+
+<pre><code>&lt;div f-m-l-10px f-m-t-2px&gt; &lt;/div&gt;
+&lt;div f-m-l-10px f-m-t-4px&gt; &lt;/div&gt;
+&lt;div f-m-l-10px f-m-t-6px&gt; &lt;/div&gt;
+&lt;div f-m-l-10px f-m-t-8px&gt; &lt;/div&gt;
+&lt;div f-m-l-10px f-m-t-10px&gt; &lt;/div&gt;
+&lt;div f-m-l-10px f-m-t-12px&gt; &lt;/div&gt;
+&lt;div f-m-l-10px f-m-t-14px&gt; &lt;/div&gt;
+&lt;div f-m-l-10px f-m-t-16px&gt; &lt;/div&gt;
+</code></pre>
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_padding-margin.scss</code>, line 23
+                </div>
+
+            </section>
+            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-padding-margin-padding" class="kss-section kss-section--depth-2 ">
+
+              <div  class="kss-style">
+                <div f-h2 f-title f-m-t-6px class="title--level-2">
+                  <a class="" f-t-grey-900 href="#kssref-padding-margin-padding">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>10.2</span>
+                      <span f-t-grey-800> Padding</span>
+                      <span class="kss-title__permalink-hash">
+                          #Padding-Margin.padding
+                      </span>
+                    </span>
+
+                  </a>
+                </div>
+
+
+                  <div class="kss-description"  f-p-b-20px>
+                     <p>Padding supports up sizes between 1px and 31px</p>
+
  <dl>
    <li><strong>f-p-{size}</strong>: padding:{size}</li>
      <li><strong>f-p-t-{size}</strong>: padding-top:{size}</li>
@@ -198,42 +347,41 @@ write CSS. Instead, use Oh-Flex to nudge things around.
 &lt;div  f-m-5px f-w-40px f-p-t-20px  f-h-100&gt;&lt;div f-bg-blue-600 f-h-20px f-w-20px&gt;&lt;/div&gt; &lt;/div&gt;
 &lt;div  f-m-5px f-w-40px f-p-t-26px  f-h-100&gt;&lt;div f-bg-blue-600 f-h-20px f-w-20px&gt;&lt;/div&gt; &lt;/div&gt;
 &lt;div  f-m-5px f-w-40px f-p-t-30px  f-h-100&gt;&lt;div f-bg-blue-600 f-h-20px f-w-20px&gt;&lt;/div&gt; &lt;/div&gt;
-</code></pre><h2>Margin</h2>
+</code></pre>
+                  </div>
 
-<dl>
-   <li><strong>f-m-{size}</strong>: margin:{size}</li>
-     <li><strong>f-m-t-{size}</strong>: margin-top:{size}</li>
-    <li><strong>f-m-b-{size}</strong>: margin-bottom:{size}</li>
-    <li><strong>f-m-l-{size}</strong>: margin-left:{size}</li>
-    <li><strong>f-m-r-{size}</strong>: margin-right:{size}</li>
- </dl>
+              </div>
 
-<div  f-bg-blue-100 f-flex f-row f-p-30px f-wrap f-m-t-20px>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-2px  f-h-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-4px  f-h-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-6px  f-h-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-8px  f-h-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-10px  f-h-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-12px  f-h-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-14px  f-h-100px></div>
-  <div f-bg-white f-box-shadow-1 f-m-l-10px  f-w-40px f-m-t-16px  f-h-100px></div>
-</div>
 
-<pre><code>&lt;div f-m-l-10px f-m-t-2px&gt; &lt;/div&gt;
-&lt;div f-m-l-10px f-m-t-4px&gt; &lt;/div&gt;
-&lt;div f-m-l-10px f-m-t-6px&gt; &lt;/div&gt;
-&lt;div f-m-l-10px f-m-t-8px&gt; &lt;/div&gt;
-&lt;div f-m-l-10px f-m-t-10px&gt; &lt;/div&gt;
-&lt;div f-m-l-10px f-m-t-12px&gt; &lt;/div&gt;
-&lt;div f-m-l-10px f-m-t-14px&gt; &lt;/div&gt;
-&lt;div f-m-l-10px f-m-t-16px&gt; &lt;/div&gt;
-</code></pre><h3 id="iphone-x-safe-padding">iPhone X Safe Padding</h3>
-<p>Oh-Flex does support iOS 11&#39;s constant(safe-area-inset-right) - to avoid having content under
+                <div class="kss-source kss-style">
+                  Source: <code>_padding-margin.scss</code>, line 82
+                </div>
+
+            </section>
+            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-padding-margin-x-safearea" class="kss-section kss-section--depth-2 ">
+
+              <div  class="kss-style">
+                <div f-h2 f-title f-m-t-6px class="title--level-2">
+                  <a class="" f-t-grey-900 href="#kssref-padding-margin-x-safearea">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>10.3</span>
+                      <span f-t-grey-800>Safe Area</span>
+                      <span class="kss-title__permalink-hash">
+                          #Padding-Margin.x-safearea
+                      </span>
+                    </span>
+
+                  </a>
+                </div>
+
+
+                  <div class="kss-description"  f-p-b-20px>
+                    <p>Oh-Flex does support iOS 11&#39;s constant(safe-area-inset-right) - to avoid having content under
 that god awful black toe at the top of the iPhone when it&#39;s rotated.</p>
 <p>You&#39;ll need the following meta in your head  for this to work</p>
 <pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1, viewport-fit=cover&quot;&gt;
 </code></pre><p>```</p>
-<div f-p-l-safe-area f-p-r-safe-area>I&#39;m save from these things!</div>
+<div f-p-l-safe-area f-p-r-safe-area f-bg-green-100>I&#39;m safe from these things!</div>
 
 
                   </div>
@@ -242,10 +390,42 @@ that god awful black toe at the top of the iPhone when it&#39;s rotated.</p>
 
 
                 <div class="kss-source kss-style">
-                  Source: <code>_box-size.scss</code>, line 185
+                  Source: <code>_padding-margin.scss</code>, line 61
                 </div>
 
-            </div>
+            </section>
+            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-padding-margin-xtra" class="kss-section kss-section--depth-2 ">
+
+              <div  class="kss-style">
+                <div f-h2 f-title f-m-t-6px class="title--level-2">
+                  <a class="" f-t-grey-900 href="#kssref-padding-margin-xtra">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>10.4</span>
+                      <span f-t-grey-800>Padding / Margin Only CSS</span>
+                      <span class="kss-title__permalink-hash">
+                          #Padding-Margin.xtra
+                      </span>
+                    </span>
+
+                  </a>
+                </div>
+
+
+                  <div class="kss-description"  f-p-b-20px>
+                    <p>Only want the padding-margin features of Oh-flex?</p>
+<pre><code class="lang-`">&lt;link href=&quot;https://unpkg.com/oh-flex/lib/chunks/_padding-margin.css&quot; rel=&quot;stylesheet&quot; /&gt;
+</code></pre>
+
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_padding-margin.scss</code>, line 160
+                </div>
+
+            </section>
 
         </div> <!-- end content -wrapper>
 

@@ -1,0 +1,37 @@
+[f-pos-absolute] {
+  position: absolute; }
+
+[f-pos-relative] {
+  position: relative; }
+
+[f-pos-fill] {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+[top-0] {
+  top: 0; }
+
+[bottom-0] {
+  bottom: 0; }
+
+[left-0] {
+  left: 0; }
+
+[right-0] {
+  right: 0; }
+
+[f-scroll-x] {
+  overflow-x: scroll !important;
+  -webkit-overflow-scrolling: touch; }
+
+[f-scroll-y] {
+  overflow-y: scroll !important;
+  -webkit-overflow-scrolling: touch; }
+
+[f-scroll-off-y] {
+  overflow-y: hidden !important; }
+
+[f-scroll-off-x] {
+  overflow-x: hidden !important; }

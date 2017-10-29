@@ -1,4 +1,5 @@
-//
+@import '_variables';
+@import 'mixins/mixins'; //
 // Box Shadows
 //
 // <div f-flex f-justify-center f>
@@ -36,52 +37,60 @@
 [f-box-shadow-1] {
   @include box-shadow(1)
 }
+
 [f-box-shadow-2] {
   @include box-shadow(2)
 }
+
 [f-box-shadow-3] {
   @include box-shadow(3)
 }
+
 [f-box-shadow-4] {
   @include box-shadow(4)
 }
+
 [f-box-shadow-5] {
   @include box-shadow(5)
 }
 
-[f-round], [f-round-md] {
-  border-radius:8px;
-  overflow:hidden;
-
+[f-round-md],
+[f-round] {
+  border-radius: 8px;
+  overflow     : hidden;
 }
+
 [f-round-sm] {
-  border-radius:4px;
-  overflow:hidden;
-
+  border-radius: 4px;
+  overflow     : hidden;
 }
+
 [f-round-lg] {
-  border-radius:12px;
-  overflow:hidden;
-
+  border-radius: 12px;
+  overflow     : hidden;
 }
-[f-round-xl] {
-  border-radius:16px;
-  overflow:hidden;
 
+[f-round-xl] {
+  border-radius: 16px;
+  overflow     : hidden;
 }
 
 [f-b-black] {
-  border:solid 1px rgba(0,0,0,0.1);
+  border: solid 1px rgba(0,0,0,0.1);
 }
+
 [f-b-top-black] {
-  border-top:solid 1px rgba(0,0,0,0.1);
+  border-top: solid 1px rgba(0,0,0,0.1);
 }
+
 [f-b-top-black] {
-  border-right:solid 1px rgba(0,0,0,0.1);
+  border-right: solid 1px rgba(0,0,0,0.1);
 }
+
 [f-b-top-black] {
-  border-left:solid 1px rgba(0,0,0,0.1);
+  border-left: solid 1px rgba(0,0,0,0.1);
 }
+
 [f-b-top-black] {
-  border-bottom:solid 1px rgba(0,0,0,0.1);
+  border-bottom: solid 1px rgba(0,0,0,0.1);
 }

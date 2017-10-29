@@ -7,6 +7,7 @@
   "scripts": {
     "server:start": "browser-sync start --server './' --files './' --index ",
     "compile:scss": "node-sass --include-path scss src/oh-flex.scss lib/oh-flex.css  --output-style compressed",
+    "compile:chunks": "node resources/build/chunkify.js",
     "compile:docs": "kss --source src/scss --destination docs  --css ../lib/oh-flex.css --builder resources/kss",
     "compile:es6": "babel src/ -d lib/",
     "compile:es6-watch": "babel --watch=./src  src/ -d lib/ --copy-files",
@@ -35,6 +36,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "browser-sync": "^2.18.13",
     "concurrently": "3.5.0",
+    "glob": "7.1.2",
     "kss": "3.0.0-beta.18",
     "node-sass": "4.5.3",
     "npm-bump": "0.0.23",

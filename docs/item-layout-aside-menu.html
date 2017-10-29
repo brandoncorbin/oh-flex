@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>KSS Style Guide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+
+    <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="../lib/oh-flex.css">
+
+
+  <style type="text/css">
+  .kss-title--level-1 {
+    display: none; }
+
+  .kss-source {
+    display:none !important;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: solid 1px #EEE;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 10px; }
+
+  #kss-node .kss-section {
+    margin-bottom: 20px; }
+
+  .kss-style .kss-title__ref {
+    border-top: solid 1px #EEE;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 10px !important;
+    margin-bottom: 5px;
+    color: #CCC !important; }
+
+  .kss-style h1 {
+    font-size: 30px; }
+
+  .kss-style h2 {
+    font-size: 24px; }
+
+  .kss-style h3 {
+    font-size: 22px; }
+
+  .kss-style dl,
+  .kss-style ul {
+    list-style: none; }
+
+  .kss-style kbd,
+  .kss-style pre,
+  .kss-style samp {
+    font-size: 13px; }
+  .kss-style pre {
+    padding:16px;
+    margin-left:-20px;
+    margin-right:-20px;
+    margin-top:26px;
+    margin-bottom:26px;
+  }
+    .kss-style pre, .kss-style code, .kss-style kbd, .kss-style samp {
+      background-color:rgb(45, 45, 45);
+      color:rgb(226, 176, 47);
+      border-radius:0px;
+    }
+  </style>
+
+</head>
+<body id="kss-node" class="kss-fullscreen-mode">
+
+  <div f-layout f-layout-aside id="app">
+    <aside f-collapse-phone :f-aside-open="menu_open" f-column f-flex f-w-160px f-w-min-20 f-w-max-260px f-bg-secondary>
+      <header f-header no-border>
+        <div f-bg-secondary f-toolbar f-justify-center>
+            <span f-rubber></span>
+            <a href="/oh-flex"><img src="/oh-flex/examples/resources/brand/oh-flex-logo.png" height="30" /></a>
+            <span f-rubber></span>
+        </div>
+      </header>
+      <div f-content>
+
+            <a f-item href="section-avatars.html">
+              <div f-title>Avatar</div>
+              <!-- <span f-note>1</span> -->
+            </a>
+            <a f-item href="section-borders.html">
+              <div f-title>Borders</div>
+              <!-- <span f-note>2</span> -->
+            </a>
+            <a f-item href="section-buttons.html">
+              <div f-title>Buttons</div>
+              <!-- <span f-note>3</span> -->
+            </a>
+            <a f-item href="section-colors.html">
+              <div f-title>Colors</div>
+              <!-- <span f-note>4</span> -->
+            </a>
+            <a f-item href="section-flex.html">
+              <div f-title>Flexbox</div>
+              <!-- <span f-note>5</span> -->
+            </a>
+            <a f-item href="section-height-width.html">
+              <div f-title>Height and Widths</div>
+              <!-- <span f-note>6</span> -->
+            </a>
+            <a f-item href="section-inputs.html">
+              <div f-title>Placeholder</div>
+              <!-- <span f-note>7</span> -->
+            </a>
+            <a f-item href="section-layout.html">
+              <div f-title>Layout</div>
+              <!-- <span f-note>8</span> -->
+            </a>
+            <a f-item href="section-list.html">
+              <div f-title>List</div>
+              <!-- <span f-note>9</span> -->
+            </a>
+            <a f-item href="section-padding-margin.html">
+              <div f-title>Padding &amp; Margins</div>
+              <!-- <span f-note>10</span> -->
+            </a>
+            <a f-item href="section-shadows.html">
+              <div f-title>Box Shadows</div>
+              <!-- <span f-note>11</span> -->
+            </a>
+            <a f-item href="section-show-hide.html">
+              <div f-title>Media Queries</div>
+              <!-- <span f-note>12</span> -->
+            </a>
+            <a f-item href="section-toolbar.html">
+              <div f-title>Toolbar</div>
+              <!-- <span f-note>13</span> -->
+            </a>
+            <a f-item href="section-typography.html">
+              <div f-title>Typography</div>
+              <!-- <span f-note>14</span> -->
+            </a>
+          <div f-item-divider f-t-black-40>
+            About
+          </div>
+          <div f-item>
+            <div f-item-content>
+              &copy; 2017 All Rights Reserved.
+              <a href="https://www.icorbin.com" f-t-black-60>A Corbin Creation</a>
+            </div>
+          </div>
+        </div>
+        <footer f-footer no-border f-t-12px f-b-t-none>
+
+          <div f-toolbar f-bg-black-5>
+            <a f-button clear f-rubber f-icon-only href="https://github.com/brandoncorbin/oh-flex">
+              <i class="zmdi zmdi-github"></i>
+            </a>
+            <a f-button clear f-rubber f-icon-only href="../">
+              <i class="zmdi zmdi-home"></i>
+            </a>
+          </div>
+        </footer>
+      </aside>
+      <main f-content  f-collapse-phone>
+        <header f-header>
+          <div f-toolbar>
+            <div f-buttons-left>
+              <a v-on:click="toggleMenu" f-button clear f-t-blue-400 f-icon-only>
+                <i class="zmdi zmdi-menu"></i>
+              </a>
+            </div>
+            <div f-title f-rubber>
+              Oh-Flex Docs
+            </div>
+          </div>
+        </header>
+
+
+      <div f-content>
+
+        <div f-contain-900px>
+
+              <header f-header f-m-b-20px>
+                <div f-toolbar f-bg-white>
+                  <div f-title f-rubber>
+                    Side Menu Layout
+                  </div>
+                  <button clear f-button>s.8.1</button>
+                </div>
+              </header>
+            <div f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-layout-aside-menu" class="kss-section kss-section--depth-2 is-fullscreen">
+
+              <div  class="kss-style">
+                <div f-h2 f-title f-m-t-6px class="title--level-2">
+                  <a class="" f-t-grey-900 href="#kssref-layout-aside-menu">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>8.1</span>
+                      <span f-t-grey-800>Side Menu Layout</span>
+                      <span class="kss-title__permalink-hash">
+                          #Layout.aside-menu
+                      </span>
+                    </span>
+
+                  </a>
+                </div>
+
+
+                  <div class="kss-description"  f-p-b-20px>
+                    <div style="position:relative;" f-round f-bg-blue-300 f-w-90 f-h-200px>
+  <div f-layout f-layout-aside>
+    <aside f-w-10 f-justify-center f-align-center f-bg-blue-100>1</aside>
+    <aside f-w-20 f-justify-center f-align-center f-bg-blue-300>Menu 2</aside>
+    <main>
+      <header f-header f-t-white f-bg-blue-600 f-justify-center f-align-center >Header</header>
+      <main f-content f-bg-blue-400 f-justify-center f-align-center >Content</main>
+      <footer f-footer f-t-white f-bg-blue-600 f-justify-center f-align-center >Footer</footer>
+    </main>
+  </div>
+</div>
+
+<pre><code>&lt;div f-layout f-layout-aside&gt;
+  &lt;aside f-w-10&gt;Menu 1&lt;/aside&gt;
+  &lt;aside f-w-20&gt;Menu 2&lt;/aside&gt;
+  &lt;main&gt;
+    &lt;header f-header&gt;Header&lt;/header&gt;
+    &lt;main f-content&gt;Content&lt;/main&gt;
+    &lt;footer f-footer&gt;Footer&lt;/footer&gt;
+  &lt;/main&gt;
+&lt;/div&gt;
+</code></pre>
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_layout.scss</code>, line 137
+                </div>
+
+            </div>
+
+        </div> <!-- end content -wrapper>
+
+
+
+
+      </div> <!-- end inner f-content -->
+
+
+  </main>
+  </div> <!-- end f-layout -->
+
+<!-- SCRIPTS -->
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/scrollspy.js"></script>
+<script src="kss-assets/prettify.js"></script>
+<script src="kss-assets/kss-fullscreen.js"></script>
+<script src="kss-assets/kss-guides.js"></script>
+<script src="kss-assets/kss-markup.js"></script>
+<script>
+  prettyPrint();
+  var spy = new ScrollSpy('#kss-node', {
+    nav: '.kss-nav__menu-child > li > a',
+    className: 'is-in-viewport'
+  });
+  var kssFullScreen = new KssFullScreen({
+    idPrefix: 'kss-fullscreen-',
+    bodyClass: 'kss-fullscreen-mode',
+    elementClass: 'is-fullscreen'
+  });
+  var kssGuides = new KssGuides({
+    bodyClass: 'kss-guides-mode'
+  });
+  var kssMarkup = new KssMarkup({
+    bodyClass: 'kss-markup-mode',
+    detailsClass: 'kss-markup'
+  });
+</script>
+
+
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+      <script
+      			  src="https://code.jquery.com/jquery-2.2.4.min.js"
+      			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      			  crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({
+    languages: ['HTML, XML']
+  });
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+<script>
+
+var app = new Vue({
+    el: '#app',
+    methods: {
+      toggleMenu: function() {
+        this.menu_open = !this.menu_open;
+      }
+    },
+    created: function() {
+      if(!localStorage.getItem('not_first_54321')) {
+        this.menu_open = true;
+        localStorage.setItem('not_first_54321', true);
+      }
+    },
+    data: {
+      menu_open : false
+    }
+})
+
+</script>
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>

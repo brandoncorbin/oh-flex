@@ -1,3 +1,6 @@
+@import '_variables';
+@import 'mixins/mixins'; //
+//
 // Toolbar
 //
 // A simple row based flexible toolbar
@@ -92,20 +95,34 @@
 //
 // Style guide: Toolbar
 
-.f-toolbar, [f-toolbar] {
+.f-toolbar,
+[f-toolbar] {
   @include f-toolbar(#F9F9F9, $faded);
+
   &[f-toolbar-inverse] {
     @include f-toolbar(transparent, #F8F8F8);
-    color:#FFF;
+    color: #FFF;
+
     [f-button] {
-      color:#FFF;
+      color: #FFF;
     }
   }
 
   button:first-child {
-    margin-left:-4px;
+    margin-left: -4px;
   }
+
   &[f-column] {
     @include align-items(flex-start);
   }
 }
+//
+// Toolbar Only CSS
+//
+// Only want the toolbar feature of Oh-flex?
+// ````
+// <link href="https://unpkg.com/oh-flex/lib/chunks/_toolbar.css" rel="stylesheet" />
+// ```
+//
+//
+// Style guide: Toolbar.xtra

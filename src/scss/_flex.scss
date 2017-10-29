@@ -1,10 +1,12 @@
+@import '_variables';
+@import 'mixins/mixins'; //
 //
 // Flexbox
 //
 // Let's start flexing! Sure your friend using IE 10 and below might not like you that much
 // but really... should we care what they think?
 //
-// Style guide: Flexbox
+// Style guide: Flex
 
 [f-flex] {}
 //
@@ -33,7 +35,7 @@
 // </div>
 // ```
 //
-// Style guide: Flexbox.align
+// Style guide: Flex.align
 
 [f-align-center] {
   @include flexbox();
@@ -103,7 +105,7 @@
 // </div>
 // ```
 //
-// Style guide: Flexbox.row-column
+// Style guide: Flex.row-column
 
 [f-row] {
   @include flexbox();
@@ -197,7 +199,7 @@
 //
 //
 //
-// Style guide: Flexbox.justify
+// Style guide: Flex.justify
 
 [f-justify-center] {
   @include flexbox();
@@ -271,3 +273,12 @@
 [f-shrink] {
   @include flex-shrink(1);
 }
+// Flex Only CSS
+//
+// Only want the flex features of Oh-flex?
+// ````
+// <link href="https://unpkg.com/oh-flex/lib/chunks/_flex.css" rel="stylesheet" />
+// ```
+//
+//
+// Style guide: Flex.xtra

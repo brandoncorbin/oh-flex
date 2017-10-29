@@ -186,7 +186,7 @@
               </div>
             </article>
 
-            <div v-if="selected.resources" f-bg-blue-50 f-h-30 f-scroll-x f-p-30px>
+            <div v-if="selected.resources" f-bg-blue-50 f-h-200px f-scroll-x f-p-30px>
               <div f-scroll-panel f-flex f-row f-m-r-20px f-h-100>
 
                 <img v-on:click="showResource(resource)" f-bg-white f-hover-zoom f-shrink-off f-m-r-20px f-box-shadow-1 v-for="resource in selected.resources" v-bind:src="resource.src" height="100%" f-m-r-10px />

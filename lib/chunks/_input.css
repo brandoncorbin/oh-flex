@@ -1,0 +1,40 @@
+[f-input] {
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-style: solid;
+  font-size: 16px;
+  padding: 6px 12px; }
+  [f-input][f-input-round] {
+    border-radius: 20px; }
+  [f-input][f-input-black] {
+    background-color: rgba(0, 0, 0, 0.1); }
+
+[f-placeholder-inverse] {
+  color: #FFF; }
+  [f-placeholder-inverse]::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: rgba(255, 255, 255, 0.4); }
+  [f-placeholder-inverse]::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba(255, 255, 255, 0.4); }
+  [f-placeholder-inverse]:-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgba(255, 255, 255, 0.4); }
+  [f-placeholder-inverse]:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgba(255, 255, 255, 0.4); }
+
+[f-placeholder-center]::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  text-align: center; }
+
+[f-placeholder-center]::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center; }
+
+[f-placeholder-center]:-ms-input-placeholder {
+  /* IE 10+ */
+  text-align: center; }
+
+[f-placeholder-center]:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center; }

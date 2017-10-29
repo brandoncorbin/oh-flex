@@ -15,6 +15,46 @@
 
 
   <style type="text/css">
+  .kss-title--level-1 {
+    display: none; }
+
+  .kss-source {
+    display:none !important;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: solid 1px #EEE;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 10px; }
+
+  #kss-node .kss-section {
+    margin-bottom: 20px; }
+
+  .kss-style .kss-title__ref {
+    border-top: solid 1px #EEE;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 10px !important;
+    margin-bottom: 5px;
+    color: #CCC !important; }
+
+  .kss-style h1 {
+    font-size: 30px; }
+
+  .kss-style h2 {
+    font-size: 24px; }
+
+  .kss-style h3 {
+    font-size: 22px; }
+
+  .kss-style dl,
+  .kss-style ul {
+    list-style: none; }
+
+  .kss-style kbd,
+  .kss-style pre,
+  .kss-style samp {
+    font-size: 13px; }
   .kss-style pre {
     padding:16px;
     margin-left:-20px;
@@ -56,10 +96,28 @@
               <!-- <span f-note>3</span> -->
             </a>
             <a f-item href="section-colors.html">
-              <div f-title>Material Colors</div>
+              <div f-title>Colors</div>
               <!-- <span f-note>4</span> -->
             </a>
-            <a f-item href="section-flexbox.html">
+                <a f-item f-bg-white-10 f-t-normal href="section-colors.html#kssref-colors-material">
+                  <div f-title f-t-14px>
+                    - Material Colors
+                  </div>
+                  <!-- <span>4.1</span> -->
+                </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-colors.html#kssref-colors-text">
+                  <div f-title f-t-14px>
+                    - Text Fading
+                  </div>
+                  <!-- <span>4.2</span> -->
+                </a>
+                <a f-item f-bg-white-10 f-t-normal href="section-colors.html#kssref-colors-xtra">
+                  <div f-title f-t-14px>
+                    - Color Only CSS
+                  </div>
+                  <!-- <span>4.3</span> -->
+                </a>
+            <a f-item href="section-flex.html">
               <div f-title>Flexbox</div>
               <!-- <span f-note>5</span> -->
             </a>
@@ -143,7 +201,7 @@
               <header f-header f-m-b-20px>
                 <div f-toolbar f-bg-white>
                   <div f-title f-rubber>
-                    Material Colors
+                    Colors
                   </div>
                   <button clear f-button>s.4</button>
                 </div>
@@ -155,9 +213,32 @@
                   <a class="" f-t-grey-900 href="#kssref-colors">
                     <span f-t-22px>
                       <span  f-t-grey-500 f-t-normal>4</span>
-                      <span f-t-grey-800>Material Colors</span>
+                      <span f-t-grey-800>Colors</span>
                       <span class="kss-title__permalink-hash">
                           #Colors
+                      </span>
+                    </span>
+
+                  </a>
+                </div>
+
+
+
+              </div>
+
+
+
+            </div>
+            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-colors-material" class="kss-section kss-section--depth-2 ">
+
+              <div  class="kss-style">
+                <div f-h2 f-title f-m-t-6px class="title--level-2">
+                  <a class="" f-t-grey-900 href="#kssref-colors-material">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>4.1</span>
+                      <span f-t-grey-800>Material Colors</span>
+                      <span class="kss-title__permalink-hash">
+                          #Colors.material
                       </span>
                     </span>
 
@@ -446,10 +527,100 @@ to apply a fill add <code>f-bg-COLORNAME</code>, to apply a color to text or an 
 
 
                 <div class="kss-source kss-style">
-                  Source: <code>_colors.scss</code>, line 121
+                  Source: <code>_colors.scss</code>, line 82
                 </div>
 
-            </div>
+            </section>
+            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-colors-text" class="kss-section kss-section--depth-2 ">
+
+              <div  class="kss-style">
+                <div f-h2 f-title f-m-t-6px class="title--level-2">
+                  <a class="" f-t-grey-900 href="#kssref-colors-text">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>4.2</span>
+                      <span f-t-grey-800>Text Fading</span>
+                      <span class="kss-title__permalink-hash">
+                          #Colors.text
+                      </span>
+                    </span>
+
+                  </a>
+                </div>
+
+
+                  <div class="kss-description"  f-p-b-20px>
+                    <div f-flex f-row>
+    <div f-w-50>
+        <div f-p-10px f-t-bold f-t-primary>f-t-primary</div>
+        <div f-p-10px f-t-bold f-t-secondary>f-t-secondary</div>
+        <div f-p-10px f-t-bold f-t-black-100>f-t-black-100</div>
+        <div f-p-10px f-t-bold f-t-black-90>f-t-black-90</div>
+        <div f-p-10px f-t-bold f-t-black-80>f-t-black-80</div>
+        <div f-p-10px f-t-bold f-t-black-70>f-t-black-70</div>
+        <div f-p-10px f-t-bold f-t-black-60>f-t-black-60</div>
+        <div f-p-10px f-t-bold f-t-black-50>f-t-black-50</div>
+        <div f-p-10px f-t-bold f-t-black-40>f-t-black-40</div>
+        <div f-p-10px f-t-bold f-t-black-30>f-t-black-30</div>
+        <div f-p-10px f-t-bold f-t-black-20>f-t-black-20</div>
+        <div f-p-10px f-t-bold f-t-black-10>f-t-black-10</div>
+        <div f-p-10px f-t-bold f-t-black-5>f-t-black-5</div>
+    </div>
+    <div f-w-50 f-bg-black-90>
+        <div f-p-10px f-t-bold f-t-white-100>f-t-white-100</div>
+        <div f-p-10px f-t-bold f-t-white-90>f-t-white-90</div>
+        <div f-p-10px f-t-bold f-t-white-80>f-t-white-80</div>
+        <div f-p-10px f-t-bold f-t-white-70>f-t-white-70</div>
+        <div f-p-10px f-t-bold f-t-white-60>f-t-white-60</div>
+        <div f-p-10px f-t-bold f-t-white-50>f-t-white-50</div>
+        <div f-p-10px f-t-bold f-t-white-40>f-t-white-40</div>
+        <div f-p-10px f-t-bold f-t-white-30>f-t-white-30</div>
+        <div f-p-10px f-t-bold f-t-white-20>f-t-white-20</div>
+        <div f-p-10px f-t-bold f-t-white-10>f-t-white-10</div>
+        <div f-p-10px f-t-bold f-t-white-5>f-t-white-5</div>
+    </div>
+</div>
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_colors.scss</code>, line 34
+                </div>
+
+            </section>
+            <section  f-p-20px f-box-shadow-2 f-b-black-10 id="kssref-colors-xtra" class="kss-section kss-section--depth-2 ">
+
+              <div  class="kss-style">
+                <div f-h2 f-title f-m-t-6px class="title--level-2">
+                  <a class="" f-t-grey-900 href="#kssref-colors-xtra">
+                    <span f-t-22px>
+                      <span  f-t-grey-500 f-t-normal>4.3</span>
+                      <span f-t-grey-800>Color Only CSS</span>
+                      <span class="kss-title__permalink-hash">
+                          #Colors.xtra
+                      </span>
+                    </span>
+
+                  </a>
+                </div>
+
+
+                  <div class="kss-description"  f-p-b-20px>
+                    <p>Only want the color features of Oh-flex?</p>
+<pre><code class="lang-`">&lt;link href=&quot;https://unpkg.com/oh-flex/lib/chunks/_colors.css&quot; rel=&quot;stylesheet&quot; /&gt;
+</code></pre>
+
+                  </div>
+
+              </div>
+
+
+                <div class="kss-source kss-style">
+                  Source: <code>_colors.scss</code>, line 406
+                </div>
+
+            </section>
 
         </div> <!-- end content -wrapper>
 
