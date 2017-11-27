@@ -1,216 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1, viewport-fit=cover">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../../lib/oh-flex.css" />
-  <title>Brandon Corbin - Product Developer - Portfolio</title>
-  <script src="https://unpkg.com/url2html@1.1.1/dist/url2html.js"></script>
-  <script src="https://unpkg.com/vue"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="manifest.json">
-  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#262e42">
-  <meta name="theme-color" content="#ffffff">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167304-34"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../lib/oh-flex.css" />
+    <title>Brandon Corbin - Product Developer - Portfolio</title>
+    <script src="https://unpkg.com/url2html@1.1.1/dist/url2html.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#262e42">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167304-34"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-    function gtag()
-    {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
 
-    gtag('config', 'UA-167304-34');
-  </script>
+      gtag('config', 'UA-167304-34');
 
-</head>
+    </script>
 
-<body class="f">
-  <div id="app">
-    <div f-layout f-layout-aside>
+  </head>
 
-      <!-- START Message List View -->
-      <aside f-w-30 f-collapse-phone f-bg-grey-900 :f-aside-open="menu_open">
-        <div f-layout f-p-l-safe-area>
-          <header f-header>
-            <div f-toolbar f-bg-grey-900>
-              <!-- <div f-buttons-left>
+  <body class="f">
+    <div id="app">
+      <div f-layout f-layout-aside>
+
+        <!-- START Message List View -->
+        <aside f-w-30 f-collapse-phone f-w-max-300px f-bg-grey-900 :f-aside-open="menu_open">
+          <div f-layout f-p-l-safe-area>
+            <header f-header>
+              <div f-toolbar f-bg-grey-900>
+                <!-- <div f-buttons-left>
                 <a href="../../" f-button clear f-t-white f-icon-only>
                   <i class="zmdi zmdi-arrow-left"></i>
                 </a>
               </div> -->
-              <input v-model="searchTerm" v-on:keyup="search" f-b-white-5 placeholder="Search" f-placeholder-center f-placeholder-inverse f-input f-rubber f-input-round f-input-black f-w-100 type="text" round-lg />
-            </div>
-
-          </header>
-
-          <section f-content v-if="searchResults" id="searchResults">
-            <div f-item-divider f-t-blue-100 clear f-p-t-10px f-p-b-10px>
-              <div f-item-content>
-                Search {{searchTerm}}
+                <input v-model="searchTerm" v-on:keyup="search" f-b-white-5 placeholder="Search" f-placeholder-center f-placeholder-inverse f-input f-rubber f-input-round f-input-black f-w-100 type="text" round-lg />
               </div>
-              <button f-button clear f-t-white v-on:click="searchTerm = null; searchResults = null">Clear</button>
-            </div>
 
-            <a f-item f-no-lines clear f-align-center f-h-min-80px v-on:click="selectItem(project)" v-for="project in searchResults" :selected="selected == project">
-              <div f-avatar-square sm f-m-r-12px><img v-bind:src="project.avatar" /> </div>
-              <div f-item-content f-rubber>
-                <div f-title f-t-white> {{ project.title }}</div>
-                <p f-truncate f-t-blue-300 f-note>
-                  {{project.summary}}
-                </p>
+            </header>
+
+            <section f-content v-if="searchResults" id="searchResults">
+              <div f-item-divider f-t-blue-100 clear f-p-t-10px f-p-b-10px>
+                <div f-item-content>
+                  Search {{searchTerm}}
+                </div>
+                <button f-button clear f-t-white v-on:click="searchTerm = null; searchResults = null">Clear</button>
               </div>
-              <div>
-                <i class="zmdi zmdi-chevron-right" f-t-22px f-t-white-60></i>
+
+              <div f-item-grid>
+                <a f-item f-no-lines clear f-align-center f-h-min-80px v-on:click="selectItem(project)" v-for="project in searchResults" :selected="selected == project">
+                  <div f-avatar-square sm f-m-r-12px><img v-bind:src="project.avatar" /> </div>
+                  <div f-item-content f-rubber>
+                    <div f-title f-t-white> {{ project.title }}</div>
+                    <p f-truncate f-t-blue-300 f-note>
+                      {{project.summary}}
+                    </p>
+                  </div>
+                  <div>
+                    <i class="zmdi zmdi-chevron-right" f-t-22px f-t-white-60></i>
+                  </div>
+                </a>
               </div>
-            </a>
-          </section>
-          <!-- end Search Results -->
+            </section>
+            <!-- end Search Results -->
 
-          <section f-content v-if="!searchResults">
-
+            <section f-content v-if="!searchResults">
 
 
-            <a f-item clear f-align-center f-h-min-80px v-on:click="selectItem(about)" v-for="about in resume.about" :selected="selected == about">
-              <div f-avatar-square sm f-m-r-12px><img v-bind:src="about.avatar" /> </div>
-              <div f-item-content f-rubber>
-                <div f-title f-t-white> {{ about.title }}</div>
-                <p f-truncate f-t-amber-300 f-note>
-                  {{about.summary}}
-                </p>
+
+              <!-- <a f-item clear f-align-center f-h-min-80px v-on:click="selectItem(about)" v-for="about in resume.about" :selected="selected == about">
+                <div f-avatar-square sm f-m-r-12px><img v-bind:src="about.avatar" /> </div>
+                <div f-item-content f-rubber>
+                  <div f-title f-t-white> {{ about.title }}</div>
+                  <p f-truncate f-t-amber-300 f-note>
+                    {{about.summary}}
+                  </p>
+                </div>
+                <div>
+                  <i f-m-l-6px class="zmdi zmdi-chevron-right" f-t-22px f-t-white-30></i>
+                </div>
+              </a> -->
+
+              <div f-item-divider f-t-grey-700 clear f-p-t-10px f-p-b-10px>
+                My Creations
               </div>
-              <div>
-                <i f-m-l-6px class="zmdi zmdi-chevron-right" f-t-22px f-t-white-30></i>
+
+              <div f-item-grid>
+                <a f-item clear f-align-center style="margin:0px; max-width:49%; width:49%; min-width:49%" v-on:click="selectItem(project)" v-for="project in resume.projects" :selected="selected == project">
+                  <div f-item-content f-align-center f-justify-center>
+                    <div style="width:60px; height:60px; border-radius:8px; overflow:hidden; text-align:center" f-m-b-12px style="overflow:hidden"><img width="100%" v-bind:src="project.avatar" /> </div>
+                    <div f-t-white f-t-16px> {{ project.title }}</div>
+                    <!-- <p f-truncate f-t-blue-300 f-note>
+                    {{project.summary}}
+                  </p> -->
+                  </div>
+                </a>
               </div>
-            </a>
 
-            <div f-item-divider f-t-grey-700 clear f-p-t-10px f-p-b-10px>
-              Products
-            </div>
-
-            <a f-item clear f-align-center f-h-min-60px v-on:click="selectItem(project)" v-for="project in resume.projects" :selected="selected == project">
-              <div f-avatar-square sm f-m-r-12px><img v-bind:src="project.avatar" /> </div>
-              <div f-item-content f-rubber>
-                <div f-title f-t-white> {{ project.title }}</div>
-                <!-- <p f-truncate f-t-blue-300 f-note>
-                  {{project.summary}}
-                </p> -->
+              <div f-item-divider f-t-grey-700 clear f-p-t-10px f-p-b-10px>
+                Experience
               </div>
-              <div>
-                <i f-m-l-6px class="zmdi zmdi-chevron-right" f-t-22px f-t-white-30></i>
-              </div>
-            </a>
 
-            <div f-item-divider f-t-grey-700 clear f-p-t-10px f-p-b-10px>
-              Experience
-            </div>
-
-            <a f-item clear f-align-center v-on:click="selectItem(job)" v-for="job in resume.experience" :selected="selected == job">
-              <div f-avatar-square sm f-m-r-12px><img v-bind:src="job.avatar" /> </div>
-              <div f-item-content f-rubber>
-                <div f-title f-t-white> {{ job.title }}</div>
-                <!-- <p f-truncate f-t-blue-300 f-note>
+              <a f-item clear f-align-center v-on:click="selectItem(job)" v-for="job in resume.experience" :selected="selected == job">
+                <div f-avatar-square sm f-m-r-12px><img v-bind:src="job.avatar" /> </div>
+                <div f-item-content f-rubber>
+                  <div f-title f-t-white> {{ job.title }}</div>
+                  <!-- <p f-truncate f-t-blue-300 f-note>
                   {{job.company}}
                 </p> -->
-                <p f-truncate f-t-grey-700 f-note>
-                  {{job.start}} to {{job.end}}
-                </p>
+                  <p f-truncate f-t-grey-700 f-note>
+                    {{job.start}} to {{job.end}}
+                  </p>
+                </div>
+                <div>
+                  <i f-m-l-6px class="zmdi zmdi-chevron-right" f-t-22px f-t-white-30></i>
+                </div>
+              </a>
+
+              <div f-item-divider f-h-60px f-t-grey-700>
+
               </div>
-              <div>
-                <i f-m-l-6px class="zmdi zmdi-chevron-right" f-t-22px f-t-white-30></i>
-              </div>
-            </a>
 
-            <div f-item-divider f-h-60px f-t-grey-700>
+              <article f-item>
+                <div f-item-content>
+                  <p f-note>
+                    Built on Oh-Flex
+                  </p>
+                </div>
+                <a href="https://brandoncorbin.github.io/oh-flex" target="_blank" f-b-white-5 f-button f-t-white-80 f-bg-grey-900>Learn More</a>
+              </article>
 
-            </div>
-
-            <article f-item>
-              <div f-item-content>
-                <p f-note>
-                  Built on Oh-Flex
-                </p>
-              </div>
-              <a href="https://brandoncorbin.github.io/oh-flex" target="_blank" f-b-white-5 f-button f-t-white-80 f-bg-grey-900>Learn More</a>
-            </article>
-
-          </section>
+            </section>
 
 
 
-        </div>
-      </aside>
-      <main f-rubber f-collapse-phone>
-        <div f-layout id="main-layout">
-          <header f-header>
-            <div f-toolbar>
-              <button f-button clear f-show-phone f-hide-tablet-up f-icon-only v-on:click="toggleMenu"><i f-t-grey-600 class="zmdi zmdi-menu"></i></button>
-              <span f-rubber></span>
-              <div f-t-center f-title f-t-grey-800>
-                {{ title }}
-              </div>
-              <span f-rubber></span>
-              <a href="mailto:portfolio@icorbin.com" f-button clear f-t-amber-600 f-icon-only>
+          </div>
+        </aside>
+        <main f-rubber f-collapse-phone>
+          <div f-layout id="main-layout">
+            <header f-header no-line f-b-none>
+              <div f-toolbar f-bg-white f-b-none>
+                <button f-button clear f-show-phone f-hide-tablet-up f-icon-only v-on:click="toggleMenu"><i f-t-grey-600 class="zmdi zmdi-menu"></i></button>
+                <span f-rubber></span>
+                <div f-t-center f-title f-t-grey-200>
+                  {{ title }}
+                </div>
+                <span f-rubber></span>
+                <a href="mailto:portfolio@icorbin.com" f-button clear f-t-amber-600 f-icon-only>
                 <i f-t-grey-600 class="zmdi zmdi-comment-outline"></i>
               </a>
-            </div>
-          </header>
-          <div f-content f-contain-700px f-p-r-safe-area>
-
-            <article f-item-divider f-no-lines clear>
-
-
-            </article>
-            <article f-item f-no-lines f-m-b-10px>
-              <div f-avatar-square f-m-r-12px f-box-shadow-1 lg v-if="selected.avatar">
-                <img v-bind:src="selected.avatar" />
               </div>
-              <div f-item-content>
-                <div f-title>{{selected.title}}</div>
-                <p f-note>
-                  <span v-if="selected.type=='job'">
+            </header>
+            <div f-content f-contain-700px f-p-r-safe-area>
+
+              <article f-item-divider f-no-lines clear>
+
+
+              </article>
+              <article f-item f-no-lines f-m-b-10px>
+                <div f-avatar-square f-m-r-12px f-box-shadow-1 lg v-if="selected.avatar">
+                  <img v-bind:src="selected.avatar" />
+                </div>
+                <div f-item-content>
+                  <div f-title>{{selected.title}}</div>
+                  <p f-note>
+                    <span v-if="selected.type=='job'">
                     <strong f-t-black-100>{{selected.company}}</strong> <br />{{selected.start}} to {{selected.end}}
                   </span>
-                  <span v-if="selected.summary" f-t-grey-600>
+                    <span v-if="selected.summary" f-t-grey-600>
                     {{selected.summary}}
                   </span>
-                </p>
+                  </p>
+                </div>
+              </article>
+
+              <div v-if="selected.resources" f-bg-blue-50 f-h-200px f-scroll-x f-p-30px>
+                <div f-scroll-panel f-flex f-row f-m-r-20px f-h-100>
+
+                  <img v-on:click="showResource(resource)" f-bg-white f-hover-zoom f-shrink-off f-m-r-20px f-box-shadow-1 v-for="resource in selected.resources" v-bind:src="resource.src" height="100%" f-m-r-10px />
+
+                  <div f-w-10px>&nbsp;</div>
+                </div>
               </div>
-            </article>
-
-            <div v-if="selected.resources" f-bg-blue-50 f-h-200px f-scroll-x f-p-30px>
-              <div f-scroll-panel f-flex f-row f-m-r-20px f-h-100>
-
-                <img v-on:click="showResource(resource)" f-bg-white f-hover-zoom f-shrink-off f-m-r-20px f-box-shadow-1 v-for="resource in selected.resources" v-bind:src="resource.src" height="100%" f-m-r-10px />
-
-                <div f-w-10px>&nbsp;</div>
-              </div>
-            </div>
 
 
-            <article f-item v-if="selected.technologies" f-wrap f-p-t-28px f-b-none f-justify-center f-align-center>
-              <div f-bg-blue-400 f-m-b-4px f-p-l-12px f-p-r-12px f-t-white f-round-lg f-t-12px f-tag f-p-4px f-m-r-5px v-for="tech in selected.technologies">
-                {{tech}}
-              </div>
-            </article>
+              <article f-item v-if="selected.technologies" f-wrap f-p-t-28px f-b-none f-justify-center f-align-center>
+                <div f-bg-blue-400 f-m-b-4px f-p-l-12px f-p-r-12px f-t-white f-round-lg f-t-12px f-tag f-p-4px f-m-r-5px v-for="tech in selected.technologies">
+                  {{tech}}
+                </div>
+              </article>
 
-            <article f-item :f-b-b="index < selected.description.length -1" :f-b-b-none="index == selected.description.length -1" v-for="(para, index) in selected.description">
-              <p f-note v-html="url2html(para)" f-w-100 f-t-16px></p>
-            </article>
+              <article f-item :f-b-b="index < selected.description.length -1" :f-b-b-none="index == selected.description.length -1" v-for="(para, index) in selected.description">
+                <p f-note v-html="url2html(para)" f-w-100 f-t-16px></p>
+              </article>
 
-            <article f-item-divider clear f-b-t-none f-b-bottom-black v-if="selected.links">
-              <div f-p-b-6px f-p-t-6px f-t-14px f-t-bolder f-t-amber-900>Learn More</div>
-            </article>
+              <article f-item-divider clear f-b-t-none f-b-bottom-black v-if="selected.links">
+                <div f-p-b-6px f-p-t-6px f-t-14px f-t-bolder f-t-amber-900>Learn More</div>
+              </article>
 
-            <a f-item v-for="link in selected.links" v-bind:href="link.href">
+              <a f-item v-for="link in selected.links" v-bind:href="link.href">
               <i v-bind:class="link.icon" f-m-r-10px f-icon-md f-t-blue-200 v-if="link.icon"></i>
               <div f-item-content>
                 <div f-title f-t-normal>
@@ -220,56 +221,57 @@
               <i class="zmdi zmdi-chevron-right" /></i>
             </a>
 
-            <article f-item-divider f-no-lines clear v-if="selected.links">
-            </article>
+              <article f-item-divider f-no-lines clear v-if="selected.links">
+              </article>
 
-          </div>
-          <!-- end f-content -->
-        </div>
-      </main>
-
-    </div>
-    <!-- end f-layout -->
-    <div f-modal :f-modal-hidden="!show_resource_modal" :f-modal-show="!show_resource_modal">
-      <div f-modal-window f-layout v-if="active_resource">
-        <header f-header>
-          <div f-toolbar>
-            <p f-note f-rubber f-p-l-10px>
-              {{ active_resource.summary }}
-            </p>
-            <div f-buttons-right>
-              <button f-button clear icon-only class="zmdi zmdi-close" v-on:click="hideResource"></button>
             </div>
+            <!-- end f-content -->
           </div>
-
-        </header>
-        <main f-content f-p-6px>
-          <img f-shrink-off f-round f-grow-off v-bind:src="active_resource.src" width="100%" />
         </main>
-        <footer f-footer>
-          <div f-toolbar>
-            <button f-rubber f-button clear icon-only v-on:click="previousResource"><i class="zmdi zmdi-arrow-left"></i></button>
-            <button f-rubber f-button clear icon-only v-on:click="nextResource"><i class="zmdi zmdi-arrow-right"></i></button>
-          </div>
-        </footer>
-      </div>
-    </div>
 
-    <div f-modal :f-modal-hidden="ready" f-bg-blue-800>
-      <span f-t-white f-t-bold f-t-16px>
+      </div>
+      <!-- end f-layout -->
+      <div f-modal :f-modal-hidden="!show_resource_modal" :f-modal-show="!show_resource_modal">
+        <div f-modal-window f-layout v-if="active_resource">
+          <header f-header>
+            <div f-toolbar>
+              <p f-note f-rubber f-p-l-10px>
+                {{ active_resource.summary }}
+              </p>
+              <div f-buttons-right>
+                <button f-button clear icon-only class="zmdi zmdi-close" v-on:click="hideResource"></button>
+              </div>
+            </div>
+
+          </header>
+          <main f-content f-p-6px>
+            <img f-shrink-off f-round f-grow-off v-bind:src="active_resource.src" width="100%" />
+          </main>
+          <footer f-footer>
+            <div f-toolbar>
+              <button f-rubber f-button clear icon-only v-on:click="previousResource"><i class="zmdi zmdi-arrow-left"></i></button>
+              <button f-rubber f-button clear icon-only v-on:click="nextResource"><i class="zmdi zmdi-arrow-right"></i></button>
+            </div>
+          </footer>
+        </div>
+      </div>
+
+      <div f-modal :f-modal-hidden="ready" f-bg-blue-800>
+        <span f-t-white f-t-bold f-t-16px>
         Preparing...
       </span>
+      </div>
     </div>
-  </div>
-  <script>
-    // var hammertime = new Hammer(document.body, {});
-    // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-    // hammertime.on('swipe', function(ev) {
-    //   console.log(ev);
-    // });
-  </script>
-  <script src="portfolio.js"></script>
+    <script>
+      // var hammertime = new Hammer(document.body, {});
+      // hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+      // hammertime.on('swipe', function(ev) {
+      //   console.log(ev);
+      // });
 
-</body>
+    </script>
+    <script src="portfolio.js"></script>
+
+  </body>
 
 </html>

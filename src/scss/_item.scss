@@ -40,7 +40,33 @@
 // </article>
 // ```
 //
-// Style guide: List.Item
+// Style guide: List.Item]
+
+[f-item-grid] {
+  @include flexbox();
+  @include flex-wrap(wrap);
+  @include justify-content(around);
+
+  [f-item] {
+    @include flex-grow(1);
+    @include flex-shrink(1);
+    width        : 20%;
+    min-width    : 200px;
+    max-width    : 450px;
+    height       : 120px;
+    border-radius: 6px;
+    margin       : 10px;
+    border       : solid 1px rgba(0,0,0,0.1);
+    @include box-shadow(2);
+    transition   : all 0.2s ease-out;
+
+    &:hover {
+      transition: all 0.2s ease-out;
+      @include box-shadow(1);
+      border    : solid 1px rgba(0,0,0,0.05);
+    }
+  }
+}
 
 p[f-note] {
   margin: 2px 0;
@@ -94,6 +120,124 @@ p[f-note] {
 
   [item-left] {
     padding-right: 6px;
+  }
+}
+
+[f-item] {
+  cursor: pointer !important;
+
+  * {
+    cursor: pointer !important;
+  }
+
+  [f-buttons-left] {
+    margin-left: -10px;
+  }
+
+  [f-buttons-right] {
+    margin-right: -10px;
+  }
+
+  &[inverse] {
+    [f-item-content][input-content] {
+      label {
+        color: #EEE;
+      }
+
+      .vue-input-tag-wrapper {
+        background: rgba(255,255,255,0.1);
+        border    : none;
+        padding   : 2px 10px;
+
+        input {
+          background: transparent !important;
+          border    : none;
+        }
+      }
+
+      input[type=email],
+      input[type=number],
+      input[type=password],
+      input[type=text] {
+        background: rgba(255,255,255,0.1);
+        color     : #FFF;
+      }
+
+      textarea {
+        background: rgba(255,255,255,0.1);
+        color     : #FFF;
+      }
+    }
+  }
+
+  [f-item-content][input-content] {
+    .vue-input-tag-wrapper {
+      input[type=text] {
+        height: 24px;
+        border: none;
+      }
+    }
+
+    input[type=email],
+    input[type=number],
+    input[type=password],
+    input[type=text] {
+      height       : 36px;
+      padding      : 5px 6px;
+      font-size    : 16px;
+      border       : solid 1px rgba(0,0,0,0.4);
+      border-radius: 2px;
+      margin-top   : 4px;
+      margin-bottom: 4px;
+    }
+
+    $checkbox-width: 18px;
+
+    input[type=checkbox] {
+      background-color  : rgba(0,0,0,0.1);
+      border            : solid 1px rgba(0,0,0,0.1);
+      -webkit-appearance: none;
+      display           : inline-block;
+      vertical-align    : middle;
+      height            : 16px;
+      width             : 16px;
+      border-radius     : 4px;
+      text-align        : center;
+      outline           : none;
+
+      &:checked {
+        border          : solid 1px rgba(0,0,0,0.2);
+        background-color: $primary;
+
+        &:after {
+          content: '✓';
+          color  : #FFF;
+        }
+      }
+    }
+
+    textarea {
+      padding      : 5px 6px;
+      font-size    : 16px;
+      border       : solid 1px rgba(0,0,0,0.4);
+      border-radius: 2px;
+      margin-top   : 4px;
+      margin-bottom: 4px;
+    }
+  }
+}
+
+[f-num-input] {
+  border      : solid 1px #EEE !important;
+  text-align  : center;
+  border-style: none;
+  box-shadow  : 0 4px 8px rgba(0,0,0,0.1);
+  width       : 60px;
+  outline     : none;
+
+  &:focus {
+    color     : $primary;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
   }
 }
 

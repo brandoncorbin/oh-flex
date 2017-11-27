@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../lib/oh-flex.css" />
+    <script src="https://unpkg.com/vue"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <title>Oh Flex | iOS Mail Example</title>
+  </head>
+
+  <body class="f">
+    <div f-layout id="app">
+
+      <div f-content>
+
+        <div f-contain-700px>
+
+          <div class="stack-container">
+            <div class="stack visible" f-column>
+              <div class="stack-title">Type</div>
+              <div class="stack-content" f-row f-justify-center f-align-center>
+                <button f-button f-m-10px f-round :f-bg-blue-500="type=='glass'" :f-t-white="type=='glass'" f-b-none v-on:click="focused=1; type='glass' ">Glass</button>
+                <button f-button f-m-10px f-round :f-bg-blue-500="type=='auto'" :f-t-white="type=='auto'" f-b-none v-on:click="focused=1; type='auto' ">Auto</button>
+                <button f-button f-m-10px f-round :f-bg-blue-500="type=='home'" :f-t-white="type=='home'" f-b-none v-on:click="focused=1; type='home' ">Home</button>
+              </div>
+            </div>
+
+            <div class="stack" v-for="i of [0,1,2,3,4,5,6,7,8,9,10]" :invisible="focused<=i">
+              <div class="stack-title">Section {{i}}</div>
+              <div class="stack-content" f-p-20px f-column f-justify-center f-align-center>
+                <span f-t-30px f-p-10px f-t-blue-grey-600>I'm content for section {{i}}</span>
+              </div>
+              <div class="stack-footer" f-w-100>
+                <div f-row f-align-end f-justify-end><button f-button f-bg-blue-100 f-t-blue-600 f-b-none f-sm f-round v-on:click="focused=(i+2)">Next</button></div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+    <!-- end f-layout -->
+
+    <style media="screen">
+      .stack-container {
+        position: relative;
+        padding: 20px;
+      }
+
+      .stack {
+        padding: 20px;
+        width: 100%;
+        min-height: 100px;
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+        border: solid 1px rgba(0, 0, 0, 0.1);
+        border-radius: 2px;
+        margin-bottom: 10px;
+        z-index: 10;
+        transition: all 0.5s ease-out
+      }
+
+      .stack[invisible] {
+        padding: 0px;
+        height: 20px !important;
+        min-height: 20px;
+        background-color: rgb(165, 178, 194);
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05);
+        z-index: 1;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+        transition: all 0.5s ease-out;
+        transform: scale(0.97);
+        margin-bottom: 0;
+      }
+
+      .stack[invisible] .stack-title {
+        color: #FFF;
+        font-size: 10px;
+        font-weight: bold;
+        width: 100%;
+        padding-left: 10px;
+        opacity: 0.9
+      }
+
+      .stack[invisible] .stack-content {
+        display: none
+      }
+
+      .stack[invisible] .stack-footer {
+        display: none
+      }
+
+    </style>
+
+    <script>
+      var app = new Vue({
+        el: '#app',
+        methods: {
+          toggleMailboxMenu: function() {
+            this.mailbox_menu_open = !this.mailbox_menu_open;
+          },
+          toggleMessageMenu: function() {
+            this.message_menu_open = !this.message_menu_open;
+          }
+        },
+        data: {
+          focused: 0,
+          type: null,
+          mailbox_menu_open: false,
+          message_menu_open: false
+        }
+      })
+
+    </script>
+
+  </body>
+
+</html>

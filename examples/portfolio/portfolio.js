@@ -3,18 +3,17 @@ var resume = {
   about: [{
     type: "about",
     avatar: "https://pbs.twimg.com/profile_images/820704707530342400/IMbih0qs_400x400.jpg",
-    summary: "Product Architect",
-    title: "Brandon Corbin",
+    summary: "",
+    title: "",
     description: [
-      "<div f-t-24px f-t-blue-600>Hi, I'm Brandon Corbin, a Product Architect with a passion for educating others, health & behavior tracking, and creating simple solutions for complex problems.</div>",
-      "<div f-p-b-6px f-p-t-20px f-t-14px f-t-bolder f-t-dark>Strengths</div>",
+      "<div f-t-24px f-t-blue-grey-900 f-t-bolder>Hi, I'm Brandon Corbin, a Product Architect with a passion for educating others, health & behavior tracking, and creating simple solutions for complex problems.</div>",
+      "<div f-p-b-6px f-p-t-20px f-t-14px f-t-bolder f-t-dark>What I enjoy</div>",
       "Turning really rough ideas into functional prototypes and MVP's.",
       "Discovering new ways of turning existing data/services into new product offerings.",
       "Managing and mentoring creatives",
       "Finding creative and simple solutions to seemingly overwhelming problems.",
       "Getting others excited about various technologies.",
-      "<div f-p-b-6px f-p-t-20px f-t-14px f-t-bolder f-t-dark>Nomie Pitch</div>https://youtu.be/1y-9KYQPbxc",
-      "<div  f-m-t-20px f-p-b-6px f-p-t-20px f-t-14px f-t-bolder f-t-dark>My Animate Pitch</div> https://youtu.be/20qnLuF4Csg?t=15s"
+      "<div f-row f-round><div f-m-6px>https://youtu.be/20qnLuF4Csg?t=15s</div><div f-m-6px>https://youtu.be/1y-9KYQPbxc</div>"
 
     ],
     resourcesx: [{
