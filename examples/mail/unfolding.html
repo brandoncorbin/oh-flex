@@ -5,37 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../../lib/oh-flex.css" />
+    <link rel="stylesheet" href="https://unpkg.com/oh-flex" />
     <script src="https://unpkg.com/vue"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-    <title>Oh Flex | iOS Mail Example</title>
+    <title>Flow Experiment</title>
   </head>
 
-  <body class="f">
-    <div f-layout id="app">
+  <body class="f" f-bg-blue-grey-100 f-h-min-900px>
+    <div f-layout f-layout-aside id="app">
+      <!-- end f-main -->
+      <aside f-w-20 f-w-max-300px f-bg-white-40>
+        <div f-content f-p-20px>
+          <h2>Sticky Content</h2> Maybe a running preview of the claim, a "scratch pad" for jotting down notes, etc
+        </div>
+      </aside>
 
-      <div f-content>
+      <div f-content f-main id="StackContainer">
 
         <div f-contain-700px>
 
           <div class="stack-container">
             <div class="stack visible" f-column>
-              <div class="stack-title">Type</div>
+              <div class="stack-title" f-m-b-20px f-t-center>Folding Stacks Example</div>
               <div class="stack-content" f-row f-justify-center f-align-center>
-                <button f-button f-m-10px f-round :f-bg-blue-500="type=='glass'" :f-t-white="type=='glass'" f-b-none v-on:click="focused=1; type='glass' ">Glass</button>
-                <button f-button f-m-10px f-round :f-bg-blue-500="type=='auto'" :f-t-white="type=='auto'" f-b-none v-on:click="focused=1; type='auto' ">Auto</button>
-                <button f-button f-m-10px f-round :f-bg-blue-500="type=='home'" :f-t-white="type=='home'" f-b-none v-on:click="focused=1; type='home' ">Home</button>
+                <button f-button f-m-10px f-round :f-bg-blue-500="type=='glass'" :f-t-white="type=='glass'" :f-t-blue-500="type!='glass'" f-b-none v-on:click="focused=1; type='glass' ">Glass</button>
+                <button f-button f-m-10px f-round :f-bg-blue-500="type=='auto'" :f-t-white="type=='auto'" :f-t-blue-500="type!='auto'" f-b-none v-on:click="focused=1; type='auto' ">Auto</button>
+                <button f-button f-m-10px f-round :f-bg-blue-500="type=='home'" :f-t-white="type=='home'" :f-t-blue-500="type!='home'" f-b-none v-on:click="focused=1; type='home' ">Home</button>
+                <button f-button f-m-10px f-round :f-bg-blue-500="type=='business'" :f-t-white="type=='business'" :f-t-blue-500="type!='business'" f-b-none v-on:click="focused=1; type='business' ">Business</button>
               </div>
             </div>
 
-            <div class="stack" v-for="i of [0,1,2,3,4,5,6,7,8,9,10]" :invisible="focused<=i">
-              <div class="stack-title">Section {{i}}</div>
-              <div class="stack-content" f-p-20px f-column f-justify-center f-align-center>
+            <div class="stack" f-column v-bind:style="{'z-index': (100 - i) }" v-for="i of [0,1,2,3,4,5,6,7,8,9,10]" :invisible="focused<=i">
+              <div class="stack-title" f-shrink-off f-grow-off>Section {{i}}</div>
+              <div class="stack-content" f-p-20px f-column f-justify-center f-align-center f-rubber>
                 <span f-t-30px f-p-10px f-t-blue-grey-600>I'm content for section {{i}}</span>
               </div>
-              <div class="stack-footer" f-w-100>
-                <div f-row f-align-end f-justify-end><button f-button f-bg-blue-100 f-t-blue-600 f-b-none f-sm f-round v-on:click="focused=(i+2)">Next</button></div>
+              <div class="stack-footer" f-w-100 f-shrink-off f-grow-off>
+                <div f-row f-align-end f-justify-end><button f-button f-bg-blue-100 f-t-blue-600 f-b-none f-sm f-w-125px f-round v-on:click="showStack(i)">Next</button></div>
               </div>
             </div>
 
@@ -47,6 +54,7 @@
 
       </div>
 
+
     </div>
     <!-- end f-layout -->
 
@@ -57,41 +65,75 @@
       }
 
       .stack {
+        position: relative;
         padding: 20px;
         width: 100%;
-        min-height: 100px;
+
         box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
         border: solid 1px rgba(0, 0, 0, 0.1);
-        border-radius: 2px;
+        border-radius: 4px;
         margin-bottom: 10px;
-        z-index: 10;
-        transition: all 0.5s ease-out
+        z-index: 1000;
+        transition: all 0.7s ease-out;
+        background-color: #FFF;
+        -webkit-transform: perspective(400px) rotateX(0deg);
       }
 
       .stack[invisible] {
-        padding: 0px;
-        height: 20px !important;
-        min-height: 20px;
-        background-color: rgb(165, 178, 194);
-        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05);
+        padding: 0;
+        height: 20px;
+        max-height: 36px;
+        min-height: 36px;
+        background-color: #F8F8F8;
         z-index: 1;
         border-bottom: solid 1px rgba(0, 0, 0, 0.1);
-        transition: all 0.5s ease-out;
-        transform: scale(0.97);
-        margin-bottom: 0;
+        transition: all 0.7s ease-out;
+        -webkit-transform: perspective(400px) rotateX(20deg);
+        z-index: 0;
+        margin-top: -20px;
+        position: relative;
+        opacity: 0.8
+        /* margin-bottom: 0; */
       }
 
+
       .stack[invisible] .stack-title {
-        color: #FFF;
+        color: #333;
         font-size: 10px;
         font-weight: bold;
         width: 100%;
         padding-left: 10px;
-        opacity: 0.9
+        opacity: 0.9;
+        line-height: 36px;
       }
 
       .stack[invisible] .stack-content {
         display: none
+      }
+
+      [f-button]:hover {
+        overflow: visible !important
+      }
+
+      [f-button]::after {
+        transition: all 0.5s ease-out;
+        content: "";
+        position: absolute;
+        right: -6px;
+        left: -6px;
+        top: -6px;
+        bottom: -6px;
+        border: solid 2px rgba(25, 122, 212, 0.2);
+
+      }
+
+      [f-button]::after {
+        border-radius: 20px
+      }
+
+      [f-button]:hover::after {
+        border: solid 2px rgba(25, 122, 212, 0.2);
+        border-radius: 30px;
       }
 
       .stack[invisible] .stack-footer {
@@ -104,6 +146,13 @@
       var app = new Vue({
         el: '#app',
         methods: {
+          showStack: function(i) {
+            var container = this.$el.querySelector("#StackContainer");
+            container.scrollTop = container.scrollHeight + (i * 100)
+            // container.scrollTop = container.scrollHeight;
+            // console.log("Scroll", container.scrollTop, container.scrollHeight);
+            this.focused = (i + 2)
+          },
           toggleMailboxMenu: function() {
             this.mailbox_menu_open = !this.mailbox_menu_open;
           },
