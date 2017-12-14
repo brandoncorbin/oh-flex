@@ -1,29 +1,25 @@
 {
   "name": "oh-flex",
-  "version": "2.1.2-pre",
+  "version": "2.2.0",
   "description": "Set of Flex and Styles lib",
   "main": "lib/oh-flex.css",
   "public": true,
   "scripts": {
     "server:start": "browser-sync start --server './' --files './' --index ",
-    "compile:scss":
-      "node-sass --include-path scss src/oh-flex.scss lib/oh-flex.css  --output-style compressed",
+    "compile:scss": "node-sass --include-path scss src/oh-flex.scss lib/oh-flex.css  --output-style compressed",
     "compile:chunks": "node resources/build/chunkify.js",
-    "compile:docs":
-      "kss --source src/scss --destination docs  --css ../lib/oh-flex.css --builder resources/kss",
+    "compile:docs": "kss --source src/scss --destination docs  --css ../lib/oh-flex.css --builder resources/kss",
     "compile:es6": "babel src/ -d lib/",
     "compile:es6-watch": "babel --watch=./src  src/ -d lib/ --copy-files",
     "test": "mocha lib/**/*.spec.js --exit",
     "watch:scss": "nodemon -e scss -x \"npm run compile:scss\"",
     "watch:docs": "watch --wait=2 \"npm run compile:docs\" ./src/scss",
-    "dev:docs":
-      "concurrently \"npm run server:start\" \"npm run watch:scss\" \"npm run watch:docs\"",
+    "dev:docs": "concurrently \"npm run server:start\" \"npm run watch:scss\" \"npm run watch:docs\"",
     "dev": "concurrently \"npm run server:start\" \"npm run watch:scss\"",
     "release:patch": "npm-bump patch",
     "release:minor": "npm-bump minor",
     "release:major": "npm-bump major",
-    "deploy":
-      "aws s3 sync examples/portfolio/ s3://www.corbinux.com && aws s3 sync lib/ s3://www.corbinux.com/lib"
+    "deploy": "aws s3 sync examples/portfolio/ s3://www.corbinux.com && aws s3 sync lib/ s3://www.corbinux.com/lib"
   },
   "watch": {
     "test": "{src,test}/*.spec.js"
